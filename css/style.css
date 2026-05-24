@@ -1207,5 +1207,7 @@ html { scroll-behavior: smooth; }
   .form-group input, .form-group textarea, .form-group select { min-height: 48px; font-size: 16px; }
   section { padding: 50px 0; }
   .stats { padding: 30px 0; }
+  .bottom-nav a, .bottom-nav button { padding: 8px 6px; min-width: 52px; font-size: 9px; }
+  .bottom-nav a i, .bottom-nav button i { font-size: 18px; }
   .bottom-nav a.active::before, .bottom-nav button.active-nav::before { width: 16px; }
 }

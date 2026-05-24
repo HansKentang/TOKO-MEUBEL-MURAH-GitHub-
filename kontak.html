@@ -159,6 +159,17 @@
     @media (max-width: 768px) {
       .float-icon { opacity: .04; font-size: 28px !important; }
     }
+    @media (max-width: 600px) {
+      .float-icon { opacity: .025; }
+      .deco { opacity: .3; }
+      .contact-hero::after { height: 30px; }
+      .page-title, .contact-hero { padding: 120px 0 40px; }
+    }
+    @media (max-width: 480px) {
+      .float-icon { display: none; }
+      .deco { display: none; }
+      .contact-hero::after { height: 24px; }
+    }
     @media (prefers-reduced-motion: reduce) {
       .float-icon, .deco { animation: none !important; }
     }
@@ -219,14 +230,23 @@
     }
     @media (max-width: 480px) {
       .service-strip .container { grid-template-columns: 1fr; }
+      .service-strip { padding: 24px 0; }
       .sosmed-card { min-width: 100%; }
-      .contact-hero { padding: 120px 0 60px; }
+      .contact-hero { padding: 110px 0 50px; }
       .contact-hero h1 { font-size: 22px; }
-      .contact-grid { padding: 40px 0; }
-      .contact-grid .container { gap: 24px; }
+      .contact-grid { padding: 32px 0; }
+      .contact-grid .container { gap: 20px; }
       .faq-section { padding: 0 0 50px; }
       .faq-question { font-size: 14px; padding: 16px 0; min-height: 52px; }
       .contact-info-card .info-item p { font-size: 13px; }
+      .contact-info-card, .contact-form-card { padding: 16px 14px; }
+      .contact-info-card h2, .contact-form-card h2 { font-size: 17px; margin-bottom: 16px; }
+      .contact-info-card .info-item { gap: 10px; margin-bottom: 12px; padding-bottom: 12px; }
+      .sosmed-section { padding: 40px 0; }
+      .sosmed-section h2 { font-size: 20px; }
+      .map-section { padding: 40px 0; }
+      .map-wrap iframe { height: 250px; }
+      .resp-text { font-size: 12px !important; }
     }
   </style>
 </head>
@@ -556,6 +576,7 @@
     <a href="cicilan.html"><i class="fas fa-credit-card"></i> Cicilan</a>
     <button onclick="openWishlist()"><i class="far fa-heart"></i><span class="wishlist-badge">0</span> Wishlist</button>
     <a href="kontak.html" class="active"><i class="fas fa-phone"></i> Kontak</a>
+    <button onclick="toggleMobileTheme()" aria-label="Toggle dark mode"><i class="fas fa-moon mobile-theme-icon"></i><span class="mobile-theme-label">Gelap</span></button>
   </div>
 </nav>
 
