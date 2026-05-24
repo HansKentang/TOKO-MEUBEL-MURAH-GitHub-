@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontak - Toko Meubel Murah Semarang</title>
+  <meta name="description" content="Hubungi Toko Meubel Murah Semarang untuk konsultasi furniture, pemesanan, atau kunjungi showroom kami di Banyumanik.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    @keyframes floatA { 0%,100% { transform: translate(0,0) rotate(0deg); } 25% { transform: translate(12px,-18px) rotate(8deg); } 50% { transform: translate(-8px,-28px) rotate(-5deg); } 75% { transform: translate(-18px,-10px) rotate(10deg); } }
+    @keyframes floatB { 0%,100% { transform: translate(0,0) rotate(0deg); } 33% { transform: translate(-15px,-12px) rotate(-8deg); } 66% { transform: translate(10px,-24px) rotate(6deg); } }
+    @keyframes floatC { 0%,100% { transform: translate(0,0) rotate(0deg) scale(1); } 50% { transform: translate(-10px,-20px) rotate(10deg) scale(1.1); } }
+
+    .float-icon { position: absolute; pointer-events: none; z-index: 0; opacity: .07; color: #fff; }
+    .float-icon.sofa { bottom: 5%; left: 3%; font-size: 52px; animation: floatA 14s ease-in-out infinite; }
+    .float-icon.lamp { top: 8%; right: 2%; font-size: 40px; animation: floatB 16s ease-in-out infinite 1s; }
+    .float-icon.chair { bottom: 25%; right: 4%; font-size: 38px; animation: floatC 12s ease-in-out infinite 3s; }
+    .float-icon.bed { bottom: 8%; right: 15%; font-size: 48px; animation: floatA 18s ease-in-out infinite 5s; }
+    .float-icon.archive { top: 12%; left: 2%; font-size: 44px; animation: floatB 13s ease-in-out infinite 2s; }
+    .float-icon.tv { top: 20%; left: 15%; font-size: 32px; animation: floatC 15s ease-in-out infinite 4s; }
+    .float-icon.table { bottom: 18%; left: 22%; font-size: 36px; animation: floatA 17s ease-in-out infinite 6s; }
+    .float-icon.camera { top: 35%; right: 12%; font-size: 28px; animation: floatB 11s ease-in-out infinite 7s; }
+    .float-icon.book { bottom: 35%; left: 10%; font-size: 24px; animation: floatC 19s ease-in-out infinite 0s; }
+    .float-icon.door { top: 45%; right: 1%; font-size: 34px; animation: floatA 20s ease-in-out infinite 8s; }
+
+    .deco { position: absolute; border-radius: 50%; pointer-events: none; z-index: 0; }
+    .deco-1 { width: 300px; height: 300px; background: radial-gradient(circle,rgba(198,40,40,.12),transparent 70%); top: -80px; left: -120px; }
+    .deco-2 { width: 250px; height: 250px; background: radial-gradient(circle,rgba(198,40,40,.08),transparent 70%); bottom: -60px; right: -80px; }
+    .deco-3 { width: 180px; height: 180px; background: radial-gradient(circle,rgba(198,40,40,.06),transparent 70%); top: 40%; right: -60px; }
+    .deco-4 { width: 200px; height: 200px; background: radial-gradient(circle,rgba(198,40,40,.1),transparent 70%); bottom: 20%; left: -80px; }
+    .deco-5 { width: 120px; height: 120px; background: radial-gradient(circle,rgba(255,152,0,.08),transparent 70%); top: -30px; right: 10%; }
+    .deco-6 { width: 100px; height: 100px; background: radial-gradient(circle,rgba(36,211,102,.06),transparent 70%); bottom: -40px; left: 20%; }
+
+    .dot-pattern {
+      position: absolute; inset: 0; z-index: 0; pointer-events: none;
+      background-image: radial-gradient(rgba(198,40,40,.07) 1px, transparent 1px);
+      background-size: 24px 24px;
+    }
+
+    .contact-hero {
+      padding: 140px 0 100px; text-align: center;
+      background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%); color: #fff;
+      position: relative; overflow: hidden;
+    }
+    .contact-hero::after {
+      content: ''; position: absolute; bottom: -2px; left: -10%; right: -10%; height: 50px; z-index: 1;
+      background: #fff; border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+      pointer-events: none;
+    }
+    .contact-hero h1 { font-size: 40px; font-weight: 700; margin-bottom: 12px; position: relative; z-index: 1; }
+    .contact-hero p { font-size: 16px; color: rgba(255,255,255,.6); max-width: 500px; margin: 0 auto; position: relative; z-index: 1; }
+
+    .contact-hero .hero-badges {
+      display: flex; gap: 24px; justify-content: center; margin-top: 32px; flex-wrap: wrap;
+      position: relative; z-index: 1;
+    }
+    .contact-hero .hero-badges span {
+      display: flex; align-items: center; gap: 8px;
+      font-size: 13px; color: rgba(255,255,255,.7);
+    }
+    .contact-hero .hero-badges i { color: #c62828; font-size: 16px; }
+
+    .service-strip {
+      padding: 40px 0; background: #fff;
+      position: relative;
+    }
+    .service-strip .container { position: relative; z-index: 1; }
+    .service-strip .container {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px;
+    }
+    .service-strip .service-item {
+      display: flex; align-items: center; gap: 16px; padding: 20px;
+      background: #fafafa; border-radius: 10px;
+    }
+    .service-strip .service-item i {
+      font-size: 26px; color: #c62828; width: 44px; height: 44px;
+      background: #fef2f2; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    }
+    .service-strip .service-item h4 { font-size: 14px; font-weight: 600; margin-bottom: 2px; }
+    .service-strip .service-item p { font-size: 12px; color: #888; }
+
+    .contact-grid { padding: 80px 0; }
+    .contact-grid .container { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
+
+    .contact-info-card {
+      background: #f8f8f8; padding: 36px; border-radius: 12px;
+    }
+    .contact-info-card h2 { font-size: 22px; font-weight: 700; margin-bottom: 28px; display: flex; align-items: center; gap: 10px; }
+    .contact-info-card h2 i { color: #c62828; font-size: 22px; }
+    .contact-info-card .info-item {
+      display: flex; gap: 16px; margin-bottom: 20px; padding-bottom: 20px;
+      border-bottom: 1px solid #eee;
+    }
+    .contact-info-card .info-item:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
+    .contact-info-card .info-item > i {
+      font-size: 18px; color: #c62828; width: 24px; margin-top: 3px;
+    }
+    .contact-info-card .info-item h4 { font-size: 14px; font-weight: 600; margin-bottom: 2px; }
+    .contact-info-card .info-item p { font-size: 14px; color: #666; }
+    .contact-info-card .info-item a { color: #c62828; font-weight: 500; }
+    .contact-info-card .info-item a:hover { text-decoration: underline; }
+
+    .contact-form-card {
+      padding: 36px; border: 1px solid #eee; border-radius: 12px;
+    }
+    .contact-form-card h2 { font-size: 22px; font-weight: 700; margin-bottom: 28px; display: flex; align-items: center; gap: 10px; }
+    .contact-form-card h2 i { color: #c62828; font-size: 20px; }
+
+    .form-group { margin-bottom: 20px; }
+    .form-group label { display: block; font-size: 13px; font-weight: 600; margin-bottom: 6px; color: #555; }
+    .form-group input, .form-group textarea, .form-group select {
+      width: 100%; padding: 14px 16px; border: 1px solid #ddd; font-size: 14px;
+      background: #fff; transition: border-color .2s; border-radius: 8px;
+    }
+    .form-group input:focus, .form-group textarea:focus, .form-group select:focus {
+      outline: none; border-color: #c62828; box-shadow: 0 0 0 3px rgba(198,40,40,.1);
+    }
+    .form-group textarea { min-height: 120px; resize: vertical; }
+
+    .sosmed-section { padding: 60px 0; background: #f8f8f8; text-align: center; }
+    .sosmed-section h2 { font-size: 24px; font-weight: 700; margin-bottom: 8px; }
+    .sosmed-section .section-desc { margin: 0 auto 32px; }
+    .sosmed-grid { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+    .sosmed-card {
+      display: flex; align-items: center; gap: 12px; padding: 16px 28px;
+      background: #fff; border-radius: 10px; transition: all .25s;
+      min-width: 180px; justify-content: center;
+    }
+    .sosmed-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,.08); }
+    .sosmed-card i { font-size: 24px; }
+    .sosmed-card span { font-weight: 600; }
+    .sosmed-card.wa i { color: #25d366; }
+    .sosmed-card.ig i { color: #e4405f; }
+    .sosmed-card.tt i { color: #000; }
+    [data-theme="dark"] .sosmed-card { background: #1a1a1a; }
+    [data-theme="dark"] .sosmed-card span { color: #e0e0e0; }
+    [data-theme="dark"] .sosmed-card.tt i { color: #ccc; }
+    [data-theme="dark"] .contact-info-card .info-item p { color: #aaa; }
+    [data-theme="dark"] .contact-info-card .info-item { border-bottom-color: #333; }
+    [data-theme="dark"] .form-group label { color: #ccc; }
+    [data-theme="dark"] .faq-item { border-bottom-color: #333; }
+    [data-theme="dark"] .faq-answer p { color: #aaa; }
+    [data-theme="dark"] .faq-question { color: #e0e0e0; }
+    [data-theme="dark"] .faq-question i { color: #888; }
+    [data-theme="dark"] .service-strip .service-item p { color: #aaa; }
+    [data-theme="dark"] .resp-text { color: #aaa !important; }
+    [data-theme="dark"] .service-strip { background: #1a1a1a; }
+    [data-theme="dark"] .service-strip .service-item { background: #222; }
+    [data-theme="dark"] .service-strip .service-item i { background: #3a1a1a; }
+
+    [data-theme="dark"] .contact-extra { background: #222 !important; }
+    [data-theme="dark"] .contact-hero::after { background: #1a1a1a; }
+
+    @media (max-width: 768px) {
+      .float-icon { opacity: .04; font-size: 28px !important; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .float-icon, .deco { animation: none !important; }
+    }
+
+    .map-section { padding: 80px 0; }
+    .map-section .map-wrap { max-width: 900px; margin: 32px auto 0; }
+    .map-section .map-wrap iframe { display: block; width: 100%; height: 400px; }
+
+    .faq-section { padding: 0 0 80px; }
+    .faq-section .container { max-width: 720px; }
+    .faq-section h2 { font-size: 22px; font-weight: 700; margin-bottom: 24px; text-align: center; }
+    .faq-item { border-bottom: 1px solid #eee; }
+    .faq-question {
+      width: 100%; display: flex; justify-content: space-between; align-items: center;
+      padding: 16px 0; background: transparent; font-size: 16px; font-weight: 500;
+      text-align: left; transition: color .2s; cursor: pointer; min-height: 56px;
+    }
+    .faq-question:hover { color: #c62828; }
+    .faq-question i { transition: transform .2s; font-size: 14px; color: #999; }
+    .faq-item.open .faq-question i { transform: rotate(180deg); }
+    .faq-answer { max-height: 0; overflow: hidden; transition: max-height .3s, padding .3s; }
+    .faq-item.open .faq-answer { max-height: 300px; padding: 0 0 20px; }
+    .faq-answer p { font-size: 14px; color: #666; line-height: 1.7; padding-right: 24px; }
+
+    @media (max-width: 992px) {
+      .contact-grid .container { grid-template-columns: 1fr; }
+      .service-strip .container { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 768px) {
+      .contact-hero h1 { font-size: 28px; }
+      .contact-hero p { font-size: 15px; }
+      .contact-hero .hero-badges { flex-direction: column; align-items: center; gap: 8px; }
+      .service-strip .container { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+      .service-strip .service-item { flex-direction: column; text-align: center; padding: 16px; }
+      .contact-info-card, .contact-form-card { padding: 20px; }
+      .sosmed-grid { gap: 12px; }
+      .sosmed-card { min-width: 130px; padding: 10px 16px; font-size: 13px; }
+      .contact-info-card h3 { font-size: 16px; }
+      .faq-question { font-size: 14px; padding: 14px 16px; }
+    }
+    @media (max-width: 600px) {
+      .container { padding: 0 16px; }
+      .contact-hero h1 { font-size: 24px; }
+      .contact-hero p { font-size: 14px; }
+      .service-item i { font-size: 24px; }
+      .service-item h3 { font-size: 13px; }
+      .contact-form-card input, .contact-form-card textarea { font-size: 14px; padding: 12px 14px; }
+      .contact-info-card, .contact-form-card { padding: 16px; }
+      .contact-info-card h2, .contact-form-card h2 { font-size: 18px; margin-bottom: 20px; }
+      .contact-info-card .info-item { gap: 12px; margin-bottom: 14px; padding-bottom: 14px; }
+      .contact-info-card .info-item p { font-size: 13px; }
+      .contact-extra { flex-direction: column; text-align: center; padding: 14px !important; }
+      .form-group { margin-bottom: 14px; }
+      .form-group input, .form-group textarea, .form-group select { padding: 12px 14px; font-size: 16px; }
+      .faq-question { font-size: 14px; padding: 14px 0; min-height: 48px; }
+      .faq-section h2 { font-size: 18px; }
+      .contact-form-card input, .contact-form-card textarea { min-height: 48px; }
+    }
+    @media (max-width: 480px) {
+      .service-strip .container { grid-template-columns: 1fr; }
+      .sosmed-card { min-width: 100%; }
+      .contact-hero { padding: 120px 0 60px; }
+      .contact-hero h1 { font-size: 22px; }
+      .contact-grid { padding: 40px 0; }
+      .contact-grid .container { gap: 24px; }
+      .faq-section { padding: 0 0 50px; }
+      .faq-question { font-size: 14px; padding: 16px 0; min-height: 52px; }
+      .contact-info-card .info-item p { font-size: 13px; }
+    }
+  </style>
+</head>
+<body>
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- ===== NAVBAR ===== -->
+<nav class="navbar light">
+  <div class="container">
+    <a href="index.html" class="logo"><img src="img/logo.png" alt="Toko Meubel Murah Semarang" class="logo-img"><span class="logo-text">TOKO MEUBEL MURAH</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="koleksi.html">Koleksi</a></li>
+      <li><a href="cicilan.html">Cicilan</a></li>
+      <li><a href="promo.html">Promo</a></li>
+      <li><a href="kontak.html" class="active">Kontak</a></li>
+    </ul>
+    <div class="nav-icons">
+      <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode"><i class="fas fa-moon"></i></button>
+      <button aria-label="Wishlist"><i class="far fa-heart"></i><span class="wishlist-badge">0</span></button>
+    </div>
+    <button class="menu-toggle" aria-label="Menu"><i class="fas fa-bars"></i></button>
+  </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section class="contact-hero">
+  <div class="dot-pattern"></div>
+  <div class="deco deco-1"></div>
+  <div class="deco deco-5"></div>
+  <div class="deco deco-6"></div>
+  <i class="fas fa-couch float-icon sofa"></i>
+  <i class="fas fa-lightbulb float-icon lamp"></i>
+  <i class="fas fa-chair float-icon chair"></i>
+  <i class="fas fa-bed float-icon bed"></i>
+  <i class="fas fa-box float-icon archive"></i>
+  <i class="fas fa-tv float-icon tv"></i>
+  <i class="fas fa-border-all float-icon table"></i>
+  <i class="fas fa-camera float-icon camera"></i>
+  <i class="fas fa-book float-icon book"></i>
+  <i class="fas fa-door-open float-icon door"></i>
+  <div class="container">
+    <h1 class="reveal">Hubungi Kami</h1>
+    <p class="reveal">Kami siap membantu Anda memilih furniture impian. Tim kami akan merespon dalam 1x24 jam.</p>
+    <div class="hero-badges reveal">
+      <span><i class="fas fa-check-circle"></i> Respon Cepat</span>
+      <span><i class="fas fa-check-circle"></i> Konsultasi Gratis</span>
+      <span><i class="fas fa-check-circle"></i> Survey Lokasi</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SERVICE STRIP ===== -->
+<section class="service-strip reveal">
+  <div class="deco deco-2"></div>
+  <div class="container">
+    <div class="service-item">
+      <i class="fas fa-headset"></i>
+      <div>
+        <h4>Konsultasi Gratis</h4>
+        <p>Tim ahli kami siap membantu</p>
+      </div>
+    </div>
+    <div class="service-item">
+      <i class="fas fa-truck"></i>
+      <div>
+        <h4>Gratis Ongkir</h4>
+        <p>Area Semarang & sekitarnya</p>
+      </div>
+    </div>
+    <div class="service-item">
+      <i class="fas fa-tools"></i>
+      <div>
+        <h4>Gratis Rakit</h4>
+        <p>Rakit di tempat oleh tim kami</p>
+      </div>
+    </div>
+    <div class="service-item">
+      <i class="fas fa-shield-alt"></i>
+      <div>
+        <h4>Garansi</h4>
+        <p>Jaminan kualitas terbaik</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT GRID ===== -->
+<section class="contact-grid" style="position:relative;overflow:hidden;">
+  <div class="deco deco-3"></div>
+  <div class="deco deco-4"></div>
+  <div class="container">
+    <div class="contact-info-card reveal-left">
+      <h2><i class="fas fa-info-circle"></i> Informasi Kontak</h2>
+      <div class="info-item">
+        <i class="fas fa-map-marker-alt"></i>
+        <div>
+          <h4>Alamat Showroom</h4>
+          <p>Jl. Kr. Rejo Raya No.55, Banyumanik,<br>Kec. Banyumanik, Kota Semarang, Jawa Tengah 50264</p>
+        </div>
+      </div>
+      <div class="info-item">
+        <i class="fas fa-phone-alt"></i>
+        <div>
+          <h4>Telepon</h4>
+          <p><a href="tel:6281325373999">0813-2537-3999</a></p>
+        </div>
+      </div>
+      <div class="info-item">
+        <i class="fab fa-whatsapp"></i>
+        <div>
+          <h4>WhatsApp</h4>
+          <p><a href="https://wa.me/6281325373999" target="_blank" rel="noopener">0813-2537-3999 (Klik langsung chat)</a></p>
+        </div>
+      </div>
+      <div class="info-item">
+        <i class="fas fa-envelope"></i>
+        <div>
+          <h4>Email</h4>
+          <p><a href="mailto:info@meubel.com">info@meubel.com</a></p>
+        </div>
+      </div>
+      <div class="info-item">
+        <i class="fas fa-clock"></i>
+        <div>
+          <h4>Jam Operasional</h4>
+          <p>Senin - Minggu<br>09.00 - 20.00 WIB</p>
+        </div>
+      </div>
+      <div class="info-item">
+        <i class="fas fa-venus"></i>
+        <div>
+          <h4>Identitas</h4>
+          <p><span class="badge-women">Usaha Milik Perempuan</span></p>
+        </div>
+      </div>
+      <div class="contact-extra" style="margin-top:24px;padding:16px 20px;background:#fff;border-radius:8px;display:flex;align-items:center;gap:12px;">
+        <i class="fas fa-stopwatch" style="color:#c62828;font-size:20px;"></i>
+        <div>
+          <strong style="font-size:14px;">Respon Cepat</strong>
+          <p class="resp-text" style="font-size:13px;margin-top:2px;color:#888;">Kami membalas pesan dalam 1x24 jam</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-form-card reveal-right">
+      <h2><i class="fas fa-paper-plane"></i> Kirim Pesan</h2>
+      <form>
+        <div class="form-group">
+          <label for="name">Nama Lengkap</label>
+          <input type="text" id="name" placeholder="Masukkan nama Anda" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="Masukkan email Anda" required>
+        </div>
+        <div class="form-group">
+          <label for="phone">No. Telepon (opsional)</label>
+          <input type="tel" id="phone" placeholder="Contoh: 0812-3456-7890">
+        </div>
+        <div class="form-group">
+          <label for="subject">Subjek</label>
+          <select id="subject">
+            <option value="">Pilih subjek...</option>
+            <option>Pertanyaan Produk</option>
+            <option>Pemesanan</option>
+            <option>Keluhan</option>
+            <option>Kerjasama Grosir</option>
+            <option>Lainnya</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">Pesan</label>
+          <textarea id="message" placeholder="Tulis pesan Anda di sini..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary w-full" style="justify-content:center;"><i class="fas fa-paper-plane"></i> Kirim Pesan</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SOSMED ===== -->
+<section class="sosmed-section reveal" style="position:relative;overflow:hidden;">
+  <div class="dot-pattern"></div>
+  <div class="container" style="position:relative;z-index:1;">
+    <p class="section-title">Terhubung</p>
+    <h2>Ikuti Kami di Media Sosial</h2>
+    <p class="section-desc">Dapatkan info terbaru seputar produk, promo, dan inspirasi furniture</p>
+    <div class="sosmed-grid">
+      <a href="https://wa.me/6281325373999" target="_blank" rel="noopener" class="sosmed-card wa">
+        <i class="fab fa-whatsapp"></i> <span>WhatsApp</span>
+      </a>
+      <a href="https://www.instagram.com/toko_meubel_murah" target="_blank" rel="noopener" class="sosmed-card ig">
+        <i class="fab fa-instagram"></i> <span>Instagram</span>
+      </a>
+      <a href="https://www.tiktok.com/@toko_mebel_murah" target="_blank" rel="noopener" class="sosmed-card tt">
+        <i class="fab fa-tiktok"></i> <span>TikTok</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== MAP ===== -->
+<section class="map-section reveal" style="position:relative;">
+  <div class="deco deco-2" style="width:150px;height:150px;top:10%;right:-60px;"></div>
+  <div class="container">
+    <p class="section-title text-center">Lokasi</p>
+    <h2 class="section-heading text-center">Kunjungi Showroom Kami</h2>
+    <p class="section-desc text-center">Datang langsung untuk melihat dan mencoba furniture secara langsung</p>
+    <div class="map-wrap">
+      <iframe src="https://maps.google.com/maps?q=Jl.%20Kr.%20Rejo%20Raya%20No.55%20Banyumanik%20Kota%20Semarang&output=embed" width="100%" height="400" style="border:0;border-radius:12px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="faq-section reveal pat-dots">
+  <div class="container">
+    <h2>Pertanyaan Umum</h2>
+    <div class="faq-item">
+      <button class="faq-question">
+        Gratis ongkir, radius tertentu, tanya WA
+        <i class="fas fa-chevron-down"></i>
+      </button>
+      <div class="faq-answer">
+        <p>Kami menyediakan layanan gratis ongkir untuk area Semarang dan sekitarnya dengan radius tertentu. Untuk informasi lebih lanjut mengenai radius dan ketentuan gratis ongkir, silakan hubungi kami via WhatsApp.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">
+        Apakah tersedia layanan perakitan?
+        <i class="fas fa-chevron-down"></i>
+      </button>
+      <div class="faq-answer">
+        <p>Ya, kami menyediakan layanan perakitan gratis untuk semua produk furniture yang dibeli di toko kami. Tim kami akan merakitkan di tempat.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">
+        Retur harus ada nota
+        <i class="fas fa-chevron-down"></i>
+      </button>
+      <div class="faq-answer">
+        <p>Retur barang hanya dapat diproses dengan menunjukkan nota pembelian asli. Retur berlaku dalam 7 hari setelah barang diterima dengan syarat barang dalam kondisi baik, tidak cacat akibat penggunaan, dan dilengkapi kemasan asli.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">
+        Apakah tersedia cicilan?
+        <i class="fas fa-chevron-down"></i>
+      </button>
+      <div class="faq-answer">
+        <p>Tersedia cicilan 0% hingga 12 bulan dengan kartu kredit Bank Mandiri, BCA, BNI, dan BRI. Juga tersedia pembayaran via QRIS, GoPay, OVO, dan Dana.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">
+        Bisakah request desain atau ukuran khusus?
+        <i class="fas fa-chevron-down"></i>
+      </button>
+      <div class="faq-answer">
+        <p>Kami melayani pemesanan furniture dengan ukuran dan desain custom. Konsultasikan kebutuhan Anda dengan tim kami untuk mendapatkan solusi terbaik.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ORDER HISTORY ===== -->
+<section style="padding:0 0 80px">
+  <div class="container">
+    <div id="orderHistoryContainer"></div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="container">
+    <div>
+      <div class="logo"><img src="img/logo.png" alt="Toko Meubel Murah Semarang" class="footer-logo-img"><span style="margin-left:8px;color:#c62828;font-weight:800;">TOKO MEUBEL MURAH</span></div>
+      <p>Toko furniture terpercaya di Semarang dengan kualitas terbaik dan harga bersahabat. Melayani sejak 2015.</p>
+      <p class="mt-3"><i class="fas fa-star text-yellow-500 mr-1"></i> Rating 4.3 (685 review)</p>
+      <div class="trust-badges">
+        <span><i class="fas fa-truck"></i> Gratis Ongkir</span>
+        <span><i class="fas fa-tools"></i> Gratis Rakit</span>
+        <span><i class="fas fa-shield-alt"></i> Garansi</span>
+      </div>
+      <div class="footer-social">
+        <a href="https://wa.me/6281325373999" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      </div>
+    </div>
+    <div>
+      <h3>Navigasi</h3>
+      <ul>
+        <li><a href="index.html"><i class="fas fa-chevron-right" style="font-size:8px;color:#666"></i> Home</a></li>
+        <li><a href="koleksi.html"><i class="fas fa-chevron-right" style="font-size:8px;color:#666"></i> Koleksi</a></li>
+        <li><a href="cicilan.html"><i class="fas fa-chevron-right" style="font-size:8px;color:#666"></i> Cicilan</a></li>
+        <li><a href="promo.html"><i class="fas fa-chevron-right" style="font-size:8px;color:#666"></i> Promo</a></li>
+        <li><a href="kontak.html"><i class="fas fa-chevron-right" style="font-size:8px;color:#666"></i> Kontak</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Kontak</h3>
+      <ul class="contact-list">
+        <li><i class="fas fa-map-marker-alt" style="color:var(--red)"></i> Jl. Kr. Rejo Raya No.55, Banyumanik, Semarang</li>
+        <li><a href="tel:+6281325373999"><i class="fas fa-phone" style="color:var(--red)"></i> 0813-2537-3999</a></li>
+        <li><i class="fas fa-clock" style="color:var(--red)"></i> Senin-Minggu: 09.00 - 20.00</li>
+        <li><a href="https://wa.me/6281325373999"><i class="fab fa-whatsapp" style="color:var(--red)"></i> WhatsApp</a></li>
+      </ul>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Toko Mebel Murah Semarang. All rights reserved. <a href="admin.html" class="footer-admin-link"><i class="fas fa-shield-alt"></i> Admin</a></span>
+      <a href="#" class="to-top" aria-label="Kembali ke atas"><i class="fas fa-arrow-up"></i></a>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== WHATSAPP FAB ===== -->
+<a href="https://wa.me/6281325373999?text=Halo%20Toko%20Meubel%20Murah,%20saya%20ingin%20bertanya" class="whatsapp-fab" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i><span class="wa-tooltip">Ada yang bisa dibantu?</span></a>
+
+<!-- ===== MOBILE BOTTOM NAV ===== -->
+<nav class="bottom-nav">
+  <div class="container">
+    <a href="index.html"><i class="fas fa-home"></i> Home</a>
+    <a href="koleksi.html"><i class="fas fa-th-large"></i> Koleksi</a>
+    <a href="cicilan.html"><i class="fas fa-credit-card"></i> Cicilan</a>
+    <button onclick="openWishlist()"><i class="far fa-heart"></i><span class="wishlist-badge">0</span> Wishlist</button>
+    <a href="kontak.html" class="active"><i class="fas fa-phone"></i> Kontak</a>
+  </div>
+</nav>
+
+<script src="js/script.js"></script>
+<script>
+window.addEventListener('scroll', function() {
+  var p = document.getElementById('scrollProgress');
+  if (!p) return;
+  var s = window.scrollY, d = document.documentElement.scrollHeight - window.innerHeight;
+  p.style.width = (d > 0 ? (s / d) * 100 : 0) + '%';
+});
+</script>
+</body>
+</html>

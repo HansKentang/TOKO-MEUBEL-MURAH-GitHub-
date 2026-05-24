@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Toko Meubel Murah Semarang - Furniture Berkualitas Harga Bersahabat</title>
+  <meta name="description" content="Toko meubel murah di Semarang dengan kualitas terbaik. Gratis ongkir area Semarang!">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    :root { --red: #c62828; --dark: #1a1a1a; --slate: #64748b; --light: #f8fafc; --yellow: #eab308; --green: #22c55e; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; font-size: 16.5px; }
+    body { font-family: 'Inter', sans-serif; color: var(--dark); background: var(--light); line-height: 1.6; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+    img { max-width: 100%; display: block; }
+    input, button, textarea { font: inherit; }
+    button { cursor: pointer; border: none; background: none; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    section { padding: 100px 0; }
+    section.dark { background: var(--dark); color: #fff; }
+    section.alt { background: #fff; }
+
+    /* Typography */
+    .hero-title { font-family: 'Syne', sans-serif; font-weight: 900; }
+
+    /* Red accent */
+    .red { color: var(--red); }
+    .btn-red { background: var(--red); color: #fff; display: inline-flex; align-items: center; gap: 8px; padding: 14px 32px; font-weight: 600; font-size: 14px; letter-spacing: 0.3px; transition: opacity .2s; }
+    .btn-red:hover { opacity: .85; }
+    .btn-outline-light { border: 2px solid rgba(255,255,255,.3); color: #fff; display: inline-flex; align-items: center; gap: 8px; padding: 14px 32px; font-weight: 600; font-size: 14px; letter-spacing: 0.3px; transition: all .2s; }
+    .btn-outline-light:hover { border-color: var(--red); background: var(--red); }
+    .btn-wa { background: #25d366; color: #fff; display: inline-flex; align-items: center; gap: 8px; padding: 14px 32px; font-weight: 600; font-size: 14px; transition: opacity .2s; }
+    .btn-wa:hover { opacity: .85; }
+    .mt-2 { margin-top: 8px; }
+    .mt-3 { margin-top: 12px; }
+
+    /* ===== SCROLL PROGRESS ===== */
+    .scroll-progress { position: fixed; top: 0; left: 0; height: 3px; background: var(--red); z-index: 1001; width: 0%; transition: width .1s linear; }
+
+    /* ===== NAVBAR ===== */
+    .navbar { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; padding: 0 24px; transition: background .3s; }
+    .navbar .container { display: flex; align-items: center; justify-content: space-between; height: 72px; }
+    .navbar .logo { font-size: 24px; font-weight: 800; color: var(--red); }
+    .navbar .logo span { color: #fff; transition: color .3s; }
+    .nav-links { display: flex; gap: 32px; align-items: center; }
+    .nav-links a { font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: rgba(255,255,255,.7); transition: color .2s; }
+    .nav-links a:hover, .nav-links a.active { color: #fff; }
+    .navbar.scrolled { background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.08); }
+    .navbar.scrolled .logo span { color: var(--dark); }
+    .navbar.scrolled .nav-links a { color: var(--slate); }
+    .navbar.scrolled .nav-links a:hover, .navbar.scrolled .nav-links a.active { color: var(--red); }
+    .nav-icons { display: flex; gap: 16px; align-items: center; }
+    .nav-icons button { position: relative; font-size: 18px; color: rgba(255,255,255,.7); padding: 4px; transition: color .2s; }
+    .nav-icons button:hover { color: #fff; }
+    .navbar.scrolled .nav-icons button { color: var(--slate); }
+    .navbar.scrolled .nav-icons button:hover { color: var(--red); }
+    .wishlist-badge { position: absolute; top: -4px; right: -8px; background: var(--red); color: #fff; font-size: 10px; width: 18px; height: 18px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; }
+    .menu-toggle { display: none; font-size: 22px; padding: 4px; color: rgba(255,255,255,.7); }
+    .navbar.scrolled .menu-toggle { color: var(--dark); }
+
+    /* ===== TRUST BANNER ===== */
+    .trust-banner { background: var(--red); color: #fff; text-align: center; padding: 10px; font-size: 13px; font-weight: 600; margin-top: 0; }
+    .trust-banner i { margin-right: 8px; }
+
+    /* ===== HERO ===== */
+    .hero {
+      min-height: 100vh; display: flex; align-items: center;
+      background: #1a1a1a; color: #fff; position: relative; overflow: hidden; padding: 0;
+    }
+    .hero-bg {
+      position: absolute; inset: 0;
+      background:
+        linear-gradient(135deg, rgba(26,26,26,.85) 0%, rgba(26,26,26,.4) 50%, rgba(198,40,40,.15) 100%),
+        url('https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=1600&q=85');
+      background-size: cover; background-position: center;
+    }
+    /* Decorative geometric accent */
+    .hero::before {
+      content: ''; position: absolute; top: 0; right: 0; width: 40%; height: 100%;
+      background: linear-gradient(to left, rgba(198,40,40,.12), transparent);
+      z-index: 1; pointer-events: none;
+    }
+    .hero::after {
+      content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 120px;
+      background: linear-gradient(to top, #1a1a1a, transparent);
+      z-index: 1; pointer-events: none;
+    }
+    .hero .container { position: relative; z-index: 2; max-width: 780px; text-align: center; }
+    .hero-kicker {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 4px;
+      color: rgba(255,255,255,.5); margin-bottom: 24px; justify-content: center;
+    }
+    .hero-kicker::before { content: ''; display: block; width: 32px; height: 2px; background: #c62828; }
+    .hero h1 {
+      font-size: clamp(48px, 8vw, 88px); line-height: 1.0; letter-spacing: -0.03em;
+      margin-bottom: 24px; font-weight: 900;
+    }
+    .hero h1 .accent { color: #c62828; display: inline-block; }
+    .hero p { font-size: 17px; color: rgba(255,255,255,.55); max-width: 600px; line-height: 1.75; margin-bottom: 40px; margin-left: auto; margin-right: auto; }
+    .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; }
+    .hero-actions .btn-red { background: #c62828; padding: 16px 36px; font-size: 15px; }
+    .hero-actions .btn-red:hover { opacity: .9; transform: translateY(-1px); box-shadow: 0 8px 24px rgba(198,40,40,.35); }
+    .hero-actions .btn-outline-light { border-color: rgba(255,255,255,.25); padding: 16px 36px; font-size: 15px; }
+    .hero-actions .btn-outline-light:hover { background: rgba(255,255,255,.1); border-color: rgba(255,255,255,.5); }
+    /* Trust badges in hero */
+    .hero-badges { display: flex; gap: 24px; margin-top: 48px; flex-wrap: wrap; justify-content: center; }
+    .hero-badge-item { display: flex; align-items: center; gap: 10px; font-size: 13px; color: rgba(255,255,255,.5); }
+    .hero-badge-item i { font-size: 16px; color: #c62828; }
+
+    /* ===== TRANSITION STRIP ===== */
+    .transition-strip {
+      position: relative;
+      height: 20px;
+      background: linear-gradient(to bottom, rgba(26,26,26,0.03), transparent);
+      margin-top: -20px;
+    }
+
+    /* ===== STATS BAR ===== */
+    .stats-bar {
+      background: #fff;
+      padding: 64px 0 56px;
+      position: relative;
+      overflow: hidden;
+    }
+    .stats-bar::before {
+      content: '';
+      position: absolute;
+      top: -60px;
+      right: -60px;
+      width: 200px;
+      height: 200px;
+      background: radial-gradient(circle, rgba(198,40,40,0.04) 0%, transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+    .stats-bar .container { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; }
+    .stat-item {
+      text-align: center; padding: 20px 16px;
+      position: relative;
+    }
+    .stat-item:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 1px;
+      height: 48px;
+      background: #eee;
+    }
+    .stat-item .num { font-size: 40px; font-weight: 900; color: var(--red); line-height: 1; }
+    .stat-item .label { font-size: 13px; color: var(--slate); margin-top: 8px; font-weight: 500; }
+    .stat-item:hover .num { color: #b71c1c; }
+
+    /* ===== SECTION HEADERS ===== */
+    .sec-label {
+      font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 4px; color: var(--red); margin-bottom: 10px;
+      position: relative; display: inline-block;
+    }
+    .sec-label::after {
+      content: '';
+      display: block;
+      width: 32px;
+      height: 2px;
+      background: var(--red);
+      margin: 10px auto 0;
+      border-radius: 1px;
+    }
+    .sec-title { font-size: clamp(30px, 4vw, 42px); font-weight: 800; line-height: 1.1; margin-bottom: 16px; }
+    .sec-desc { font-size: 15px; color: var(--slate); max-width: 500px; line-height: 1.7; }
+    .chapter-header { text-align: center; }
+    .chapter-header .sec-desc { margin-left: auto; margin-right: auto; }
+
+    /* ===== PROBLEM SECTION ===== */
+    #problem {
+      position: relative; overflow: hidden;
+    }
+    /* -- glow background -- */
+    #problem::before {
+      content: ''; position: absolute; top: -120px; right: -80px; width: 400px; height: 400px;
+      background: radial-gradient(circle, rgba(198,40,40,0.04) 0%, transparent 70%);
+      border-radius: 50%; pointer-events: none;
+    }
+    #problem::after {
+      content: ''; position: absolute; bottom: -80px; left: -80px; width: 300px; height: 300px;
+      background: radial-gradient(circle, rgba(198,40,40,0.03) 0%, transparent 70%);
+      border-radius: 50%; pointer-events: none;
+    }
+    .prob-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 48px; }
+    .prob-card {
+      background: #fff; padding: 0; border-radius: 16px; overflow: hidden;
+      position: relative;
+      transition: transform .3s cubic-bezier(.34,1.56,.64,1), box-shadow .35s;
+      cursor: default;
+    }
+    .prob-card::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0;
+      height: 3px; background: var(--red); opacity: 0.6;
+    }
+    .prob-card:hover { transform: translateY(-8px); box-shadow: 0 20px 60px rgba(0,0,0,.1); }
+    .prob-card:active { transform: scale(0.97); }
+    .prob-card .prob-top {
+      padding: 44px 28px 0 28px; text-align: center;
+      position: relative;
+    }
+    .prob-card .prob-number {
+      position: absolute; top: 12px; left: 16px;
+      font-size: 40px; font-weight: 800; line-height: 1;
+      color: var(--red); opacity: 0.06; pointer-events: none;
+      font-family: 'Inter', sans-serif;
+    }
+    .prob-card .prob-top .icon {
+      width: 60px; height: 60px; border-radius: 14px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 24px; margin: 0 auto 16px;
+      position: relative;
+    }
+    .prob-card .prob-top .icon::after {
+      content: ''; position: absolute; inset: -4px;
+      border-radius: 18px; border: 1px solid rgba(198,40,40,0.08);
+    }
+    .prob-card:nth-child(1) .prob-top .icon,
+    .prob-card:nth-child(2) .prob-top .icon,
+    .prob-card:nth-child(3) .prob-top .icon { background: #fef2f2; color: var(--red); }
+    .prob-card h3 { font-size: 18px; font-weight: 700; margin-bottom: 8px; }
+    .prob-card .prob-body {
+      padding: 0 28px 32px;
+    }
+    .prob-card p { font-size: 13.5px; color: #666; line-height: 1.75; margin: 0; }
+    .prob-card .prob-bar {
+      height: 3px; background: #f0f0f0; border-radius: 0 0 16px 16px; overflow: hidden;
+    }
+    .prob-card .prob-bar span {
+      display: block; height: 100%; width: 0;
+      transition: width .6s cubic-bezier(.34,1.56,.64,1);
+    }
+    .prob-card:hover .prob-bar span { width: 100%; }
+    .prob-card:nth-child(1) .prob-bar span,
+    .prob-card:nth-child(2) .prob-bar span,
+    .prob-card:nth-child(3) .prob-bar span { background: var(--red); }
+    .chapter-cta { margin-top: 48px; text-align: center; }
+    .chapter-cta p { font-size: 14px; color: #999; margin-bottom: 16px; }
+    .chapter-cta .btn-red {
+      border-radius: 12px; padding: 14px 36px; font-size: 14px;
+      transition: transform .25s, box-shadow .25s;
+      box-shadow: 0 4px 16px rgba(198,40,40,.25);
+    }
+    .chapter-cta .btn-red:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(198,40,40,.35); }
+
+    /* ===== TESTIMONIAL DARK ===== */
+    .testimonial-block { max-width: 640px; margin: 48px auto 0; text-align: center; padding: 40px; border-top: 1px solid rgba(255,255,255,.08); }
+    .testimonial-block i.fa-quote-left { font-size: 24px; color: var(--red); opacity: .5; margin-bottom: 16px; }
+    .testimonial-block blockquote { font-size: 17px; line-height: 1.7; color: rgba(255,255,255,.7); }
+    .testimonial-block .author { font-size: 14px; font-weight: 600; color: #fff; margin-top: 20px; }
+    .testimonial-block .author span { color: var(--slate); font-family: 'Inter', sans-serif; font-weight: 400; }
+    .testimonial-block .stars { margin-top: 8px; }
+    .testimonial-block .stars i { color: var(--yellow); font-size: 14px; }
+
+    /* ===== CATEGORY GRID ===== */
+    .cat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 48px; max-width: 900px; margin-left: auto; margin-right: auto; }
+    .cat-card { position: relative; overflow: hidden; cursor: pointer; transition: box-shadow .25s; }
+    .cat-card:hover { box-shadow: 0 12px 40px rgba(0,0,0,.18); }
+    .cat-card img { width: 100%; height: 280px; object-fit: cover; transition: transform .35s; }
+    .cat-card:hover img { transform: scale(1.05); }
+    .cat-card .overlay { position: absolute; bottom: 0; left: 0; right: 0; padding: 24px; background: linear-gradient(transparent, rgba(0,0,0,.7)); color: #fff; }
+    .cat-card .overlay h3 { font-size: 18px; font-weight: 700; }
+    .cat-card .overlay p { font-size: 13px; opacity: .7; margin-top: 2px; }
+
+    /* ===== TRUST FEATURES ===== */
+    .trust-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-top: 48px; }
+    .trust-item {
+      text-align: center; padding: 36px 20px;
+      background: #fff; border-radius: 12px;
+      transition: transform .3s ease, box-shadow .3s ease;
+    }
+    .trust-item:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,.06); }
+    .trust-item i { font-size: 28px; color: var(--red); margin-bottom: 16px; }
+    .trust-item h4 { font-size: 15px; font-weight: 700; margin-bottom: 6px; }
+    .trust-item p { font-size: 13px; color: var(--slate); }
+
+    /* ===== PROMO SCROLL ===== */
+    .promo-scroll { display: flex; gap: 20px; overflow-x: auto; padding-bottom: 12px; margin-top: 48px; scroll-snap-type: x mandatory; }
+    .promo-scroll::-webkit-scrollbar { height: 4px; }
+    .promo-scroll::-webkit-scrollbar-thumb { background: var(--slate); border-radius: 2px; }
+    .promo-card { flex: 0 0 320px; scroll-snap-align: start; background: #fff; position: relative; overflow: hidden; }
+    .promo-card .img-wrap { position: relative; overflow: hidden; }
+    .promo-card img { width: 100%; height: 200px; object-fit: cover; transition: transform .35s; }
+    .promo-card:hover img { transform: scale(1.05); }
+    .promo-card .badge { position: absolute; top: 10px; left: 10px; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; padding: 4px 10px; color: #fff; z-index: 1; }
+    .badge-red { background: var(--red); }
+    .badge-yellow { background: var(--yellow); color: #000 !important; }
+    .badge-green { background: var(--green); }
+    .promo-card .body { padding: 20px; }
+    .promo-card .body h3 { font-size: 16px; font-weight: 700; margin-bottom: 6px; }
+    .promo-card .body .hubungi-wa { color: var(--red); font-weight: 600; font-size: 14px; }
+    [data-theme="dark"] .promo-card .body .hubungi-wa { color: #ef5350; }
+
+    /* ===== CLIMAX CTA ===== */
+    .climax { background: var(--dark); color: #fff; text-align: center; padding: 100px 0; position: relative; overflow: hidden; }
+    .climax::before {
+      content: '';
+      position: absolute;
+      top: -100px;
+      left: -100px;
+      width: 300px;
+      height: 300px;
+      background: radial-gradient(circle, rgba(198,40,40,0.06) 0%, transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+    .climax::after {
+      content: '';
+      position: absolute;
+      bottom: -80px;
+      right: -80px;
+      width: 250px;
+      height: 250px;
+      background: radial-gradient(circle, rgba(255,255,255,0.02) 0%, transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+    .climax .label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 4px; color: var(--red); margin-bottom: 16px; }
+    .climax h2 { font-size: clamp(32px, 5vw, 52px); font-weight: 800; line-height: 1.1; margin-bottom: 16px; }
+    .climax p { font-size: 15px; color: var(--slate); max-width: 480px; margin: 0 auto 32px; line-height: 1.7; }
+    .climax-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .climax-actions .btn-red { box-shadow: 0 4px 16px rgba(198,40,40,.3); }
+    .climax-actions .btn-red:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(198,40,40,.4); }
+
+    /* ===== NEWSLETTER ===== */
+    .newsletter { background: var(--red); color: #fff; text-align: center; padding: 80px 0; }
+    .newsletter h2 { font-size: 30px; font-weight: 700; margin-bottom: 8px; }
+    .newsletter p { opacity: .8; margin-bottom: 24px; font-size: 15px; }
+    .newsletter form { display: flex; gap: 0; max-width: 480px; margin: 0 auto; }
+    .newsletter input { flex: 1; padding: 16px 20px; border: none; font-size: 14px; border-radius: 8px 0 0 8px; outline: none; }
+    .newsletter input:focus { box-shadow: inset 0 0 0 2px rgba(255,255,255,.4); }
+    .newsletter .btn-sub { background: var(--dark); color: #fff; padding: 16px 28px; font-weight: 600; font-size: 13px; border-radius: 0 8px 8px 0; transition: opacity .2s; cursor: pointer; }
+    .newsletter .btn-sub:hover { opacity: .85; }
+
+    /* ===== FOOTER ===== */
+    .footer { background: var(--dark); color: #999; padding: 64px 0 0; position: relative; overflow: hidden; }
+    .footer::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, transparent, rgba(198,40,40,.3), rgba(198,40,40,.6), rgba(198,40,40,.3), transparent); }
+    .footer .container { display: grid; grid-template-columns: 2.2fr 1fr 1.2fr; gap: 48px; }
+    .footer h3 { color: #fff; font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 20px; position: relative; padding-bottom: 12px; }
+    .footer h3::after { content: ''; position: absolute; bottom: 0; left: 0; width: 28px; height: 2px; background: var(--red); opacity: .5; }
+    .footer .logo { font-size: 24px; font-weight: 800; color: var(--red); display: flex; align-items: center; }
+    .footer .logo span { color: #fff; }
+    .footer .footer-logo-img { height: 38px; width: auto; display: block; }
+    .footer p { font-size: 13.5px; line-height: 1.8; margin-top: 12px; color: #999; }
+    .footer ul li { margin-bottom: 10px; }
+    .footer ul a { font-size: 14px; color: #999; transition: color .2s; display: inline-flex; align-items: center; gap: 6px; }
+    .footer ul a:hover { color: var(--red); }
+    .footer ul a:hover i { color: var(--red); }
+    .footer .contact-list li { display: flex; align-items: flex-start; gap: 10px; font-size: 13.5px; color: #999; line-height: 1.6; }
+    .footer .contact-list li i { margin-top: 3px; flex-shrink: 0; width: 14px; text-align: center; }
+    .footer .contact-list a { font-size: 13.5px; color: #999; }
+    .footer .footer-social { display: flex; gap: 10px; margin-top: 20px; }
+    .footer .footer-social a { width: 36px; height: 36px; border-radius: 50%; border: 1px solid #333; display: flex; align-items: center; justify-content: center; color: #666; font-size: 15px; transition: all .25s; }
+    .footer .footer-social a:hover { border-color: var(--red); color: #fff; background: rgba(198,40,40,.15); }
+    .footer .trust-badges { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+    .footer .trust-badges span { font-size: 11px; color: #777; padding: 4px 10px; border: 1px solid #333; border-radius: 6px; display: inline-flex; align-items: center; gap: 5px; }
+    .footer-bottom { border-top: 1px solid #333; margin-top: 48px; padding: 20px 0; display: flex; justify-content: space-between; align-items: center; font-size: 13px; color: #666; grid-column: 1 / -1; }
+    .footer-bottom a { color: #999; transition: color .2s; }
+    .footer-bottom a:hover { color: var(--red); }
+    .footer-bottom .to-top { width: 36px; height: 36px; border-radius: 50%; border: 1px solid #333; display: inline-flex; align-items: center; justify-content: center; color: #666; font-size: 14px; transition: all .25s; }
+    .footer-bottom .to-top:hover { border-color: var(--red); color: #fff; background: rgba(198,40,40,.15); }
+    .badge-women { display: inline-block; background: #be185d; color: #fff; padding: 3px 10px; font-size: 11px; font-weight: 600; }
+
+    /* ===== TOAST ===== */
+    .toast-container { position: fixed; top: 80px; right: 20px; z-index: 9999; display: flex; flex-direction: column; gap: 8px; }
+    .toast { background: var(--dark); color: #fff; padding: 14px 24px; font-size: 14px; font-weight: 500; box-shadow: 0 4px 20px rgba(0,0,0,.15); display: flex; align-items: center; gap: 10px; min-width: 280px; transform: translateX(120%); transition: transform .35s ease-out; }
+    .toast.show { transform: translateX(0); }
+    .toast i { font-size: 18px; }
+    .toast-success i { color: var(--green); }
+    .toast-error i { color: var(--red); }
+
+    /* ===== WHATSAPP FAB ===== */
+    .whatsapp-fab { position: fixed; bottom: 80px; right: 20px; z-index: 1001; width: 50px; height: 50px; border-radius: 50%; background: #25d366; color: #fff; font-size: 24px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 16px rgba(37,211,102,.35); transition: transform .2s; }
+    .whatsapp-fab:hover { transform: scale(1.1); }
+
+    /* ===== MOBILE BOTTOM NAV ===== */
+    .bottom-nav { display: none; position: fixed; bottom: 0; left: 0; right: 0; background: #fff; border-top: 1px solid #eee; z-index: 1000; padding: 6px 0 env(safe-area-inset-bottom,6px); }
+    .bottom-nav .container { display: flex; justify-content: space-around; align-items: center; }
+    .bottom-nav a, .bottom-nav button { display: flex; flex-direction: column; align-items: center; gap: 2px; font-size: 10px; color: var(--slate); padding: 6px 12px; background: none; border: none; }
+    .bottom-nav a:hover, .bottom-nav a.active, .bottom-nav button:hover { color: var(--red); }
+    .bottom-nav a i, .bottom-nav button i { font-size: 18px; }
+
+    /* ===== ANIMATIONS ===== */
+    @media (prefers-reduced-motion: no-preference) {
+      @keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+      @keyframes fadeScale { from { opacity: 0; transform: scale(.95); } to { opacity: 1; transform: scale(1); } }
+      .reveal { opacity: 0; transform: translateY(24px); transition: opacity .55s ease-out, transform .55s ease-out; }
+      .reveal.visible { opacity: 1; transform: translateY(0); }
+      .reveal-l { opacity: 0; transform: translateX(-24px); transition: opacity .55s ease-out, transform .55s ease-out; }
+      .reveal-l.visible { opacity: 1; transform: translateX(0); }
+      .reveal-r { opacity: 0; transform: translateX(24px); transition: opacity .55s ease-out, transform .55s ease-out; }
+      .reveal-r.visible { opacity: 1; transform: translateX(0); }
+      .stagger > * { opacity: 0; transform: translateY(16px); transition: opacity .5s ease-out, transform .5s ease-out; }
+      .stagger.visible > * { opacity: 1; transform: translateY(0); }
+      .stagger > :nth-child(1) { transition-delay: .03s; }
+      .stagger > :nth-child(2) { transition-delay: .07s; }
+      .stagger > :nth-child(3) { transition-delay: .11s; }
+      .stagger > :nth-child(4) { transition-delay: .15s; }
+      .stagger > :nth-child(5) { transition-delay: .19s; }
+      .stagger > :nth-child(6) { transition-delay: .23s; }
+      .stagger > :nth-child(7) { transition-delay: .27s; }
+      .stagger > :nth-child(8) { transition-delay: .31s; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .reveal, .reveal-l, .reveal-r, .stagger > * { opacity: 1; transform: none; transition: none; }
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 992px) {
+      .stats-bar .container { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+      .stat-item:not(:last-child)::after { display: none; }
+      .cat-grid { grid-template-columns: repeat(2, 1fr); }
+      .problem-grid { grid-template-columns: repeat(2, 1fr); }
+      .trust-grid { grid-template-columns: repeat(2, 1fr); }
+      .footer .container { grid-template-columns: repeat(2, 1fr); gap: 32px; }
+    }
+    @media (max-width: 768px) {
+      section { padding: 60px 0; }
+      .hero { min-height: 85vh; }
+      .hero h1 { font-size: clamp(34px, 9vw, 44px); }
+      .hero p { font-size: 15px; margin-bottom: 28px; }
+      .hero-badges { gap: 16px; margin-top: 32px; }
+      .cat-grid { grid-template-columns: repeat(2, 1fr); }
+      .cat-card img { height: 200px; }
+      .cat-card .overlay { padding: 16px; }
+      .cat-card h3 { font-size: 15px; }
+      .problem-grid { grid-template-columns: 1fr; }
+      .prob-card .prob-top { padding: 36px 24px 0 24px; }
+      .prob-card .prob-body { padding: 0 24px 28px; }
+      .stats-bar { padding: 24px 0; }
+      .stats-bar .container { grid-template-columns: repeat(2, 1fr); gap: 0; }
+      .stat-item .num { font-size: 32px; }
+      .trust-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+      .trust-item { padding: 24px 16px; }
+      .promo-card { flex: 0 0 270px; }
+      .sec-title { font-size: clamp(24px, 5vw, 32px); }
+      .footer .container { grid-template-columns: 1fr; }
+      .footer { padding-bottom: 70px; }
+      .bottom-nav { display: block; }
+      .whatsapp-fab { bottom: 70px; }
+      .newsletter form { flex-direction: column; }
+      .newsletter input { text-align: center; }
+      .climax { padding: 60px 0; }
+      .climax h2 { font-size: 28px; }
+      .container { padding: 0 20px; }
+    }
+    @media (max-width: 600px) {
+      .container { padding: 0 16px; }
+      .hero h1 { font-size: clamp(28px, 8vw, 36px); margin-bottom: 14px; }
+      .hero p { font-size: 14px; margin-bottom: 22px; }
+      .hero-kicker { font-size: 10px; letter-spacing: 2px; margin-bottom: 14px; }
+      .hero-badges { gap: 10px; margin-top: 24px; }
+      .hero-badge-item { font-size: 11px; gap: 6px; }
+      .hero-badge-item i { font-size: 13px; }
+      .hero { min-height: 80vh; }
+      .cat-card img { height: 130px; }
+      .cat-card .overlay { padding: 12px; }
+      .cat-card h3 { font-size: 13px; }
+      .cat-card .overlay p { font-size: 11px; }
+      .stat-item .num { font-size: 26px; }
+      .stat-item .label { font-size: 11px; }
+      .promo-card { flex: 0 0 230px; }
+      .prob-card h3 { font-size: 16px; }
+      .newsletter h2 { font-size: 24px; }
+      .sec-title { font-size: clamp(20px, 5vw, 26px); }
+      .btn-red, .btn-outline-light, .btn-wa { padding: 10px 20px; font-size: 13px; }
+    }
+    @media (max-width: 480px) {
+      .cat-card img { height: 160px; }
+      .cat-grid { gap: 12px; }
+      .stats-bar .container { gap: 12px; }
+      .stat-item .num { font-size: 26px; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<nav class="navbar" id="navbar">
+  <div class="container">
+    <a href="index.html" class="logo"><img src="img/logo.png" alt="Toko Meubel Murah Semarang" class="logo-img"><span class="logo-text">TOKO MEUBEL MURAH</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="koleksi.html">Koleksi</a></li>
+      <li><a href="cicilan.html">Cicilan</a></li>
+      <li><a href="promo.html">Promo</a></li>
+      <li><a href="kontak.html">Kontak</a></li>
+    </ul>
+    <div class="nav-icons">
+      <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode"><i class="fas fa-moon"></i></button>
+      <button aria-label="Wishlist"><i class="far fa-heart"></i><span class="wishlist-badge">0</span></button>
+    </div>
+    <button class="menu-toggle" id="menuToggle" aria-label="Menu"><i class="fas fa-bars"></i></button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="intro">
+  <div class="hero-bg"></div>
+  <div class="container">
+    <p class="hero-kicker reveal">Toko Meubel Murah Semarang</p>
+    <h1 class="reveal hero-title">Wujudkan<br>Rumah <span class="accent">Idaman</span><br>Anda</h1>
+    <p class="reveal">Furniture berkualitas premium dengan harga bersahabat. Hadirkan kenyamanan dan keindahan untuk setiap sudut rumah Anda.</p>
+    <div class="hero-actions reveal">
+      <a href="koleksi.html" class="btn-red"><i class="fas fa-th-large"></i> Lihat Koleksi</a>
+      <a href="https://wa.me/6281325373999" class="btn-outline-light"><i class="fab fa-whatsapp"></i> Konsultasi</a>
+    </div>
+    <div class="hero-badges reveal">
+      <div class="hero-badge-item"><i class="fas fa-truck"></i> Gratis Ongkir</div>
+      <div class="hero-badge-item"><i class="fas fa-tools"></i> Gratis Rakit</div>
+      <div class="hero-badge-item"><i class="fas fa-shield-alt"></i> Garansi</div>
+      <div class="hero-badge-item"><i class="fas fa-star"></i> 4.3 Rating</div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BANNER -->
+<div class="trust-banner"><i class="fas fa-truck"></i> Gratis Ongkir area Semarang &amp; sekitarnya &mdash; Syarat &amp; ketentuan berlaku, hubungi via WhatsApp</div>
+
+<!-- TRANSITION STRIP -->
+<div class="transition-strip"></div>
+
+<!-- STATS -->
+<section class="stats-bar" id="stats">
+  <div class="container">
+    <div class="stat-item reveal"><div class="num">685+</div><div class="label">Pelanggan Puas</div></div>
+    <div class="stat-item reveal"><div class="num">500+</div><div class="label">Produk Tersedia</div></div>
+    <div class="stat-item reveal"><div class="num">20+</div><div class="label">Tahun Pengalaman</div></div>
+    <div class="stat-item reveal"><div class="num">4.3</div><div class="label">Rating Google</div></div>
+  </div>
+</section>
+
+<!-- CHAPTER 1: MASALAH -->
+<section id="problem">
+  <div class="container">
+    <div class="chapter-header reveal">
+      <p class="sec-label">01 — Masalah</p>
+      <h2 class="sec-title">Cari Mebel Berkualitas<br><span class="red">Tanpa Mahal?</span></h2>
+      <p class="sec-desc">Tiga masalah utama yang sering dihadapi saat beli furniture:</p>
+    </div>
+    <div class="problem-grid stagger">
+      <div class="prob-card">
+        <span class="prob-number">01</span>
+        <div class="prob-top">
+          <div class="icon"><i class="fas fa-tag"></i></div>
+          <h3>Harga Selangit</h3>
+        </div>
+        <div class="prob-body">
+          <p>Furniture berkualitas identik dengan harga mahal. Markup tinggi tanpa kualitas sepadan.</p>
+        </div>
+        <div class="prob-bar"><span></span></div>
+      </div>
+      <div class="prob-card">
+        <span class="prob-number">02</span>
+        <div class="prob-top">
+          <div class="icon"><i class="fas fa-box-open"></i></div>
+          <h3>Kualitas Instan</h3>
+        </div>
+        <div class="prob-body">
+          <p>Produk murah tapi cepat rusak. Material bawah, finishing asal, tidak tahan lama.</p>
+        </div>
+        <div class="prob-bar"><span></span></div>
+      </div>
+      <div class="prob-card">
+        <span class="prob-number">03</span>
+        <div class="prob-top">
+          <div class="icon"><i class="fas fa-money-bill-wave"></i></div>
+          <h3>Ongkir Membengkak</h3>
+        </div>
+        <div class="prob-body">
+          <p>Biaya kirim + rakit bikin kantong jebol. Belum lagi kalau ada kerusakan.</p>
+        </div>
+        <div class="prob-bar"><span></span></div>
+      </div>
+    </div>
+    <div class="chapter-cta reveal">
+      <p>Kami hadir sebagai solusi.</p>
+      <a href="#solution" class="btn-red"><i class="fas fa-arrow-down"></i> Lihat Solusi</a>
+    </div>
+  </div>
+</section>
+
+<!-- CHAPTER 2: PERJALANAN + TESTIMONIAL -->
+<section class="dark" id="journey">
+  <div class="container">
+    <div class="reveal" style="text-align:center">
+      <p class="sec-label">02 — Perjalanan</p>
+      <h2 class="sec-title">Sejak 2015,<br><span class="red">Ribuan Pelanggan</span> Percaya</h2>
+      <p class="sec-desc" style="color:var(--slate);margin-left:auto;margin-right:auto">Dari showroom kecil di Banyumanik, kini jadi destinasi utama furniture murah berkualitas di Semarang.</p>
+    </div>
+    <div class="testimonial-block reveal">
+      <i class="fas fa-quote-left"></i>
+      <blockquote>"Sangat puas beli lemari di sini! Harganya terjangkau, kualitas kayunya bagus, pengiriman gratis sampai rumah di Tembalang."</blockquote>
+      <div class="author">Budi Santoso <span>— Tembalang, Semarang</span></div>
+      <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+    </div>
+    <div class="chapter-cta reveal">
+      <a href="koleksi.html" class="btn-red"><i class="fas fa-th-large"></i> Jelajahi Koleksi</a>
+    </div>
+  </div>
+</section>
+
+<!-- CHAPTER 3: SOLUSI + CATEGORIES -->
+<section id="solution" class="pat-dots">
+  <div class="container">
+    <div class="reveal">
+      <p class="sec-label">03 — Solusi</p>
+      <h2 class="sec-title">Koleksi Lengkap<br><span class="red">Harga Ramah</span></h2>
+      <p class="sec-desc">Dari lemari hingga kursi tamu, semua dengan kualitas terbaik di kelasnya.</p>
+    </div>
+    <div class="cat-grid stagger">
+      <a href="koleksi.html?kategori=kasur-busa" class="cat-card">
+        <img src="https://asset.morefurniture.id/OLYMPIC/GINKO/ginko-4.webp" alt="Kasur Busa" loading="lazy">
+        <div class="overlay"><h3>Kasur Busa</h3><p>9 produk</p></div>
+      </a>
+      <a href="koleksi.html?kategori=lemari" class="cat-card">
+        <img src="https://asset.morefurniture.id/OLYMPIC/HESSIAN/LP/more-3pintu-1.webp" alt="Lemari" loading="lazy">
+        <div class="overlay"><h3>Lemari</h3><p>21 produk</p></div>
+      </a>
+      <a href="koleksi.html?kategori=meja" class="cat-card">
+        <img src="https://asset.morefurniture.id/OLYMPIC/ALMA/SETDTM/dtm-1.webp" alt="Meja Makan" loading="lazy">
+        <div class="overlay"><h3>Meja Makan</h3><p>2 produk</p></div>
+      </a>
+      <a href="koleksi.html?kategori=meja-rias" class="cat-card">
+        <img src="https://asset.morefurniture.id/PRODUCT/p-1145-1724666027-1.webp" alt="Meja Rias" loading="lazy">
+        <div class="overlay"><h3>Meja Rias</h3><p>4 produk</p></div>
+      </a>
+      <a href="koleksi.html?kategori=rak-aksesoris" class="cat-card">
+        <img src="img/activ/open-rack-cabinet-rak-terbuka-lula-orc-4a-activ-furniture.png" alt="Rak & Aksesoris" loading="lazy">
+        <div class="overlay"><h3>Rak & Aksesoris</h3><p>10 produk</p></div>
+      </a>
+      <a href="koleksi.html?kategori=kitchen-set" class="cat-card">
+        <img src="img/activ/kitchen-set-lotus-kc-120-activ-furniture.png" alt="Kitchen Set" loading="lazy">
+        <div class="overlay"><h3>Kitchen Set</h3><p>3 produk</p></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST FEATURES -->
+<section class="alt pat-cross" id="trust">
+  <div class="container">
+    <div class="reveal" style="text-align:center">
+      <p class="sec-label">Layanan</p>
+      <h2 class="sec-title">Kenapa Pilih Kami?</h2>
+      <p class="sec-desc" style="margin-left:auto;margin-right:auto">Kami berkomitmen memberikan pelayanan terbaik untuk setiap pelanggan.</p>
+    </div>
+    <div class="trust-grid stagger">
+      <div class="trust-item"><i class="fas fa-truck"></i><h4>Gratis Ongkir</h4><p>Semarang & sekitarnya</p></div>
+      <div class="trust-item"><i class="fas fa-tools"></i><h4>Gratis Rakit</h4><p>Tim rakit di tempat</p></div>
+      <div class="trust-item"><i class="fas fa-shield-alt"></i><h4>Garansi</h4><p>Kerusakan ditanggung</p></div>
+      <div class="trust-item"><i class="fas fa-headset"></i><h4>CS 08.00-20.00</h4><p>Siap bantu Anda</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIAL CAROUSEL -->
+<section class="alt" id="testimoni">
+  <div class="container">
+    <div class="reveal" style="text-align:center">
+      <p class="sec-label">Testimoni</p>
+      <h2 class="sec-title">Apa Kata <span class="red">Pelanggan</span>?</h2>
+      <p class="sec-desc" style="margin-left:auto;margin-right:auto">Mereka sudah merasakan kualitas furniture kami.</p>
+    </div>
+    <div class="testi-carousel stagger" id="testiCarousel"></div>
+    <div class="testi-dots" id="testiDots" style="display:flex;justify-content:center;gap:8px;margin-top:16px"></div>
+  </div>
+</section>
+
+<!-- SHIPPING ESTIMATE -->
+<section class="pat-diagonal" id="ongkir">
+  <div class="container">
+    <div class="reveal" style="text-align:center">
+      <p class="sec-label">Cek Ongkir</p>
+      <h2 class="sec-title">Estimasi <span class="red">Ongkos Kirim</span></h2>
+      <p class="sec-desc" style="margin-left:auto;margin-right:auto">Pilih kecamatan tujuan untuk estimasi biaya pengiriman.</p>
+    </div>
+    <div class="shipping-card reveal">
+      <div class="ship-row">
+        <select id="shipKecamatan">
+          <option value="">Pilih Kecamatan</option>
+          <option value="banyumanik">Banyumanik</option>
+          <option value="tembalang">Tembalang</option>
+          <option value="pedurungan">Pedurungan</option>
+          <option value="gayamsari">Gayamsari</option>
+          <option value="genuk">Genuk</option>
+          <option value="semarang-timur">Semarang Timur</option>
+          <option value="semarang-barat">Semarang Barat</option>
+          <option value="semarang-utara">Semarang Utara</option>
+          <option value="semarang-selatan">Semarang Selatan</option>
+          <option value="semarang-tengah">Semarang Tengah</option>
+          <option value="mijen">Mijen</option>
+          <option value="gunungpati">Gunungpati</option>
+          <option value="ngaliyan">Ngaliyan</option>
+          <option value="tugu">Tugu</option>
+          <option value="luar-kota">Luar Kota Semarang</option>
+        </select>
+      </div>
+      <button class="btn-check" onclick="checkShipping()"><i class="fas fa-search"></i> Cek Ongkir</button>
+      <div class="ship-result" id="shipResult"></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROMO -->
+<section id="promo" class="pat-diagonal">
+  <div class="container">
+    <div class="reveal" style="text-align:center">
+      <p class="sec-label">Promo</p>
+      <h2 class="sec-title">Produk Terpopuler</h2>
+    </div>
+    <div class="promo-scroll stagger">
+      <div class="promo-card">
+        <div class="img-wrap">
+          <img src="https://images.unsplash.com/photo-1540574163026-643ea20ade25?w=400&q=80" alt="Sofa" loading="lazy">
+          <span class="badge badge-red">Diskon 20%</span>
+        </div>
+        <div class="body">
+          <h3>Sofa Tamu Minimalis</h3>
+          <p><span class="hubungi-wa"><i class="fas fa-phone"></i> Hubungi WA untuk harga</span></p>
+          <a href="https://wa.me/6281325373999?text=Halo,%20saya%20tertarik%20dengan%20Sofa%20Tamu%20Minimalis" target="_blank" class="btn-wa" style="padding:10px 20px;font-size:13px;margin-top:10px"><i class="fab fa-whatsapp"></i> Tanya WA</a>
+        </div>
+      </div>
+      <div class="promo-card">
+        <div class="img-wrap">
+          <img src="https://images.unsplash.com/photo-1503602642458-232111445657?w=400&q=80" alt="Kursi Tamu" loading="lazy">
+          <span class="badge badge-yellow">Terlaris</span>
+        </div>
+        <div class="body">
+          <h3>Set Kursi Tamu</h3>
+          <p><span class="hubungi-wa"><i class="fas fa-phone"></i> Hubungi WA untuk harga</span></p>
+          <a href="https://wa.me/6281325373999?text=Halo,%20saya%20tertarik%20dengan%20Set%20Kursi%20Tamu" target="_blank" class="btn-wa" style="padding:10px 20px;font-size:13px;margin-top:10px"><i class="fab fa-whatsapp"></i> Tanya WA</a>
+        </div>
+      </div>
+      <div class="promo-card">
+        <div class="img-wrap">
+          <img src="https://images.unsplash.com/photo-1586105251261-72a756497a11?w=400&q=80" alt="Lemari" loading="lazy">
+          <span class="badge badge-green">Diskon 15%</span>
+        </div>
+        <div class="body">
+          <h3>Lemari Pakaian 2 Pintu</h3>
+          <p><span class="hubungi-wa"><i class="fas fa-phone"></i> Hubungi WA untuk harga</span></p>
+          <a href="https://wa.me/6281325373999?text=Halo,%20saya%20tertarik%20dengan%20Lemari%20Pakaian%202%20Pintu" target="_blank" class="btn-wa" style="padding:10px 20px;font-size:13px;margin-top:10px"><i class="fab fa-whatsapp"></i> Tanya WA</a>
+        </div>
+      </div>
+      <div class="promo-card">
+        <div class="img-wrap">
+          <img src="https://images.unsplash.com/photo-1567016432779-094069958ea5?w=400&q=80" alt="Spring Bed" loading="lazy">
+          <span class="badge badge-red">Special</span>
+        </div>
+        <div class="body">
+          <h3>Spring Bed Single</h3>
+          <p><span class="hubungi-wa"><i class="fas fa-phone"></i> Hubungi WA untuk harga</span></p>
+          <a href="https://wa.me/6281325373999?text=Halo,%20saya%20tertarik%20dengan%20Spring%20Bed%20Single" target="_blank" class="btn-wa" style="padding:10px 20px;font-size:13px;margin-top:10px"><i class="fab fa-whatsapp"></i> Tanya WA</a>
+        </div>
+      </div>
+      <div class="promo-card">
+        <div class="img-wrap">
+          <img src="https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?w=400&q=80" alt="Meja Kerja" loading="lazy">
+          <span class="badge badge-yellow">Hemat 25%</span>
+        </div>
+        <div class="body">
+          <h3>Meja Kerja Minimalis</h3>
+          <p><span class="hubungi-wa"><i class="fas fa-phone"></i> Hubungi WA untuk harga</span></p>
+          <a href="https://wa.me/6281325373999?text=Halo,%20saya%20tertarik%20dengan%20Meja%20Kerja%20Minimalis" target="_blank" class="btn-wa" style="padding:10px 20px;font-size:13px;margin-top:10px"><i class="fab fa-whatsapp"></i> Tanya WA</a>
+        </div>
+      </div>
+    </div>
+    <div class="chapter-cta reveal">
+      <a href="promo.html" class="btn-red"><i class="fas fa-tags"></i> Lihat Semua Promo</a>
+    </div>
+  </div>
+</section>
+
+<!-- CLIMAX -->
+<section class="climax" id="climax">
+  <div class="container">
+    <div class="reveal">
+      <p class="label">Siap Berbelanja?</p>
+      <h2>Wujudkan Rumah Impian<br><span class="red">Sekarang</span></h2>
+      <p>Kunjungi showroom, konsultasi gratis, dan dapatkan penawaran terbaik untuk furniture impian Anda.</p>
+      <div class="climax-actions">
+        <a href="https://wa.me/6281325373999?text=Halo%20Toko%20Meubel%20Murah,%20saya%20ingin%20konsultasi%20furniture" target="_blank" class="btn-wa" style="padding:16px 36px"><i class="fab fa-whatsapp"></i> Konsultasi Gratis</a>
+        <a href="kontak.html" class="btn-outline-light" style="padding:16px 36px"><i class="fas fa-map-marker-alt"></i> Kunjungi Showroom</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="newsletter reveal">
+  <div class="container">
+    <h2>Dapatkan Info Promo</h2>
+    <p>Masukkan nomor WA kamu, kami kirim promo & diskon eksklusif langsung ke chat!</p>
+    <form onsubmit="window.open('https://wa.me/6281325373999?text=Halo%20saya%20mau%20berlangganan%20info%20promo%20via%20WA','_blank');return false">
+      <input type="tel" placeholder="Masukkan nomor WhatsApp" required>
+      <button type="submit" class="btn-sub">Langganan</button>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div>
+      <div class="logo"><img src="img/logo.png" alt="Toko Meubel Murah Semarang" class="footer-logo-img"><span style="margin-left:8px;color:#c62828;font-weight:800;">TOKO MEUBEL MURAH</span></div>
+      <p>Toko furniture terpercaya di Semarang dengan kualitas terbaik dan harga bersahabat. Melayani sejak 2015.</p>
+      <p class="mt-3"><i class="fas fa-star text-yellow-500 mr-1"></i> Rating 4.3 (685 review)</p>
+      <div class="trust-badges">
+        <span><i class="fas fa-truck"></i> Gratis Ongkir</span>
+        <span><i class="fas fa-tools"></i> Gratis Rakit</span>
+        <span><i class="fas fa-shield-alt"></i> Garansi</span>
+      </div>
+      <div class="footer-social">
+        <a href="https://wa.me/6281325373999" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      </div>
+    </div>
+    <div>
+      <h3>Navigasi</h3>
+      <ul>
+        <li><a href="index.html"><i class="fas fa-chevron-right" style="font-size:8px;color:#666"></i> Home</a></li>
+        <li><a href="koleksi.html"><i class="fas fa-chevron-right" style="font-size:8px;color:#666"></i> Koleksi</a></li>
+        <li><a href="cicilan.html"><i class="fas fa-chevron-right" style="font-size:8px;color:#666"></i> Cicilan</a></li>
+        <li><a href="promo.html"><i class="fas fa-chevron-right" style="font-size:8px;color:#666"></i> Promo</a></li>
+        <li><a href="kontak.html"><i class="fas fa-chevron-right" style="font-size:8px;color:#666"></i> Kontak</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Kontak</h3>
+      <ul class="contact-list">
+        <li><i class="fas fa-map-marker-alt" style="color:var(--red)"></i> Jl. Kr. Rejo Raya No.55, Banyumanik, Semarang</li>
+        <li><a href="tel:+6281325373999"><i class="fas fa-phone" style="color:var(--red)"></i> 0813-2537-3999</a></li>
+        <li><i class="fas fa-clock" style="color:var(--red)"></i> Senin-Minggu: 09.00 - 20.00</li>
+        <li><a href="https://wa.me/6281325373999"><i class="fab fa-whatsapp" style="color:var(--red)"></i> WhatsApp</a></li>
+      </ul>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Toko Mebel Murah Semarang. All rights reserved. <a href="admin.html" class="footer-admin-link"><i class="fas fa-shield-alt"></i> Admin</a></span>
+      <a href="#" class="to-top" aria-label="Kembali ke atas"><i class="fas fa-arrow-up"></i></a>
+    </div>
+  </div>
+</footer>
+
+<div class="toast-container" id="toastContainer"></div>
+
+<a href="https://wa.me/6281325373999?text=Halo%20Toko%20Meubel%20Murah,%20saya%20ingin%20bertanya" class="whatsapp-fab" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i><span class="wa-tooltip">Ada yang bisa dibantu?</span></a>
+
+<nav class="bottom-nav">
+  <div class="container">
+    <a href="index.html" class="active"><i class="fas fa-home"></i> Home</a>
+    <a href="koleksi.html"><i class="fas fa-th-large"></i> Koleksi</a>
+    <a href="cicilan.html"><i class="fas fa-credit-card"></i> Cicilan</a>
+    <button onclick="openWishlist()"><i class="far fa-heart"></i><span class="wishlist-badge">0</span> Wishlist</button>
+    <a href="kontak.html"><i class="fas fa-phone"></i> Kontak</a>
+  </div>
+</nav>
+
+<script src="js/script.js"></script>
+<script>
+window.addEventListener('scroll', function() {
+  var p = document.getElementById('scrollProgress');
+  if (!p) return;
+  var s = window.scrollY, d = document.documentElement.scrollHeight - window.innerHeight;
+  p.style.width = (d > 0 ? (s / d) * 100 : 0) + '%';
+});
+
+// Testimonial data
+const testimonials = [
+  { name: 'Budi Santoso', loc: 'Tembalang', avatar: '', text: 'Sangat puas beli lemari di sini! Harganya terjangkau. Kualitas kayunya bagus, pengiriman gratis.', stars: 5, produk: 'Lemari Pakaian 3 Pintu' },
+  { name: 'Siti Rahmawati', loc: 'Banyumanik', avatar: '', text: 'Spring bednya nyaman banget. Udah 2 tahun masih awet. Recommended banget buat yang cari kasur bagus.', stars: 5, produk: 'Spring Bed Single' },
+  { name: 'Ahmad Fauzi', loc: 'Pedurungan', avatar: '', text: 'Meja makannya elegan, cocok sama interior rumah. Proses pengiriman juga cepat.', stars: 4, produk: 'Set Meja Makan' },
+  { name: 'Dewi Lestari', loc: 'Semarang Barat', avatar: '', text: 'Pelayanan ramah, penjelasan detail. Barang sesuai pesanan. Rakit juga gratis!', stars: 5, produk: 'Meja Rias' },
+  { name: 'Hendra Wijaya', loc: 'Ngaliyan', avatar: '', text: 'Rak dapurnya kokoh, finishing rapi. Harganya juga bersahabat. Langganan di sini terus.', stars: 4, produk: 'Kitchen Set' },
+  { name: 'Rina Marlina', loc: 'Gunungpati', avatar: '', text: 'Belanja furniture di sini solusi tepat buat yg mau bagus tp budget pas-pasan. Top!', stars: 5, produk: 'Rak TV' },
+  { name: 'Agus Prasetyo', loc: 'Tembalang', avatar: '', text: 'Pertama beli lemari, puas, lanjut beli spring bed dan meja rias. Kualitas konsisten.', stars: 5, produk: 'Lemari + Spring Bed' },
+  { name: 'Maya Anggraini', loc: 'Semarang Tengah', avatar: '', text: 'Rekomendasi dari temen, ternyata beneran murah dan bagus. Admin fast respon.', stars: 4, produk: 'Kursi Kantor' },
+];
+const colors = ['#c62828','#2563eb','#2e7d32','#e65100','#7c3aed','#0891b2','#be185d','#ca8a04'];
+function renderTestimonials() {
+  const c = document.getElementById('testiCarousel');
+  if (!c) return;
+  c.innerHTML = testimonials.map(function(t, i) {
+    var starHtml = '';
+    for (var s = 0; s < 5; s++) { starHtml += s < t.stars ? '<i class="fas fa-star"></i>' : '<i class="far fa-star"></i>'; }
+    var initial = t.name.charAt(0).toUpperCase();
+    var bg = colors[i % colors.length];
+    return '<div class="testi-card">' +
+      '<div class="testi-user">' +
+        (t.avatar ? '<img class="testi-avatar" src="' + t.avatar + '" alt="">' : '<div class="testi-avatar" style="background:' + bg + ';color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:18px">' + initial + '</div>') +
+        '<div><div class="testi-name">' + t.name + '</div><div class="testi-loc">' + t.loc + '</div></div>' +
+      '</div>' +
+      '<div class="testi-stars">' + starHtml + '</div>' +
+      '<div class="testi-text">"' + t.text + '"</div>' +
+      '<div class="testi-produk"><i class="fas fa-tag"></i> ' + t.produk + '</div>' +
+    '</div>';
+  }).join('');
+}
+renderTestimonials();
+
+// Testimonial carousel dots
+var testiCarousel = document.getElementById('testiCarousel');
+var testiDots = document.getElementById('testiDots');
+if (testiCarousel && testiDots && testimonials.length > 1) {
+  testiDots.innerHTML = testimonials.map(function(_, i) {
+    return '<span class="testi-dot" data-index="' + i + '" style="width:8px;height:8px;border-radius:50%;background:#ddd;cursor:pointer;transition:background .2s' + (i === 0 ? ';background:#c62828' : '') + '"></span>';
+  }).join('');
+  testiDots.addEventListener('click', function(e) {
+    var dot = e.target.closest('.testi-dot');
+    if (!dot) return;
+    var idx = parseInt(dot.dataset.index);
+    var card = testiCarousel.querySelector('.testi-card');
+    if (card) testiCarousel.scrollTo({ left: card.offsetWidth * idx, behavior: 'smooth' });
+  });
+  testiCarousel.addEventListener('scroll', function() {
+    var card = this.querySelector('.testi-card');
+    if (!card) return;
+    var idx = Math.round(this.scrollLeft / (card.offsetWidth + 20));
+    testiDots.querySelectorAll('.testi-dot').forEach(function(d, i) {
+      d.style.background = i === idx ? '#c62828' : '#ddd';
+    });
+  });
+}
+</script>
+</body>
+</html>

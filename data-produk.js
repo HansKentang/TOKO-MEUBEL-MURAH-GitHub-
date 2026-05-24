@@ -1,0 +1,5509 @@
+// ========== PRODUCT DATABASE ==========
+const products = {
+  // === KASUR BUSA (Olympic Foam) ===
+  ginko: {
+    id: 'ginko',
+    name: 'Olympic Ginko Hybrid® 160x200',
+    category: 'Kasur Busa',
+    image: 'https://asset.morefurniture.id/OLYMPIC/GINKO/ginko-4.webp',
+    images: [
+      'https://asset.morefurniture.id/OLYMPIC/GINKO/ginko-4.webp',
+      'https://asset.morefurniture.id/OLYMPIC/GINKO/ginko-4.webp'
+    ],
+    badge: 'PREMIUM',
+    price: 7280000,
+    variants: ['90x200', '120x200', '140x200', '160x200', '180x200'],
+    description: 'Kasur busa terbaru yang dirancang khusus memenuhi kebutuhan tidur dengan sensasi dingin menyejukkan. Ini adalah pilihan terbaik untuk Anda yang menginginkan tidur pulas dengan cara praktis.',
+    specs: {
+      'Ukuran': '160x200 cm',
+      'Tebal': '28 cm',
+      'Merek': 'Olympic',
+      'Garansi': '20 tahun',
+      'Teknologi': 'Cool Gel Memory Foam',
+      'Densitas': 'Ultra High Density Foam',
+      'Bahan': 'Premium Plush Knit Fabric',
+      'Desain': 'Two Tones Modern Design',
+      'Anti Slip': 'Mattress Grip Pad',
+      'Pengiriman': 'In The Box (Vakum)'
+    },
+    features: [
+      'Ultra High Density Foam – busa kepadatan tinggi untuk daya tahan maksimal',
+      'Cool Gel Memory Foam – sensasi dingin menyejukkan saat tidur',
+      'Premium Plush Knit Fabric – kain rajut premium yang lembut dan mewah',
+      'Two Tones Modern Design – tampilan modern dua warna yang elegan',
+      'Mattress Grip Pad – anti slip agar kasur tidak bergeser',
+      'Tersedia dalam berbagai ukuran: 90x200, 120x200, 140x200, 160x200, 180x200'
+    ],
+    waText: 'Halo, saya tertarik dengan Olympic Ginko Hybrid 160x200 (Rp 7.280.000)'
+  },
+
+  serena: {
+    id: 'serena',
+    name: 'Olympic Serena Hybrid® 160x200',
+    category: 'Kasur Busa',
+    image: 'https://asset.morefurniture.id/OLYMPIC/SERENA/KB/serena-4.webp',
+    images: [
+      'https://asset.morefurniture.id/OLYMPIC/SERENA/KB/serena-4.webp',
+      'https://asset.morefurniture.id/OLYMPIC/SERENA/KB/serena-4.webp'
+    ],
+    badge: 'BESTSELLER',
+    price: 6100000,
+    variants: ['90x200', '120x200', '140x200', '160x200', '180x200'],
+    description: 'Kini tidur semakin mengasyikan dengan sentuhan kenyamanan dan sensasi dingin menyejukkan. Lewat penggunaan busa berdensitas tinggi dan kain rajut halus, tidur nyenyak dengan berbagai preferensi gaya tidur bisa Anda dapatkan.',
+    specs: {
+      'Ukuran': '160x200 cm',
+      'Tebal': '23 cm',
+      'Merek': 'Olympic',
+      'Garansi': '20 tahun',
+      'Teknologi': 'Cool Gel Memory Foam',
+      'Densitas': 'High Density Sleep Foam',
+      'Bahan': 'Soft Knit Fabric',
+      'Desain': 'Two Tones Modern Design',
+      'Anti Slip': 'Mattress Grip Pad',
+      'Pengiriman': 'In The Box (Vakum)'
+    },
+    features: [
+      'Cool Gel Memory Foam – lapisan gel dingin untuk tidur yang nyaman',
+      'High Density Sleep Foam – busa densitas tinggi untuk support optimal',
+      'Soft Knit Fabric – kain rajut lembut dan halus di kulit',
+      'Two Tones Modern Design – desain dua warna yang modern dan segar',
+      'Mattress Grip Pad – alas anti slip bawah kasur',
+      'Tersedia berbagai ukuran: 90x200, 120x200, 140x200, 160x200, 180x200'
+    ],
+    waText: 'Halo, saya tertarik dengan Olympic Serena Hybrid 160x200 (Rp 6.100.000)'
+  },
+
+  valerie: {
+    id: 'valerie',
+    name: 'Olympic Valerie Nature-Nap® 160x200',
+    category: 'Kasur Busa',
+    image: 'https://asset.morefurniture.id/OLYMPIC/VALERIE/valerie-4.webp',
+    images: [
+      'https://asset.morefurniture.id/OLYMPIC/VALERIE/valerie-4.webp',
+      'https://asset.morefurniture.id/OLYMPIC/VALERIE/valerie-4.webp'
+    ],
+    badge: '20 YR',
+    price: 5500000,
+    variants: ['90x200', '120x200', '140x200', '160x200', '180x200'],
+    description: 'Untuk Anda yang menyukai tidur dengan posisi terlentang, Kasur busa dengan tingkat kepadatan keras dibalut kain rajut lembut adalah pilihan yang cocok. Dilengkapi anti slip pada bagian bawah, nikmati tidur nyenyak sepanjang malam.',
+    specs: {
+      'Ukuran': '160x200 cm',
+      'Tebal': '25 cm',
+      'Merek': 'Olympic',
+      'Garansi': '20 tahun',
+      'Densitas': 'Ultra High Density Foam',
+      'Bahan': 'Premium Plush Knit Fabric',
+      'Desain': 'Two Tones Modern Design',
+      'Anti Slip': 'Mattress Grip Pad',
+      'Rekomendasi': 'Ideal untuk Back Sleeper',
+      'Pengiriman': 'In The Box (Vakum)'
+    },
+    features: [
+      'Ideal for Back Sleeper – direkomendasikan untuk tidur telentang',
+      'Ultra High Density Foam – kepadatan busa ekstra tinggi',
+      'Premium Plush Knit Fabric – kain rajut premium yang mewah',
+      'Two Tones Modern Design – desain modern dua warna',
+      'Mattress Grip Pad – alas anti slip bawah kasur',
+      'Tersedia dalam berbagai ukuran: 90x200, 120x200, 140x200, 160x200, 180x200'
+    ],
+    waText: 'Halo, saya tertarik dengan Olympic Valerie Nature-Nap 160x200 (Rp 5.500.000)'
+  },
+
+  olympedic: {
+    id: 'olympedic',
+    name: 'Olympic Olympedic Foam® 160x200',
+    category: 'Kasur Busa',
+    image: 'https://asset.morefurniture.id/PRODUCT/p-1299-1737018089-5.webp',
+    images: [
+      'https://asset.morefurniture.id/PRODUCT/p-1299-1737018089-5.webp',
+      'https://asset.morefurniture.id/PRODUCT/p-1299-1737018089-5.webp'
+    ],
+    badge: '15 YR',
+    price: 5160000,
+    variants: ['90x200', '120x200', '140x200', '160x200', '180x200'],
+    description: 'Memaksimalkan istirahat Anda dengan daya tahan lama dan lapisan busa berdensitas lebih tinggi. Cocok untuk Anda yang menginginkan kasur busa dengan kualitas premium dan harga terjangkau.',
+    specs: {
+      'Ukuran': '160x200 cm',
+      'Tebal': '25 cm',
+      'Merek': 'Olympic',
+      'Garansi': '15 tahun',
+      'Densitas': 'Ultra High Density Foam',
+      'Bahan': 'Premium Plush Knit Fabric',
+      'Rekomendasi': 'Ideal untuk Back Sleeper',
+      'Tipe': 'Durable Foam Comfort'
+    },
+    features: [
+      'Ideal for Back Sleeper – nyaman untuk tidur telentang',
+      'Ultra High Density Foam – busa kepadatan tinggi',
+      'Durable Foam Comfort – kenyamanan busa yang tahan lama',
+      'Premium Plush Knit Fabric – kain rajut premium lembut',
+      'Tersedia dalam berbagai ukuran: 90x200, 120x200, 140x200, 160x200, 180x200'
+    ],
+    waText: 'Halo, saya tertarik dengan Olympic Olympedic Foam 160x200 (Rp 5.160.000)'
+  },
+
+  zenitha: {
+    id: 'zenitha',
+    name: 'Olympic Zenitha® 160x200',
+    category: 'Kasur Busa',
+    image: 'https://asset.morefurniture.id/OLYMPIC/ZENITHA/zenitha-4.webp',
+    images: [
+      'https://asset.morefurniture.id/OLYMPIC/ZENITHA/zenitha-4.webp',
+      'https://asset.morefurniture.id/OLYMPIC/ZENITHA/zenitha-4.webp'
+    ],
+    badge: '',
+    price: 4520000,
+    variants: ['90x200', '120x200', '140x200', '160x200', '180x200'],
+    description: 'Kasur busa andalan yang bisa membuat Anda tidur lelap dengan senyuman. Memiliki berbagai fitur esensial yang bisa kamu dapatkan dengan harga terjangkau. Selamat tidur & mimpi indah!',
+    specs: {
+      'Ukuran': '160x200 cm',
+      'Tebal': '20 cm',
+      'Merek': 'Olympic',
+      'Garansi': '15 tahun',
+      'Densitas': 'High Density Sleep Foam',
+      'Bahan': 'Soft Knit Fabric',
+      'Desain': 'Two Tones Modern Design',
+      'Anti Slip': 'Mattress Grip Pad',
+      'Rekomendasi': 'Ideal untuk Back Sleeper'
+    },
+    features: [
+      'Ideal for Back Sleeper – cocok untuk posisi tidur telentang',
+      'High Density Sleep Foam – busa densitas tinggi berkualitas',
+      'Soft Knit Fabric – kain rajut lembut dan halus',
+      'Two Tones Modern Design – tampilan modern elegan',
+      'Mattress Grip Pad – anti slip bawah kasur',
+      'Tersedia dalam berbagai ukuran: 90x200, 120x200, 140x200, 160x200, 180x200'
+    ],
+    waText: 'Halo, saya tertarik dengan Olympic Zenitha 160x200 (Rp 4.520.000)'
+  },
+
+  irish: {
+    id: 'irish',
+    name: 'Olympic Irish® 160x200',
+    category: 'Kasur Busa',
+    image: 'https://asset.morefurniture.id/PRODUCT/p-1009-1712202816-2.webp',
+    images: [
+      'https://asset.morefurniture.id/PRODUCT/p-1009-1712202816-2.webp',
+      'https://asset.morefurniture.id/PRODUCT/p-1009-1712202816-2.webp'
+    ],
+    badge: '',
+    price: 5160000,
+    variants: ['90x200', '120x200', '140x200', '160x200', '180x200'],
+    description: 'Kasur busa dengan kualitas teknologi Jerman no.1, sehingga memberikan pengalaman tidur yang lebih baik. Dilengkapi lapisan tambahan (Euro Top) dibalut kain rajut halus, akan membuat Anda makin betah berlama-lama di atas kasur.',
+    specs: {
+      'Ukuran': '160x200 cm',
+      'Tebal': '25 cm',
+      'Merek': 'Olympic',
+      'Garansi': '15 tahun',
+      'Densitas': 'High Density Sleep Foam',
+      'Bahan': 'Soft Knit Fabric',
+      'Tipe': 'Euro Top',
+      'Rekomendasi': 'Ideal untuk Back Sleeper',
+      'Teknologi': 'Jerman'
+    },
+    features: [
+      'High Density Sleep Foam – busa densitas tinggi',
+      'Euro Top – lapisan tambahan untuk kenyamanan ekstra',
+      'Soft Knit Fabric – kain rajut halus dan nyaman',
+      'Ideal for Back Sleeper – cocok untuk tidur telentang',
+      'Teknologi Jerman no.1 – kualitas terpercaya',
+      'Tersedia dalam berbagai ukuran: 90x200, 120x200, 140x200, 160x200, 180x200'
+    ],
+    waText: 'Halo, saya tertarik dengan Olympic Irish 160x200 (Rp 5.160.000)'
+  },
+
+  jove: {
+    id: 'jove',
+    name: 'Olympic Jove® 160x200',
+    category: 'Kasur Busa',
+    image: 'https://asset.morefurniture.id/PRODUCT/p-1011-1713858648-3.webp',
+    images: [
+      'https://asset.morefurniture.id/PRODUCT/p-1011-1713858648-3.webp',
+      'https://asset.morefurniture.id/PRODUCT/p-1011-1713858648-3.webp'
+    ],
+    badge: '',
+    price: 4180000,
+    variants: ['90x200', '120x200', '140x200', '160x200', '180x200'],
+    description: 'Gabungan desain yang stylish dan densitas busa tinggi, menjadikan kasur ini pilihan ideal untuk Anda yang menghargai estetika modern dan kualitas tidur optimal.',
+    specs: {
+      'Ukuran': '160x200 cm',
+      'Tebal': '22 cm',
+      'Merek': 'Olympic',
+      'Garansi': '15 tahun',
+      'Densitas': 'High Density Sleep Foam',
+      'Bahan': 'Soft Knit Fabric',
+      'Desain': 'Two Tones Modern Design'
+    },
+    features: [
+      'High Density Sleep Foam – kualitas tidur optimal',
+      'Soft Knit Fabric – kain rajut lembut dan halus',
+      'Two Tones Modern Design – desain stylish dan modern',
+      'Tersedia berbagai ukuran: 90x200, 120x200, 140x200, 160x200, 180x200'
+    ],
+    waText: 'Halo, saya tertarik dengan Olympic Jove 160x200 (Rp 4.180.000)'
+  },
+
+  iliad: {
+    id: 'iliad',
+    name: 'Olympic Iliad® 160x200',
+    category: 'Kasur Busa',
+    image: 'https://asset.morefurniture.id/PRODUCT/p-1010-1712211834-2.webp',
+    images: [
+      'https://asset.morefurniture.id/PRODUCT/p-1010-1712211834-2.webp',
+      'https://asset.morefurniture.id/PRODUCT/p-1010-1712211834-2.webp'
+    ],
+    badge: '',
+    price: 3790000,
+    variants: ['90x200', '120x200', '140x200', '160x200', '180x200'],
+    description: 'Kasur busa yang menawarkan fleksibilitas dengan 2 pilihan ketinggian yang dapat disesuaikan preferensi kebutuhan tidur Anda. Pastinya memberikan pengalaman tidur yang lebih personal.',
+    specs: {
+      'Ukuran': '160x200 cm',
+      'Tebal': '20 cm',
+      'Merek': 'Olympic',
+      'Garansi': '10 tahun',
+      'Densitas': 'High Density Sleep Foam',
+      'Bahan': 'Soft Knit Fabric',
+      'Fleksibilitas': '2 pilihan ketinggian'
+    },
+    features: [
+      'High Density Sleep Foam – kualitas tidur optimal',
+      'Soft Knit Fabric – kain rajut lembut dan halus',
+      '2 pilihan ketinggian – sesuaikan preferensi tidur Anda',
+      'Tersedia dalam berbagai ukuran: 90x200, 120x200, 140x200, 160x200, 180x200'
+    ],
+    waText: 'Halo, saya tertarik dengan Olympic Iliad 160x200 (Rp 3.790.000)'
+  },
+
+  somnus: {
+    id: 'somnus',
+    name: 'Olympic Somnus® 160x200 (Blue)',
+    category: 'Kasur Busa',
+    image: 'https://asset.morefurniture.id/PRODUCT/p-1012-1712212309-2.webp',
+    images: [
+      'https://asset.morefurniture.id/PRODUCT/p-1012-1712212309-2.webp',
+      'https://asset.morefurniture.id/PRODUCT/p-1012-1712212309-2.webp'
+    ],
+    badge: 'NEW',
+    price: 3180000,
+    variants: ['90x200', '120x200', '140x200', '160x200', '180x200'],
+    description: 'Dengan kombinasi keindahan dan keawetan, kasur busa ini menjadi pilihan utama untuk Anda yang menyukai tidur yang nyaman dan bergaya. Desain elegan dengan bahan jacquard berkualitas.',
+    specs: {
+      'Ukuran': '160x200 cm',
+      'Tebal': '18 cm',
+      'Merek': 'Olympic',
+      'Garansi': '10 tahun',
+      'Densitas': 'High Density Sleep Foam',
+      'Bahan': 'Durable Jacquard Fabric',
+      'Warna': 'Blue'
+    },
+    features: [
+      'High Density Sleep Foam – support optimal untuk tidur',
+      'Durable Jacquard Fabric – kain jacquard berkualitas dan awet',
+      'Desain elegan dengan warna Blue',
+      'Tersedia dalam berbagai ukuran: 90x200, 120x200, 140x200, 160x200, 180x200'
+    ],
+    waText: 'Halo, saya tertarik dengan Olympic Somnus 160x200 (Rp 3.180.000)'
+  },
+
+  // === MEJA ===
+  dtm_alma_6s: {
+    id: 'dtm_alma_6s',
+    name: 'Olympic DTM ALMA 6S Meja Makan',
+    category: 'Meja',
+    image: 'https://asset.morefurniture.id/OLYMPIC/ALMA/SETDTM/dtm-1.webp',
+    images: [
+      'https://asset.morefurniture.id/OLYMPIC/ALMA/SETDTM/dtm-1.webp',
+      'https://asset.morefurniture.id/OLYMPIC/ALMA/SETDTM/dtm-2.webp',
+      'https://asset.morefurniture.id/OLYMPIC/ALMA/SETDTM/dtm-3.webp',
+      'https://asset.morefurniture.id/OLYMPIC/ALMA/SETDTM/dtm-4.webp',
+      'https://asset.morefurniture.id/OLYMPIC/ALMA/SETDTM/dtm-5.webp',
+      'https://asset.morefurniture.id/OLYMPIC/ALMA/SETDTM/dtm-6.webp',
+      'https://asset.morefurniture.id/OLYMPIC/ALMA/SETDTM/dtm-7.webp',
+      'https://asset.morefurniture.id/OLYMPIC/ALMA/SETDTM/dtm-8.webp'
+    ],
+    badge: '',
+    price: 3500000,
+    description: 'Set meja makan 6 kursi dengan desain ALMA yang elegan. Meja MDF 24mm dengan finishing Natural Light Wood dipadukan aksen Creambone yang hangat.',
+    specs: {
+      'Dimensi Meja': '1500 x 800 x 750 mm',
+      'Dimensi Kursi': '420 x 430 x 830 mm',
+      'Material Meja': 'MDF 24 mm',
+      'Rangka Kursi': 'Plastik',
+      'Dudukan Kursi': 'MDF 12 mm',
+      'Finishing': 'PVC Creambone, Paper Spray Gloss',
+      'Warna': 'Natural Light Wood + Creambone'
+    },
+    features: [
+      'Set 6 kursi – cocok untuk keluarga',
+      'Natural Light Wood finish – tampilan natural',
+      'Creambone accents – desain modern dan elegan',
+      'MDF 24mm premium – kokoh dan tahan lama'
+    ],
+    waText: 'Halo, saya tertarik dengan Olympic DTM ALMA 6S Meja Makan (Rp 3.500.000)'
+  },
+
+  dtm_marble_6s: {
+    id: 'dtm_marble_6s',
+    name: 'Olympic DTM MARBLE 6S Meja Makan',
+    category: 'Meja',
+    image: 'https://asset.morefurniture.id/OLYMPIC/MARBLE/SETDTM/dtm-1.webp',
+    images: [
+      'https://asset.morefurniture.id/OLYMPIC/MARBLE/SETDTM/dtm-1.webp',
+      'https://asset.morefurniture.id/OLYMPIC/MARBLE/SETDTM/dtm-2.webp',
+      'https://asset.morefurniture.id/OLYMPIC/MARBLE/SETDTM/dtm-3.webp',
+      'https://asset.morefurniture.id/OLYMPIC/MARBLE/SETDTM/dtm-4.webp',
+      'https://asset.morefurniture.id/OLYMPIC/MARBLE/SETDTM/dtm-5.webp',
+      'https://asset.morefurniture.id/OLYMPIC/MARBLE/SETDTM/dtm-6.webp',
+      'https://asset.morefurniture.id/OLYMPIC/MARBLE/SETDTM/dtm-7.webp'
+    ],
+    badge: 'PREMIUM',
+    price: 5500000,
+    description: 'Set meja makan 6 kursi dengan finishing marmer putih premium. MDF 30mm dengan PVC White Marble dan kaki besi powder coating.',
+    specs: {
+      'Dimensi Meja': '1500 x 800 x 750 mm',
+      'Dimensi Kursi': '420 x 430 x 830 mm',
+      'Top Meja': 'MDF 30 mm + PVC White Marble',
+      'Kaki Meja': 'Besi 20x20 mm (Powder Coating)',
+      'Warna': 'White Marble + Black Marble'
+    },
+    features: [
+      'Set 6 kursi – mewah dan lengkap',
+      'White Marble surface – tampilan mewah seperti marmer',
+      'Kaki besi powder coating – kokoh, anti karat',
+      'MDF 30mm top table – sangat kokoh dan stabil'
+    ],
+    waText: 'Halo, saya tertarik dengan Olympic DTM MARBLE 6S Meja Makan (Rp 5.500.000)'
+  },
+
+    // === MEJA RIAS (Dressing Table Series) ===
+  mr_helena: {
+    id: 'mr_helena',
+    name: 'Olympic MR HELENA Meja Rias',
+    category: 'Meja Rias',
+    image: 'https://asset.morefurniture.id/PRODUCT/p-1145-1724666027-1.webp',
+    images: ['https://asset.morefurniture.id/PRODUCT/p-1145-1724666027-1.webp'],
+    badge: 'LED',
+    price: 2750000,
+    description: 'Meja rias seri HELENA dengan finishing Sanremo Light dan White. Dilengkapi lampu LED Hollywood yang mewah, cermin lebar, rak penyimpanan, dan puff fabric yang elegan.',
+    specs: {
+      'Ukuran': '896 x 398 x 1356 mm',
+      'Material': 'PB Paper',
+      'Warna': 'Sanremo Light | White',
+      'Fitur': 'LED Hollywood Lights, Wide Mirror, Shelves, Fabric Puff'
+    },
+    features: [
+      'LED Hollywood Lights – lampu rias mewah di sekeliling cermin',
+      'Wide Mirror – cermin lebar untuk riasan yang nyaman',
+      'Shelves – rak penyimpanan luas',
+      'Fabric Puff – puff dudukan empuk elegan',
+      'Finishing Sanremo Light – tampilan mewah dan bersih'
+    ],
+    waText: 'Halo, saya tertarik dengan Olympic MR HELENA Meja Rias (Rp 2.750.000)'
+  },
+
+  mr_navaro: {
+    id: 'mr_navaro',
+    name: 'Olympic MR NAVARO Meja Rias',
+    category: 'Meja Rias',
+    image: 'https://asset.morefurniture.id/OLYMPIC/NAVARO/MR/more-mrnavaro-1.webp',
+    images: ['https://asset.morefurniture.id/OLYMPIC/NAVARO/MR/more-mrnavaro-1.webp'],
+    badge: 'SLIDING',
+    price: 2500000,
+    description: 'Meja rias seri NAVARO dengan cermin sliding full-length. Tersedia warna SO Cream, Silver, dan White. Dilengkapi laci penyimpanan, gantungan, dan puff.',
+    specs: {
+      'Ukuran': '795 x 395 x 1610 mm',
+      'Material': 'PB Paper',
+      'Warna': 'SO Cream | Silver | White',
+      'Fitur': 'Full-Length Mirror Slide, Storage Drawer, Puff'
+    },
+    features: [
+      'Full-Length Wardrobe Mirror Slide – cermin panjang geser',
+      'Storage Drawer – laci penyimpanan luas',
+      'Hanger – gantungan untuk pakaian/jaket',
+      'Puff – dudukan rias yang nyaman',
+      'Pilihan warna SO Cream, Silver, White'
+    ],
+    waText: 'Halo, saya tertarik dengan Olympic MR NAVARO Meja Rias (Rp 2.500.000)'
+  },
+
+  mr_seamus_n: {
+    id: 'mr_seamus_n',
+    name: 'Olympic MR SEAMUS N Meja Rias',
+    category: 'Meja Rias',
+    image: 'https://asset.morefurniture.id/OLYMPIC/SEAMUS/MR/MR%20Seamus%201.webp',
+    images: ['https://asset.morefurniture.id/OLYMPIC/SEAMUS/MR/MR%20Seamus%201.webp'],
+    badge: 'LED',
+    price: 2200000,
+    description: 'Meja rias seri SEAMUS N dengan desain modern minimalis. Dilengkapi lampu LED terintegrasi, rak sekat ganda, dan ruang kaki yang lega. Pilihan warna White dan Pinewood natural.',
+    specs: {
+      'Ukuran': '800 x 398 x 1400 mm',
+      'Material': 'PB Paper',
+      'Warna': 'White | Pinewood',
+      'Fitur': 'Integrated LED Bulbs, Dual Side Tier Shelving, Compact Leg-Room'
+    },
+    features: [
+      'Integrated LED Bulbs – lampu LED terintegrasi hemat energi',
+      'Dual Side Tier Shelving – rak sekat ganda di kedua sisi',
+      'Compact Leg-Room – ruang kaki lega dan nyaman',
+      'Desain modern minimalis',
+      'Pilihan warna White atau Pinewood natural'
+    ],
+    waText: 'Halo, saya tertarik dengan Olympic MR SEAMUS N Meja Rias (Rp 2.200.000)'
+  },
+
+  mr_palazio: {
+    id: 'mr_palazio',
+    name: 'Olympic MR PALAZIO Meja Rias',
+    category: 'Meja Rias',
+    image: 'https://asset.morefurniture.id/PRODUCT/p-722-1695368424-1.webp',
+    images: ['https://asset.morefurniture.id/PRODUCT/p-722-1695368424-1.webp'],
+    badge: 'LAMPU',
+    price: 2350000,
+    description: 'Meja rias seri PALAZIO dengan desain putih minimalis yang elegan. Dilengkapi lampu studio premium 3 warna, organizer samping tinggi, 3 laci, dan bantal duduk nyaman.',
+    specs: {
+      'Ukuran': '800 x 398 x 1593 mm',
+      'Material': 'PB Paper',
+      'Warna': 'White',
+      'Fitur': 'Premium Studio Bulbs (3 warna), Tall Outer Organizers, 3-Drawer Array, Cushion'
+    },
+    features: [
+      'Premium Studio Bulbs – lampu dengan 3 pilihan warna cahaya',
+      'Tall Outer Organizers – organizer samping tinggi',
+      '3-Drawer Array – 3 laci penyimpanan',
+      'Cushion – bantal duduk nyaman',
+      'Desain putih minimalis elegan'
+    ],
+    waText: 'Halo, saya tertarik dengan Olympic MR PALAZIO Meja Rias (Rp 2.350.000)'
+  },
+
+  // === LEMARI PAKAIAN (PB Paper Series) ===
+  lp_hessian_3p: {
+    id: 'lp_hessian_3p',
+    name: 'Olympic LP HESSIAN — Lemari Pakaian Premium',
+    category: 'Lemari',
+    image: 'https://asset.morefurniture.id/OLYMPIC/HESSIAN/LP/more-3pintu-1.webp',
+    images: ['https://asset.morefurniture.id/OLYMPIC/HESSIAN/LP/more-3pintu-1.webp'],
+    badge: 'PREMIUM',
+    price: 2800000,
+    description: 'Lemari pakaian seri HESSIAN dengan material PB Paper premium. Finishing Fabric pada permukaan memberikan tampilan tekstur yang unik dan elegan. Tersedia warna White.',
+    specs: {
+      'Material': 'PB Paper (Premium)',
+      'Warna': 'White | Fabric',
+      'Grade': 'Premium'
+    },
+    features: [
+      'Material PB Paper premium – kokoh dan tahan lama',
+      'Finishing Fabric – tekstur unik dan elegan',
+      'Warna White netral – cocok berbagai tema ruangan',
+      'Desain minimalis modern'
+    ],
+    variants: ['2 Pintu (800 x 430 x 1809 mm)', '3 Pintu (1200 x 430 x 1809 mm)'],
+    waText: 'Halo, saya tertarik dengan Olympic LP HESSIAN (Rp 2.800.000)'
+  },
+
+  lp_navaro_3p: {
+    id: 'lp_navaro_3p',
+    name: 'Olympic LP NAVARO — Lemari Pakaian Premium',
+    category: 'Lemari',
+    image: 'https://asset.morefurniture.id/OLYMPIC/NAVARO/LP/3pintu-1.webp',
+    images: ['https://asset.morefurniture.id/OLYMPIC/NAVARO/LP/3pintu-1.webp'],
+    badge: 'PREMIUM',
+    price: 2900000,
+    description: 'Lemari pakaian seri NAVARO dengan desain elegan. Tersedia pilihan warna SO Cream, Silver, dan White yang fleksibel untuk berbagai konsep ruangan.',
+    specs: {
+      'Material': 'PB Paper (Premium)',
+      'Warna': 'SO Cream | Silver | White',
+      'Grade': 'Premium'
+    },
+    features: [
+      'Material PB Paper premium – awet dan tahan lama',
+      'Pilihan warna SO Cream, Silver, White',
+      'Desain elegan dan modern',
+      'Cocok untuk kamar tidur atau kamar anak'
+    ],
+    variants: ['2 Pintu (800 x 430 x 1809 mm)', '3 Pintu (1200 x 430 x 1809 mm)'],
+    waText: 'Halo, saya tertarik dengan Olympic LP NAVARO (Rp 2.900.000)'
+  },
+
+  lp_helena_3p: {
+    id: 'lp_helena_3p',
+    name: 'Olympic LP HELENA — Lemari Pakaian Premium',
+    category: 'Lemari',
+    image: 'https://asset.morefurniture.id/OLYMPIC/HELENA/LP/more-3pintu-1.webp',
+    images: ['https://asset.morefurniture.id/OLYMPIC/HELENA/LP/more-3pintu-1.webp'],
+    badge: 'PREMIUM',
+    price: 3100000,
+    description: 'Lemari pakaian seri HELENA dengan finishing Sanremo Light yang elegan. Kombinasi warna Sanremo Light dan White memberikan kesan mewah dan bersih.',
+    specs: {
+      'Material': 'PB Paper (Premium)',
+      'Warna': 'Sanremo Light | White',
+      'Grade': 'Premium'
+    },
+    features: [
+      'Finishing Sanremo Light – tampilan elegan dan mewah',
+      'Material PB Paper premium – kokoh dan tahan lama',
+      'Desain modern dengan kombinasi warna eksklusif',
+      'Cocok untuk kamar tidur utama'
+    ],
+    variants: ['2 Pintu (800 x 430 x 1809 mm)', '3 Pintu (1200 x 430 x 1809 mm)'],
+    waText: 'Halo, saya tertarik dengan Olympic LP HELENA (Rp 3.100.000)'
+  },
+
+  lp_alphin_3p: {
+    id: 'lp_alphin_3p',
+    name: 'Olympic LP ALPHIN — Lemari Pakaian Premium',
+    category: 'Lemari',
+    image: 'https://asset.morefurniture.id/OLYMPIC/ALPHIN/LP/3pintu-1.webp',
+    images: ['https://asset.morefurniture.id/OLYMPIC/ALPHIN/LP/3pintu-1.webp'],
+    badge: 'PREMIUM',
+    price: 3000000,
+    description: 'Lemari pakaian seri ALPHIN dengan motif Sonoma Alphina yang natural. Kombinasi warna Sonoma Alphina dan White menghadirkan nuansa alami dan segar.',
+    specs: {
+      'Material': 'PB Paper (Premium)',
+      'Warna': 'Sonoma Alphina | White',
+      'Grade': 'Premium'
+    },
+    features: [
+      'Motif Sonoma Alphina – tampilan natural dan hangat',
+      'Material PB Paper premium',
+      'Kombinasi dengan White – kesan bersih dan modern',
+      'Cocok untuk kamar anak maupun utama'
+    ],
+    variants: ['2 Pintu (800 x 430 x 1809 mm)', '3 Pintu (1200 x 430 x 1809 mm)'],
+    waText: 'Halo, saya tertarik dengan Olympic LP ALPHIN (Rp 3.000.000)'
+  },
+
+  lp_alana_3p: {
+    id: 'lp_alana_3p',
+    name: 'Olympic LP ALANA — Lemari Pakaian Premium',
+    category: 'Lemari',
+    image: 'https://asset.morefurniture.id/PRODUCT/p-1043-1715071058-1.webp',
+    images: ['https://asset.morefurniture.id/PRODUCT/p-1043-1715071058-1.webp'],
+    badge: 'PREMIUM',
+    price: 3100000,
+    description: 'Lemari pakaian seri ALANA dengan kombinasi warna White dan Dark Walnut. Perpaduan klasik dan modern yang elegan.',
+    specs: {
+      'Material': 'PB Paper (Premium)',
+      'Warna': 'White - Dark Walnut',
+      'Grade': 'Premium'
+    },
+    features: [
+      'Kombinasi White + Dark Walnut – elegan dan timeless',
+      'Material PB Paper premium',
+      'Desain klasik modern yang fleksibel',
+      'Cocok untuk berbagai konsep interior'
+    ],
+    variants: ['2 Pintu (800 x 430 x 1809 mm)', '3 Pintu (1200 x 430 x 1809 mm)'],
+    waText: 'Halo, saya tertarik dengan Olympic LP ALANA (Rp 3.100.000)'
+  },
+
+  lp_alora_3p: {
+    id: 'lp_alora_3p',
+    name: 'Olympic LP ALORA — Lemari Pakaian Premium',
+    category: 'Lemari',
+    image: 'https://asset.morefurniture.id/PRODUCT/p-1044-1715072228-1.webp',
+    images: ['https://asset.morefurniture.id/PRODUCT/p-1044-1715072228-1.webp'],
+    badge: 'PREMIUM',
+    price: 3000000,
+    description: 'Lemari pakaian seri ALORA dengan pilihan warna Dark Walnut atau White. Desain premium dengan finishing elegan.',
+    specs: {
+      'Material': 'PB Paper (Premium)',
+      'Warna': 'Dark Walnut | White',
+      'Grade': 'Premium'
+    },
+    features: [
+      'Pilihan warna Dark Walnut atau White',
+      'Material PB Paper premium',
+      'Desain premium dengan finishing elegan',
+      'Cocok untuk kamar tidur utama'
+    ],
+    variants: ['2 Pintu (800 x 430 x 1809 mm)', '3 Pintu (1200 x 430 x 1809 mm)'],
+    waText: 'Halo, saya tertarik dengan Olympic LP ALORA (Rp 3.000.000)'
+  },
+
+  // === LEMARI PAKAIAN (Lite / Minimalist Series) ===
+  lp_evrin_3p: {
+    id: 'lp_evrin_3p',
+    name: 'Olympic LP EVRIN — Lemari Pakaian Minimalis',
+    category: 'Lemari',
+    image: 'https://asset.morefurniture.id/PRODUCT/p-1042-1715069755-1.webp',
+    images: ['https://asset.morefurniture.id/PRODUCT/p-1042-1715069755-1.webp'],
+    badge: 'MINIMALIS',
+    price: 1900000,
+    description: 'Lemari pakaian seri EVRIN dari koleksi Minimalist. Finishing Whitewood dan White dengan desain simpel dan fungsional. Harga terjangkau untuk kebutuhan sehari-hari.',
+    specs: {
+      'Material': 'PB Paper (Lite)',
+      'Warna': 'Whitewood | White',
+      'Grade': 'Lite (Minimalist Series)'
+    },
+    features: [
+      'Desain minimalis simpel dan fungsional',
+      'Pilihan warna Whitewood atau White',
+      'Harga terjangkau – cocok untuk kebutuhan dasar',
+      'Material PB Paper berkualitas'
+    ],
+    variants: ['2 Pintu (800 x 430 x 1809 mm)', '3 Pintu (1200 x 430 x 1809 mm)'],
+    waText: 'Halo, saya tertarik dengan Olympic LP EVRIN (Rp 1.900.000)'
+  },
+
+  lp_leno_3p: {
+    id: 'lp_leno_3p',
+    name: 'Olympic LP LENO — Lemari Pakaian Minimalis',
+    category: 'Lemari',
+    image: 'https://asset.morefurniture.id/OLYMPIC/LENO/LP/LP%20Leno%203P%201.webp',
+    images: ['https://asset.morefurniture.id/OLYMPIC/LENO/LP/LP%20Leno%203P%201.webp'],
+    badge: 'MINIMALIS',
+    price: 1800000,
+    description: 'Lemari pakaian seri LENO dari koleksi Minimalist dengan finishing White polos. Desain simpel, bersih, dan cocok untuk kamar dengan konsep minimalis.',
+    specs: {
+      'Material': 'PB Paper (Lite)',
+      'Warna': 'White',
+      'Grade': 'Lite (Minimalist Series)'
+    },
+    features: [
+      'Desain minimalis putih bersih',
+      'Harga sangat terjangkau',
+      'Cocok untuk kamar kost atau kamar anak',
+      'Material PB Paper berkualitas'
+    ],
+    variants: ['2 Pintu (800 x 430 x 1809 mm)', '3 Pintu (1200 x 430 x 1809 mm)'],
+    waText: 'Halo, saya tertarik dengan Olympic LP LENO (Rp 1.800.000)'
+  },
+
+  lp_seamus_3p: {
+    id: 'lp_seamus_3p',
+    name: 'Olympic LP SEAMUS — Lemari Pakaian Minimalis',
+    category: 'Lemari',
+    image: 'https://asset.morefurniture.id/OLYMPIC/SEAMUS/LP/LP%20Seamus%203P%201.webp',
+    images: ['https://asset.morefurniture.id/OLYMPIC/SEAMUS/LP/LP%20Seamus%203P%201.webp'],
+    badge: 'MINIMALIS',
+    price: 1900000,
+    description: 'Lemari pakaian seri SEAMUS dari koleksi Minimalist. Pilihan warna White atau Pinewood dengan desain natural yang hangat.',
+    specs: {
+      'Material': 'PB Paper (Lite)',
+      'Warna': 'White | Pinewood',
+      'Grade': 'Lite (Minimalist Series)'
+    },
+    features: [
+      'Pilihan warna White atau Pinewood natural',
+      'Desain minimalis dengan sentuhan natural',
+      'Harga terjangkau',
+      'Material PB Paper berkualitas'
+    ],
+    variants: ['2 Pintu (800 x 430 x 1809 mm)', '3 Pintu (1200 x 430 x 1809 mm)'],
+    waText: 'Halo, saya tertarik dengan Olympic LP SEAMUS (Rp 1.900.000)'
+  },
+
+  // === LEMARI PAKAIAN ANAK (Kids Series) ===
+  lpk_avengers: {
+    id: 'lpk_avengers',
+    name: 'Olympic LPK AVENGERS',
+    category: 'Lemari',
+    image: 'https://asset.morefurniture.id/OLYMPIC/AVENGERS/LPK/2pintu-1.webp',
+    images: ['https://asset.morefurniture.id/OLYMPIC/AVENGERS/LPK/2pintu-1.webp'],
+    badge: 'MARVEL',
+    price: 2200000,
+    description: 'Lemari pakaian anak dengan lisensi resmi Marvel Avengers! Tampilan warna Blue dengan grafis karakter Avengers favorit. Membuat anak semangat merapikan barangnya sendiri.',
+    specs: {
+      'Ukuran': '800 x 430 x 1809 mm',
+      'Pintu': '2 Pintu',
+      'Material': 'PB Paper (Kids)',
+      'Warna': 'Blue (Marvel Avengers Graphics)',
+      'Grade': 'Kids Series (Official License)'
+    },
+    features: [
+      'Lisensi resmi Marvel Avengers – karakter favorit anak',
+      'Warna Blue dengan grafis Avengers',
+      'Desain khusus anak – fungsional dan menyenangkan',
+      'Material PB Paper berkualitas dan aman'
+    ],
+    waText: 'Halo, saya tertarik dengan Olympic LPK AVENGERS (Rp 2.200.000)'
+  },
+
+  lpk_little_pony: {
+    id: 'lpk_little_pony',
+    name: 'Olympic LPK LITTLE PONY',
+    category: 'Lemari',
+    image: 'https://asset.morefurniture.id/OLYMPIC/MLP/LPK/2pintu-1.webp',
+    images: ['https://asset.morefurniture.id/OLYMPIC/MLP/LPK/2pintu-1.webp'],
+    badge: 'MY LITTLE PONY',
+    price: 2200000,
+    description: 'Lemari pakaian anak dengan lisensi resmi My Little Pony! Tampilan Pink cantik dengan grafis Little Pony. Hadirkan keceriaan di kamar anak.',
+    specs: {
+      'Ukuran': '800 x 430 x 1809 mm',
+      'Pintu': '2 Pintu',
+      'Material': 'PB Paper (Kids)',
+      'Warna': 'Pink (My Little Pony Graphics)',
+      'Grade': 'Kids Series (Official License)'
+    },
+    features: [
+      'Lisensi resmi My Little Pony',
+      'Warna Pink dengan grafis Little Pony',
+      'Desain khusus anak – lucu dan fungsional',
+      'Material PB Paper berkualitas dan aman'
+    ],
+    waText: 'Halo, saya tertarik dengan Olympic LPK LITTLE PONY (Rp 2.200.000)'
+  },
+
+  lpk_princess: {
+    id: 'lpk_princess',
+    name: 'Olympic LPK PRINCESS',
+    category: 'Lemari',
+    image: 'https://asset.morefurniture.id/OLYMPIC/PRINCESS/LPK/2pintu-1.webp',
+    images: ['https://asset.morefurniture.id/OLYMPIC/PRINCESS/LPK/2pintu-1.webp'],
+    badge: 'DISNEY',
+    price: 2200000,
+    description: 'Lemari pakaian anak dengan lisensi resmi Disney Princess! Tampilan Pink dengan grafis putri Disney favorit. Wujudkan kamar impian buah hati Anda.',
+    specs: {
+      'Ukuran': '800 x 430 x 1809 mm',
+      'Pintu': '2 Pintu',
+      'Material': 'PB Paper (Kids)',
+      'Warna': 'Pink (Disney Princess Graphics)',
+      'Grade': 'Kids Series (Official License)'
+    },
+    features: [
+      'Lisensi resmi Disney Princess',
+      'Warna Pink dengan grafis putri Disney',
+      'Desain khusus anak – istimewa dan menyenangkan',
+      'Material PB Paper berkualitas dan aman'
+    ],
+    waText: 'Halo, saya tertarik dengan Olympic LPK PRINCESS (Rp 2.200.000)'
+  },
+
+  // === MEJA TULIS (MT / MTS Series) ===
+  mt_oliver_160: {
+    id: 'mt_oliver_160',
+    name: 'Olympic MT OLIVER — Meja Tulis Minimalis',
+    category: 'Meja Tulis',
+    image: 'https://asset.morefurniture.id/PRODUCT/p-875-1707823790-1.webp',
+    images: ['https://asset.morefurniture.id/PRODUCT/p-875-1707823790-1.webp'],
+    badge: '',
+    price: 1500000,
+    description: 'Meja tulis seri MT OLIVER dengan desain minimalis modern. Kaki besi kokoh, permukaan meja luas cocok untuk kerja atau belajar.',
+    specs: {
+      'Material': 'Partikel Board / MDF',
+      'Kaki': 'Besi'
+    },
+    features: [
+      'Desain minimalis modern',
+      'Kaki besi kokoh – stabil dan tahan lama',
+      'Permukaan luas – ideal untuk kerja dan belajar'
+    ],
+    variants: ['120cm (1200 x 600 x 755 mm)', '160cm (1600 x 600 x 755 mm)'],
+    waText: 'Halo, saya tertarik dengan Olympic MT OLIVER Meja Tulis (Rp 1.500.000)'
+  },
+
+  mts_venus_n_cherry: {
+    id: 'mts_venus_n_cherry',
+    name: 'Olympic MTS VENUS N Cherry — Meja Tulis 120cm',
+    category: 'Meja Tulis',
+    image: 'https://asset.morefurniture.id/OLYMPIC/VENUS/MT/mts-1.webp',
+    images: ['https://asset.morefurniture.id/OLYMPIC/VENUS/MT/mts-1.webp'],
+    badge: '',
+    price: 1350000,
+    description: 'Meja tulis semi seri VENUS dengan finishing Cherry natural. Desain elegan dengan kaki besi, cocok untuk kantor atau ruang belajar.',
+    specs: {
+      'Ukuran': '1200 x 600 x 720 mm',
+      'Material': 'Partikel Board / MDF',
+      'Warna': 'Cherry',
+      'Kaki': 'Besi'
+    },
+    features: [
+      'Desain elegan dengan finishing Cherry',
+      'Kaki besi kokoh – stabil dan awet',
+      'Ukuran 120cm – ideal untuk ruang kerja',
+      'Ruang kaki lega untuk kenyamanan maksimal'
+    ],
+    waText: 'Halo, saya tertarik dengan Olympic MTS VENUS N Cherry Meja Tulis (Rp 1.350.000)'
+  },
+
+  mts_onix: {
+    id: 'mts_onix',
+    name: 'Olympic MTS ONYX — Meja Tulis Industrial 120cm',
+    category: 'Meja Tulis',
+    image: 'https://asset.morefurniture.id/OLYMPIC/ONYX/MTS/mts-1.webp',
+    images: ['https://asset.morefurniture.id/OLYMPIC/ONYX/MTS/mts-1.webp'],
+    badge: '',
+    price: 1300000,
+    description: 'Meja tulis industrial style seri MTS ONYX dengan desain kekinian. Kaki besi kokoh dengan finishing elegan, cocok untuk workspace modern.',
+    specs: {
+      'Ukuran': '1200 x 600 x 748 mm',
+      'Material': 'Partikel Board / MDF',
+      'Warna': 'Sesuai varian',
+      'Gaya': 'Industrial Style'
+    },
+    features: [
+      'Desain industrial style – modern dan kekinian',
+      'Kaki besi kokoh',
+      'Ukuran 120cm – pas untuk berbagai ruangan',
+      'Tampilan elegan untuk workspace'
+    ],
+    waText: 'Halo, saya tertarik dengan Olympic MTS ONYX Meja Tulis (Rp 1.300.000)'
+  },
+
+  mts_titan_cherry: {
+    id: 'mts_titan_cherry',
+    name: 'Olympic MTS TITAN Cherry — Meja Tulis 120cm',
+    category: 'Meja Tulis',
+    image: 'https://asset.morefurniture.id/OLYMPIC/TITAN/MTS/mts-2.webp',
+    images: [
+      'https://asset.morefurniture.id/OLYMPIC/TITAN/MTS/mts-2.webp',
+      'https://asset.morefurniture.id/OLYMPIC/TITAN/MTS/brown-1.webp'
+    ],
+    badge: '',
+    price: 1650000,
+    description: 'Meja tulis seri MTS TITAN dengan finishing Cherry eksklusif. Dilengkapi laci dan lemari penyimpanan, tekstur meja serat kayu natural.',
+    specs: {
+      'Ukuran': '1200 x 600 x 764 mm',
+      'Material': 'Partikel Board + Besi',
+      'Warna': 'Cherry (Brown)',
+      'Fitur': 'Laci & lemari penyimpanan'
+    },
+    features: [
+      'Desain minimalis dengan tekstur serat kayu',
+      'Rangka kaki besi kokoh',
+      'Terdapat laci & lemari penyimpanan',
+      'Tersedia varian Cherry dan Cream'
+    ],
+    waText: 'Halo, saya tertarik dengan Olympic MTS TITAN Cherry Meja Tulis (Rp 1.650.000)'
+  },
+
+  mts_titan_cream: {
+    id: 'mts_titan_cream',
+    name: 'Olympic MTS TITAN Cream — Meja Tulis 80cm',
+    category: 'Meja Tulis',
+    image: 'https://asset.morefurniture.id/OLYMPIC/TITAN/MTS/cream-1.webp',
+    images: [
+      'https://asset.morefurniture.id/OLYMPIC/TITAN/MTS/cream-1.webp',
+      'https://asset.morefurniture.id/OLYMPIC/TITAN/MTS/mts-2.webp'
+    ],
+    badge: '',
+    price: 1200000,
+    description: 'Meja tulis seri MTS TITAN varian Cream dengan ukuran 80cm ringkas. Cocok untuk ruang terbatas namun tetap stylish dengan tekstur kayu.',
+    specs: {
+      'Ukuran': '800 x 600 x 764 mm',
+      'Material': 'Partikel Board + Besi',
+      'Warna': 'Cream',
+      'Fitur': 'Laci & lemari penyimpanan'
+    },
+    features: [
+      'Ukuran 80cm ringkas – cocok untuk ruang terbatas',
+      'Rangka kaki besi kokoh',
+      'Terdapat laci & lemari penyimpanan',
+      'Tersedia varian Cherry dan Cream'
+    ],
+    waText: 'Halo, saya tertarik dengan Olympic MTS TITAN Cream Meja Tulis (Rp 1.200.000)'
+  },
+
+  // ===== ACTIV FURNITURE =====
+
+  alp_lemari_pakaian_lula_lp_200_activ_fu_0: {
+    id: 'alp_lemari_pakaian_lula_lp_200_activ_fu_0',
+    name: 'Lemari Pakaian – Lula LP 200 – Activ Furniture',
+    category: 'Lemari',
+    image: 'img/activ/lemari-pakaian-lula-lp-200-activ-furniture.jpg',
+    images: ['img/activ/lemari-pakaian-lula-lp-200-activ-furniture.jpg'],
+    badge: 'ACTIV',
+    price: 2800000,
+    description: 'Produk Activ Furniture Lemari Pakaian – Lula LP 200 – Activ Furniture. Dimensi P: 79,7 L: 41,5 T: 184 cm. Tersedia warna Wahana Teak – White.',
+    specs: { 'Ruangan': 'Ruang Tidur', 'Kategori Produk': 'Lemari Pakaian', 'Warna': 'Wahana Teak – White', 'Berat Kotor': '47 Kg', 'Dimensi': 'P: 79,7 L: 41,5 T: 184 cm', 'Volume': '0,0852 m' },
+    features: ['\u2013 Lula LP 200 ini dilengkapi Handle alumunium dan 2 set kunci di masing-masing pintu', '\u2013 Tersedia gantungan baju di lemari kiri yang tinggi', '\u2013 Memiliki 5 kompartemen yang luas untuk menyimpan berbagai jenis kebutuhan pakaian', '\u2013 Dilengkapi laci dengan kunci yang dapat digunakan untuk menyimpan perhiasan kecil', '\u2013 Menggunakan tatakan kaki agar furniture tidak langsung bersentuhan dengan lantai', '\u2013 Material: Particle Board tebal 12 mm (Grade A)'],
+    waText: 'Halo, saya tertarik dengan Lemari Pakaian \u2013 Lula LP 200 \u2013 Activ Furniture (Rp 2.800.000)'
+  },
+  amr_meja_rias_lula_mr_80_activ_furnitur_1: {
+    id: 'amr_meja_rias_lula_mr_80_activ_furnitur_1',
+    name: 'Meja Rias \u2013 Lula MR 80 \u2013 Activ Furniture',
+    category: 'Meja Rias',
+    image: 'img/activ/meja-rias-lula-mr-80-activ-furniture.jpg',
+    images: ['img/activ/meja-rias-lula-mr-80-activ-furniture.jpg'],
+    badge: 'ACTIV',
+    price: 1600000,
+    description: '\u2013 Memiliki cermin dengan mekanisme geser untuk buka tutup rak belakang dan untuk menyesuaikan pandangan saat bercermin \u2013 Dilengkapi rak belakang cermin dengan jumlah 6 rak penyimpanan',
+    specs: { 'Ruangan': 'Ruang Tidur', 'Kategori Produk': 'Meja Rias', 'Warna': 'Wahana Teak \u2013 Taupe', 'Berat Kotor': '34 Kg', 'Dimensi': 'P: 80 L: 39,5 T: 145,5 cm', 'Volume': '0,0811 m' },
+    features: ['\u2013 Memiliki cermin dengan mekanisme geser untuk buka tutup rak belakang dan untuk menyesuaikan pandangan saat bercermin', '\u2013 Dilengkapi rak belakang cermin dengan jumlah 6 rak penyimpanan.', '\u2013 Dilengkapi laci yang lebar untuk penyimpanan extra', '\u2013 Terdapat papan panel penguat bawah yang lebih stabil dan kokoh', '\u2013 Memiliki bangku/stool yang dilengkapi bantalan yang soft. Nyaman digunakan duduk berlama-lama', '\u2013 Bahan luar meja dan kursi menggunakan particle board dan laminasi wahana teak sheet'],
+    waText: 'Halo, saya tertarik dengan Meja Rias \u2013 Lula MR 80 \u2013 Activ Furniture (Rp 1.600.000)'
+  },
+  amt_meja_belajar_anak_lula_mb_80_activ__2: {
+    id: 'amt_meja_belajar_anak_lula_mb_80_activ__2',
+    name: 'Meja Belajar Anak \u2013 Lula MB 80 \u2013 Activ Furniture',
+    category: 'Meja Tulis',
+    image: 'img/activ/meja-belajar-anak-lula-mb-80-activ-furniture.jpg',
+    images: ['img/activ/meja-belajar-anak-lula-mb-80-activ-furniture.jpg'],
+    badge: 'ACTIV',
+    price: 1100000,
+    description: '\u2013 Bagian pintu menggunakan laminasi white sheet paper yang bersih \u2013 Dilengkapi gantungan stainless untuk menggantung tas / perlengkapan sekolah lainnya \u2013 Bagian ujung tumpul \u2013 Terdapat tata',
+    specs: { 'Ruangan': 'Ruang Tidur', 'Kategori Produk': 'Meja Belajar Anak', 'Warna': 'White \u2013 Wahana Teak', 'Berat Kotor': '21 Kg', 'Dimensi': 'P: 80,2 L: 39,5 T: 131,4 cm', 'Volume': '0,044 m' },
+    features: ['\u2013 Bagian pintu menggunakan laminasi white sheet paper yang bersih', '\u2013 Dilengkapi gantungan stainless untuk menggantung tas / perlengkapan sekolah lainnya', '\u2013 Bagian ujung tumpul', '\u2013 Terdapat tatakan kaki untuk melindungi furniture bersentuhan langsung dengan lantai', '\u2013 Memiliki 2 rak penyimpanan didalam pintu yang luas dan dapat menahan berat maksimal hingga 5 kg', '\u2013 Memiliki 3 rak penyimpanan terbuka di bagian atas meja'],
+    waText: 'Halo, saya tertarik dengan Meja Belajar Anak \u2013 Lula MB 80 \u2013 Activ Furniture (Rp 1.100.000)'
+  },
+  amt_meja_tulis_meja_kerja_lula_mt_120_a_3: {
+    id: 'amt_meja_tulis_meja_kerja_lula_mt_120_a_3',
+    name: 'Meja Tulis / Meja Kerja \u2013 Lula MT 120 \u2013 Activ Furniture',
+    category: 'Meja Tulis',
+    image: 'img/activ/meja-tulis-meja-kerja-lula-mt-120-activ-furniture-3.png',
+    images: ['img/activ/meja-tulis-meja-kerja-lula-mt-120-activ-furniture-3.png'],
+    badge: 'ACTIV',
+    price: 1200000,
+    description: '\u2013 Meja tulis / meja kerja ini menggunakan warna phantom oak yang clean dan minimalis \u2013 Dilengkapi kunci pintu dan rak \u2013 Terdapat penyimpanan laci dan rak \u2013 Memiliki tatakan kaki anti slip \u2013',
+    specs: { 'Ruangan': 'Ruang Kerja', 'Kategori Produk': 'Meja Tulis / Meja Kerja', 'Warna': 'Phantom Oak', 'Berat Kotor': '19 Kg', 'Dimensi': 'P: 120 L: 60 T: 74,7 cm', 'Volume': '0,0435 m' },
+    features: ['\u2013 Meja tulis / meja kerja ini menggunakan warna phantom oak yang clean dan minimalis', '\u2013 Dilengkapi kunci pintu dan rak', '\u2013 Terdapat penyimpanan laci dan rak', '\u2013 Memiliki tatakan kaki anti slip', '\u2013 Handle rak dan laci yang minimalis', '\u2013 Laminasi white sheet paper yang bersih'],
+    waText: 'Halo, saya tertarik dengan Meja Tulis / Meja Kerja \u2013 Lula MT 120 \u2013 Activ Furniture (Rp 1.200.000)'
+  },
+  abl_lemari_pakaian_anak_baby_locker_lul_4: {
+    id: 'abl_lemari_pakaian_anak_baby_locker_lul_4',
+    name: 'Lemari Pakaian Anak (Baby Locker) \u2013 Lula BL 150 \u2013 Activ Furniture',
+    category: 'Lemari',
+    image: 'img/activ/lemari-pakaian-anak-baby-locker-lula-bl-150-activ-furniture.jpg',
+    images: ['img/activ/lemari-pakaian-anak-baby-locker-lula-bl-150-activ-furniture.jpg'],
+    badge: 'ACTIV',
+    price: 1800000,
+    description: '\u2013 Memiliki cermin tinggi dengan tebal 3 mm \u2013 Bagian pintu menggunakan laminasi white sheet paper yang bersih \u2013 Dilengkapi gantungan baju aluminium yang kuat menahan beban hingga 10 kg \u2013 Dil',
+    specs: { 'Ruangan': 'Ruang Tidur', 'Kategori Produk': 'Lemari Pakaian Anak (Baby Locker)', 'Warna': 'White \u2013 Wahana Teak', 'Berat Kotor': '36 Kg', 'Dimensi': 'P: 79,4 L: 41 T: 149,8 cm', 'Volume': '0,0702 m' },
+    features: ['\u2013 Memiliki cermin tinggi dengan tebal 3 mm', '\u2013 Bagian pintu menggunakan laminasi white sheet paper yang bersih', '\u2013 Dilengkapi gantungan baju aluminium yang kuat menahan beban hingga 10 kg', '\u2013 Dilengkapi 2 set pengunci pintu dan handle L aluminium', '\u2013 Terdapat tatakan kaki untuk melindungi furniture bersentuhan langsung dengan lantai', '\u2013 Memiliki 3 rak penyimpanan baju yang luas dan dapat menahan berat maksimal hingga 5 kg'],
+    waText: 'Halo, saya tertarik dengan Lemari Pakaian Anak (Baby Locker) \u2013 Lula BL 150 \u2013 Activ Furniture (Rp 1.800.000)'
+  },
+  adm_meja_makan_dining_set_lula_ds_110_a_5: {
+    id: 'adm_meja_makan_dining_set_lula_ds_110_a_5',
+    name: 'Meja Makan / Dining Set \u2013 Lula DS 110 \u2013 Activ Furniture',
+    category: 'Meja Makan',
+    image: 'img/activ/meja-makan-dining-set-lula-ds-110-activ-furniture.png',
+    images: ['img/activ/meja-makan-dining-set-lula-ds-110-activ-furniture.png'],
+    badge: 'ACTIV',
+    price: 2500000,
+    description: '\u2013 Meja Makan / Dining Set dengan kombinasi warna Dark Wood \u2013 Black yang Natural \u2013 Meja makan Luas dan Lebar \u2013 Top table Tebal dan Kuat \u2013 Dudukan Soft dengan bantalan Beekled Fabric \u2013 Kaki m',
+    specs: { 'Ruangan': 'Ruang Makan', 'Kategori Produk': 'Dining Set', 'Warna': 'Meja = Dark Wood \u2013 Black', 'Berat Kotor': '26,3 Kg', 'Dimensi': 'Meja = P: 110 L: 70 T: 75 cm', 'Kursi = P': '40 L: 45 T: 82 cm', 'Volume': '0,1224 m' },
+    features: ['\u2013 Meja Makan / Dining Set dengan kombinasi warna Dark Wood \u2013 Black yang Natural', '\u2013 Meja makan Luas dan Lebar', '\u2013 Top table Tebal dan Kuat', '\u2013 Dudukan Soft dengan bantalan Beekled Fabric', '\u2013 Kaki meja dan kursi Lebih Tahan Gores', '\u2013 Ujung meja tidak tajam (Rounded Corner)'],
+    waText: 'Halo, saya tertarik dengan Meja Makan / Dining Set \u2013 Lula DS 110 \u2013 Activ Furniture (Rp 2.500.000)'
+  },
+    aov_open_rack_cabinet_rak_terbuka_lula__6: {
+    id: 'aov_open_rack_cabinet_rak_terbuka_lula__6',
+    name: 'Open Rack Cabinet / Rak Terbuka – Lula ORC 4A – Activ Furniture',
+    category: 'Rak & Aksesoris',
+    image: 'img/activ/open-rack-cabinet-rak-terbuka-lula-orc-4a-activ-furniture.png',
+    images: ['img/activ/open-rack-cabinet-rak-terbuka-lula-orc-4a-activ-furniture.png'],
+    badge: 'ACTIV',
+    price: 650000,
+    description: '– Rak terbuka ini menggunakan warna sonoma oak yang clean dan minimalis – Terdapat penyimpanan 4 rak yang luas – Bahan dengan kualitas terbaik Spesifikasi: – Laminasi white sheet paper yang',
+    specs: {
+      'Ruangan': 'Ruang Kerja / Ruang Keluarga / Ruang Tidur',
+      'Kategori Produk': 'Open Rack Cabinet / Rak Terbuka',
+      'Warna': 'Sonoma Oak',
+      'Berat Kotor': '13 Kg',
+      'Dimensi': 'P: 40 L: 29,6 T: 118,1 cm',
+      'Volume': '0,0206 m'
+    },
+    features: [
+      '– Rak terbuka ini menggunakan warna sonoma oak yang clean dan minimalis',
+      '– Terdapat penyimpanan 4 rak yang luas',
+      '– Bahan dengan kualitas terbaik',
+      '– Laminasi white sheet paper yang bersih',
+      '– Bahan menggunakan particle board kualitas terbaik',
+      '– Kedalaman penyimpanan 29,6 cm'
+    ],
+    waText: 'Halo, saya tertarik dengan Open Rack Cabinet / Rak Terbuka – Lula ORC 4A – Activ Furniture (Rp 650.000)'
+  },
+  aov_open_rack_cabinet_rak_terbuka_lula__6: {
+    id: 'aov_open_rack_cabinet_rak_terbuka_lula__6',
+    name: 'Open Rack Cabinet / Rak Terbuka – Lula ORC 4A – Activ Furniture',
+    category: 'Rak & Aksesoris',
+    image: 'img/activ/open-rack-cabinet-rak-terbuka-lula-orc-4a-activ-furniture.png',
+    images: ['img/activ/open-rack-cabinet-rak-terbuka-lula-orc-4a-activ-furniture.png'],
+    badge: 'ACTIV',
+    price: 650000,
+    description: '– Rak terbuka ini menggunakan warna sonoma oak yang clean dan minimalis – Terdapat penyimpanan 4 rak yang luas – Bahan dengan kualitas terbaik Spesifikasi: – Laminasi white sheet paper yang',
+    specs: {
+      'Ruangan': 'Ruang Kerja / Ruang Keluarga / Ruang Tidur',
+      'Kategori Produk': 'Open Rack Cabinet / Rak Terbuka',
+      'Warna': 'Sonoma Oak',
+      'Berat Kotor': '13 Kg',
+      'Dimensi': 'P: 40 L: 29,6 T: 118,1 cm',
+      'Volume': '0,0206 m'
+    },
+    features: [
+      '– Rak terbuka ini menggunakan warna sonoma oak yang clean dan minimalis',
+      '– Terdapat penyimpanan 4 rak yang luas',
+      '– Bahan dengan kualitas terbaik',
+      '– Laminasi white sheet paper yang bersih',
+      '– Bahan menggunakan particle board kualitas terbaik',
+      '– Kedalaman penyimpanan 29,6 cm'
+    ],
+    waText: 'Halo, saya tertarik dengan Open Rack Cabinet / Rak Terbuka – Lula ORC 4A – Activ Furniture (Rp 650.000)'
+  },
+
+  aov_open_rack_cabinet_rak_terbuka_lula__7: {
+    id: 'aov_open_rack_cabinet_rak_terbuka_lula__7',
+    name: 'Open Rack Cabinet / Rak Terbuka – Lula ORC 4 – Activ Furniture',
+    category: 'Rak & Aksesoris',
+    image: 'img/activ/open-rack-cabinet-rak-terbuka-lula-orc-4-activ-furniture-2.png',
+    images: ['img/activ/open-rack-cabinet-rak-terbuka-lula-orc-4-activ-furniture-2.png'],
+    badge: 'ACTIV',
+    price: 550000,
+    description: '– Rak terbuka ini menggunakan warna white – turquoise yang clean dan minimalis – Terdapat penyimpanan 4 rak yang luas – Bahan dengan kualitas terbaik Spesifikasi: – Laminasi white sheet pap',
+    specs: {
+      'Ruangan': 'Ruang Kerja / Ruang Keluarga / Ruang Tidur',
+      'Kategori Produk': 'Open Rack Cabinet / Rak Terbuka',
+      'Warna': 'White – Turquoise',
+      'Berat Kotor': '13 Kg',
+      'Dimensi': 'P: 40 L: 29,6 T: 118,1 cm',
+      'Volume': '0,0206 m'
+    },
+    features: [
+      '– Rak terbuka ini menggunakan warna white – turquoise yang clean dan minimalis',
+      '– Terdapat penyimpanan 4 rak yang luas',
+      '– Bahan dengan kualitas terbaik',
+      '– Laminasi white sheet paper yang bersih',
+      '– Bahan menggunakan particle board kualitas terbaik',
+      '– Kedalaman penyimpanan 29,6 cm'
+    ],
+    waText: 'Halo, saya tertarik dengan Open Rack Cabinet / Rak Terbuka – Lula ORC 4 – Activ Furniture (Rp 550.000)'
+  },
+  aov_open_rack_cabinet_rak_terbuka_lula__8: {
+    id: 'aov_open_rack_cabinet_rak_terbuka_lula__8',
+    name: 'Open Rack Cabinet / Rak Terbuka – Lula ORC 3 – Activ Furniture',
+    category: 'Rak & Aksesoris',
+    image: 'img/activ/open-rack-cabinet-rak-terbuka-lula-orc-3-activ-furniture-copy.png',
+    images: ['img/activ/open-rack-cabinet-rak-terbuka-lula-orc-3-activ-furniture-copy.png'],
+    badge: 'ACTIV',
+    price: 450000,
+    description: '– Rak terbuka ini menggunakan warna white – turquoise yang clean dan minimalis – Terdapat penyimpanan 3 rak yang luas – Bahan dengan kualitas terbaik Spesifikasi: – Laminasi white sheet pap',
+    specs: {
+      'Ruangan': 'Ruang Kerja / Ruang Keluarga / Ruang Tidur',
+      'Kategori Produk': 'Open Rack Cabinet / Rak Terbuka',
+      'Warna': 'White – Turquoise',
+      'Berat Kotor': '10.2 Kg',
+      'Dimensi': 'P: 40 L: 29,6 T: 89,3 cm',
+      'Volume': '0,0165 m'
+    },
+    features: [
+      '– Rak terbuka ini menggunakan warna white – turquoise yang clean dan minimalis',
+      '– Terdapat penyimpanan 3 rak yang luas',
+      '– Bahan dengan kualitas terbaik',
+      '– Laminasi white sheet paper yang bersih',
+      '– Bahan menggunakan particle board kualitas terbaik',
+      '– Kedalaman penyimpanan 29,6 cm'
+    ],
+    waText: 'Halo, saya tertarik dengan Open Rack Cabinet / Rak Terbuka – Lula ORC 3 – Activ Furniture (Rp 450.000)'
+  },
+  aov_open_rack_cabinet_rak_terbuka_lula__9: {
+    id: 'aov_open_rack_cabinet_rak_terbuka_lula__9',
+    name: 'Open Rack Cabinet / Rak Terbuka – Lula ORC 2 – Activ Furniture',
+    category: 'Rak & Aksesoris',
+    image: 'img/activ/open-rack-cabinet-rak-terbuka-lula-orc-2-activ-furniture-2.png',
+    images: ['img/activ/open-rack-cabinet-rak-terbuka-lula-orc-2-activ-furniture-2.png'],
+    badge: 'ACTIV',
+    price: 350000,
+    description: '– Rak terbuka ini menggunakan warna white – turquoise yang clean dan minimalis – Terdapat penyimpanan 2 rak yang luas – Bahan dengan kualitas terbaik Spesifikasi: – Laminasi white sheet pap',
+    specs: {
+      'Ruangan': 'Ruang Kerja / Ruang Keluarga / Ruang Tidur',
+      'Kategori Produk': 'Open Rack Cabinet / Rak Terbuka',
+      'Warna': 'White – Turquoise',
+      'Berat Kotor': '7,45 Kg',
+      'Dimensi': 'P: 40 L: 29,6 T: 60,5 cm',
+      'Volume': '0,0133 m'
+    },
+    features: [
+      '– Rak terbuka ini menggunakan warna white – turquoise yang clean dan minimalis',
+      '– Terdapat penyimpanan 2 rak yang luas',
+      '– Bahan dengan kualitas terbaik',
+      '– Laminasi white sheet paper yang bersih',
+      '– Bahan menggunakan particle board kualitas terbaik',
+      '– Kedalaman penyimpanan 29,6 cm'
+    ],
+    waText: 'Halo, saya tertarik dengan Open Rack Cabinet / Rak Terbuka – Lula ORC 2 – Activ Furniture (Rp 350.000)'
+  },
+  alp_lemari_pakaian_spin_lp_222_activ_fu_10: {
+    id: 'alp_lemari_pakaian_spin_lp_222_activ_fu_10',
+    name: 'Lemari Pakaian - Spin LP 222 - Activ Furniture',
+    category: 'Lemari',
+    image: 'img/activ/lemari-pakaian-spin-lp-222-activ-furniture.png',
+    images: ['img/activ/lemari-pakaian-spin-lp-222-activ-furniture.png'],
+    badge: 'ACTIV',
+    price: 1242000,
+    description: '– Lemari pakaian ini hadir dengan dark oak – floral white yang minimalis – Handle minimalis – Tersedia pengunci pintu – Memiliki 5 penyimpanan rak yang luas – Terdapat penyimpanan laci – Di',
+    specs: {
+      'Ruangan': 'Ruang Tidur',
+      'Kategori Produk': 'Lemari Pakaian',
+      'Warna': 'Dark Oak – Floral White',
+      'Berat Kotor': '48,5 Kg',
+      'Dimensi': 'P: 79,6 L: 41,5 T: 184,3 cm',
+      'Volume': '0,0913 m'
+    },
+    features: [
+      '– Lemari pakaian ini hadir dengan dark oak – floral white yang minimalis',
+      '– Handle minimalis',
+      '– Tersedia pengunci pintu',
+      '– Memiliki 5 penyimpanan rak yang luas',
+      '– Terdapat penyimpanan laci',
+      '– Dilengkapi cermin yang panjang'
+    ],
+    waText: 'Halo, saya tertarik dengan Lemari Pakaian – Spin LP 222 – Activ Furniture (Rp 1.242.000)'
+  },
+  alp_lemari_pakaian_2_pintu_spin_lpmr_20_11: {
+    id: 'alp_lemari_pakaian_2_pintu_spin_lpmr_20_11',
+    name: 'Lemari Pakaian 2 Pintu – Spin LPMR 201 (Sonoma Oak – White) – Activ Furniture',
+    category: 'Lemari',
+    image: 'img/activ/lemari-pakaian-2-pintu-spin-lpmr-201-sonoma-oak-white-activ-furniture.png',
+    images: ['img/activ/lemari-pakaian-2-pintu-spin-lpmr-201-sonoma-oak-white-activ-furniture.png'],
+    badge: 'ACTIV',
+    price: 1300000,
+    description: '– Lemari pakaian 2 pintu ini hadir dengan warna sonoma oak – white yang minimalis – Handle minimalis – Tersedia pengunci pintu – Memiliki 5 penyimpanan rak yang luas – Dilengkapi cermin yan',
+    specs: {
+      'Ruangan': 'Ruang Tidur',
+      'Kategori Produk': 'Lemari Pakaian',
+      'Warna': 'Sonoma Oak – White',
+      'Berat Kotor': '49 Kg',
+      'Dimensi': 'P: 79,6 L: 41,5 T: 184,3 cm',
+      'Volume': '0,0953 m'
+    },
+    features: [
+      '– Lemari pakaian 2 pintu ini hadir dengan warna sonoma oak – white yang minimalis',
+      '– Handle minimalis',
+      '– Tersedia pengunci pintu',
+      '– Memiliki 5 penyimpanan rak yang luas',
+      '– Dilengkapi cermin yang panjang',
+      '– Terdapat kompartemen untuk alat make-up'
+    ],
+    waText: 'Halo, saya tertarik dengan Lemari Pakaian 2 Pintu – Spin LPMR 201 (Sonoma Oak – White) – Activ Furniture (Rp 1.300.000)'
+  },
+  alp_lemari_pakaian_spin_lpr_231_columbi_12: {
+    id: 'alp_lemari_pakaian_spin_lpr_231_columbi_12',
+    name: 'Lemari Pakaian – Spin LPR 231 (Columbia Nussebaum) – Activ Furniture',
+    category: 'Lemari',
+    image: 'img/activ/lemari-pakaian-spin-lpr-231-columbia-nussebaum-activ-furniture.webp',
+    images: ['img/activ/lemari-pakaian-spin-lpr-231-columbia-nussebaum-activ-furniture.webp'],
+    badge: 'ACTIV',
+    price: 1300000,
+    description: '– Lemari pakaian ini hadir dengan warna columbia nussebaum yang minimalis – Handle minimalis – Tersedia pengunci pintu – Memiliki 8 penyimpanan rak yang luas – Terdapat penyimpanan laci – D',
+    specs: {
+      'Ruangan': 'Ruang Tidur',
+      'Kategori Produk': 'Lemari Pakaian',
+      'Warna': 'Columbia Nussebaum',
+      'Berat Kotor': '48,5 Kg',
+      'Dimensi': 'P: 79,6 L: 41,5 T: 184,3 cm',
+      'Volume': '0,0913 m'
+    },
+    features: [
+      '– Lemari pakaian ini hadir dengan warna columbia nussebaum yang minimalis',
+      '– Handle minimalis',
+      '– Tersedia pengunci pintu',
+      '– Memiliki 8 penyimpanan rak yang luas',
+      '– Terdapat penyimpanan laci',
+      '– Dilengkapi cermin yang panjang'
+    ],
+    waText: 'Halo, saya tertarik dengan Lemari Pakaian – Spin LPR 231 (Columbia Nussebaum) – Activ Furniture (Rp 1.300.000)'
+  },
+  alp_lemari_pakaian_3_pintu_spin_lpm_331_13: {
+    id: 'alp_lemari_pakaian_3_pintu_spin_lpm_331_13',
+    name: 'Lemari Pakaian 3 Pintu – Spin LPM 331 (Columbia Nussebaum) – Activ Furniture',
+    category: 'Lemari',
+    image: 'img/activ/lemari-pakaian-3-pintu-spin-lpm-331-columbia-nussebaum-activ-furniture.webp',
+    images: ['img/activ/lemari-pakaian-3-pintu-spin-lpm-331-columbia-nussebaum-activ-furniture.webp'],
+    badge: 'ACTIV',
+    price: 1478000,
+    description: '– Lemari pakaian 3 pintu ini hadir dengan warna columbia nussebaum yang minimalis – Handle minimalis – Tersedia pengunci pintu – Memiliki 6 penyimpanan rak yang luas – Dilengkapi cermin yan',
+    specs: {
+      'Ruangan': 'Ruang Tidur',
+      'Kategori Produk': 'Lemari Pakaian',
+      'Warna': 'Columbia Nussebaum',
+      'Berat Kotor': '62,5 Kg',
+      'Dimensi': 'P: 119,4 L: 41,5 T: 184,3 cm',
+      'Volume': '0,1273 m'
+    },
+    features: [
+      '– Lemari pakaian 3 pintu ini hadir dengan warna columbia nussebaum yang minimalis',
+      '– Handle minimalis',
+      '– Tersedia pengunci pintu',
+      '– Memiliki 6 penyimpanan rak yang luas',
+      '– Dilengkapi cermin yang panjang',
+      '– Terdapat kompartemen untuk alat make-up'
+    ],
+    waText: 'Halo, saya tertarik dengan Lemari Pakaian 3 Pintu – Spin LPM 331 (Columbia Nussebaum) – Activ Furniture (Rp 1.478.000)'
+  },
+  alp_lemari_pakaian_spin_lpm_231_columbi_14: {
+    id: 'alp_lemari_pakaian_spin_lpm_231_columbi_14',
+    name: 'Lemari Pakaian – Spin LPM 231 (Columbia Nussebaum) – Activ Furniture',
+    category: 'Lemari',
+    image: 'img/activ/lemari-pakaian-spin-lpm-231-columbia-nussebaum-activ-furniture.webp',
+    images: ['img/activ/lemari-pakaian-spin-lpm-231-columbia-nussebaum-activ-furniture.webp'],
+    badge: 'ACTIV',
+    price: 1147000,
+    description: '– Lemari pakaian ini hadir dengan warna columbia nussebaum yang minimalis – Handle minimalis – Tersedia pengunci pintu – Memiliki 5 penyimpanan rak yang luas – Terdapat penyimpanan laci – D',
+    specs: {
+      'Ruangan': 'Ruang Tidur',
+      'Kategori Produk': 'Lemari Pakaian',
+      'Warna': 'Columbia Nussebaum',
+      'Berat Kotor': '46 Kg',
+      'Dimensi': 'P: 79,6 L: 41,5 T: 184,3 cm',
+      'Volume': '0,892 m'
+    },
+    features: [
+      '– Lemari pakaian ini hadir dengan warna columbia nussebaum yang minimalis',
+      '– Handle minimalis',
+      '– Tersedia pengunci pintu',
+      '– Memiliki 5 penyimpanan rak yang luas',
+      '– Terdapat penyimpanan laci',
+      '– Dilengkapi cermin yang panjang'
+    ],
+    waText: 'Halo, saya tertarik dengan Lemari Pakaian – Spin LPM 231 (Columbia Nussebaum) – Activ Furniture (Rp 1.147.000)'
+  },
+  alp_lemari_pakaian_3_pintu_spin_lp_331__15: {
+    id: 'alp_lemari_pakaian_3_pintu_spin_lp_331__15',
+    name: 'Lemari Pakaian 3 Pintu – Spin LP 331 (Columbia Nussebaum) – Activ Furniture',
+    category: 'Lemari',
+    image: 'img/activ/lemari-pakaian-3-pintu-spin-lp-331-columbia-nussebaum-activ-furniture.webp',
+    images: ['img/activ/lemari-pakaian-3-pintu-spin-lp-331-columbia-nussebaum-activ-furniture.webp'],
+    badge: 'ACTIV',
+    price: 1548000,
+    description: '– Lemari pakaian 3 pintu ini hadir dengan warna columbia nussebaum yang minimalis – Handle minimalis – Tersedia pengunci pintu – Memiliki 5 penyimpanan rak yang luas – Terdapat penyimpanan',
+    specs: {
+      'Ruangan': 'Ruang Tidur',
+      'Kategori Produk': 'Lemari Pakaian',
+      'Warna': 'Columbia Nussebaum',
+      'Berat Kotor': '62,5 Kg',
+      'Dimensi': 'P: 119,6 L: 41,5 T: 184,3 cm',
+      'Volume': '0,273 m'
+    },
+    features: [
+      '– Lemari pakaian 3 pintu ini hadir dengan warna columbia nussebaum yang minimalis',
+      '– Handle minimalis',
+      '– Tersedia pengunci pintu',
+      '– Memiliki 5 penyimpanan rak yang luas',
+      '– Terdapat penyimpanan laci',
+      '– Dilengkapi cermin yang panjang'
+    ],
+    waText: 'Halo, saya tertarik dengan Lemari Pakaian 3 Pintu – Spin LP 331 (Columbia Nussebaum) – Activ Furniture (Rp 1.548.000)'
+  },
+  alp_lemari_pakaian_spin_lp_231_columbia_16: {
+    id: 'alp_lemari_pakaian_spin_lp_231_columbia_16',
+    name: 'Lemari Pakaian – Spin LP 231 (Columbia Nussebaum) – Activ Furniture',
+    category: 'Lemari',
+    image: 'img/activ/lemari-pakaian-spin-lp-231-columbia-nussebaum-activ-furniture.webp',
+    images: ['img/activ/lemari-pakaian-spin-lp-231-columbia-nussebaum-activ-furniture.webp'],
+    badge: 'ACTIV',
+    price: 1242000,
+    description: '– Lemari pakaian ini hadir dengan warna columbia nussebaum yang minimalis – Handle minimalis – Tersedia pengunci pintu – Memiliki 5 penyimpanan rak yang luas – Terdapat penyimpanan laci – D',
+    specs: {
+      'Ruangan': 'Ruang Tidur',
+      'Kategori Produk': 'Lemari Pakaian',
+      'Warna': 'Columbia Nussebaum',
+      'Berat Kotor': '48 Kg',
+      'Dimensi': 'P: 79,6 L: 41,5 T: 184,3 cm',
+      'Volume': '0,892 m'
+    },
+    features: [
+      '– Lemari pakaian ini hadir dengan warna columbia nussebaum yang minimalis',
+      '– Handle minimalis',
+      '– Tersedia pengunci pintu',
+      '– Memiliki 5 penyimpanan rak yang luas',
+      '– Terdapat penyimpanan laci',
+      '– Dilengkapi cermin yang panjang'
+    ],
+    waText: 'Halo, saya tertarik dengan Lemari Pakaian – Spin LP 231 (Columbia Nussebaum) – Activ Furniture (Rp 1.242.000)'
+  },
+  amr_meja_rias_spin_mr_60_zalkova_tsugaw_17: {
+    id: 'amr_meja_rias_spin_mr_60_zalkova_tsugaw_17',
+    name: 'Meja Rias – Spin MR 60 (Zalkova – Tsugawood Ash) – Activ Furniture',
+    category: 'Meja Rias',
+    image: 'img/activ/meja-rias-spin-mr-60-zalkova-tsugawood-ash-activ-furniture.webp',
+    images: ['img/activ/meja-rias-spin-mr-60-zalkova-tsugawood-ash-activ-furniture.webp'],
+    badge: 'ACTIV',
+    price: 800000,
+    description: '– Meja rias ini menggunkan warna zalkova – tsugawood ash yang elegan – Dilengkapi penyimpanan laci – Memiliki kursi dengan dudukan yang empuk dan luas – Dilengkapi cermin panjang dan luas –',
+    specs: {
+      'Ruangan': 'Ruang Tidur',
+      'Kategori Produk': 'Meja Rias',
+      'Warna': 'Zalkova – Tsugawood Ash',
+      'Berat Kotor': '24 Kg',
+      'Dimensi': 'P: 60 L: 39,5 T: 148,2 cm',
+      'Volume': '0,0666 m'
+    },
+    features: [
+      '– Meja rias ini menggunkan warna zalkova – tsugawood ash yang elegan',
+      '– Dilengkapi penyimpanan laci',
+      '– Memiliki kursi dengan dudukan yang empuk dan luas',
+      '– Dilengkapi cermin panjang dan luas',
+      '– Tersedia kompartemen terbuka diatas untuk meletakkan alat rias',
+      '– Tatakan kaki anti slip'
+    ],
+    waText: 'Halo, saya tertarik dengan Meja Rias – Spin MR 60 (Zalkova – Tsugawood Ash) – Activ Furniture (Rp 800.000)'
+  },
+  amr_meja_rias_spin_mr_60_tsugawood_ash__18: {
+    id: 'amr_meja_rias_spin_mr_60_tsugawood_ash__18',
+    name: 'Meja Rias – Spin MR 60 (Tsugawood Ash) – Activ Furniture',
+    category: 'Meja Rias',
+    image: 'img/activ/meja-rias-spin-mr-60-tsugawood-ash-activ-furniture.webp',
+    images: ['img/activ/meja-rias-spin-mr-60-tsugawood-ash-activ-furniture.webp'],
+    badge: 'ACTIV',
+    price: 800000,
+    description: '– Meja rias ini menggunkan warna tsugawood ash yang elegan – Dilengkapi penyimpanan laci – Memiliki kursi dengan dudukan yang empuk dan luas – Dilengkapi cermin panjang dan luas – Tersedia',
+    specs: {
+      'Ruangan': 'Ruang Tidur',
+      'Kategori Produk': 'Meja Rias',
+      'Warna': 'Tsugawood Ash',
+      'Berat Kotor': '24 Kg',
+      'Dimensi': 'P: 60 L: 39,5 T: 148,2 cm',
+      'Volume': '0,0666 m'
+    },
+    features: [
+      '– Meja rias ini menggunkan warna tsugawood ash yang elegan',
+      '– Dilengkapi penyimpanan laci',
+      '– Memiliki kursi dengan dudukan yang empuk dan luas',
+      '– Dilengkapi cermin panjang dan luas',
+      '– Tersedia kompartemen terbuka diatas untuk meletakkan alat rias',
+      '– Tatakan kaki anti slip'
+    ],
+    waText: 'Halo, saya tertarik dengan Meja Rias – Spin MR 60 (Tsugawood Ash) – Activ Furniture (Rp 800.000)'
+  },
+  amr_meja_rias_spin_mr_61_activ_furnitur_19: {
+    id: 'amr_meja_rias_spin_mr_61_activ_furnitur_19',
+    name: 'Meja Rias – Spin MR 61 – Activ Furniture',
+    category: 'Meja Rias',
+    image: 'img/activ/meja-rias-spin-mr-61-activ-furniture.webp',
+    images: ['img/activ/meja-rias-spin-mr-61-activ-furniture.webp'],
+    badge: 'ACTIV',
+    price: 800000,
+    description: '– Meja rias ini menggunkan warna white yang elegan – Dilengkapi penyimpanan laci – Memiliki kursi dengan dudukan yang empuk dan luas – Dilengkapi cermin panjang dan luas – Tersedia komparte',
+    specs: {
+      'Ruangan': 'Ruang Tidur',
+      'Kategori Produk': 'Meja Rias',
+      'Warna': 'White',
+      'Berat Kotor': '24 Kg',
+      'Dimensi': 'P: 60 L: 39,5 T: 148,2 cm',
+      'Volume': '0,0666 m'
+    },
+    features: [
+      '– Meja rias ini menggunkan warna white yang elegan',
+      '– Dilengkapi penyimpanan laci',
+      '– Memiliki kursi dengan dudukan yang empuk dan luas',
+      '– Dilengkapi cermin panjang dan luas',
+      '– Tersedia kompartemen terbuka diatas untuk meletakkan alat rias',
+      '– Tatakan kaki anti slip'
+    ],
+    waText: 'Halo, saya tertarik dengan Meja Rias – Spin MR 61 – Activ Furniture (Rp 800.000)'
+  },
+  abl_lemari_pakaian_baby_locker_spin_bl__20: {
+    id: 'abl_lemari_pakaian_baby_locker_spin_bl__20',
+    name: 'Lemari Pakaian / Baby Locker – Spin BL 150 (Tsugawood Ash) – Activ Furniture',
+    category: 'Lemari',
+    image: 'img/activ/lemari-pakaian-baby-locker-spin-bl-150-sonoma-oak-white-activ-furniture-copy.webp',
+    images: ['img/activ/lemari-pakaian-baby-locker-spin-bl-150-sonoma-oak-white-activ-furniture-copy.webp'],
+    badge: 'ACTIV',
+    price: 900000,
+    description: '– Lemari pakaian / baby locker ini hadir dengan warna tsugawood ash yang minimalis – Handle minimalis – Tersedia pengunci pintu – Memiliki 5 penyimpanan rak yang luas – Dilengkapi cermin ya',
+    specs: {
+      'Ruangan': 'Ruang Tidur',
+      'Kategori Produk': 'Lemari Pakaian Anak (Baby Locker)',
+      'Warna': 'Tsugawood Ash',
+      'Berat Kotor': '36 Kg',
+      'Dimensi': 'P: 79,4 L: 41 T: 150,5 cm',
+      'Volume': '0,0642 m'
+    },
+    features: [
+      '– Lemari pakaian / baby locker ini hadir dengan warna tsugawood ash yang minimalis',
+      '– Handle minimalis',
+      '– Tersedia pengunci pintu',
+      '– Memiliki 5 penyimpanan rak yang luas',
+      '– Dilengkapi cermin yang panjang',
+      '– Tatakan kaki agar lemari tidak bersentuhan langsung dengan lantai'
+    ],
+    waText: 'Halo, saya tertarik dengan Lemari Pakaian / Baby Locker – Spin BL 150 (Tsugawood Ash) – Activ Furniture (Rp 900.000)'
+  },
+  aov_lemari_serba_guna_rak_serba_guna_sp_21: {
+    id: 'aov_lemari_serba_guna_rak_serba_guna_sp_21',
+    name: 'Lemari Serba Guna / Rak Serba Guna – Spin LSG 4 (Tsugawood Ash) – Activ Furniture',
+    category: 'Rak & Aksesoris',
+    image: 'img/activ/lemari-serba-guna-rak-serba-guna-spin-lsg-4-tsugawood-ash-activ-furniture.webp',
+    images: ['img/activ/lemari-serba-guna-rak-serba-guna-spin-lsg-4-tsugawood-ash-activ-furniture.webp'],
+    badge: 'ACTIV',
+    price: 550000,
+    description: '– Sideboard terbuka ini hadir dengan warna tsugawood ash – Handle pintu minimalis – Dilengkapi 4 kompartemen rak yang luas – Tersedia pengunci pintu – Tatakan kaki agar lemari tidak bersent',
+    specs: {
+      'Ruangan': 'Ruang Keluarga',
+      'Kategori Produk': 'Lemari Serba Guna / Rak Serba Guna',
+      'Warna': 'Tsugawood Ash',
+      'Berat Kotor': '18,5 Kg',
+      'Dimensi': 'P: 39,6 L: 39,8 T: 120,5 cm',
+      'Volume': '0,0329 m'
+    },
+    features: [
+      '– Sideboard terbuka ini hadir dengan warna tsugawood ash',
+      '– Handle pintu minimalis',
+      '– Dilengkapi 4 kompartemen rak yang luas',
+      '– Tersedia pengunci pintu',
+      '– Tatakan kaki agar lemari tidak bersentuhan langsung dengan lantai',
+      '– Bahan : particle board'
+    ],
+    waText: 'Halo, saya tertarik dengan Lemari Serba Guna / Rak Serba Guna – Spin LSG 4 (Tsugawood Ash) – Activ Furniture (Rp 550.000)'
+  },
+  aov_lemari_serba_guna_rak_serba_guna_sp_22: {
+    id: 'aov_lemari_serba_guna_rak_serba_guna_sp_22',
+    name: 'Lemari Serba Guna / Rak Serba Guna – Spin LSG 5 (Tsugawood Ash) – Activ Furniture',
+    category: 'Rak & Aksesoris',
+    image: 'img/activ/lemari-serba-guna-rak-serba-guna-spin-lsg-5-tsugawood-ash-activ-furniture.webp',
+    images: ['img/activ/lemari-serba-guna-rak-serba-guna-spin-lsg-5-tsugawood-ash-activ-furniture.webp'],
+    badge: 'ACTIV',
+    price: 600000,
+    description: '– Sideboard terbuka ini hadir dengan warna tsugawood ash – Handle pintu minimalis – Dilengkapi 5 kompartemen rak yang luas – Tersedia pengunci pintu – Tatakan kaki agar lemari tidak bersent',
+    specs: {
+      'Ruangan': 'Ruang Keluarga',
+      'Kategori Produk': 'Lemari Serbaguna',
+      'Warna': 'Tsugawood Ash',
+      'Berat Kotor': '22,5 Kg',
+      'Dimensi': 'P: 39,6 L: 39,8 T: 148,2 cm',
+      'Volume': '0,0403 m'
+    },
+    features: [
+      '– Sideboard terbuka ini hadir dengan warna tsugawood ash',
+      '– Handle pintu minimalis',
+      '– Dilengkapi 5 kompartemen rak yang luas',
+      '– Tersedia pengunci pintu',
+      '– Tatakan kaki agar lemari tidak bersentuhan langsung dengan lantai',
+      '– Bahan : particle board'
+    ],
+    waText: 'Halo, saya tertarik dengan Lemari Serba Guna / Rak Serba Guna – Spin LSG 5 (Tsugawood Ash) – Activ Furniture (Rp 600.000)'
+  },
+  aov_open_rack_cabinet_rak_terbuka_spin__23: {
+    id: 'aov_open_rack_cabinet_rak_terbuka_spin__23',
+    name: 'Open Rack Cabinet / Rak Terbuka – Spin ORC 4 – Activ Furniture',
+    category: 'Rak & Aksesoris',
+    image: 'img/activ/open-rack-cabinet-rak-terbuka-spin-orc-4-activ-furniture.webp',
+    images: ['img/activ/open-rack-cabinet-rak-terbuka-spin-orc-4-activ-furniture.webp'],
+    badge: 'ACTIV',
+    price: 450000,
+    description: '– Rak terbuka ini menggunakan warna columbia nussebaum yang minimalis – Terdapat penyimpanan 4 rak yang luas – Bahan dengan kualitas terbaik Spesifikasi: – Laminasi sheet paper yang clean –',
+    specs: {
+      'Ruangan': 'Ruang Kerja / Ruang Keluarga / Ruang Tidur',
+      'Kategori Produk': 'Open Rack Cabinet / Rak Terbuka',
+      'Warna': 'Columbia Nussebaum',
+      'Berat Kotor': '11,5 Kg',
+      'Dimensi': 'P: 39,7 L: 29,5 T: 115,2 cm',
+      'Volume': '0,0256 m'
+    },
+    features: [
+      '– Rak terbuka ini menggunakan warna columbia nussebaum yang minimalis',
+      '– Terdapat penyimpanan 4 rak yang luas',
+      '– Bahan dengan kualitas terbaik',
+      '– Laminasi sheet paper yang clean',
+      '– Bahan menggunakan particle board kualitas terbaik',
+      '– Kedalaman penyimpanan 29,5 cm'
+    ],
+    waText: 'Halo, saya tertarik dengan Open Rack Cabinet / Rak Terbuka – Spin ORC 4 – Activ Furniture (Rp 450.000)'
+  },
+  aov_open_rack_cabinet_rak_terbuka_spin__24: {
+    id: 'aov_open_rack_cabinet_rak_terbuka_spin__24',
+    name: 'Open Rack Cabinet / Rak Terbuka – Spin ORC 3 – Activ Furniture',
+    category: 'Rak & Aksesoris',
+    image: 'img/activ/open-rack-cabinet-rak-terbuka-spin-orc-3-activ-furniture.webp',
+    images: ['img/activ/open-rack-cabinet-rak-terbuka-spin-orc-3-activ-furniture.webp'],
+    badge: 'ACTIV',
+    price: 450000,
+    description: '– Rak terbuka ini menggunakan warna columbia nussebaum yang minimalis – Terdapat penyimpanan 3 rak yang luas – Bahan dengan kualitas terbaik Spesifikasi: – Laminasi sheet paper yang clean –',
+    specs: {
+      'Ruangan': 'Ruang Kerja / Ruang Keluarga / Ruang Tidur',
+      'Kategori Produk': 'Open Rack Cabinet / Rak Terbuka',
+      'Warna': 'Columbia Nussebaum',
+      'Berat Kotor': '10 Kg',
+      'Dimensi': 'P: 39,7 L: 29,5 T: 87,6 cm',
+      'Volume': '0,0195 m'
+    },
+    features: [
+      '– Rak terbuka ini menggunakan warna columbia nussebaum yang minimalis',
+      '– Terdapat penyimpanan 3 rak yang luas',
+      '– Bahan dengan kualitas terbaik',
+      '– Laminasi sheet paper yang clean',
+      '– Bahan menggunakan particle board kualitas terbaik',
+      '– Kedalaman penyimpanan 29,5 cm'
+    ],
+    waText: 'Halo, saya tertarik dengan Open Rack Cabinet / Rak Terbuka – Spin ORC 3 – Activ Furniture (Rp 450.000)'
+  },
+  aov_lemari_serba_guna_spin_sb_120_activ_25: {
+    id: 'aov_lemari_serba_guna_spin_sb_120_activ_25',
+    name: 'Lemari Serba Guna / Rak Serba Guna – Spin LSG 5 (Sonoma Oak – White) – Activ Furniture',
+    category: 'Rak & Aksesoris',
+    image: 'img/activ/lemari-serba-guna-spin-sb-120-activ-furniture.webp',
+    images: ['img/activ/lemari-serba-guna-spin-sb-120-activ-furniture.webp'],
+    badge: 'ACTIV',
+    price: 600000,
+    description: '– Sideboard terbuka ini hadir dengan warna sonoma oak – white – Handle pintu minimalis – Dilengkapi 5 kompartemen rak yang luas – Tersedia pengunci pintu – Tatakan kaki agar lemari tidak be',
+    specs: {
+      'Ruangan': 'Ruang Keluarga',
+      'Kategori Produk': 'Lemari Serbaguna',
+      'Warna': 'Sonoma Oak – White',
+      'Berat Kotor': '22,5 Kg',
+      'Dimensi': 'P: 39,6 L: 39,8 T: 148,2 cm',
+      'Volume': '0,0403 m'
+    },
+    features: [
+      '– Sideboard terbuka ini hadir dengan warna sonoma oak – white',
+      '– Handle pintu minimalis',
+      '– Dilengkapi 5 kompartemen rak yang luas',
+      '– Tersedia pengunci pintu',
+      '– Tatakan kaki agar lemari tidak bersentuhan langsung dengan lantai',
+      '– Bahan : particle board'
+    ],
+    waText: 'Halo, saya tertarik dengan Lemari Serba Guna / Rak Serba Guna – Spin LSG 5 (Sonoma Oak – White) – Activ Furniture (Rp 600.000)'
+  },
+  aov_lemari_sepatu_spin_ls_90_rainbow_oa_26: {
+    id: 'aov_lemari_sepatu_spin_ls_90_rainbow_oa_26',
+    name: 'Lemari Sepatu – Spin LS 90 (Rainbow Oak) – Activ Furniture',
+    category: 'Rak & Aksesoris',
+    image: 'img/activ/lemari-sepatu-spin-ls-90-rainbow-oak-activ-furniture.png',
+    images: ['img/activ/lemari-sepatu-spin-ls-90-rainbow-oak-activ-furniture.png'],
+    badge: 'ACTIV',
+    price: 700000,
+    description: '– Lemari sepatu terbuka ini hadir dengan warna rainbow oak – Memiliki kapasitas besar yang dapat menyimpan hingga 15 pasang sepatu – Tersedia lubang ventilasi – Pintu kaca lebih tahan pecah',
+    specs: {
+      'Ruangan': 'Ruang Keluarga',
+      'Kategori Produk': 'Lemari Sepatu',
+      'Warna': 'Raibow Oak',
+      'Berat Kotor': '33,5 Kg',
+      'Dimensi': 'P: 91 L: 39,5 T: 121 cm',
+      'Volume': '0,0553 m'
+    },
+    features: [
+      '– Lemari sepatu terbuka ini hadir dengan warna rainbow oak',
+      '– Memiliki kapasitas besar yang dapat menyimpan hingga 15 pasang sepatu',
+      '– Tersedia lubang ventilasi',
+      '– Pintu kaca lebih tahan pecah',
+      '– Dilengkapi penyimpanan tambahan pada bagian atas',
+      '– Terdapat kompartemen terbuka'
+    ],
+    waText: 'Halo, saya tertarik dengan Lemari Sepatu – Spin LS 90 (Rainbow Oak) – Activ Furniture (Rp 700.000)'
+  },
+  alp_lemari_pakaian_besi_forte_sl_203_c__27: {
+    id: 'alp_lemari_pakaian_besi_forte_sl_203_c__27',
+    name: 'Lemari Pakaian Besi – Forte SL 203 C – Activ Furniture',
+    category: 'Lemari',
+    image: 'img/activ/lemari-pakaian-besi-forte-sl-203-c-activ-furniture.png',
+    images: ['img/activ/lemari-pakaian-besi-forte-sl-203-c-activ-furniture.png'],
+    badge: 'ACTIV',
+    price: 5500000,
+    description: '– Lemari Pakaian Besi dengan kombinasi warna White – Aesthetic Tile yang Natural – Mekanisme bukaan pintu Sliding + Swing – Cermin Tinggi Full Satu Pintu – Tersedia Safety Box dengan pengun',
+    specs: {
+      'Ruangan': 'Ruang Tidur',
+      'Kategori Produk': 'Lemari Pakaian Besi',
+      'Warna': 'White – Aesthetic Tile',
+      'Berat Kotor': '110,8 Kg',
+      'Dimensi': 'P: 200 L: 60 T: 185 cm',
+      'Volume': '0,3609 m'
+    },
+    features: [
+      '– Lemari Pakaian Besi dengan kombinasi warna White – Aesthetic Tile yang Natural',
+      '– Mekanisme bukaan pintu Sliding + Swing',
+      '– Cermin Tinggi Full Satu Pintu',
+      '– Tersedia Safety Box dengan pengunci',
+      '– Gantungan baju Kuat dan Tahan Lama',
+      '– Lemari lebih Tahan Gores serta Anti Rayap dan Jamur'
+    ],
+    waText: 'Halo, saya tertarik dengan Lemari Pakaian Besi – Forte SL 203 C – Activ Furniture (Rp 5.500.000)'
+  },
+  alp_lemari_pakaian_besi_lemari_sliding__28: {
+    id: 'alp_lemari_pakaian_besi_lemari_sliding__28',
+    name: 'Lemari Pakaian Besi/ Lemari Sliding Besi – Forte SL 162 A – Activ Furniture',
+    category: 'Lemari',
+    image: 'img/activ/lemari-pakaian-besi-lemari-sliding-besi-forte-sl-162-a-activ-furniture.png',
+    images: ['img/activ/lemari-pakaian-besi-lemari-sliding-besi-forte-sl-162-a-activ-furniture.png'],
+    badge: 'ACTIV',
+    price: 5200000,
+    description: '– Lemari pakaian forte series dengan kombinasi pintu sliding + swing – Hadir dengan tampilan warna White – Wahana Teak yang lebih elegan – Tersedia kompartemen untuk long dress – Pintu slid',
+    specs: {
+      'Ruangan': 'Ruang Tidur',
+      'Kategori Produk': 'Lemari Pakaian Besi / Lemari Sliding Besi',
+      'Warna': 'White – White Teak',
+      'Berat Kotor': '78,8 Kg',
+      'Dimensi': 'P: 160 L: 50 T: 185 cm',
+      'Volume': '0,2148 m'
+    },
+    features: [
+      '– Lemari pakaian forte series dengan kombinasi pintu sliding + swing',
+      '– Hadir dengan tampilan warna White – Wahana Teak yang lebih elegan',
+      '– Tersedia kompartemen untuk long dress',
+      '– Pintu sliding dengan rel yang lancar',
+      '– Menggunakan handle besi tanam',
+      '– Tersedia safety box dengan pengunci'
+    ],
+    waText: 'Halo, saya tertarik dengan Lemari Pakaian Besi/ Lemari Sliding Besi – Forte SL 162 A – Activ Furniture (Rp 5.200.000)'
+  },
+  alp_lemari_pakaian_besi_lemari_sliding__29: {
+    id: 'alp_lemari_pakaian_besi_lemari_sliding__29',
+    name: 'Lemari Pakaian Besi/ Lemari Sliding Besi – Forte SL 161 A – Activ Furniture',
+    category: 'Lemari',
+    image: 'img/activ/lemari-pakaian-besi-lemari-sliding-besi-forte-sl-161-a-activ-furniture.png',
+    images: ['img/activ/lemari-pakaian-besi-lemari-sliding-besi-forte-sl-161-a-activ-furniture.png'],
+    badge: 'ACTIV',
+    price: 5018000,
+    description: '– Lemari pakaian forte series hadir dengan tampilan warna White – Wahana Teak yang lebih elegan – Tersedia kompartemen untuk long dress – Pintu sliding dengan rel yang lancar – Menggunakan',
+    specs: {
+      'Ruangan': 'Ruang Tidur',
+      'Kategori Produk': 'Lemari Pakaian Besi / Lemari Sliding Besi',
+      'Warna': 'White – White Teak',
+      'Berat Kotor': '72,7 Kg',
+      'Dimensi': 'P: 160 L: 50 T: 185 cm',
+      'Volume': '0,2371 m'
+    },
+    features: [
+      '– Lemari pakaian forte series hadir dengan tampilan warna White – Wahana Teak yang lebih elegan',
+      '– Tersedia kompartemen untuk long dress',
+      '– Pintu sliding dengan rel yang lancar',
+      '– Menggunakan handle besi tanam',
+      '– Tersedia safety box dengan pengunci',
+      '– Memiliki magnet dan bumper pada pintu'
+    ],
+    waText: 'Halo, saya tertarik dengan Lemari Pakaian Besi/ Lemari Sliding Besi – Forte SL 161 A – Activ Furniture (Rp 5.018.000)'
+  },
+  alp_lemari_pakaian_besi_forte_sl_127_a__30: {
+    id: 'alp_lemari_pakaian_besi_forte_sl_127_a__30',
+    name: 'Lemari Pakaian Besi – Forte SL 127 A – Activ Furniture',
+    category: 'Lemari',
+    image: 'img/activ/lemari-pakaian-besi-forte-sl-127-a-activ-furniture.png',
+    images: ['img/activ/lemari-pakaian-besi-forte-sl-127-a-activ-furniture.png'],
+    badge: 'ACTIV',
+    price: 4500000,
+    description: '– Lemari pakaian Forte series dengan bukaan sliding – Hadir dengan motif emboss limited edition yang memberikan kesan Modern & Artistik – Tekstur pintu lebih tahan gores – Handle pintu tana',
+    specs: {
+      'Ruangan': 'Ruang Tidur',
+      'Kategori Produk': 'Lemari Pakaian Besi / Lemari Sliding Besi',
+      'Warna': 'White',
+      'Berat Kotor': '52,3 Kg',
+      'Dimensi': 'P: 118 L: 50 T: 185 cm',
+      'Volume': '0,1842 m'
+    },
+    features: [
+      '– Lemari pakaian Forte series dengan bukaan sliding',
+      '– Hadir dengan motif emboss limited edition yang memberikan kesan Modern & Artistik',
+      '– Tekstur pintu lebih tahan gores',
+      '– Handle pintu tanam dari bahan besi',
+      '– Tersedia 2 gantungan baju yang bisa di lepas-pasang',
+      '– Memiliki extra rak penyimpanan'
+    ],
+    waText: 'Halo, saya tertarik dengan Lemari Pakaian Besi – Forte SL 127 A – Activ Furniture (Rp 4.500.000)'
+  },
+  alp_lemari_pakaian_besi_forte_sl_123_a__31: {
+    id: 'alp_lemari_pakaian_besi_forte_sl_123_a__31',
+    name: 'Lemari Pakaian Besi – Forte SL 123 A – Activ Furniture',
+    category: 'Lemari',
+    image: 'img/activ/lemari-pakaian-besi-forte-sl-123-a-activ-furniture.png',
+    images: ['img/activ/lemari-pakaian-besi-forte-sl-123-a-activ-furniture.png'],
+    badge: 'ACTIV',
+    price: 3800000,
+    description: '– Lemari Pakaian Besi dengan kombinasi warna White – Wooden yang Natural – Mekanisme bukaan pintu Sliding – Rak dan gantungan Dapat Disesuaikan menjadi 6 Konfigurasi – Cermin Tinggi Full Sa',
+    specs: {
+      'Ruangan': 'Ruang Tidur',
+      'Kategori Produk': 'Lemari Pakaian Besi',
+      'Warna': 'White – Wooden',
+      'Berat Kotor': '60,4 Kg',
+      'Dimensi': 'P: 118 L: 50 T: 185 cm',
+      'Volume': '0,1943 m'
+    },
+    features: [
+      '– Lemari Pakaian Besi dengan kombinasi warna White – Wooden yang Natural',
+      '– Mekanisme bukaan pintu Sliding',
+      '– Rak dan gantungan Dapat Disesuaikan menjadi 6 Konfigurasi',
+      '– Cermin Tinggi Full Satu Pintu',
+      '– Tersedia Safety Box dengan pengunci',
+      '– Gantungan baju Kuat dan Tahan Lama'
+    ],
+    waText: 'Halo, saya tertarik dengan Lemari Pakaian Besi – Forte SL 123 A – Activ Furniture (Rp 3.800.000)'
+  },
+  alp_lemari_pakaian_besi_forte_sl_121_a__32: {
+    id: 'alp_lemari_pakaian_besi_forte_sl_121_a__32',
+    name: 'Lemari Pakaian Besi – Forte SL 121 A – Activ Furniture',
+    category: 'Lemari',
+    image: 'img/activ/lemari-pakaian-besi-forte-sl-121-a-activ-furniture.png',
+    images: ['img/activ/lemari-pakaian-besi-forte-sl-121-a-activ-furniture.png'],
+    badge: 'ACTIV',
+    price: 3539000,
+    description: '– Lemari Pakaian Besi dengan kombinasi warna White – Marble – Mekanisme bukaan pintu Sliding – Cermin Tinggi Full Satu Pintu – Tersedia Safety Box dengan pengunci – Gantungan baju Kuat dan',
+    specs: {
+      'Ruangan': 'Ruang Tidur',
+      'Kategori Produk': 'Lemari Pakaian Besi',
+      'Warna': 'White – Marble',
+      'Berat Kotor': '57 Kg',
+      'Dimensi': 'P: 118 L: 50 T: 185 cm',
+      'Volume': '0,1742 m'
+    },
+    features: [
+      '– Lemari Pakaian Besi dengan kombinasi warna White – Marble',
+      '– Mekanisme bukaan pintu Sliding',
+      '– Cermin Tinggi Full Satu Pintu',
+      '– Tersedia Safety Box dengan pengunci',
+      '– Gantungan baju Kuat dan Tahan Lama',
+      '– Lemari lebih Tahan Gores serta Anti Rayap dan Jamur'
+    ],
+    waText: 'Halo, saya tertarik dengan Lemari Pakaian Besi – Forte SL 121 A – Activ Furniture (Rp 3.539.000)'
+  },
+  alp_lemari_pakaian_besi_forte_sl_93_a_a_33: {
+    id: 'alp_lemari_pakaian_besi_forte_sl_93_a_a_33',
+    name: 'Lemari Pakaian Besi – Forte SL 93 A – Activ Furniture',
+    category: 'Lemari',
+    image: 'img/activ/lemari-pakaian-besi-forte-sl-93-a-activ-furniture.png',
+    images: ['img/activ/lemari-pakaian-besi-forte-sl-93-a-activ-furniture.png'],
+    badge: 'ACTIV',
+    price: 3347000,
+    description: '– Lemari Pakaian Besi dengan kombinasi warna White – Wooden yang Natural – Mekanisme bukaan pintu Sliding – Rak dan gantungan Dapat Disesuaikan menjadi 6 Konfigurasi – Cermin Tinggi Full Sa',
+    specs: {
+      'Ruangan': 'Ruang Tidur',
+      'Kategori Produk': 'Lemari Pakaian Besi',
+      'Warna': 'White – Wooden',
+      'Berat Kotor': '52 Kg',
+      'Dimensi': 'P: 90 L: 50 T: 185 cm',
+      'Volume': '0,1744 m'
+    },
+    features: [
+      '– Lemari Pakaian Besi dengan kombinasi warna White – Wooden yang Natural',
+      '– Mekanisme bukaan pintu Sliding',
+      '– Rak dan gantungan Dapat Disesuaikan menjadi 6 Konfigurasi',
+      '– Cermin Tinggi Full Satu Pintu',
+      '– Tersedia Safety Box dengan pengunci',
+      '– Gantungan baju Kuat dan Tahan Lama'
+    ],
+    waText: 'Halo, saya tertarik dengan Lemari Pakaian Besi – Forte SL 93 A – Activ Furniture (Rp 3.347.000)'
+  },
+  alp_lemari_pakaian_kofi_lp_307_activ_fu_34: {
+    id: 'alp_lemari_pakaian_kofi_lp_307_activ_fu_34',
+    name: 'Lemari Pakaian – Kofi LP 307 – Activ Furniture',
+    category: 'Lemari',
+    image: 'img/activ/lemari-pakaian-kofi-lp-307-activ-furniture.png',
+    images: ['img/activ/lemari-pakaian-kofi-lp-307-activ-furniture.png'],
+    badge: 'ACTIV',
+    price: 3058000,
+    description: '– Lemari 3 pintu ini menggunkan warna white glossy – taupe yang elegan – Dilengkapi penyimpanan laci dengan kunci – Tersedia gantungan baju yang kuat – Memiliki 5 kompartemen penyimpanan ya',
+    specs: {
+      'Ruangan': 'Ruang Tidur',
+      'Kategori Produk': 'Lemari Pakaian',
+      'Warna': 'White Glossy – Taupe',
+      'Berat Kotor': '82,5 Kg',
+      'Dimensi': 'P: 118,9 L: 58 T: 191 cm',
+      'Volume': '0,1972 m'
+    },
+    features: [
+      '– Lemari 3 pintu ini menggunkan warna white glossy – taupe yang elegan',
+      '– Dilengkapi penyimpanan laci dengan kunci',
+      '– Tersedia gantungan baju yang kuat',
+      '– Memiliki 5 kompartemen penyimpanan yang luas',
+      '– Handle yang minimalis dan kokoh',
+      '– Dilengkapi cermin panjang yang bisa menampilkan seluruh tubuh'
+    ],
+    waText: 'Halo, saya tertarik dengan Lemari Pakaian – Kofi LP 307 – Activ Furniture (Rp 3.058.000)'
+  },
+  alp_lemari_pakaian_kofi_lp_207_activ_fu_35: {
+    id: 'alp_lemari_pakaian_kofi_lp_207_activ_fu_35',
+    name: 'Lemari Pakaian – Kofi LP 207 – Activ Furniture',
+    category: 'Lemari',
+    image: 'img/activ/lemari-pakaian-kofi-lp-207-activ-furniture.png',
+    images: ['img/activ/lemari-pakaian-kofi-lp-207-activ-furniture.png'],
+    badge: 'ACTIV',
+    price: 2451000,
+    description: '– Lemari 2 pintu ini menggunkan warna white glossy – taupe yang elegan – Dilengkapi penyimpanan laci dengan kunci – Tersedia gantungan baju yang kuat – Memiliki 5 kompartemen penyimpanan ya',
+    specs: {
+      'Ruangan': 'Ruang Tidur',
+      'Kategori Produk': 'Lemari Pakaian',
+      'Warna': 'White Glossy – Taupe',
+      'Berat Kotor': '67 Kg',
+      'Dimensi': 'P: 79,5 L: 58 T: 191 cm',
+      'Volume': '0,1437 m'
+    },
+    features: [
+      '– Lemari 2 pintu ini menggunkan warna white glossy – taupe yang elegan',
+      '– Dilengkapi penyimpanan laci dengan kunci',
+      '– Tersedia gantungan baju yang kuat',
+      '– Memiliki 5 kompartemen penyimpanan yang luas',
+      '– Handle yang minimalis dan kokoh',
+      '– Dilengkapi cermin panjang yang bisa menampilkan seluruh tubuh'
+    ],
+    waText: 'Halo, saya tertarik dengan Lemari Pakaian – Kofi LP 207 – Activ Furniture (Rp 2.451.000)'
+  },
+  amr_meja_rias_kofi_mr_90_activ_furnitur_36: {
+    id: 'amr_meja_rias_kofi_mr_90_activ_furnitur_36',
+    name: 'Meja Rias – Kofi MR 90 – Activ Furniture',
+    category: 'Meja Rias',
+    image: 'img/activ/meja-rias-kofi-mr-90-activ-furniture.png',
+    images: ['img/activ/meja-rias-kofi-mr-90-activ-furniture.png'],
+    badge: 'ACTIV',
+    price: 1800000,
+    description: '– Meja rias ini menggunkan warna white glossy – taupe yang elegan – Dilengkapi penyimpanan laci – Tersedia kompartemen rak yang luas – Memiliki kursi dengan dudukan yang empuk – Handle pint',
+    specs: {
+      'Ruangan': 'Ruang Tidur',
+      'Kategori Produk': 'Meja Rias',
+      'Warna': 'White Glossy – Taupe',
+      'Berat Kotor': '46 Kg',
+      'Dimensi': 'P: 90 L: 41 T: 170,2 cm',
+      'Volume': '0,145 m'
+    },
+    features: [
+      '– Meja rias ini menggunkan warna white glossy – taupe yang elegan',
+      '– Dilengkapi penyimpanan laci',
+      '– Tersedia kompartemen rak yang luas',
+      '– Memiliki kursi dengan dudukan yang empuk',
+      '– Handle pintu rak yang minimalis dan kokoh',
+      '– Dilengkapi cermin panjang dan luas'
+    ],
+    waText: 'Halo, saya tertarik dengan Meja Rias – Kofi MR 90 – Activ Furniture (Rp 1.800.000)'
+  },
+  aov_rak_tv_jazz_austin_rtv_120_activ_fu_37: {
+    id: 'aov_rak_tv_jazz_austin_rtv_120_activ_fu_37',
+    name: 'Rak TV – Jazz Austin RTV 120 – Activ Furniture',
+    category: 'Rak & Aksesoris',
+    image: 'img/activ/rak-tv-jazz-austin-rtv-120-activ-furniture-2.png',
+    images: ['img/activ/rak-tv-jazz-austin-rtv-120-activ-furniture-2.png'],
+    badge: 'ACTIV',
+    price: 1500000,
+    description: '– Menggunakan warna amber oak yang modern dan industrial – Tersedia penyimpanan 2 rak, 1 laci dan 1 penyimpanan terbuka yang fungsional – Pintu dilengkapi handle minimalis – Top table dapat',
+    specs: {
+      'Ruangan': 'Ruang Keluarga',
+      'Kategori Produk': 'Rak TV',
+      'Warna': 'Amber Oak',
+      'Berat Kotor': '22,5 Kg',
+      'Dimensi': 'P: 120,1 L: 39,5 T: 50,7 cm',
+      'Volume': '0,0623 m'
+    },
+    features: [
+      '– Menggunakan warna amber oak yang modern dan industrial',
+      '– Tersedia penyimpanan 2 rak, 1 laci dan 1 penyimpanan terbuka yang fungsional',
+      '– Pintu dilengkapi handle minimalis',
+      '– Top table dapat digunakan untuk meletakkan TV',
+      '– Menggunakan kaki aluminium yang kuat dan tahan lama',
+      '– Sambungan panel belakang tanpa paku'
+    ],
+    waText: 'Halo, saya tertarik dengan Rak TV – Jazz Austin RTV 120 – Activ Furniture (Rp 1.500.000)'
+  },
+  aov_lemari_laci_jazz_austin_ll_60_activ_38: {
+    id: 'aov_lemari_laci_jazz_austin_ll_60_activ_38',
+    name: 'Lemari Laci – Jazz Austin LL 60 – Activ Furniture',
+    category: 'Rak & Aksesoris',
+    image: 'img/activ/lemari-laci-jazz-austin-ll-60-activ-furniture.webp',
+    images: ['img/activ/lemari-laci-jazz-austin-ll-60-activ-furniture.webp'],
+    badge: 'ACTIV',
+    price: 850000,
+    description: '– Menggunakan warna canyon oak – black yang modern dan industrial – Tersedia penyimpanan 4 laci yang fungsional dan luas – Pintu dilengkapi handle aluminium yang minimalis – Menggunakan kak',
+    specs: {
+      'Ruangan': 'Ruang Keluarga',
+      'Kategori Produk': 'Lemari Laci',
+      'Warna': 'Canyon Oak – Black',
+      'Berat Kotor': '35 Kg',
+      'Dimensi': 'P: 60 L: 39,5 T: 119 cm',
+      'Volume': '0,078 m'
+    },
+    features: [
+      '– Menggunakan warna canyon oak – black yang modern dan industrial',
+      '– Tersedia penyimpanan 4 laci yang fungsional dan luas',
+      '– Pintu dilengkapi handle aluminium yang minimalis',
+      '– Menggunakan kaki aluminium yang kuat dan tahan lama',
+      '– Sambungan panel belakang tanpa paku',
+      '– Ketebalan panel 15 mm'
+    ],
+    waText: 'Halo, saya tertarik dengan Lemari Laci – Jazz Austin LL 60 – Activ Furniture (Rp 850.000)'
+  },
+  aov_sideboard_jazz_austin_sb_80_activ_f_39: {
+    id: 'aov_sideboard_jazz_austin_sb_80_activ_f_39',
+    name: 'Sideboard – Jazz Austin SB 80 – Activ Furniture',
+    category: 'Rak & Aksesoris',
+    image: 'img/activ/sideboard-jazz-austin-sb-80-activ-furniture.webp',
+    images: ['img/activ/sideboard-jazz-austin-sb-80-activ-furniture.webp'],
+    badge: 'ACTIV',
+    price: 1100000,
+    description: '– Menggunakan warna canyon oak – black yang modern dan industrial – Tersedia penyimpanan 4 rak yang fungsional dan luas – Pintu dilengkapi handle aluminium yang minimalis – Menggunakan kaki',
+    specs: {
+      'Ruangan': 'Ruang Keluarga',
+      'Kategori Produk': 'Rak TV',
+      'Warna': 'Canyon Oak – Black',
+      'Berat Kotor': '25 Kg',
+      'Dimensi': 'P: 80,1 L: 39,5 T: 136,6 cm',
+      'Volume': '0,0506 m'
+    },
+    features: [
+      '– Menggunakan warna canyon oak – black yang modern dan industrial',
+      '– Tersedia penyimpanan 4 rak yang fungsional dan luas',
+      '– Pintu dilengkapi handle aluminium yang minimalis',
+      '– Menggunakan kaki aluminium yang kuat dan tahan lama',
+      '– Sambungan panel belakang tanpa paku',
+      '– Ketebalan panel 15 mm'
+    ],
+    waText: 'Halo, saya tertarik dengan Sideboard – Jazz Austin SB 80 – Activ Furniture (Rp 1.100.000)'
+  },
+  aov_lemari_sepatu_jazz_austin_ls_80_act_40: {
+    id: 'aov_lemari_sepatu_jazz_austin_ls_80_act_40',
+    name: 'Lemari Sepatu – Jazz Austin LS 80 – Activ Furniture',
+    category: 'Rak & Aksesoris',
+    image: 'img/activ/lemari-sepatu-jazz-austin-ls-80-activ-furniture.webp',
+    images: ['img/activ/lemari-sepatu-jazz-austin-ls-80-activ-furniture.webp'],
+    badge: 'ACTIV',
+    price: 900000,
+    description: '– Menggunakan warna canyon oak – black yang modern dan industrial – Tersedia penyimpanan 5 rak yang luas dan lega – Pintu dilengkapi handle aluminium yang minimalis – Menggunakan kaki alumi',
+    specs: {
+      'Ruangan': 'Ruang Keluarga',
+      'Kategori Produk': 'Lemari Sepatu',
+      'Warna': 'Canyon Oak – Black',
+      'Berat Kotor': '40,5 Kg',
+      'Dimensi': 'P: 80,1 L: 39,5 T: 136,6 cm',
+      'Volume': '0,095 m'
+    },
+    features: [
+      '– Menggunakan warna canyon oak – black yang modern dan industrial',
+      '– Tersedia penyimpanan 5 rak yang luas dan lega',
+      '– Pintu dilengkapi handle aluminium yang minimalis',
+      '– Menggunakan kaki aluminium yang kuat dan tahan lama',
+      '– Sambungan panel belakang tanpa paku',
+      '– Kaca lemari lebih tahan pecah'
+    ],
+    waText: 'Halo, saya tertarik dengan Lemari Sepatu – Jazz Austin LS 80 – Activ Furniture (Rp 900.000)'
+  },
+  alp_lemari_pakaian_jazz_austin_lp_300_a_41: {
+    id: 'alp_lemari_pakaian_jazz_austin_lp_300_a_41',
+    name: 'Lemari Pakaian – Jazz Austin LP 300 – Activ Furniture',
+    category: 'Lemari',
+    image: 'img/activ/lemari-pakaian-jazz-austin-lp-300-activ-furniture.webp',
+    images: ['img/activ/lemari-pakaian-jazz-austin-lp-300-activ-furniture.webp'],
+    badge: 'ACTIV',
+    price: 3500000,
+    description: '– Menggunakan warna canyon oak – black yang modern dan industrial – Tersedia penyimpanan 7 rak yang fungsional dan luas – Pintu dilengkapi handle aluminium yang minimalis – Tersedia gantung',
+    specs: {
+      'Ruangan': 'Ruang Tidur',
+      'Kategori Produk': 'Lemari Pakaian',
+      'Warna': 'Canyon Oak – Black',
+      'Berat Kotor': '91 Kg',
+      'Dimensi': 'P: 118,8 L: 52 T: 209,5 cm',
+      'Volume': '0,2388 m'
+    },
+    features: [
+      '– Menggunakan warna canyon oak – black yang modern dan industrial',
+      '– Tersedia penyimpanan 7 rak yang fungsional dan luas',
+      '– Pintu dilengkapi handle aluminium yang minimalis',
+      '– Tersedia gantungan baju yang kuat',
+      '– Dilengkapi cermin yang luas dan tinggi',
+      '– Menggunakan kaki aluminium yang kuat dan tahan lama'
+    ],
+    waText: 'Halo, saya tertarik dengan Lemari Pakaian – Jazz Austin LP 300 – Activ Furniture (Rp 3.500.000)'
+  },
+  aov_rak_tv_nexa_rtv_158_activ_furniture_42: {
+    id: 'aov_rak_tv_nexa_rtv_158_activ_furniture_42',
+    name: 'Rak TV – Nexa RTV 158 – Activ Furniture',
+    category: 'Rak & Aksesoris',
+    image: 'img/activ/rak-tv-nexa-rtv-158-activ-furniture.png',
+    images: ['img/activ/rak-tv-nexa-rtv-158-activ-furniture.png'],
+    badge: 'ACTIV',
+    price: 1200000,
+    description: '– Menggunakan warna wenge yang modern – Tersedia penyimpanan 1 rak kaca luas dan 1 rak tertutup yang fungsional – Pintu dilengkapi handle minimalis – Menggunakan pintu sliding dengan rel pi',
+    specs: {
+      'Ruangan': 'Ruang Keluarga',
+      'Kategori Produk': 'Rak TV',
+      'Warna': 'Wenge',
+      'Berat Kotor': '39 Kg',
+      'Dimensi': 'P: 150 L: 39,5 T: 57,5 cm',
+      'Volume': '0,0785 m'
+    },
+    features: [
+      '– Menggunakan warna wenge yang modern',
+      '– Tersedia penyimpanan 1 rak kaca luas dan 1 rak tertutup yang fungsional',
+      '– Pintu dilengkapi handle minimalis',
+      '– Menggunakan pintu sliding dengan rel pintu yang lancar',
+      '– Top table luas dapat digunakan untuk meletakkan TV',
+      '– Laminasi PVC'
+    ],
+    waText: 'Halo, saya tertarik dengan Rak TV – Nexa RTV 158 – Activ Furniture (Rp 1.200.000)'
+  },
+  aov_rak_tv_nexa_rtv_156_activ_furniture_43: {
+    id: 'aov_rak_tv_nexa_rtv_156_activ_furniture_43',
+    name: 'Rak TV – Nexa RTV 156 – Activ Furniture',
+    category: 'Rak & Aksesoris',
+    image: 'img/activ/rak-tv-nexa-rtv-156-activ-furniture.webp',
+    images: ['img/activ/rak-tv-nexa-rtv-156-activ-furniture.webp'],
+    badge: 'ACTIV',
+    price: 1200000,
+    description: '– Menggunakan warna sonoma oak – taupe yang modern – Tersedia penyimpanan 1 rak luas tertutup dan 2 rak terbuka dan 2 laci yang fungsional – Laci dilengkapi handle minimalis – Top table lua',
+    specs: {
+      'Ruangan': 'Ruang Keluarga',
+      'Kategori Produk': 'Rak TV',
+      'Warna': 'Sonoma Oak – Taupe',
+      'Berat Kotor': '32 Kg',
+      'Dimensi': 'P: 150 L: 39,5 T: 55 cm',
+      'Volume': '0,0784 m'
+    },
+    features: [
+      '– Menggunakan warna sonoma oak – taupe yang modern',
+      '– Tersedia penyimpanan 1 rak luas tertutup dan 2 rak terbuka dan 2 laci yang fungsional',
+      '– Laci dilengkapi handle minimalis',
+      '– Top table luas dapat digunakan untuk meletakkan TV',
+      '– Laminasi PVC',
+      '– Sheet paper'
+    ],
+    waText: 'Halo, saya tertarik dengan Rak TV – Nexa RTV 156 – Activ Furniture (Rp 1.200.000)'
+  },
+  aov_rak_tv_nexa_rtv_80_activ_furniture_44: {
+    id: 'aov_rak_tv_nexa_rtv_80_activ_furniture_44',
+    name: 'Rak TV – Nexa RTV 80 – Activ Furniture',
+    category: 'Rak & Aksesoris',
+    image: 'img/activ/rak-tv-nexa-rtv-80-activ-furniture.webp',
+    images: ['img/activ/rak-tv-nexa-rtv-80-activ-furniture.webp'],
+    badge: 'ACTIV',
+    price: 800000,
+    description: '– Menggunakan warna natural oak – tsugawood ash yang modern – Tersedia penyimpanan 1 rak luas tertutup dan 2 rak terbuka yang fungsional – Pintu dilengkapi handle minimalis – Top table luas',
+    specs: {
+      'Ruangan': 'Ruang Keluarga',
+      'Kategori Produk': 'Rak TV',
+      'Warna': 'Natural Oak – Tsugawood Ash',
+      'Berat Kotor': '11 Kg',
+      'Dimensi': 'P: 80 L: 29,5 T: 52,3 cm',
+      'Volume': '0,0272 m'
+    },
+    features: [
+      '– Menggunakan warna natural oak – tsugawood ash yang modern',
+      '– Tersedia penyimpanan 1 rak luas tertutup dan 2 rak terbuka yang fungsional',
+      '– Pintu dilengkapi handle minimalis',
+      '– Top table luas dapat digunakan untuk meletakkan TV',
+      '– Memiliki kaki meja yang kuat dan kokoh',
+      '– Laminasi PVC'
+    ],
+    waText: 'Halo, saya tertarik dengan Rak TV – Nexa RTV 80 – Activ Furniture (Rp 800.000)'
+  },
+  aov_sideboard_nexa_sb_150_activ_furnitu_45: {
+    id: 'aov_sideboard_nexa_sb_150_activ_furnitu_45',
+    name: 'Sideboard – Nexa SB 150 – Activ Furniture',
+    category: 'Rak & Aksesoris',
+    image: 'img/activ/sideboard-nexa-sb-150-activ-furniture.png',
+    images: ['img/activ/sideboard-nexa-sb-150-activ-furniture.png'],
+    badge: 'ACTIV',
+    price: 2000000,
+    description: '– Menggunakan warna white glossy – black yang clean – Tersedia penyimpanan 3 laci yang luas – Pintu dilengkapi handle minimalis – Memiliki penyimpanan rak kaca – Memiliki kaki yang kuat dan',
+    specs: {
+      'Ruangan': 'Ruang Keluarga',
+      'Kategori Produk': 'Sideboard',
+      'Warna': 'White Glossy – Black',
+      'Berat Kotor': '61 Kg',
+      'Dimensi': 'P: 157,3 L: 41 T: 86,3 cm',
+      'Volume': '0,0889 m'
+    },
+    features: [
+      '– Menggunakan warna white glossy – black yang clean',
+      '– Tersedia penyimpanan 3 laci yang luas',
+      '– Pintu dilengkapi handle minimalis',
+      '– Memiliki penyimpanan rak kaca',
+      '– Memiliki kaki yang kuat dan kokoh',
+      '– Top table laminasi PVC glossy'
+    ],
+    waText: 'Halo, saya tertarik dengan Sideboard – Nexa SB 150 – Activ Furniture (Rp 2.000.000)'
+  },
+  aov_meja_tamu_coffee_table_nexa_cft_91__46: {
+    id: 'aov_meja_tamu_coffee_table_nexa_cft_91__46',
+    name: 'Meja Tamu / Coffee Table – Nexa CFT 91 – Activ Furniture',
+    category: 'Rak & Aksesoris',
+    image: 'img/activ/meja-tamu-coffee-table-nexa-cft-91-activ-furniture.png',
+    images: ['img/activ/meja-tamu-coffee-table-nexa-cft-91-activ-furniture.png'],
+    badge: 'ACTIV',
+    price: 850000,
+    description: '– Meja tamu Nexa CFT 90 dilengkapi dua open storage serbaguna dengan ukuran space yang cukup luas untuk menyimpan barang – Top table berbahan Particle Board 12mm dengan finishing laminasi P',
+    specs: {
+      'Ruangan': 'Ruang Keluarga',
+      'Kategori Produk': 'Meja Tamu/Coffee Table',
+      'Warna': 'Columbia Nussebaum',
+      'Berat Kotor': '23 Kg',
+      'Dimensi': 'P: 90 L: 59 T: 39 cm',
+      'Volume': '0,0639 m'
+    },
+    features: [
+      '– Meja tamu Nexa CFT 90 dilengkapi dua open storage serbaguna dengan ukuran space yang cukup luas untuk menyimpan barang',
+      '– Top table berbahan Particle Board 12mm dengan finishing laminasi PVC Sonoma Oak bertekstur',
+      '– Tersedia Rak Paten pemisah antar open storage',
+      '– 5 Kaki Curved sebagai penopang yang kuat',
+      '– Material : Top table Particle Board 12 mm, finishing laminasi PVC Sonoma Oak bertekstur',
+      '– Berat Beban Top Table Max : 10 Kg'
+    ],
+    waText: 'Halo, saya tertarik dengan Meja Tamu / Coffee Table – Nexa CFT 91 – Activ Furniture (Rp 850.000)'
+  },
+  aov_meja_tamu_coffee_table_nexa_cft_80__47: {
+    id: 'aov_meja_tamu_coffee_table_nexa_cft_80__47',
+    name: 'Meja Tamu / Coffee Table – Nexa CFT 80 – Activ Furniture',
+    category: 'Rak & Aksesoris',
+    image: 'img/activ/meja-tamu-coffee-table-nexa-cft-80-activ-furniture.png',
+    images: ['img/activ/meja-tamu-coffee-table-nexa-cft-80-activ-furniture.png'],
+    badge: 'ACTIV',
+    price: 700000,
+    description: '– Meja tamu Nexa CFT 80 dilengkapi dua open storage serbaguna dengan ukuran space yang cukup luas untuk menyimpan barang – Top table berbahan Particle Board 12mm dengan finishing laminasi P',
+    specs: {
+      'Ruangan': 'Ruang Keluarga',
+      'Kategori Produk': 'Meja Tamu/Coffee Table',
+      'Warna': 'Sonoma Oak – White',
+      'Berat Kotor': '15 Kg',
+      'Dimensi': 'P: 118 L: 50 T: 185 cm',
+      'Volume': '0,0702 m'
+    },
+    features: [
+      '– Meja tamu Nexa CFT 80 dilengkapi dua open storage serbaguna dengan ukuran space yang cukup luas untuk menyimpan barang',
+      '– Top table berbahan Particle Board 12mm dengan finishing laminasi PVC Sonoma Oak bertekstur',
+      '– Tersedia Rak Paten pemisah antar open storage',
+      '– 5 Kaki Curved sebagai penopang yang kuat',
+      '– Open Storage samping dengan space yang cukup luas',
+      '– Bantalan dudukan kursi tebal dan empuk'
+    ],
+    waText: 'Halo, saya tertarik dengan Meja Tamu / Coffee Table – Nexa CFT 80 – Activ Furniture (Rp 700.000)'
+  },
+  aov_rak_tv_wall_unit_buffet_nexa_wu_181_48: {
+    id: 'aov_rak_tv_wall_unit_buffet_nexa_wu_181_48',
+    name: 'Rak TV / Wall Unit / Buffet – Nexa WU 182 – Activ Furniture',
+    category: 'Rak & Aksesoris',
+    image: 'img/activ/rak-tv-wall-unit-buffet-nexa-wu-181-activ-furniture.png',
+    images: ['img/activ/rak-tv-wall-unit-buffet-nexa-wu-181-activ-furniture.png'],
+    badge: 'ACTIV',
+    price: 2500000,
+    description: '– Rak TV / Wall Unit / Buffet menggunakan warna columbia nussebaum – white glossy yang modern – Tersedia penyimpanan 3 rak luas tertutup yang fungsional – Dilengkapi rak dengan pintu kaca y',
+    specs: {
+      'Ruangan': 'Ruang Keluarga',
+      'Kategori Produk': 'Rak TV / Wall Unit / Buffet',
+      'Warna': 'Columbia Nussebaum – White Glossy',
+      'Berat Kotor': '113 Kg',
+      'Dimensi': 'P: 180 L: 48 T: 180 cm',
+      'Volume': '0,2283 m'
+    },
+    features: [
+      '– Rak TV / Wall Unit / Buffet menggunakan warna columbia nussebaum – white glossy yang modern',
+      '– Tersedia penyimpanan 3 rak luas tertutup yang fungsional',
+      '– Dilengkapi rak dengan pintu kaca yang cocok untuk men-display koleksi',
+      '– Rak dengan bukaan pintu kaca push open',
+      '– Terdapat penyimpanan terbuka',
+      '– Memiliki penerangan tambahan lampu LED'
+    ],
+    waText: 'Halo, saya tertarik dengan Rak TV / Wall Unit / Buffet – Nexa WU 182 – Activ Furniture (Rp 2.500.000)'
+  },
+  aov_sideboard_lotus_sb_120_sonoma_oak_w_49: {
+    id: 'aov_sideboard_lotus_sb_120_sonoma_oak_w_49',
+    name: 'Sideboard – Lotus SB 120 (Sonoma Oak – White) – Activ Furniture',
+    category: 'Rak & Aksesoris',
+    image: 'img/activ/sideboard-lotus-sb-120-sonoma-oak-white-activ-furniture.png',
+    images: ['img/activ/sideboard-lotus-sb-120-sonoma-oak-white-activ-furniture.png'],
+    badge: 'ACTIV',
+    price: 1200000,
+    description: '– Sideboard terbuka ini hadir dengan warna sonoma oak – white – Handle pintu dan laci minimalis – Dilengkapi 4 kompartemen rak dalam di bagian bawah – Bagian atas sideboard dapat digunakan',
+    specs: {
+      'Ruangan': 'Ruang Keluarga',
+      'Kategori Produk': 'Sideboard',
+      'Warna': 'Sonoma Oak – White',
+      'Berat Kotor': '32 Kg',
+      'Dimensi': 'P: 118,2 L: 39,5 T: 78 cm',
+      'Volume': '0,0749 m'
+    },
+    features: [
+      '– Sideboard terbuka ini hadir dengan warna sonoma oak – white',
+      '– Handle pintu dan laci minimalis',
+      '– Dilengkapi 4 kompartemen rak dalam di bagian bawah',
+      '– Bagian atas sideboard dapat digunakan untuk meletakkan barang',
+      '– Bahan : particle board',
+      '– Luas penyimpanan 39,5 cm'
+    ],
+    waText: 'Halo, saya tertarik dengan Sideboard – Lotus SB 120 (Sonoma Oak – White) – Activ Furniture (Rp 1.200.000)'
+  },
+  aov_sideboard_lotus_sb_80_sonoma_oak_wh_50: {
+    id: 'aov_sideboard_lotus_sb_80_sonoma_oak_wh_50',
+    name: 'Sideboard – Lotus SB 80 (Sonoma Oak – White) – Activ Furniture',
+    category: 'Rak & Aksesoris',
+    image: 'img/activ/sideboard-lotus-sb-80-sonoma-oak-white-activ-furniture.png',
+    images: ['img/activ/sideboard-lotus-sb-80-sonoma-oak-white-activ-furniture.png'],
+    badge: 'ACTIV',
+    price: 850000,
+    description: '– Sideboard terbuka ini hadir dengan warna sonoma oak – white – Handle pintu dan laci minimalis – Dilengkapi 3 kompartemen rak dalam di bagian bawah – Terdapat 2 kompartemen laci yang luas',
+    specs: {
+      'Ruangan': 'Ruang Keluarga',
+      'Kategori Produk': 'Sideboard',
+      'Warna': 'Sonoma Oak – White',
+      'Berat Kotor': '26 Kg',
+      'Dimensi': 'P: 80 L: 39,5 T: 78 cm',
+      'Volume': '0,0558 m'
+    },
+    features: [
+      '– Sideboard terbuka ini hadir dengan warna sonoma oak – white',
+      '– Handle pintu dan laci minimalis',
+      '– Dilengkapi 3 kompartemen rak dalam di bagian bawah',
+      '– Terdapat 2 kompartemen laci yang luas',
+      '– Bagian atas sideboard dapat digunakan untuk meletakkan barang',
+      '– Bahan : particle board'
+    ],
+    waText: 'Halo, saya tertarik dengan Sideboard – Lotus SB 80 (Sonoma Oak – White) – Activ Furniture (Rp 850.000)'
+  },
+  aov_rak_tv_nexa_rtv_120_sonoma_oak_whit_51: {
+    id: 'aov_rak_tv_nexa_rtv_120_sonoma_oak_whit_51',
+    name: 'Rak TV – Lotus RTV 120 (Sonoma Oak – White) – Activ Furniture',
+    category: 'Rak & Aksesoris',
+    image: 'img/activ/rak-tv-nexa-rtv-120-sonoma-oak-white-activ-furniture.png',
+    images: ['img/activ/rak-tv-nexa-rtv-120-sonoma-oak-white-activ-furniture.png'],
+    badge: 'ACTIV',
+    price: 1100000,
+    description: '– Menggunakan warna sonoma oak – white yang modern – Tersedia penyimpanan 3 rak luas tertutup dan 1 rak terbuka yang fungsional – Pintu dilengkapi handle minimalis – Top table luas dapat di',
+    specs: {
+      'Ruangan': 'Ruang Keluarga',
+      'Kategori Produk': 'Rak TV',
+      'Warna': 'Sonoma Oak – White',
+      'Berat Kotor': '32 Kg',
+      'Dimensi': 'P: 118,2 L: 39,5 T: 58 cm',
+      'Volume': '0,0688 m'
+    },
+    features: [
+      '– Menggunakan warna sonoma oak – white yang modern',
+      '– Tersedia penyimpanan 3 rak luas tertutup dan 1 rak terbuka yang fungsional',
+      '– Pintu dilengkapi handle minimalis',
+      '– Top table luas dapat digunakan untuk meletakkan TV',
+      '– Memiliki kaki meja yang kuat dan kokoh',
+      '– Laminasi PVC'
+    ],
+    waText: 'Halo, saya tertarik dengan Rak TV – Lotus RTV 120 (Sonoma Oak – White) – Activ Furniture (Rp 1.100.000)'
+  },
+  aov_lemari_sepatu_lotus_ls_120_activ_fu_52: {
+    id: 'aov_lemari_sepatu_lotus_ls_120_activ_fu_52',
+    name: 'Lemari Sepatu – Lotus LS 120 – Activ Furniture',
+    category: 'Rak & Aksesoris',
+    image: 'img/activ/lemari-sepatu-lotus-ls-120-activ-furniture.png',
+    images: ['img/activ/lemari-sepatu-lotus-ls-120-activ-furniture.png'],
+    badge: 'ACTIV',
+    price: 900000,
+    description: '– Menggunakan warna sonoma oak – white yang modern dan minimalis – Tersedia penyimpanan 9 rak yang luas dan lega untuk meletakkan alas kaki – Pintu dilengkapi handle aluminium yang minimali',
+    specs: {
+      'Ruangan': 'Ruang Keluarga',
+      'Kategori Produk': 'Lemari Sepatu',
+      'Warna': 'Sonoma Oak – White',
+      'Berat Kotor': '38 Kg',
+      'Dimensi': 'P: 119,5 L: 39,5 T: 108 cm',
+      'Volume': '0,0749 m'
+    },
+    features: [
+      '– Menggunakan warna sonoma oak – white yang modern dan minimalis',
+      '– Tersedia penyimpanan 9 rak yang luas dan lega untuk meletakkan alas kaki',
+      '– Pintu dilengkapi handle aluminium yang minimalis',
+      '– Menggunakan engsel besi yang kuat',
+      '– Panel kaki tebal yang kuat dan kokoh',
+      '– Ketebalan panel kaki 25 mm dan 50 mm'
+    ],
+    waText: 'Halo, saya tertarik dengan Lemari Sepatu – Lotus LS 120 – Activ Furniture (Rp 900.000)'
+  },
+  aov_meja_tamu_coffee_table_lotus_cft_90_53: {
+    id: 'aov_meja_tamu_coffee_table_lotus_cft_90_53',
+    name: 'Meja Tamu / Coffee Table – Lotus CFT 90 (Sonoma Oak – White) – Activ Furniture',
+    category: 'Rak & Aksesoris',
+    image: 'img/activ/meja-tamu-coffee-table-lotus-cft-90-sonoma-oak-white-activ-furniture.png',
+    images: ['img/activ/meja-tamu-coffee-table-lotus-cft-90-sonoma-oak-white-activ-furniture.png'],
+    badge: 'ACTIV',
+    price: 700000,
+    description: '– Meja tamu ini hadir dengan tampilan warna sonoma oak – white yang lebih elegan – Meja tamu dengan penyimpanan yang luas – Pintu sliding dengan rel lacu yang lancar – Meja dengan bagian to',
+    specs: {
+      'Ruangan': 'Ruang Keluarga',
+      'Kategori Produk': 'Meja Tamu/Coffee Table',
+      'Warna': 'Sonoma Oak – White',
+      'Berat Kotor': '22 Kg',
+      'Dimensi': 'P: 90 L: 59,5 T: 41,5 cm',
+      'Volume': '0,0592 m'
+    },
+    features: [
+      '– Meja tamu ini hadir dengan tampilan warna sonoma oak – white yang lebih elegan',
+      '– Meja tamu dengan penyimpanan yang luas',
+      '– Pintu sliding dengan rel lacu yang lancar',
+      '– Meja dengan bagian top yang luas, dapat di gunakan untuk meletakkan banyak barang',
+      '– Bagian meja mudah di bersihkan',
+      '– Dilengkapi Kaki yang kuat'
+    ],
+    waText: 'Halo, saya tertarik dengan Meja Tamu / Coffee Table – Lotus CFT 90 (Sonoma Oak – White) – Activ Furniture (Rp 700.000)'
+  },
+  aov_lemari_hias_jazz_lh_400_activ_furni_54: {
+    id: 'aov_lemari_hias_jazz_lh_400_activ_furni_54',
+    name: 'Lemari Hias – Jazz LH 400 – Activ Furniture',
+    category: 'Rak & Aksesoris',
+    image: 'img/activ/lemari-hias-jazz-lh-400-activ-furniture-2.webp',
+    images: ['img/activ/lemari-hias-jazz-lh-400-activ-furniture-2.webp'],
+    badge: 'ACTIV',
+    price: 2062000,
+    description: '– Menggunakan warna white – sanremo oak yang modern – Tersedia penyimpanan 4 rak yang cocok untuk display koleksi – Memiliki 2 penyimpanan laci yang luas – Pintu dan laci dilengkapi handle',
+    specs: {
+      'Ruangan': 'Ruang Keluarga',
+      'Kategori Produk': 'Lemari Hias',
+      'Warna': 'Phantom Oak – White',
+      'Berat Kotor': '47,1 Kg',
+      'Dimensi': 'P: 42 L: 39,4 T: 182 cm',
+      'Volume': '0,1177 m'
+    },
+    features: [
+      '– Menggunakan warna white – sanremo oak yang modern',
+      '– Tersedia penyimpanan 4 rak yang cocok untuk display koleksi',
+      '– Memiliki 2 penyimpanan laci yang luas',
+      '– Pintu dan laci dilengkapi handle aluminium yang minimalis',
+      '– Dilengkapi kaca yang lebih tahan pecah',
+      '– Memiliki lampu LED untuk tambahan penerangan'
+    ],
+    waText: 'Halo, saya tertarik dengan Lemari Hias – Jazz LH 400 – Activ Furniture (Rp 2.062.000)'
+  },
+  aov_lemari_hias_jazz_lh_800_activ_furni_55: {
+    id: 'aov_lemari_hias_jazz_lh_800_activ_furni_55',
+    name: 'Lemari Hias – Jazz LH 800 – Activ Furniture',
+    category: 'Rak & Aksesoris',
+    image: 'img/activ/lemari-hias-jazz-lh-800-activ-furniture-2.png',
+    images: ['img/activ/lemari-hias-jazz-lh-800-activ-furniture-2.png'],
+    badge: 'ACTIV',
+    price: 3033000,
+    description: '– Menggunakan warna phantom oak – white yang modern – Tersedia penyimpanan 4 rak luas yang cocok untuk display koleksi – Memiliki 2 penyimpanan laci yang luas – Pintu dan laci dilengkapi ha',
+    specs: {
+      'Ruangan': 'Ruang Keluarga',
+      'Kategori Produk': 'Lemari Hias',
+      'Warna': 'Phantom Oak – White',
+      'Berat Kotor': '74,25 Kg',
+      'Dimensi': 'P: 80 L: 39,4 T: 182 cm',
+      'Volume': '0,1644 m3'
+    },
+    features: [
+      '– Menggunakan warna phantom oak – white yang modern',
+      '– Tersedia penyimpanan 4 rak luas yang cocok untuk display koleksi',
+      '– Memiliki 2 penyimpanan laci yang luas',
+      '– Pintu dan laci dilengkapi handle aluminium yang minimalis',
+      '– Dilengkapi kaca yang lebih tahan pecah',
+      '– Memiliki lampu LED untuk tambahan penerangan'
+    ],
+    waText: 'Halo, saya tertarik dengan Lemari Hias – Jazz LH 800 – Activ Furniture (Rp 3.033.000)'
+  },
+  aov_meja_rias_jazz_mr_activ_furniture_56: {
+    id: 'aov_meja_rias_jazz_mr_activ_furniture_56',
+    name: 'Meja Rias – Jazz MR – Activ Furniture',
+    category: 'Rak & Aksesoris',
+    image: 'img/activ/meja-rias-jazz-mr-activ-furniture.png',
+    images: ['img/activ/meja-rias-jazz-mr-activ-furniture.png'],
+    badge: 'ACTIV',
+    price: 1500000,
+    description: '– Menggunakan warna river teak – beech yang modern – Tersedia penyimpanan 1 laci dan 1 kompartemen rak yang fungsional dan luas – Pintu dan laci dilengkapi handle minimalis – Cermin luas –',
+    specs: {
+      'Ruangan': 'Ruang Tidur',
+      'Kategori Produk': 'Meja Rias',
+      'Warna': 'River Teak – Beech',
+      'Berat Kotor': '32 Kg',
+      'Dimensi': 'P: 88,6 L: 40 T: 164,5 cm',
+      'Volume': '0,0857 m'
+    },
+    features: [
+      '– Menggunakan warna river teak – beech yang modern',
+      '– Tersedia penyimpanan 1 laci dan 1 kompartemen rak yang fungsional dan luas',
+      '– Pintu dan laci dilengkapi handle minimalis',
+      '– Cermin luas',
+      '– Bangku dilengkapi bantalan yang empuk',
+      '– Tersedia penyimpanan tambahan diatas meja'
+    ],
+    waText: 'Halo, saya tertarik dengan Meja Rias – Jazz MR – Activ Furniture (Rp 1.500.000)'
+  },
+alb_lemari_buku_book_case_lotus_bc_57: {
+    id: 'alb_lemari_buku_book_case_lotus_bc_57',
+    name: 'Lemari Buku / Book Case - Lotus BC 80 - Activ Furniture',
+    category: 'Lemari',
+    image: 'img/activ/lemari-buku-book-case-lotus-bc-80-activ-furniture.png',
+    images: ['img/activ/lemari-buku-book-case-lotus-bc-80-activ-furniture.png'],
+    badge: 'ACTIV',
+    price: 1000000,
+    description: '- Lemari buku menggunakan warna sonoma oak - turquoise - grey - white yang modern dan ceria; - Tersedia penyimpanan 3 rak tertutup dan 4 rak terbuka yang fungsional dan luas; - Pintu dilengkapi handle aluminium yang minimalis; - Menggunakan engsel besi yang kuat; - Panel kaki tebal yang kuat dan kok',
+    specs: {
+      'Dimensi': 'P: 80 L: 39,5 T: 180,5 cm',
+      'Warna': 'Sonoma Oak - Turquoise - Grey - White',
+      'Berat Kotor': '50 Kg'
+    },
+    features: [
+      'Lemari buku menggunakan warna sonoma oak - turquoise - grey - white yang modern dan ceria',
+      'Tersedia penyimpanan 3 rak tertutup dan 4 rak terbuka yang fungsional dan luas',
+      'Pintu dilengkapi handle aluminium yang minimalis',
+      'Menggunakan engsel besi yang kuat',
+      'Panel kaki tebal yang kuat dan kokoh',
+      'Ketebalan panel kaki 25 mm dan 50 mm'
+    ],
+    waText: 'Halo, saya tertarik dengan Lemari Buku / Book Case - Lotus BC 80 - Activ Furniture (Rp 1.000.000)'
+  },
+
+  aov_rak_tv_lotus_rtv_80_pasific_oa_58: {
+    id: 'aov_rak_tv_lotus_rtv_80_pasific_oa_58',
+    name: 'Rak TV - Lotus RTV 80 (Pasific Oak - White) - Activ Furniture',
+    category: 'Rak & Aksesoris',
+    image: 'img/activ/rak-tv-lotus-rtv-80-pasific-oak-white-activ-furniture.png',
+    images: ['img/activ/rak-tv-lotus-rtv-80-pasific-oak-white-activ-furniture.png'],
+    badge: 'ACTIV',
+    price: 750000,
+    description: '- Menggunakan warna pasific oak - white yang modern; - Tersedia penyimpanan 2 rak luas tertutup dan 1 rak terbuka yang fungsional; - Pintu dilengkapi handle minimalis; - Top table luas dapat digunakan untuk meletakkan TV; - Memiliki kaki meja yang kuat dan kokoh; - Laminasi PVC; - Sheet paper; - Pan',
+    specs: {
+      'Dimensi': 'P: 80 L: 39,5 T: 58 cm',
+      'Warna': 'Pasific Oak - White',
+      'Berat Kotor': '23,5 Kg'
+    },
+    features: [
+      'Menggunakan warna pasific oak - white yang modern',
+      'Tersedia penyimpanan 2 rak luas tertutup dan 1 rak terbuka yang fungsional',
+      'Pintu dilengkapi handle minimalis',
+      'Top table luas dapat digunakan untuk meletakkan TV',
+      'Memiliki kaki meja yang kuat dan kokoh',
+      'Laminasi PVC'
+    ],
+    waText: 'Halo, saya tertarik dengan Rak TV - Lotus RTV 80 (Pasific Oak - White) - Activ Furniture (Rp 750.000)'
+  },
+
+  aov_lemari_sepatu_lotus_ls_80_acti_59: {
+    id: 'aov_lemari_sepatu_lotus_ls_80_acti_59',
+    name: 'Lemari Sepatu - Lotus LS 80 - Activ Furniture',
+    category: 'Rak & Aksesoris',
+    image: 'img/activ/lemari-sepatu-lotus-ls-80-activ-furniture.png',
+    images: ['img/activ/lemari-sepatu-lotus-ls-80-activ-furniture.png'],
+    badge: 'ACTIV',
+    price: 650000,
+    description: '- Menggunakan warna sonoma oak - turquoise - grey - white yang modern dan minimalis; - Tersedia penyimpanan 4 rak yang luas dan lega untuk meletakkan alas kaki; - Pintu dilengkapi handle aluminium yang minimalis; - Menggunakan engsel besi yang kuat; - Panel kaki tebal yang kuat dan kokoh; - Ketebala',
+    specs: {
+      'Dimensi': 'P: 80 L: 39,5 T: 108 cm',
+      'Warna': 'Sonoma Oak - Turquoise - Grey - White',
+      'Berat Kotor': '26 Kg'
+    },
+    features: [
+      'Menggunakan warna sonoma oak - turquoise - grey - white yang modern dan minimalis',
+      'Tersedia penyimpanan 4 rak yang luas dan lega untuk meletakkan alas kaki',
+      'Pintu dilengkapi handle aluminium yang minimalis',
+      'Menggunakan engsel besi yang kuat',
+      'Panel kaki tebal yang kuat dan kokoh',
+      'Ketebalan panel kaki 25 mm dan 50 mm'
+    ],
+    waText: 'Halo, saya tertarik dengan Lemari Sepatu - Lotus LS 80 - Activ Furniture (Rp 650.000)'
+  },
+
+  aks_kitchen_set_lotus_kc_120_activ_60: {
+    id: 'aks_kitchen_set_lotus_kc_120_activ_60',
+    name: 'Kitchen Set - Lotus KC 120 - Activ Furniture',
+    category: 'Kitchen Set',
+    image: 'img/activ/kitchen-set-lotus-kc-120-activ-furniture.png',
+    images: ['img/activ/kitchen-set-lotus-kc-120-activ-furniture.png'],
+    badge: 'ACTIV',
+    price: 2500000,
+    description: '- Menggunakan warna pasific oak - white yang modern dan minimais; - Tersedia penyimpanan 9 rak yang fungsional dan luas; - Pintu dilengkapi handle aluminium yang minimalis; - Menggunakan engsel besi yang kuat; - Panel kaki tebal yang kuat dan kokoh; - Ketebalan panel kaki 25 mm dan 50 mm; - Top tabl',
+    specs: {
+      'Dimensi': 'P: 118,2 L: 39,5 T: 180,5 cm',
+      'Warna': 'Pasific Oak - White',
+      'Berat Kotor': '39 Kg'
+    },
+    features: [
+      'Menggunakan warna pasific oak - white yang modern dan minimais',
+      'Tersedia penyimpanan 9 rak yang fungsional dan luas',
+      'Pintu dilengkapi handle aluminium yang minimalis',
+      'Menggunakan engsel besi yang kuat',
+      'Panel kaki tebal yang kuat dan kokoh',
+      'Ketebalan panel kaki 25 mm dan 50 mm'
+    ],
+    waText: 'Halo, saya tertarik dengan Kitchen Set - Lotus KC 120 - Activ Furniture (Rp 2.500.000)'
+  },
+
+  ald_lemari_dapur_height_board_lotu_61: {
+    id: 'ald_lemari_dapur_height_board_lotu_61',
+    name: 'Lemari Dapur / Height Board - Lotus HB 80 - Activ Furniture',
+    category: 'Lemari Dapur',
+    image: 'img/activ/lemari-dapur-height-board-lotus-hb-80-activ-furniture.png',
+    images: ['img/activ/lemari-dapur-height-board-lotus-hb-80-activ-furniture.png'],
+    badge: 'ACTIV',
+    price: 700000,
+    description: '- Menggunakan warna sonoma oak - turquoise - grey - white yang modern dan ceria; - Tersedia penyimpanan 3 rak tertutup dan 3 rak terbuka yang fungsional dan luas; - Pintu dilengkapi handle aluminium yang minimalis; - Menggunakan engsel besi yang kuat; - Panel kaki tebal yang kuat dan kokoh; - Keteba',
+    specs: {
+      'Dimensi': 'P: 80 L: 39,5 T: 119 cm',
+      'Warna': 'Sonoma Oak - Turquoise - Grey - White',
+      'Berat Kotor': '22 Kg'
+    },
+    features: [
+      'Menggunakan warna sonoma oak - turquoise - grey - white yang modern dan ceria',
+      'Tersedia penyimpanan 3 rak tertutup dan 3 rak terbuka yang fungsional dan luas',
+      'Pintu dilengkapi handle aluminium yang minimalis',
+      'Menggunakan engsel besi yang kuat',
+      'Panel kaki tebal yang kuat dan kokoh',
+      'Ketebalan panel kaki 25 mm dan 50 mm'
+    ],
+    waText: 'Halo, saya tertarik dengan Lemari Dapur / Height Board - Lotus HB 80 - Activ Furniture (Rp 700.000)'
+  },
+
+  aov_sideboard_lotus_sb_120_pasific_62: {
+    id: 'aov_sideboard_lotus_sb_120_pasific_62',
+    name: 'Sideboard - Lotus SB 120 (Pasific Oak - White) - Activ Furniture',
+    category: 'Rak & Aksesoris',
+    image: 'img/activ/sideboard-lotus-sb-120-pasific-oak-white-activ-furniture.png',
+    images: ['img/activ/sideboard-lotus-sb-120-pasific-oak-white-activ-furniture.png'],
+    badge: 'ACTIV',
+    price: 1200000,
+    description: '- Sideboard terbuka ini hadir dengan warna pasific oak - white; - Handle pintu dan laci minimalis; - Dilengkapi 4 kompartemen rak dalam di bagian bawah; - Bagian atas sideboard dapat digunakan untuk meletakkan barang; - Bahan : particle board; - Luas penyimpanan 39,5 cm',
+    specs: {
+      'Dimensi': 'P: 118,2 L: 39,5 T: 78 cm',
+      'Warna': 'Pasific Oak - White',
+      'Berat Kotor': '32 Kg'
+    },
+    features: [
+      'Sideboard terbuka ini hadir dengan warna pasific oak - white',
+      'Handle pintu dan laci minimalis',
+      'Dilengkapi 4 kompartemen rak dalam di bagian bawah',
+      'Bagian atas sideboard dapat digunakan untuk meletakkan barang',
+      'Bahan : particle board',
+      'Luas penyimpanan 39,5 cm'
+    ],
+    waText: 'Halo, saya tertarik dengan Sideboard - Lotus SB 120 (Pasific Oak - White) - Activ Furniture (Rp 1.200.000)'
+  },
+
+  aov_sideboard_lotus_sb_80_pasific__63: {
+    id: 'aov_sideboard_lotus_sb_80_pasific__63',
+    name: 'Sideboard - Lotus SB 80 (Pasific Oak - White) - Activ Furniture',
+    category: 'Rak & Aksesoris',
+    image: 'img/activ/sideboard-lotus-sb-80-pasific-oak-white-activ-furniture.png',
+    images: ['img/activ/sideboard-lotus-sb-80-pasific-oak-white-activ-furniture.png'],
+    badge: 'ACTIV',
+    price: 850000,
+    description: '- Sideboard terbuka ini hadir dengan warna pasific oak - white; - Handle pintu dan laci minimalis; - Dilengkapi 3 kompartemen rak dalam di bagian bawah; - Terdapat 2 kompartemen laci yang luas; - Bagian atas sideboard dapat digunakan untuk meletakkan barang; - Bahan : particle board; - Luas penyimpa',
+    specs: {
+      'Dimensi': 'P: 80 L: 39,5 T: 78 cm',
+      'Warna': 'Pasific Oak - White',
+      'Berat Kotor': '26 Kg'
+    },
+    features: [
+      'Sideboard terbuka ini hadir dengan warna pasific oak - white',
+      'Handle pintu dan laci minimalis',
+      'Dilengkapi 3 kompartemen rak dalam di bagian bawah',
+      'Terdapat 2 kompartemen laci yang luas',
+      'Bagian atas sideboard dapat digunakan untuk meletakkan barang',
+      'Bahan : particle board'
+    ],
+    waText: 'Halo, saya tertarik dengan Sideboard - Lotus SB 80 (Pasific Oak - White) - Activ Furniture (Rp 850.000)'
+  },
+
+  aov_rak_tv_lotus_rtv_120_pasific_o_64: {
+    id: 'aov_rak_tv_lotus_rtv_120_pasific_o_64',
+    name: 'Rak TV - Lotus RTV 120 (Pasific Oak - White) - Activ Furniture',
+    category: 'Rak & Aksesoris',
+    image: 'img/activ/rak-tv-lotus-rtv-120-pasific-oak-white-activ-furniture.png',
+    images: ['img/activ/rak-tv-lotus-rtv-120-pasific-oak-white-activ-furniture.png'],
+    badge: 'ACTIV',
+    price: 1100000,
+    description: '- Menggunakan warna pasific oak - white� yang modern; - Tersedia penyimpanan 3 rak luas tertutup dan 1 rak terbuka yang fungsional; - Pintu dilengkapi handle minimalis; - Top table luas dapat digunakan untuk meletakkan TV; - Memiliki kaki meja yang kuat dan kokoh; - Laminasi PVC; - Sheet paper; - Pa',
+    specs: {
+      'Dimensi': 'P: 118,2 L: 39,5 T: 58 cm',
+      'Warna': 'Pasific Oak - White',
+      'Berat Kotor': '32 Kg'
+    },
+    features: [
+      'Menggunakan warna pasific oak - white� yang modern',
+      'Tersedia penyimpanan 3 rak luas tertutup dan 1 rak terbuka yang fungsional',
+      'Pintu dilengkapi handle minimalis',
+      'Top table luas dapat digunakan untuk meletakkan TV',
+      'Memiliki kaki meja yang kuat dan kokoh',
+      'Laminasi PVC'
+    ],
+    waText: 'Halo, saya tertarik dengan Rak TV - Lotus RTV 120 (Pasific Oak - White) - Activ Furniture (Rp 1.100.000)'
+  },
+
+  amtm_meja_tamu_coffee_table_lotus_c_65: {
+    id: 'amtm_meja_tamu_coffee_table_lotus_c_65',
+    name: 'Meja Tamu / Coffee Table - Lotus CFT 90 (Pasific Oak - White) - Activ Furniture',
+    category: 'Meja Tamu',
+    image: 'img/activ/meja-tamu-coffee-table-lotus-cft-90-activ-furniture.png',
+    images: ['img/activ/meja-tamu-coffee-table-lotus-cft-90-activ-furniture.png'],
+    badge: 'ACTIV',
+    price: 700000,
+    description: '- Meja tamu ini hadir dengan tampilan warna pasific oak - white yang lebih elegan; - Meja tamu dengan penyimpanan yang luas; - Pintu sliding dengan rel lacu yang lancar; - Meja dengan bagian top yang luas, dapat di gunakan untuk meletakkan banyak barang; - Bagian meja mudah di bersihkan; - Dilengkap',
+    specs: {
+      'Dimensi': 'P: 90 L: 59,5 T: 41,5 cm',
+      'Warna': 'Pasific Oak - White',
+      'Berat Kotor': '22 Kg'
+    },
+    features: [
+      'Meja tamu ini hadir dengan tampilan warna pasific oak - white yang lebih elegan',
+      'Meja tamu dengan penyimpanan yang luas',
+      'Pintu sliding dengan rel lacu yang lancar',
+      'Meja dengan bagian top yang luas, dapat di gunakan untuk meletakkan banyak barang',
+      'Bagian meja mudah di bersihkan',
+      'Dilengkapi Kaki yang kuat'
+    ],
+    waText: 'Halo, saya tertarik dengan Meja Tamu / Coffee Table - Lotus CFT 90 (Pasific Oak - White) - Activ Furniture (Rp 700.000)'
+  },
+
+  alp_lemari_pakaian_besi_forte_sl_1_66: {
+    id: 'alp_lemari_pakaian_besi_forte_sl_1_66',
+    name: 'Lemari Pakaian Besi - Forte SL 121 C - Activ Furniture',
+    category: 'Lemari',
+    image: 'img/activ/lemari-pakaian-besi-forte-sl-121-c-activ-furniture.png',
+    images: ['img/activ/lemari-pakaian-besi-forte-sl-121-c-activ-furniture.png'],
+    badge: 'ACTIV',
+    price: 3539000,
+    description: '- Lemari Pakaian Besi dengan kombinasi warna White - Aesthetic Tile; - Mekanisme bukaan pintu Sliding; - Cermin Tinggi Full Satu Pintu; - Tersedia Safety Box dengan pengunci; - Gantungan baju Kuat dan Tahan Lama; - Lemari lebih Tahan Gores�serta Anti Rayap dan Jamur; - Handle pintu tanam besi; - Dil',
+    specs: {
+      'Dimensi': 'P: 118 L: 50 T: 185 cm',
+      'Warna': 'White - Aesthetic Tile',
+      'Berat Kotor': '57 Kg'
+    },
+    features: [
+      'Lemari Pakaian Besi dengan kombinasi warna White - Aesthetic Tile',
+      'Mekanisme bukaan pintu Sliding',
+      'Cermin Tinggi Full Satu Pintu',
+      'Tersedia Safety Box dengan pengunci',
+      'Gantungan baju Kuat dan Tahan Lama',
+      'Lemari lebih Tahan Gores�serta Anti Rayap dan Jamur'
+    ],
+    waText: 'Halo, saya tertarik dengan Lemari Pakaian Besi - Forte SL 121 C - Activ Furniture (Rp 3.539.000)'
+  },
+
+  alp_lemari_pakaian_besi_forte_sl_1_67: {
+    id: 'alp_lemari_pakaian_besi_forte_sl_1_67',
+    name: 'Lemari Pakaian Besi - Forte SL 161 D - Activ Furniture',
+    category: 'Lemari',
+    image: 'img/activ/lemari-pakaian-besi-forte-sl-161-d-activ-furniture.png',
+    images: ['img/activ/lemari-pakaian-besi-forte-sl-161-d-activ-furniture.png'],
+    badge: 'ACTIV',
+    price: 5018000,
+    description: '- Lemari Pakaian Besi dengan kombinasi warna Black - Hexagonal�yang Natural; - Mekanisme bukaan pintu Sliding + Swing; - Cermin Tinggi Full Satu Pintu; - Tersedia Safety Box dengan pengunci; - Gantungan baju Kuat dan Tahan Lama; - Lemari lebih Tahan Gores�serta Anti Rayap dan Jamur; - Handle pintu t',
+    specs: {
+      'Dimensi': 'P: 160 L: 50 T: 185 cm',
+      'Warna': 'Black - Hexagonal',
+      'Berat Kotor': '73,7 Kg'
+    },
+    features: [
+      'Lemari Pakaian Besi dengan kombinasi warna Black - Hexagonal�yang Natural',
+      'Mekanisme bukaan pintu Sliding + Swing',
+      'Cermin Tinggi Full Satu Pintu',
+      'Tersedia Safety Box dengan pengunci',
+      'Gantungan baju Kuat dan Tahan Lama',
+      'Lemari lebih Tahan Gores�serta Anti Rayap dan Jamur'
+    ],
+    waText: 'Halo, saya tertarik dengan Lemari Pakaian Besi - Forte SL 161 D - Activ Furniture (Rp 5.018.000)'
+  },
+
+  alp_lemari_pakaian_besi_forte_sl_1_68: {
+    id: 'alp_lemari_pakaian_besi_forte_sl_1_68',
+    name: 'Lemari Pakaian Besi - Forte SL 161 C - Activ Furniture',
+    category: 'Lemari',
+    image: 'img/activ/lemari-pakaian-besi-forte-sl-161-c-activ-furniture.png',
+    images: ['img/activ/lemari-pakaian-besi-forte-sl-161-c-activ-furniture.png'],
+    badge: 'ACTIV',
+    price: 5018000,
+    description: '- Lemari Pakaian Besi dengan kombinasi warna White - Aesthetic Tile; - Mekanisme bukaan pintu Sliding; - Cermin Tinggi Full Satu Pintu; - Tersedia Safety Box dengan pengunci; - Gantungan baju Kuat dan Tahan Lama; - Lemari lebih Tahan Gores�serta Anti Rayap dan Jamur; - Handle pintu tanam besi; - Dil',
+    specs: {
+      'Dimensi': 'P: 160 L: 50 T: 185 cm',
+      'Warna': 'White - Aesthetic Tile',
+      'Berat Kotor': '73,7 Kg'
+    },
+    features: [
+      'Lemari Pakaian Besi dengan kombinasi warna White - Aesthetic Tile',
+      'Mekanisme bukaan pintu Sliding',
+      'Cermin Tinggi Full Satu Pintu',
+      'Tersedia Safety Box dengan pengunci',
+      'Gantungan baju Kuat dan Tahan Lama',
+      'Lemari lebih Tahan Gores�serta Anti Rayap dan Jamur'
+    ],
+    waText: 'Halo, saya tertarik dengan Lemari Pakaian Besi - Forte SL 161 C - Activ Furniture (Rp 5.018.000)'
+  },
+
+  alp_lemari_pakaian_besi_forte_sl_2_69: {
+    id: 'alp_lemari_pakaian_besi_forte_sl_2_69',
+    name: 'Lemari Pakaian Besi - Forte SL 203 D - Activ Furniture',
+    category: 'Lemari',
+    image: 'img/activ/lemari-pakaian-besi-forte-sl-203-d-activ-furniture.png',
+    images: ['img/activ/lemari-pakaian-besi-forte-sl-203-d-activ-furniture.png'],
+    badge: 'ACTIV',
+    price: 5500000,
+    description: '- Lemari Pakaian Besi dengan kombinasi warna Black - Hexagonal�yang Natural; - Mekanisme bukaan pintu Sliding + Swing; - Cermin Tinggi Full Satu Pintu; - Tersedia Safety Box dengan pengunci; - Gantungan baju Kuat dan Tahan Lama; - Lemari lebih Tahan Gores�serta Anti Rayap dan Jamur; - Handle pintu t',
+    specs: {
+      'Dimensi': 'P: 200 L: 60 T: 185 cm',
+      'Warna': 'Black - Hexagonal',
+      'Berat Kotor': '110,8 Kg'
+    },
+    features: [
+      'Lemari Pakaian Besi dengan kombinasi warna Black - Hexagonal�yang Natural',
+      'Mekanisme bukaan pintu Sliding + Swing',
+      'Cermin Tinggi Full Satu Pintu',
+      'Tersedia Safety Box dengan pengunci',
+      'Gantungan baju Kuat dan Tahan Lama',
+      'Lemari lebih Tahan Gores�serta Anti Rayap dan Jamur'
+    ],
+    waText: 'Halo, saya tertarik dengan Lemari Pakaian Besi - Forte SL 203 D - Activ Furniture (Rp 5.500.000)'
+  },
+
+  alp_lemari_pakaian_besi_forte_sl_1_70: {
+    id: 'alp_lemari_pakaian_besi_forte_sl_1_70',
+    name: 'Lemari Pakaian Besi - Forte SL 123 D - Activ Furniture',
+    category: 'Lemari',
+    image: 'img/activ/lemari-pakaian-besi-forte-sl-123-d-activ-furniture.png',
+    images: ['img/activ/lemari-pakaian-besi-forte-sl-123-d-activ-furniture.png'],
+    badge: 'ACTIV',
+    price: 3800000,
+    description: '- Lemari Pakaian Besi dengan kombinasi warna Black - Hexagonal�yang Natural; - Mekanisme bukaan pintu Sliding; - Rak dan gantungan Dapat Disesuaikan menjadi 6 Konfigurasi; - Cermin Tinggi Full Satu Pintu; - Tersedia Safety Box dengan pengunci; - Gantungan baju Kuat dan Tahan Lama; - Lemari lebih Tah',
+    specs: {
+      'Dimensi': 'P: 118 L: 50 T: 185 cm',
+      'Warna': 'White - Wooden',
+      'Berat Kotor': '60,4 Kg'
+    },
+    features: [
+      'Lemari Pakaian Besi dengan kombinasi warna Black - Hexagonal�yang Natural',
+      'Mekanisme bukaan pintu Sliding',
+      'Rak dan gantungan Dapat Disesuaikan menjadi 6 Konfigurasi',
+      'Cermin Tinggi Full Satu Pintu',
+      'Tersedia Safety Box dengan pengunci',
+      'Gantungan baju Kuat dan Tahan Lama'
+    ],
+    waText: 'Halo, saya tertarik dengan Lemari Pakaian Besi - Forte SL 123 D - Activ Furniture (Rp 3.800.000)'
+  },
+
+  alp_lemari_pakaian_besi_forte_sl_9_71: {
+    id: 'alp_lemari_pakaian_besi_forte_sl_9_71',
+    name: 'Lemari Pakaian Besi - Forte SL 93 D - Activ Furniture',
+    category: 'Lemari',
+    image: 'img/activ/lemari-pakaian-besi-forte-sl-93-d-activ-furniture.png',
+    images: ['img/activ/lemari-pakaian-besi-forte-sl-93-d-activ-furniture.png'],
+    badge: 'ACTIV',
+    price: 3347000,
+    description: '- Lemari Pakaian Besi dengan kombinasi warna Black - Hexagonal�yang Natural; - Mekanisme bukaan pintu Sliding; - Rak dan gantungan Dapat Disesuaikan menjadi 6 Konfigurasi; - Cermin Tinggi Full Satu Pintu; - Tersedia Safety Box dengan pengunci; - Gantungan baju Kuat dan Tahan Lama; - Lemari lebih Tah',
+    specs: {
+      'Dimensi': 'P: 90 L: 50 T: 185 cm',
+      'Warna': 'Black - Hexagonal',
+      'Berat Kotor': '52 Kg'
+    },
+    features: [
+      'Lemari Pakaian Besi dengan kombinasi warna Black - Hexagonal�yang Natural',
+      'Mekanisme bukaan pintu Sliding',
+      'Rak dan gantungan Dapat Disesuaikan menjadi 6 Konfigurasi',
+      'Cermin Tinggi Full Satu Pintu',
+      'Tersedia Safety Box dengan pengunci',
+      'Gantungan baju Kuat dan Tahan Lama'
+    ],
+    waText: 'Halo, saya tertarik dengan Lemari Pakaian Besi - Forte SL 93 D - Activ Furniture (Rp 3.347.000)'
+  },
+
+  alp_lemari_pakaian_besi_forte_sl_1_72: {
+    id: 'alp_lemari_pakaian_besi_forte_sl_1_72',
+    name: 'Lemari Pakaian Besi - Forte SL 125 B - Activ Furniture',
+    category: 'Lemari',
+    image: 'img/activ/lemari-pakaian-besi-forte-sl-125-b-activ-furniture.png',
+    images: ['img/activ/lemari-pakaian-besi-forte-sl-125-b-activ-furniture.png'],
+    badge: 'ACTIV',
+    price: 4200000,
+    description: '- Lemari pakaian Forte series dengan bukaan sliding; - Hadir dengan motif emboss limited edition yang memberikan kesan Modern - Tekstur pintu lebih tahan gores; - Handle pintu tanam dari bahan besi; - Tersedia 2 gantungan baju yang bisa di lepas-pasang; - Memiliki extra rak penyimpanan; - Tersedia s',
+    specs: {
+      'Dimensi': 'P: 118 L: 50 T: 185 cm',
+      'Warna': 'Dark Grey',
+      'Berat Kotor': '53,5 Kg'
+    },
+    features: [
+      'Lemari pakaian Forte series dengan bukaan sliding',
+      'Hadir dengan motif emboss limited edition yang memberikan kesan Modern & Artistik',
+      'Tekstur pintu lebih tahan gores',
+      'Handle pintu tanam dari bahan besi',
+      'Tersedia 2 gantungan baju yang bisa di lepas-pasang',
+      'Memiliki extra rak penyimpanan'
+    ],
+    waText: 'Halo, saya tertarik dengan Lemari Pakaian Besi - Forte SL 125 B - Activ Furniture (Rp 4.200.000)'
+  },
+
+  alp_lemari_pakaian_besi_forte_sl_1_73: {
+    id: 'alp_lemari_pakaian_besi_forte_sl_1_73',
+    name: 'Lemari Pakaian Besi - Forte SL 125 A - Activ Furniture',
+    category: 'Lemari',
+    image: 'img/activ/lemari-pakaian-besi-forte-sl-125-a-activ-furniture.png',
+    images: ['img/activ/lemari-pakaian-besi-forte-sl-125-a-activ-furniture.png'],
+    badge: 'ACTIV',
+    price: 4200000,
+    description: '- Lemari pakaian Forte series dengan bukaan sliding; - Hadir dengan motif emboss limited edition yang memberikan kesan Modern - Tekstur pintu lebih tahan gores; - Handle pintu tanam dari bahan besi; - Tersedia 2 gantungan baju yang bisa di lepas-pasang; - Memiliki extra rak penyimpanan; - Tersedia s',
+    specs: {
+      'Dimensi': 'P: 118 L: 50 T: 185 cm',
+      'Warna': 'White',
+      'Berat Kotor': '53,5 Kg'
+    },
+    features: [
+      'Lemari pakaian Forte series dengan bukaan sliding',
+      'Hadir dengan motif emboss limited edition yang memberikan kesan Modern & Artistik',
+      'Tekstur pintu lebih tahan gores',
+      'Handle pintu tanam dari bahan besi',
+      'Tersedia 2 gantungan baju yang bisa di lepas-pasang',
+      'Memiliki extra rak penyimpanan'
+    ],
+    waText: 'Halo, saya tertarik dengan Lemari Pakaian Besi - Forte SL 125 A - Activ Furniture (Rp 4.200.000)'
+  },
+
+  aks_kitchen_cabinet_besi_forte_kc__74: {
+    id: 'aks_kitchen_cabinet_besi_forte_kc__74',
+    name: 'Kitchen Cabinet Besi - Forte KC 100 B - Activ Furniture',
+    category: 'Kitchen Set',
+    image: 'img/activ/kitchen-cabinet-besi-forte-kc-100-b-activ-furniture.png',
+    images: ['img/activ/kitchen-cabinet-besi-forte-kc-100-b-activ-furniture.png'],
+    badge: 'ACTIV',
+    price: 3500000,
+    description: '- Kitchen Cabinet Besi / Kitchen Set Besi ini hadir dengan warna grey yang modern; - Telah dilengkapi dengan 6 kitchen hook , 4 kaki adjuster dan 4 roda; - Menggunakan bahan besi yang anti rayap - Pintu menggunakan�fluted acrylic; - Tersedia 3 lubang kabel pada bagian belakang; - Dilengkapi masing -',
+    specs: {
+      'Dimensi': 'P: 100 L: 45 T: 186,7 cm',
+      'Warna': 'Grey',
+      'Berat Kotor': '38 Kg'
+    },
+    features: [
+      'Kitchen Cabinet Besi / Kitchen Set Besi ini hadir dengan warna grey yang modern',
+      'Telah dilengkapi dengan 6 kitchen hook , 4 kaki adjuster dan 4 roda',
+      'Menggunakan bahan besi yang anti rayap & jamur serta�tahan air, api dan gores',
+      'Pintu menggunakan�fluted acrylic',
+      'Tersedia 3 lubang kabel pada bagian belakang',
+      'Dilengkapi masing - masing 2 rak penyimpanan yang luas diatas dan bawah'
+    ],
+    waText: 'Halo, saya tertarik dengan Kitchen Cabinet Besi - Forte KC 100 B - Activ Furniture (Rp 3.500.000)'
+  },
+
+  aov_tools_room_gudang_portable_for_75: {
+    id: 'aov_tools_room_gudang_portable_for_75',
+    name: 'Tools Room / Gudang Portable - Forte TR 120 B - Activ Furniture',
+    category: 'Rak & Aksesoris',
+    image: 'img/activ/tools-room-gudang-portable-forte-tr-120-b-activ-furniture.png',
+    images: ['img/activ/tools-room-gudang-portable-forte-tr-120-b-activ-furniture.png'],
+    badge: 'ACTIV',
+    price: 2800000,
+    description: '- Tools Room/Gudang Portable yang hadir dengan warna Cream - Penyimpanan outdoor untuk menyimpan perlengkapan rumah tangga, mesin pompa air dan mesin genset; - Portable Tools Room yang dapat dipindah dan tersedia plat penyangga; - Tools Room memiliki Outdoor Kualitas yang sudah Anti UV; - Dilengkapi',
+    specs: {
+      'Dimensi': 'P: 123 L: 90,5 T: 185 cm',
+      'Warna': 'Cream - Black',
+      'Berat Kotor': '38 Kg'
+    },
+    features: [
+      'Tools Room/Gudang Portable yang hadir dengan warna Cream & Black',
+      'Penyimpanan outdoor untuk menyimpan perlengkapan rumah tangga, mesin pompa air dan mesin genset',
+      'Portable Tools Room yang dapat dipindah dan tersedia plat penyangga',
+      'Tools Room memiliki Outdoor Kualitas yang sudah Anti UV',
+      'Dilengkapi handle dan kunci yang anti karat',
+      'Tersedia ventilasi udara'
+    ],
+    waText: 'Halo, saya tertarik dengan Tools Room / Gudang Portable - Forte TR 120 B - Activ Furniture (Rp 2.800.000)'
+  },
+
+  alb_swing_book_case_lemari_buku_fo_76: {
+    id: 'alb_swing_book_case_lemari_buku_fo_76',
+    name: 'Swing Book Case/Lemari Buku - Forte SWB 91 B - Activ Furniture',
+    category: 'Lemari',
+    image: 'img/activ/swing-book-case-lemari-buku-forte-swb-91-b-activ-furniture.png',
+    images: ['img/activ/swing-book-case-lemari-buku-forte-swb-91-b-activ-furniture.png'],
+    badge: 'ACTIV',
+    price: 2800000,
+    description: '- Lemari buku / Book Case ini hadir dengan 6 Kompartemen yang luas; - Pintu swing dengan kaca clear pada bagian atas; - Rak penyimpanan tertutup pada bagian bawah; - Besi lebih tahan gores; - Dilengkapi 2 kunci pintu; - Besi tahan api, air dan anti rayap - Material : Besi dengan powder coating tekst',
+    specs: {
+      'Dimensi': 'P: 90 L: 45 T: 185 cm',
+      'Warna': 'Sonoma Oak - White',
+      'Berat Kotor': '44 Kg'
+    },
+    features: [
+      'Lemari buku / Book Case ini hadir dengan 6 Kompartemen yang luas',
+      'Pintu swing dengan kaca clear pada bagian atas',
+      'Rak penyimpanan tertutup pada bagian bawah',
+      'Besi lebih tahan gores',
+      'Dilengkapi 2 kunci pintu',
+      'Besi tahan api, air dan anti rayap & jamur'
+    ],
+    waText: 'Halo, saya tertarik dengan Swing Book Case/Lemari Buku - Forte SWB 91 B - Activ Furniture (Rp 2.800.000)'
+  },
+
+  alp_lemari_pakaian_besi_lemari_sli_77: {
+    id: 'alp_lemari_pakaian_besi_lemari_sli_77',
+    name: 'Lemari Pakaian Besi/ Lemari Sliding Besi - Forte SL 162 B - Activ Furniture',
+    category: 'Lemari',
+    image: 'img/activ/lemari-pakaian-besi-lemari-sliding-besi-forte-sl-162-b-activ-furniture.png',
+    images: ['img/activ/lemari-pakaian-besi-lemari-sliding-besi-forte-sl-162-b-activ-furniture.png'],
+    badge: 'ACTIV',
+    price: 5200000,
+    description: '- Lemari pakaian forte series dengan kombinasi pintu sliding + swing; - Hadir dengan tampilan warna Black - Grey Tile yang lebih elegan; - Tersedia kompartemen untuk long dress; - Pintu sliding dengan rel yang lancar; - Menggunakan handle besi tanam; - Tersedia safety box dengan pengunci; - Memiliki',
+    specs: {
+      'Dimensi': 'P: 160 L: 50 T: 185 cm',
+      'Warna': 'Black - Grey Tile',
+      'Berat Kotor': '78,8 Kg'
+    },
+    features: [
+      'Lemari pakaian forte series dengan kombinasi pintu sliding + swing',
+      'Hadir dengan tampilan warna Black - Grey Tile yang lebih elegan',
+      'Tersedia kompartemen untuk long dress',
+      'Pintu sliding dengan rel yang lancar',
+      'Menggunakan handle besi tanam',
+      'Tersedia safety box dengan pengunci'
+    ],
+    waText: 'Halo, saya tertarik dengan Lemari Pakaian Besi/ Lemari Sliding Besi - Forte SL 162 B - Activ Furniture (Rp 5.200.000)'
+  },
+
+  alp_lemari_pakaian_besi_lemari_sli_78: {
+    id: 'alp_lemari_pakaian_besi_lemari_sli_78',
+    name: 'Lemari Pakaian Besi/ Lemari Sliding Besi - Forte SL 161 B - Activ Furniture',
+    category: 'Lemari',
+    image: 'img/activ/lemari-pakaian-besi-lemari-sliding-besi-forte-sl-161-b-activ-furniture.png',
+    images: ['img/activ/lemari-pakaian-besi-lemari-sliding-besi-forte-sl-161-b-activ-furniture.png'],
+    badge: 'ACTIV',
+    price: 5018000,
+    description: '- Lemari pakaian forte series hadir dengan tampilan warna Black - Grey Tile yang lebih elegan; - Tersedia kompartemen untuk long dress; - Pintu sliding dengan rel yang lancar; - Menggunakan handle besi tanam; - Tersedia safety box dengan pengunci; - Memiliki magnet dan bumper pada pintu; - Memiliki ',
+    specs: {
+      'Dimensi': 'P: 160 L: 50 T: 185 cm',
+      'Warna': 'Black - Grey Tile',
+      'Berat Kotor': '72,7 Kg'
+    },
+    features: [
+      'Lemari pakaian forte series hadir dengan tampilan warna Black - Grey Tile yang lebih elegan',
+      'Tersedia kompartemen untuk long dress',
+      'Pintu sliding dengan rel yang lancar',
+      'Menggunakan handle besi tanam',
+      'Tersedia safety box dengan pengunci',
+      'Memiliki magnet dan bumper pada pintu'
+    ],
+    waText: 'Halo, saya tertarik dengan Lemari Pakaian Besi/ Lemari Sliding Besi - Forte SL 161 B - Activ Furniture (Rp 5.018.000)'
+  },
+
+  alp_lemari_pakaian_besi_lemari_sli_79: {
+    id: 'alp_lemari_pakaian_besi_lemari_sli_79',
+    name: 'Lemari Pakaian Besi/ Lemari Sliding Besi - Forte SL 121 D - Activ Furniture',
+    category: 'Lemari',
+    image: 'img/activ/lemari-pakaian-besi-lemari-sliding-besi-forte-sl-121-d-activ-furniture.png',
+    images: ['img/activ/lemari-pakaian-besi-lemari-sliding-besi-forte-sl-121-d-activ-furniture.png'],
+    badge: 'ACTIV',
+    price: 3539000,
+    description: '- Lemari pakaian forte series hadir dengan tampilan warna black - color line yang lebih elegan; - Tersedia kompartemen untuk long dress; - Pintu sliding dengan rel yang lancar; - Menggunakan handle besi tanam; - Tersedia safety box dengan pengunci; - Memiliki magnet dan bumper pada pintu; - Memiliki',
+    specs: {
+      'Dimensi': 'P: 118 L: 50 T: 185 cm',
+      'Warna': 'Black - Color Line',
+      'Berat Kotor': '59 Kg'
+    },
+    features: [
+      'Lemari pakaian forte series hadir dengan tampilan warna black - color line yang lebih elegan',
+      'Tersedia kompartemen untuk long dress',
+      'Pintu sliding dengan rel yang lancar',
+      'Menggunakan handle besi tanam',
+      'Tersedia safety box dengan pengunci',
+      'Memiliki magnet dan bumper pada pintu'
+    ],
+    waText: 'Halo, saya tertarik dengan Lemari Pakaian Besi/ Lemari Sliding Besi - Forte SL 121 D - Activ Furniture (Rp 3.539.000)'
+  },
+
+  alp_lemari_pakaian_besi_lemari_sli_80: {
+    id: 'alp_lemari_pakaian_besi_lemari_sli_80',
+    name: 'Lemari Pakaian Besi/ Lemari Sliding Besi - Forte SL 121 B - Activ Furniture',
+    category: 'Lemari',
+    image: 'img/activ/lemari-pakaian-besi-lemari-sliding-besi-forte-sl-121-b-activ-furniture.png',
+    images: ['img/activ/lemari-pakaian-besi-lemari-sliding-besi-forte-sl-121-b-activ-furniture.png'],
+    badge: 'ACTIV',
+    price: 3539000,
+    description: '- Lemari pakaian forte series hadir dengan tampilan warna dark grey - white line yang lebih elegan; - Tersedia kompartemen untuk long dress; - Pintu sliding dengan rel yang lancar; - Menggunakan handle besi tanam; - Tersedia safety box dengan pengunci; - Memiliki magnet dan bumper pada pintu; - Memi',
+    specs: {
+      'Dimensi': 'P: 118 L: 50 T: 185 cm',
+      'Warna': 'Dark Grey - White Line',
+      'Berat Kotor': '59 Kg'
+    },
+    features: [
+      'Lemari pakaian forte series hadir dengan tampilan warna dark grey - white line yang lebih elegan',
+      'Tersedia kompartemen untuk long dress',
+      'Pintu sliding dengan rel yang lancar',
+      'Menggunakan handle besi tanam',
+      'Tersedia safety box dengan pengunci',
+      'Memiliki magnet dan bumper pada pintu'
+    ],
+    waText: 'Halo, saya tertarik dengan Lemari Pakaian Besi/ Lemari Sliding Besi - Forte SL 121 B - Activ Furniture (Rp 3.539.000)'
+  },
+
+  alk_lemari_kantor_forte_swb_90_b_a_81: {
+    id: 'alk_lemari_kantor_forte_swb_90_b_a_81',
+    name: 'Lemari Kantor - FORTE SWB 90 B - Activ Furniture',
+    category: 'Lemari Kantor',
+    image: 'img/activ/lemari-kantor-forte-swb-90-b-activ-furniture.png',
+    images: ['img/activ/lemari-kantor-forte-swb-90-b-activ-furniture.png'],
+    badge: 'ACTIV',
+    price: 2800000,
+    description: '- Perpaduan warna dark grey dan white yang elegan modern; - Memiliki 5 kompartemen penyimpanan yang luas; - Menggunakan pintu tertutup, cocok untuk menyimpan dokumen penting; - Dilengkapi 1 pengunci pintu yang aman; - Lapisan pintu Forte series telah menggunakan bahan powder coating sehingga pintu t',
+    specs: {
+      'Dimensi': 'P: 90 L: 45 T: 185 cm',
+      'Warna': 'Dark Grey � White',
+      'Berat Kotor': '38,7 Kg'
+    },
+    features: [
+      'Perpaduan warna dark grey dan white yang elegan modern',
+      'Memiliki 5 kompartemen penyimpanan yang luas',
+      'Menggunakan pintu tertutup, cocok untuk menyimpan dokumen penting',
+      'Dilengkapi 1 pengunci pintu yang aman',
+      'Lapisan pintu Forte series telah menggunakan bahan powder coating sehingga pintu tahan gores',
+      'Bahan besi berkualitas yang anti-jamur, anti-rayap, dan tahan air'
+    ],
+    waText: 'Halo, saya tertarik dengan Lemari Kantor - FORTE SWB 90 B - Activ Furniture (Rp 2.800.000)'
+  },
+
+  alk_lemari_kantor_loker_besi_forte_82: {
+    id: 'alk_lemari_kantor_loker_besi_forte_82',
+    name: 'Lemari Loker Besi 15 Pintu - Forte LK 915 B - ACTIV',
+    category: 'Lemari Kantor',
+    image: 'img/activ/lemari-kantor-loker-besi-forte-lk-915-b-activ-furniture.png',
+    images: ['img/activ/lemari-kantor-loker-besi-forte-lk-915-b-activ-furniture.png'],
+    badge: 'ACTIV',
+    price: 4500000,
+    description: '- Perpaduan warna dark grey dan white yang elegan modern; - Memiliki 15 kompartemen penyimpanan yang luas dan tinggi; - Muat diletakkan helm full face; - Dilengkapi total 15 pengunci pintu yang aman; - Dilengkapi lubang ventilasi udara untuk mencegah bau; - Tersedia tempat name tag; - Lapisan pintu ',
+    specs: {
+      'Dimensi': 'P: 90 L: 45 T: 185 cm',
+      'Warna': 'Dark Grey � White',
+      'Berat Kotor': '48,5 Kg'
+    },
+    features: [
+      'Perpaduan warna dark grey dan white yang elegan modern',
+      'Memiliki 15 kompartemen penyimpanan yang luas dan tinggi',
+      'Muat diletakkan helm full face',
+      'Dilengkapi total 15 pengunci pintu yang aman',
+      'Dilengkapi lubang ventilasi udara untuk mencegah bau',
+      'Tersedia tempat name tag'
+    ],
+    waText: 'Halo, saya tertarik dengan Lemari Loker Besi 15 Pintu - Forte LK 915 B - ACTIV (Rp 4.500.000)'
+  },
+
+  alk_lemari_kantor_loker_besi_forte_83: {
+    id: 'alk_lemari_kantor_loker_besi_forte_83',
+    name: 'Lemari Loker Besi 12 Pintu - Forte LK 912 B - Activ Furniture',
+    category: 'Lemari Kantor',
+    image: 'img/activ/lemari-kantor-loker-besi-forte-lk-912-b-activ-furniture.png',
+    images: ['img/activ/lemari-kantor-loker-besi-forte-lk-912-b-activ-furniture.png'],
+    badge: 'ACTIV',
+    price: 3800000,
+    description: '- Perpaduan warna dark grey dan white yang elegan modern; - Memiliki 12 kompartemen penyimpanan yang luas dan tinggi; - Muat diletakkan helm full face; - Dilengkapi total 12 pengunci pintu yang aman; - Dilengkapi lubang ventilasi udara untuk mencegah bau; - Tersedia tempat name tag; - Lapisan pintu ',
+    specs: {
+      'Dimensi': 'P: 90 L: 45 T: 185 cm',
+      'Warna': 'Dark Grey � White',
+      'Berat Kotor': '46,1 Kg'
+    },
+    features: [
+      'Perpaduan warna dark grey dan white yang elegan modern',
+      'Memiliki 12 kompartemen penyimpanan yang luas dan tinggi',
+      'Muat diletakkan helm full face',
+      'Dilengkapi total 12 pengunci pintu yang aman',
+      'Dilengkapi lubang ventilasi udara untuk mencegah bau',
+      'Tersedia tempat name tag'
+    ],
+    waText: 'Halo, saya tertarik dengan Lemari Loker Besi 12 Pintu - Forte LK 912 B - Activ Furniture (Rp 3.800.000)'
+  },
+
+  alk_lemari_kantor_loker_besi_forte_84: {
+    id: 'alk_lemari_kantor_loker_besi_forte_84',
+    name: 'Lemari Loker Besi 9 Pintu - Forte LK 909 B - Activ Furniture',
+    category: 'Lemari Kantor',
+    image: 'img/activ/lemari-kantor-loker-besi-forte-lk-909-b-activ-furniture.png',
+    images: ['img/activ/lemari-kantor-loker-besi-forte-lk-909-b-activ-furniture.png'],
+    badge: 'ACTIV',
+    price: 3200000,
+    description: '- Perpaduan warna dark grey dan white yang elegan modern; - Memiliki 9 kompartemen penyimpanan yang luas dan tinggi; - Muat diletakkan helm full face; - Dilengkapi total 9 pengunci pintu yang aman; - Dilengkapi lubang ventilasi udara untuk mencegah bau; - Tersedia tempat name tag; - Lapisan pintu te',
+    specs: {
+      'Dimensi': 'P: 90 L: 45 T: 185 cm',
+      'Warna': 'Dark Grey � White',
+      'Berat Kotor': '43,5 Kg'
+    },
+    features: [
+      'Perpaduan warna dark grey dan white yang elegan modern',
+      'Memiliki 9 kompartemen penyimpanan yang luas dan tinggi',
+      'Muat diletakkan helm full face',
+      'Dilengkapi total 9 pengunci pintu yang aman',
+      'Dilengkapi lubang ventilasi udara untuk mencegah bau',
+      'Tersedia tempat name tag'
+    ],
+    waText: 'Halo, saya tertarik dengan Lemari Loker Besi 9 Pintu - Forte LK 909 B - Activ Furniture (Rp 3.200.000)'
+  },
+
+  alk_lemari_kantor_loker_besi_forte_85: {
+    id: 'alk_lemari_kantor_loker_besi_forte_85',
+    name: 'Lemari Loker Besi 6 Pintu - Forte LK 906 B - Activ Furniture',
+    category: 'Lemari Kantor',
+    image: 'img/activ/lemari-kantor-loker-besi-forte-lk-906-b-activ-furniture.png',
+    images: ['img/activ/lemari-kantor-loker-besi-forte-lk-906-b-activ-furniture.png'],
+    badge: 'ACTIV',
+    price: 2800000,
+    description: '- Perpaduan warna dark grey dan white yang elegan modern; - Memiliki 6 kompartemen penyimpanan yang luas dan tinggi; - Dilengkapi cermin kecil pada belakang pintu di setiap pintunya; - Dilengkapi total 6 pengunci pintu yang aman; - Dilengkapi lubang ventilasi udara untuk mencegah bau; - Tersedia tem',
+    specs: {
+      'Dimensi': 'P: 40 L: 90 T: 185 cm',
+      'Warna': 'Dark Grey � White',
+      'Berat Kotor': '45 Kg'
+    },
+    features: [
+      'Perpaduan warna dark grey dan white yang elegan modern',
+      'Memiliki 6 kompartemen penyimpanan yang luas dan tinggi',
+      'Dilengkapi cermin kecil pada belakang pintu di setiap pintunya',
+      'Dilengkapi total 6 pengunci pintu yang aman',
+      'Dilengkapi lubang ventilasi udara untuk mencegah bau',
+      'Tersedia tempat name tag'
+    ],
+    waText: 'Halo, saya tertarik dengan Lemari Loker Besi 6 Pintu - Forte LK 906 B - Activ Furniture (Rp 2.800.000)'
+  },
+
+  alk_lemari_kantor_loker_besi_forte_86: {
+    id: 'alk_lemari_kantor_loker_besi_forte_86',
+    name: 'Lemari Loker Besi 5 Pintu - Forte LK 405 B - Activ Furniture',
+    category: 'Lemari Kantor',
+    image: 'img/activ/lemari-kantor-loker-besi-forte-lk-405-b-activ-furniture.png',
+    images: ['img/activ/lemari-kantor-loker-besi-forte-lk-405-b-activ-furniture.png'],
+    badge: 'ACTIV',
+    price: 2500000,
+    description: '- Perpaduan warna dark grey dan white yang elegan modern; - Memiliki 5 kompartemen penyimpanan yang luas dan tinggi; - Muat diletakkan helm full face; - Dilengkapi total 5 pengunci pintu yang aman; - Dilengkapi lubang ventilasi udara untuk mencegah bau; - Tersedia tempat name tag; - Lapisan pintu Fo',
+    specs: {
+      'Dimensi': 'P: 40 L: 45 T: 185 cm',
+      'Warna': 'Dark Grey � White',
+      'Berat Kotor': '19,2 Kg'
+    },
+    features: [
+      'Perpaduan warna dark grey dan white yang elegan modern',
+      'Memiliki 5 kompartemen penyimpanan yang luas dan tinggi',
+      'Muat diletakkan helm full face',
+      'Dilengkapi total 5 pengunci pintu yang aman',
+      'Dilengkapi lubang ventilasi udara untuk mencegah bau',
+      'Tersedia tempat name tag'
+    ],
+    waText: 'Halo, saya tertarik dengan Lemari Loker Besi 5 Pintu - Forte LK 405 B - Activ Furniture (Rp 2.500.000)'
+  },
+
+  alk_lemari_kantor_loker_besi_forte_87: {
+    id: 'alk_lemari_kantor_loker_besi_forte_87',
+    name: 'Lemari Loker Besi 4 Pintu - Forte LK 404 B - Activ Furniture',
+    category: 'Lemari Kantor',
+    image: 'img/activ/lemari-kantor-loker-besi-forte-lk-404-b-activ-furniture.png',
+    images: ['img/activ/lemari-kantor-loker-besi-forte-lk-404-b-activ-furniture.png'],
+    badge: 'ACTIV',
+    price: 2200000,
+    description: '- Perpaduan warna dark grey dan white yang elegan modern; - Memiliki 4 kompartemen penyimpanan yang luas dan tinggi; - Muat diletakkan helm full face; - Dilengkapi total 4 pengunci pintu yang aman; - Dilengkapi lubang ventilasi udara untuk mencegah bau; - Tersedia tempat name tag; - Lapisan pintu Fo',
+    specs: {
+      'Dimensi': 'P: 40 L: 45 T: 185 cm',
+      'Warna': 'Dark Grey � White',
+      'Berat Kotor': '18,6 Kg'
+    },
+    features: [
+      'Perpaduan warna dark grey dan white yang elegan modern',
+      'Memiliki 4 kompartemen penyimpanan yang luas dan tinggi',
+      'Muat diletakkan helm full face',
+      'Dilengkapi total 4 pengunci pintu yang aman',
+      'Dilengkapi lubang ventilasi udara untuk mencegah bau',
+      'Tersedia tempat name tag'
+    ],
+    waText: 'Halo, saya tertarik dengan Lemari Loker Besi 4 Pintu - Forte LK 404 B - Activ Furniture (Rp 2.200.000)'
+  },
+
+  alk_lemari_kantor_loker_besi_forte_88: {
+    id: 'alk_lemari_kantor_loker_besi_forte_88',
+    name: 'Lemari Loker Besi 3 Pintu - Forte LK 403 B - ACTIV',
+    category: 'Lemari Kantor',
+    image: 'img/activ/lemari-kantor-loker-besi-forte-lk-403-b-activ-furniture.png',
+    images: ['img/activ/lemari-kantor-loker-besi-forte-lk-403-b-activ-furniture.png'],
+    badge: 'ACTIV',
+    price: 1800000,
+    description: '- Perpaduan warna dark grey dan white yang elegan modern; - Memiliki 3 kompartemen penyimpanan yang luas dan tinggi; - Muat diletakkan helm full face; - Dilengkapi total 3 pengunci pintu yang aman; - Dilengkapi lubang ventilasi udara untuk mencegah bau; - Tersedia tempat name tag; - Lapisan pintu Fo',
+    specs: {
+      'Dimensi': 'P: 40 L: 45 T: 185 cm',
+      'Warna': 'Dark Grey � White',
+      'Berat Kotor': '17,5 Kg'
+    },
+    features: [
+      'Perpaduan warna dark grey dan white yang elegan modern',
+      'Memiliki 3 kompartemen penyimpanan yang luas dan tinggi',
+      'Muat diletakkan helm full face',
+      'Dilengkapi total 3 pengunci pintu yang aman',
+      'Dilengkapi lubang ventilasi udara untuk mencegah bau',
+      'Tersedia tempat name tag'
+    ],
+    waText: 'Halo, saya tertarik dengan Lemari Loker Besi 3 Pintu - Forte LK 403 B - ACTIV (Rp 1.800.000)'
+  },
+
+  alk_lemari_kantor_loker_besi_forte_89: {
+    id: 'alk_lemari_kantor_loker_besi_forte_89',
+    name: 'Lemari Loker Besi 2 Pintu - Forte LK 402 B - Activ Furniture',
+    category: 'Lemari Kantor',
+    image: 'img/activ/lemari-kantor-loker-besi-forte-lk-402-b-activ-furniture.png',
+    images: ['img/activ/lemari-kantor-loker-besi-forte-lk-402-b-activ-furniture.png'],
+    badge: 'ACTIV',
+    price: 1500000,
+    description: '- Perpaduan warna dark grey dan white yang elegan modern; - Memiliki 2 kompartemen penyimpanan yang luas dan tinggi; - Dilengkapi cermin kecil pada belakang pintu di setiap pintunya; - Dilengkapi total 2 pengunci pintu yang aman; - Tersedia total 2 gantungan besi; - Tersedia tempat name tag; - Lapis',
+    specs: {
+      'Dimensi': 'P: 40 L: 45 T: 185 cm',
+      'Warna': 'Dark Grey � White',
+      'Berat Kotor': '18,2 Kg'
+    },
+    features: [
+      'Perpaduan warna dark grey dan white yang elegan modern',
+      'Memiliki 2 kompartemen penyimpanan yang luas dan tinggi',
+      'Dilengkapi cermin kecil pada belakang pintu di setiap pintunya',
+      'Dilengkapi total 2 pengunci pintu yang aman',
+      'Tersedia total 2 gantungan besi',
+      'Tersedia tempat name tag'
+    ],
+    waText: 'Halo, saya tertarik dengan Lemari Loker Besi 2 Pintu - Forte LK 402 B - Activ Furniture (Rp 1.500.000)'
+  },
+
+  alp_lemari_pakaian_forte_sl_90_a_a_90: {
+    id: 'alp_lemari_pakaian_forte_sl_90_a_a_90',
+    name: 'Lemari Pakaian - Forte SL 90 A - Activ Furniture',
+    category: 'Lemari',
+    image: 'img/activ/lemari-pakaian-forte-sl-90-a-activ-furniture.png',
+    images: ['img/activ/lemari-pakaian-forte-sl-90-a-activ-furniture.png'],
+    badge: 'ACTIV',
+    price: 3198000,
+    description: '- Perpaduan warna White dan Light Teak yang elegan dan modern; - Memiliki 3 kompartemen penyimpanan yang luas; - Terdapat penyimpanan yang dapat di kunci; - Cermin yang panjang dan luas; - Tersedia gantungan baju aluminium; - Pintu bukaan sliding dengan rel yang berkualitas; - Bahan besi tahan rayap',
+    specs: {
+      'Dimensi': 'P: 90 L: 50 T: 185 cm',
+      'Warna': 'White - Light Teak',
+      'Berat Kotor': '47 Kg'
+    },
+    features: [
+      'Perpaduan warna White dan Light Teak yang elegan dan modern',
+      'Memiliki 3 kompartemen penyimpanan yang luas',
+      'Terdapat penyimpanan yang dapat di kunci',
+      'Cermin yang panjang dan luas',
+      'Tersedia gantungan baju aluminium',
+      'Pintu bukaan sliding dengan rel yang berkualitas'
+    ],
+    waText: 'Halo, saya tertarik dengan Lemari Pakaian - Forte SL 90 A - Activ Furniture (Rp 3.198.000)'
+  },
+
+  alp_lemari_pakaian_forte_sl_120_b__91: {
+    id: 'alp_lemari_pakaian_forte_sl_120_b__91',
+    name: 'Lemari Pakaian - Forte SL 120 B - Activ Furniture',
+    category: 'Lemari',
+    image: 'img/activ/lemari-pakaian-forte-sl-120-b-activ-furniture.png',
+    images: ['img/activ/lemari-pakaian-forte-sl-120-b-activ-furniture.png'],
+    badge: 'ACTIV',
+    price: 3443000,
+    description: '- Perpaduan warna Dark Grey dan Light Teak yang elegan dan modern; - Memiliki 3 kompartemen penyimpanan yang luas; - Terdapat penyimpanan yang dapat di kunci; - Cermin yang panjang dan luas; - Tersedia gantungan baju aluminium; - Pintu bukaan sliding dengan rel yang berkualitas; - Bahan besi tahan r',
+    specs: {
+      'Dimensi': 'P: 118 L: 50 T: 185 cm',
+      'Warna': 'Dark Grey - Light Teak',
+      'Berat Kotor': '59 Kg'
+    },
+    features: [
+      'Perpaduan warna Dark Grey dan Light Teak yang elegan dan modern',
+      'Memiliki 3 kompartemen penyimpanan yang luas',
+      'Terdapat penyimpanan yang dapat di kunci',
+      'Cermin yang panjang dan luas',
+      'Tersedia gantungan baju aluminium',
+      'Pintu bukaan sliding dengan rel yang berkualitas'
+    ],
+    waText: 'Halo, saya tertarik dengan Lemari Pakaian - Forte SL 120 B - Activ Furniture (Rp 3.443.000)'
+  },
+
+  alp_lemari_pakaian_forte_sl_120_a__92: {
+    id: 'alp_lemari_pakaian_forte_sl_120_a__92',
+    name: 'Lemari Pakaian - Forte SL 120 A - Activ Furniture',
+    category: 'Lemari',
+    image: 'img/activ/lemari-pakaian-forte-sl-120-a-activ-furniture.png',
+    images: ['img/activ/lemari-pakaian-forte-sl-120-a-activ-furniture.png'],
+    badge: 'ACTIV',
+    price: 3443000,
+    description: '- Perpaduan warna White dan Light Teak yang elegan dan modern; - Memiliki 3 kompartemen penyimpanan yang luas; - Terdapat penyimpanan yang dapat di kunci; - Cermin yang panjang dan luas; - Tersedia gantungan baju aluminium; - Pintu bukaan sliding dengan rel yang berkualitas; - Bahan besi tahan rayap',
+    specs: {
+      'Dimensi': 'P: 118 L: 50 T: 185 cm',
+      'Warna': 'White - Light Teak',
+      'Berat Kotor': '59 Kg'
+    },
+    features: [
+      'Perpaduan warna White dan Light Teak yang elegan dan modern',
+      'Memiliki 3 kompartemen penyimpanan yang luas',
+      'Terdapat penyimpanan yang dapat di kunci',
+      'Cermin yang panjang dan luas',
+      'Tersedia gantungan baju aluminium',
+      'Pintu bukaan sliding dengan rel yang berkualitas'
+    ],
+    waText: 'Halo, saya tertarik dengan Lemari Pakaian - Forte SL 120 A - Activ Furniture (Rp 3.443.000)'
+  },
+
+  alk_lemari_kantor_filing_cabinet_f_93: {
+    id: 'alk_lemari_kantor_filing_cabinet_f_93',
+    name: 'Filing Cabinet Besi 4 Tingkat - Forte FC 41 B - ACTIV',
+    category: 'Lemari Kantor',
+    image: 'img/activ/lemari-kantor-filing-cabinet-forte-fc-41.png',
+    images: ['img/activ/lemari-kantor-filing-cabinet-forte-fc-41.png'],
+    badge: 'ACTIV',
+    price: 2500000,
+    description: '� Perpaduan warna dark grey dan wite yang modern; � Memiliki 4 kompartemen penyimpanan yang luas; � Laci menggunakan sistem soft-close; � Terdapat gantungan folder; � Dilengkapi pengunci 1 laci dengan mekanisme kunci sentral (jika dikunci semua laci akan terkunci); � Lapisan pintu Forte series telah',
+    specs: {
+      'Dimensi': 'P: 46 L: 62 T: 133,1 cm',
+      'Warna': 'Dark Grey � White',
+      'Berat Kotor': '36 Kg'
+    },
+    features: [
+      '� Perpaduan warna dark grey dan wite yang modern',
+      '� Memiliki 4 kompartemen penyimpanan yang luas',
+      '� Laci menggunakan sistem soft-close',
+      '� Terdapat gantungan folder',
+      '� Dilengkapi pengunci 1 laci dengan mekanisme kunci sentral (jika dikunci semua laci akan terkunci)',
+      '� Lapisan pintu Forte series telah menggunakan bahan powder coating sehingga pintu tahan gores'
+    ],
+    waText: 'Halo, saya tertarik dengan Filing Cabinet Besi 4 Tingkat - Forte FC 41 B - ACTIV (Rp 2.500.000)'
+  },
+
+  alk_lemari_kantor_forte_scl_90_b_94: {
+    id: 'alk_lemari_kantor_forte_scl_90_b_94',
+    name: 'Lemari Kantor - FORTE SCL 90 B - Activ Furniture',
+    category: 'Lemari Kantor',
+    image: 'img/activ/lemari-kantor-forte-scl-90-b.png',
+    images: ['img/activ/lemari-kantor-forte-scl-90-b.png'],
+    badge: 'ACTIV',
+    price: 2000000,
+    description: '- Perpaduan warna dark grey dan white yang elegan modern; - Memiliki 5 kompartemen penyimpanan yang luas; - Menggunakan pintu sliding kaca dengan rel pintu anti macet; - Dilengkapi 1 pengunci pintu yang aman; - Lapisan pintu Forte series telah menggunakan bahan powder coating sehingga pintu tahan go',
+    specs: {
+      'Dimensi': 'P: 90 L: 45 T: 185 cm',
+      'Warna': 'Dark Grey � White',
+      'Berat Kotor': '46 Kg'
+    },
+    features: [
+      'Perpaduan warna dark grey dan white yang elegan modern',
+      'Memiliki 5 kompartemen penyimpanan yang luas',
+      'Menggunakan pintu sliding kaca dengan rel pintu anti macet',
+      'Dilengkapi 1 pengunci pintu yang aman',
+      'Lapisan pintu Forte series telah menggunakan bahan powder coating sehingga pintu tahan gores',
+      'Bahan besi berkualitas yang anti-jamur, anti-rayap, dan tahan air'
+    ],
+    waText: 'Halo, saya tertarik dengan Lemari Kantor - FORTE SCL 90 B - Activ Furniture (Rp 2.000.000)'
+  },
+
+  alk_lemari_pakaian_forte_fc_40_b_95: {
+    id: 'alk_lemari_pakaian_forte_fc_40_b_95',
+    name: 'Filing Cabinet Besi 4 Tingkat - Forte FC 40 B - Activ Furniture',
+    category: 'Lemari Kantor',
+    image: 'img/activ/lemari-pakaian-forte-fc-40-b.png',
+    images: ['img/activ/lemari-pakaian-forte-fc-40-b.png'],
+    badge: 'ACTIV',
+    price: 2300000,
+    description: '- Perpaduan warna dark grey dan wite yang modern; - Memiliki 4 kompartemen penyimpanan yang luas; - Laci menggunakan sistem soft-close; - Terdapat gantungan folder; - Dilengkapi pengunci 1 laci dengan mekanisme kunci sentral (jika dikunci semua laci akan terkunci); � Lapisan pintu Forte series telah',
+    specs: {
+      'Dimensi': 'P: 46 L: 62 T: 133,1 cm',
+      'Warna': 'Dark Grey - White',
+      'Berat Kotor': '36 Kg'
+    },
+    features: [
+      'Perpaduan warna dark grey dan wite yang modern',
+      'Memiliki 4 kompartemen penyimpanan yang luas',
+      'Laci menggunakan sistem soft-close',
+      'Terdapat gantungan folder',
+      'Dilengkapi pengunci 1 laci dengan mekanisme kunci sentral (jika dikunci semua laci akan terkunci)',
+      '� Lapisan pintu Forte series telah menggunakan bahan powder coating sehingga pintu tahan gores'
+    ],
+    waText: 'Halo, saya tertarik dengan Filing Cabinet Besi 4 Tingkat - Forte FC 40 B - Activ Furniture (Rp 2.300.000)'
+  },
+
+  aks_kitchen_set_jazz_austin_kc_80__96: {
+    id: 'aks_kitchen_set_jazz_austin_kc_80__96',
+    name: 'Kitchen Set - Jazz Austin KC 80 - Activ Furniture',
+    category: 'Kitchen Set',
+    image: 'img/activ/kitchen-set-jazz-austin-kc-80-activ-furniture.webp',
+    images: ['img/activ/kitchen-set-jazz-austin-kc-80-activ-furniture.webp'],
+    badge: 'ACTIV',
+    price: 2200000,
+    description: '- Menggunakan warna amber oak yang modern dan industrial; - Tersedia penyimpanan 6 rak dan 1 laci yang fungsional dan luas; - Pintu dilengkapi handle aluminium yang minimalis; - Menggunakan kaki aluminium yang kuat dan tahan lama; - Sambungan panel belakang tanpa paku; - Ketebalan panel 15 mm; - Top',
+    specs: {
+      'Dimensi': 'P: 80 L: 39,5 T: 184,7 cm',
+      'Warna': 'Amber Oak',
+      'Berat Kotor': '46 Kg'
+    },
+    features: [
+      'Menggunakan warna amber oak yang modern dan industrial',
+      'Tersedia penyimpanan 6 rak dan 1 laci yang fungsional dan luas',
+      'Pintu dilengkapi handle aluminium yang minimalis',
+      'Menggunakan kaki aluminium yang kuat dan tahan lama',
+      'Sambungan panel belakang tanpa paku',
+      'Ketebalan panel 15 mm'
+    ],
+    waText: 'Halo, saya tertarik dengan Kitchen Set - Jazz Austin KC 80 - Activ Furniture (Rp 2.200.000)'
+  },
+
+  aks_kitchen_set_jazz_austin_kc_120_97: {
+    id: 'aks_kitchen_set_jazz_austin_kc_120_97',
+    name: 'Kitchen Set - Jazz Austin KC 120 - Activ Furniture',
+    category: 'Kitchen Set',
+    image: 'img/activ/kitchen-set-jazz-austin-kc-120-activ-furniture.webp',
+    images: ['img/activ/kitchen-set-jazz-austin-kc-120-activ-furniture.webp'],
+    badge: 'ACTIV',
+    price: 3000000,
+    description: '- Menggunakan warna canyon oak - black yang modern dan industrial; - Tersedia penyimpanan 10 rak yang fungsional dan luas; - Pintu dilengkapi handle aluminium yang minimalis; - Menggunakan kaki aluminium yang kuat dan tahan lama; - Sambungan panel belakang tanpa paku; - Ketebalan panel 15 mm; - Top ',
+    specs: {
+      'Dimensi': 'P: 118,2 L: 39,5 T: 184,7 cm',
+      'Warna': 'Canyon Oak - Black',
+      'Berat Kotor': '69 Kg'
+    },
+    features: [
+      'Menggunakan warna canyon oak - black yang modern dan industrial',
+      'Tersedia penyimpanan 10 rak yang fungsional dan luas',
+      'Pintu dilengkapi handle aluminium yang minimalis',
+      'Menggunakan kaki aluminium yang kuat dan tahan lama',
+      'Sambungan panel belakang tanpa paku',
+      'Ketebalan panel 15 mm'
+    ],
+    waText: 'Halo, saya tertarik dengan Kitchen Set - Jazz Austin KC 120 - Activ Furniture (Rp 3.000.000)'
+  },
+
+  ald_lemari_dapur_height_board_jazz_98: {
+    id: 'ald_lemari_dapur_height_board_jazz_98',
+    name: 'Lemari Dapur / Height Board - Jazz Austin HB 50 - Activ Furniture',
+    category: 'Lemari Dapur',
+    image: 'img/activ/lemari-dapur-height-board-jazz-austin-hb-50-activ-furniture-2.webp',
+    images: ['img/activ/lemari-dapur-height-board-jazz-austin-hb-50-activ-furniture-2.webp'],
+    badge: 'ACTIV',
+    price: 800000,
+    description: '- Menggunakan warna canyon oak - black yang modern dan industrial; - Tersedia penyimpanan 3 rak yang fungsional dan luas; - Pintu dilengkapi handle aluminium yang minimalis; - Menggunakan kaki aluminium yang kuat dan tahan lama; - Sambungan panel belakang tanpa paku; - Ketebalan panel 15 mm; - Top t',
+    specs: {
+      'Dimensi': 'P: 50 L: 39,5 T: 125,5 cm',
+      'Warna': 'Canyon Oak - Black',
+      'Berat Kotor': '22 Kg'
+    },
+    features: [
+      'Menggunakan warna canyon oak - black yang modern dan industrial',
+      'Tersedia penyimpanan 3 rak yang fungsional dan luas',
+      'Pintu dilengkapi handle aluminium yang minimalis',
+      'Menggunakan kaki aluminium yang kuat dan tahan lama',
+      'Sambungan panel belakang tanpa paku',
+      'Ketebalan panel 15 mm'
+    ],
+    waText: 'Halo, saya tertarik dengan Lemari Dapur / Height Board - Jazz Austin HB 50 - Activ Furniture (Rp 800.000)'
+  },
+
+  ald_lemari_dapur_height_board_jazz_99: {
+    id: 'ald_lemari_dapur_height_board_jazz_99',
+    name: 'Lemari Dapur / Height Board - Jazz Austin HB 50 - Activ Furniture',
+    category: 'Lemari Dapur',
+    image: 'img/activ/lemari-dapur-height-board-jazz-austin-hb-50-activ-furniture.webp',
+    images: ['img/activ/lemari-dapur-height-board-jazz-austin-hb-50-activ-furniture.webp'],
+    badge: 'ACTIV',
+    price: 800000,
+    description: '- Menggunakan warna amber oak yang modern dan industrial; - Tersedia penyimpanan 3 rak yang fungsional dan luas; - Pintu dilengkapi handle aluminium yang minimalis; - Menggunakan kaki aluminium yang kuat dan tahan lama; - Sambungan panel belakang tanpa paku; - Ketebalan panel 15 mm; - Top table lami',
+    specs: {
+      'Dimensi': 'P: 50 L: 39,5 T: 125,5 cm',
+      'Warna': 'Amber Oak',
+      'Berat Kotor': '22 Kg'
+    },
+    features: [
+      'Menggunakan warna amber oak yang modern dan industrial',
+      'Tersedia penyimpanan 3 rak yang fungsional dan luas',
+      'Pintu dilengkapi handle aluminium yang minimalis',
+      'Menggunakan kaki aluminium yang kuat dan tahan lama',
+      'Sambungan panel belakang tanpa paku',
+      'Ketebalan panel 15 mm'
+    ],
+    waText: 'Halo, saya tertarik dengan Lemari Dapur / Height Board - Jazz Austin HB 50 - Activ Furniture (Rp 800.000)'
+  },
+
+  aov_lemari_laci_jazz_austin_ll_120_100: {
+    id: 'aov_lemari_laci_jazz_austin_ll_120_100',
+    name: 'Lemari Laci - Jazz Austin LL 120 - Activ Furniture',
+    category: 'Rak & Aksesoris',
+    image: 'img/activ/lemari-laci-jazz-austin-ll-120-activ-furniture.png',
+    images: ['img/activ/lemari-laci-jazz-austin-ll-120-activ-furniture.png'],
+    badge: 'ACTIV',
+    price: 1200000,
+    description: '- Menggunakan warna canyon oak - black yang modern dan industrial; - Tersedia penyimpanan 6 laci yang fungsional dan luas; - Pintu dilengkapi handle aluminium yang minimalis; - Menggunakan kaki aluminium yang kuat dan tahan lama; - Sambungan panel belakang tanpa paku; - Ketebalan panel 15 mm; - Top ',
+    specs: {
+      'Dimensi': 'P: 116,2 L: 39,5 T: 95,1 cm',
+      'Warna': 'Canyon Oak - Black',
+      'Berat Kotor': '50 Kg'
+    },
+    features: [
+      'Menggunakan warna canyon oak - black yang modern dan industrial',
+      'Tersedia penyimpanan 6 laci yang fungsional dan luas',
+      'Pintu dilengkapi handle aluminium yang minimalis',
+      'Menggunakan kaki aluminium yang kuat dan tahan lama',
+      'Sambungan panel belakang tanpa paku',
+      'Ketebalan panel 15 mm'
+    ],
+    waText: 'Halo, saya tertarik dengan Lemari Laci - Jazz Austin LL 120 - Activ Furniture (Rp 1.200.000)'
+  },
+
+  aks_kitchen_set_bawah_kitchen_set__101: {
+    id: 'aks_kitchen_set_bawah_kitchen_set__101',
+    name: 'Kitchen Set Bawah / Kitchen Set Sudut - Kofi KSBS (Tsugawood - French Walnut) - Activ Furniture',
+    category: 'Kitchen Set',
+    image: 'img/activ/kitchen-set-bawah-kitchen-set-sudut-kofi-ksbs-tsugawood-french-walnut-activ-furniture-copy.png',
+    images: ['img/activ/kitchen-set-bawah-kitchen-set-sudut-kofi-ksbs-tsugawood-french-walnut-activ-furniture-copy.png'],
+    badge: 'ACTIV',
+    price: 1800000,
+    description: '- Menggunkan warna tsugawood - french walnut yang elegant; - Dilengkapi 3 kompartemen luas di bawah; - Cocok di letakkan di sudut dapur; - Dilengkapi tatakan kaki di bawah kitchen set; - Top panel laminasi PVC; - Penyimpanan luas dengan kedalam hingga 59,5 cm',
+    specs: {
+      'Dimensi': 'P: 59,5 L: 59,5 T: 81 cm',
+      'Warna': 'Tsugawood - French Walnut',
+      'Berat Kotor': '31,65 Kg'
+    },
+    features: [
+      'Menggunkan warna tsugawood - french walnut yang elegant',
+      'Dilengkapi 3 kompartemen luas di bawah',
+      'Cocok di letakkan di sudut dapur',
+      'Dilengkapi tatakan kaki di bawah kitchen set',
+      'Top panel laminasi PVC',
+      'Penyimpanan luas dengan kedalam hingga 59,5 cm'
+    ],
+    waText: 'Halo, saya tertarik dengan Kitchen Set Bawah / Kitchen Set Sudut - Kofi KSBS (Tsugawood - French Walnut) - Activ Furniture (Rp 1.800.000)'
+  },
+
+  aks_kitchen_set_bawah_kitchen_set__102: {
+    id: 'aks_kitchen_set_bawah_kitchen_set__102',
+    name: 'Kitchen Set Bawah / Kitchen Set Sudut - Kofi KSBS (French Walnut) - Activ Furniture',
+    category: 'Kitchen Set',
+    image: 'img/activ/kitchen-set-bawah-kitchen-set-sudut-kofi-ksbs-activ-furniture-2.png',
+    images: ['img/activ/kitchen-set-bawah-kitchen-set-sudut-kofi-ksbs-activ-furniture-2.png'],
+    badge: 'ACTIV',
+    price: 1800000,
+    description: '- Menggunkan warna French walnut yang elegant; - Dilengkapi 3 kompartemen luas di bawah; - Cocok di letakkan di sudut dapur; - Dilengkapi tatakan kaki di bawah kitchen set; - Top panel laminasi PVC; - Penyimpanan luas dengan kedalam hingga 59,5 cm',
+    specs: {
+      'Dimensi': 'P: 59,5 L: 59,5 T: 81 cm',
+      'Warna': 'French Walnut',
+      'Berat Kotor': '31,65 Kg'
+    },
+    features: [
+      'Menggunkan warna French walnut yang elegant',
+      'Dilengkapi 3 kompartemen luas di bawah',
+      'Cocok di letakkan di sudut dapur',
+      'Dilengkapi tatakan kaki di bawah kitchen set',
+      'Top panel laminasi PVC',
+      'Penyimpanan luas dengan kedalam hingga 59,5 cm'
+    ],
+    waText: 'Halo, saya tertarik dengan Kitchen Set Bawah / Kitchen Set Sudut - Kofi KSBS (French Walnut) - Activ Furniture (Rp 1.800.000)'
+  },
+
+  aks_kitchen_set_bawah_kofi_ksb_322_103: {
+    id: 'aks_kitchen_set_bawah_kofi_ksb_322_103',
+    name: 'Kitchen Set Bawah - Kofi KSB 322 - Activ Furniture',
+    category: 'Kitchen Set',
+    image: 'img/activ/kitchen-set-bawah-kofi-ksb-322-activ-furniture-2.png',
+    images: ['img/activ/kitchen-set-bawah-kofi-ksb-322-activ-furniture-2.png'],
+    badge: 'ACTIV',
+    price: 1800000,
+    description: '- Menggunkan warna white glossy yang elegant; - Top table tahan gores dan tahan air panas; - Dilengkapi 3 kompartemen luas di bawah dan 3 laci; - Handle aluminium yang minimalis; - Dilengkapi tatakan kaki di bawah kitchen set; - Top panel laminasi PVC; - Warna white glossy; - Penyimpanan luas dengan',
+    specs: {
+      'Dimensi': 'P: 119,9 L: 40 T: 82,5 cm',
+      'Warna': 'White Glossy - Grey Star Marble',
+      'Berat Kotor': '47 Kg'
+    },
+    features: [
+      'Menggunkan warna white glossy yang elegant',
+      'Top table tahan gores dan tahan air panas',
+      'Dilengkapi 3 kompartemen luas di bawah dan 3 laci',
+      'Handle aluminium yang minimalis',
+      'Dilengkapi tatakan kaki di bawah kitchen set',
+      'Top panel laminasi PVC'
+    ],
+    waText: 'Halo, saya tertarik dengan Kitchen Set Bawah - Kofi KSB 322 - Activ Furniture (Rp 1.800.000)'
+  },
+
+  alp_lemari_pakaian_kofi_lp_305_act_104: {
+    id: 'alp_lemari_pakaian_kofi_lp_305_act_104',
+    name: 'Lemari Pakaian - Kofi LP 305 - Activ Furniture',
+    category: 'Lemari',
+    image: 'img/activ/lemari-pakaian-kofi-lp-305-activ-furniture.png',
+    images: ['img/activ/lemari-pakaian-kofi-lp-305-activ-furniture.png'],
+    badge: 'ACTIV',
+    price: 2796000,
+    description: '- Lemari pakaian 3 pintu ini menggunkan warna zalkova - tsugawood ash yang elegan; - Dilengkapi penyimpanan laci dengan kunci; - Tersedia gantungan baju yang kuat; - Memiliki 6 kompartemen penyimpanan yang luas; - Handle yang besar dan elegan; - Dilengkapi cermin panjang yang bisa menampilkan seluru',
+    specs: {
+      'Dimensi': 'P: 138,8 L: 41,8 T: 180,5 cm',
+      'Warna': 'Zalkova - Tsugawood Ash',
+      'Berat Kotor': '82,8 Kg'
+    },
+    features: [
+      'Lemari pakaian 3 pintu ini menggunkan warna zalkova - tsugawood ash yang elegan',
+      'Dilengkapi penyimpanan laci dengan kunci',
+      'Tersedia gantungan baju yang kuat',
+      'Memiliki 6 kompartemen penyimpanan yang luas',
+      'Handle yang besar dan elegan',
+      'Dilengkapi cermin panjang yang bisa menampilkan seluruh tubuh'
+    ],
+    waText: 'Halo, saya tertarik dengan Lemari Pakaian - Kofi LP 305 - Activ Furniture (Rp 2.796.000)'
+  },
+
+  alp_kitchen_set_bawah_kofi_ksb_322_105: {
+    id: 'alp_kitchen_set_bawah_kofi_ksb_322_105',
+    name: 'Lemari Pakaian - Kofi LP 205 - Activ Furniture',
+    category: 'Lemari',
+    image: 'img/activ/kitchen-set-bawah-kofi-ksb-322-activ-furniture.png',
+    images: ['img/activ/kitchen-set-bawah-kofi-ksb-322-activ-furniture.png'],
+    badge: 'ACTIV',
+    price: 2105000,
+    description: '- Menggunkan warna zalkova - tsugawood ash yang elegan; - Dilengkapi penyimpanan laci dengan kunci; - Tersedia gantungan baju yang kuat; - Memiliki 5 kompartemen penyimpanan yang luas; - Handle yang besar dan elegan; - Dilengkapi cermin panjang yang bisa menampilkan seluruh tubuh; - Gantungan baju b',
+    specs: {
+      'Dimensi': 'P: 93,8 L: 41,8 T: 180,5 cm',
+      'Warna': 'Zalkova - Tsugawood Ash',
+      'Berat Kotor': '63,3 Kg'
+    },
+    features: [
+      'Menggunkan warna zalkova - tsugawood ash yang elegan',
+      'Dilengkapi penyimpanan laci dengan kunci',
+      'Tersedia gantungan baju yang kuat',
+      'Memiliki 5 kompartemen penyimpanan yang luas',
+      'Handle yang besar dan elegan',
+      'Dilengkapi cermin panjang yang bisa menampilkan seluruh tubuh'
+    ],
+    waText: 'Halo, saya tertarik dengan Lemari Pakaian - Kofi LP 205 - Activ Furniture (Rp 2.105.000)'
+  },
+
+  aks_kitchen_set_bawah_kofi_ksb_222_106: {
+    id: 'aks_kitchen_set_bawah_kofi_ksb_222_106',
+    name: 'Kitchen Set Bawah - Kofi KSB 222 - Activ Furniture',
+    category: 'Kitchen Set',
+    image: 'img/activ/kitchen-set-bawah-kofi-ksb-222-activ-furniture.png',
+    images: ['img/activ/kitchen-set-bawah-kofi-ksb-222-activ-furniture.png'],
+    badge: 'ACTIV',
+    price: 1800000,
+    description: '- Menggunkan warna white glossy - grey star marble yang elegant; - Dilengkapi 2 kompartemen luas dibawah; - Tersedia total 2 laci; - Top table tahan air panas dan gores; - Handle aluminium yang minimalis; - Laminasi PVC tahan gores dan air panas; - Kaca tempered yang lebih tahan pecah',
+    specs: {
+      'Dimensi': 'P: 80 L: 40 T: 82,5 cm',
+      'Warna': 'White Glossy - Grey Star Marble',
+      'Berat Kotor': '32 Kg'
+    },
+    features: [
+      'Menggunkan warna white glossy - grey star marble yang elegant',
+      'Dilengkapi 2 kompartemen luas dibawah',
+      'Tersedia total 2 laci',
+      'Top table tahan air panas dan gores',
+      'Handle aluminium yang minimalis',
+      'Laminasi PVC tahan gores dan air panas'
+    ],
+    waText: 'Halo, saya tertarik dengan Kitchen Set Bawah - Kofi KSB 222 - Activ Furniture (Rp 1.800.000)'
+  },
+
+  aks_kitchen_set_bawah_kofi_ksb_3p__107: {
+    id: 'aks_kitchen_set_bawah_kofi_ksb_3p__107',
+    name: 'Kitchen Set Bawah - Kofi KSB 3P - Activ Furniture',
+    category: 'Kitchen Set',
+    image: 'img/activ/kitchen-set-bawah-kofi-ksb-3p-activ-furniture.png',
+    images: ['img/activ/kitchen-set-bawah-kofi-ksb-3p-activ-furniture.png'],
+    badge: 'ACTIV',
+    price: 1800000,
+    description: '- Menggunkan warna french walnut - tsugawood yang elegant; - Dilengkapi 3 kompartemen luas dibawah; - Tersedia total 3 laci; - Top table tahan air panas dan gores; - Handle aluminium yang minimalis; - Laminasi PVC tahan gores dan air panas; - Kaca tempered yang lebih tahan pecah',
+    specs: {
+      'Dimensi': 'P: 119,5 L: 40 T: 81 cm',
+      'Warna': 'French Walnut - Tsugawood',
+      'Berat Kotor': '44 Kg'
+    },
+    features: [
+      'Menggunkan warna french walnut - tsugawood yang elegant',
+      'Dilengkapi 3 kompartemen luas dibawah',
+      'Tersedia total 3 laci',
+      'Top table tahan air panas dan gores',
+      'Handle aluminium yang minimalis',
+      'Laminasi PVC tahan gores dan air panas'
+    ],
+    waText: 'Halo, saya tertarik dengan Kitchen Set Bawah - Kofi KSB 3P - Activ Furniture (Rp 1.800.000)'
+  },
+
+  aks_kitchen_set_atas_kofi_ksa_312__108: {
+    id: 'aks_kitchen_set_atas_kofi_ksa_312__108',
+    name: 'Kitchen Set Atas - Kofi KSA 312 - Activ Furniture',
+    category: 'Kitchen Set',
+    image: 'img/activ/kitchen-set-atas-kofi-ksa-312-activ-furniture.png',
+    images: ['img/activ/kitchen-set-atas-kofi-ksa-312-activ-furniture.png'],
+    badge: 'ACTIV',
+    price: 800000,
+    description: '- Menggunkan warna dark oak - silver yang elegant; - Dilengkapi 3 kompartemen luas di atas; - Dilengkapi kaca yang lebih tahan pecah; - Tersedia ventilasi udara di bagian belakang; - Handle aluminium yang minimalis; - Laminasi PVC; - Kaca tempered yang lebih tahan pecah',
+    specs: {
+      'Dimensi': 'P: 119,8 L: 31,5 T: 80 cm',
+      'Warna': 'Dark Oak - Silver',
+      'Berat Kotor': '26 Kg'
+    },
+    features: [
+      'Menggunkan warna dark oak - silver yang elegant',
+      'Dilengkapi 3 kompartemen luas di atas',
+      'Dilengkapi kaca yang lebih tahan pecah',
+      'Tersedia ventilasi udara di bagian belakang',
+      'Handle aluminium yang minimalis',
+      'Laminasi PVC'
+    ],
+    waText: 'Halo, saya tertarik dengan Kitchen Set Atas - Kofi KSA 312 - Activ Furniture (Rp 800.000)'
+  },
+
+  aks_kitchen_set_atas_kofi_ksa_322__109: {
+    id: 'aks_kitchen_set_atas_kofi_ksa_322__109',
+    name: 'Kitchen Set Atas - Kofi KSA 322 - Activ Furniture',
+    category: 'Kitchen Set',
+    image: 'img/activ/kitchen-set-atas-kofi-ksa-322-activ-furniture.png',
+    images: ['img/activ/kitchen-set-atas-kofi-ksa-322-activ-furniture.png'],
+    badge: 'ACTIV',
+    price: 800000,
+    description: '- Menggunkan warna white glossy yang elegant; - Dilengkapi 3 kompartemen luas di atas; - Dilengkapi kaca yang lebih tahan pecah; - Tersedia tempat untuk bumbu dapur bagian bawah; - Handle aluminium yang minimalis; - Laminasi PVC; - Kaca tempered yang lebih tahan pecah',
+    specs: {
+      'Dimensi': 'P: 120 L: 31,4 T: 80 cm',
+      'Warna': 'White Glossy',
+      'Berat Kotor': '33 Kg'
+    },
+    features: [
+      'Menggunkan warna white glossy yang elegant',
+      'Dilengkapi 3 kompartemen luas di atas',
+      'Dilengkapi kaca yang lebih tahan pecah',
+      'Tersedia tempat untuk bumbu dapur bagian bawah',
+      'Handle aluminium yang minimalis',
+      'Laminasi PVC'
+    ],
+    waText: 'Halo, saya tertarik dengan Kitchen Set Atas - Kofi KSA 322 - Activ Furniture (Rp 800.000)'
+  },
+
+  aks_kitchen_set_atas_kofi_ksa_222__110: {
+    id: 'aks_kitchen_set_atas_kofi_ksa_222__110',
+    name: 'Kitchen Set Atas - Kofi KSA 222 - Activ Furniture',
+    category: 'Kitchen Set',
+    image: 'img/activ/kitchen-set-atas-kofi-ksa-222-activ-furniture.png',
+    images: ['img/activ/kitchen-set-atas-kofi-ksa-222-activ-furniture.png'],
+    badge: 'ACTIV',
+    price: 800000,
+    description: '- Menggunkan warna white glossy yang elegant; - Dilengkapi 2 kompartemen luas di atas; - Dilengkapi kaca yang lebih tahan pecah; - Tersedia tempat untuk bumbu dapur bagian bawah; - Handle aluminium yang minimalis; - Laminasi PVC; - Kaca tempered yang lebih tahan pecah',
+    specs: {
+      'Dimensi': 'P: 80 L: 31,4 T: 80 cm',
+      'Warna': 'White Glossy',
+      'Berat Kotor': '29 Kg'
+    },
+    features: [
+      'Menggunkan warna white glossy yang elegant',
+      'Dilengkapi 2 kompartemen luas di atas',
+      'Dilengkapi kaca yang lebih tahan pecah',
+      'Tersedia tempat untuk bumbu dapur bagian bawah',
+      'Handle aluminium yang minimalis',
+      'Laminasi PVC'
+    ],
+    waText: 'Halo, saya tertarik dengan Kitchen Set Atas - Kofi KSA 222 - Activ Furniture (Rp 800.000)'
+  },
+
+  aks_kitchen_set_atas_kofi_ksa_302__111: {
+    id: 'aks_kitchen_set_atas_kofi_ksa_302__111',
+    name: 'Kitchen Set Atas - Kofi KSA 302 - Activ Furniture',
+    category: 'Kitchen Set',
+    image: 'img/activ/kitchen-set-atas-kofi-ksa-302-activ-furniture.png',
+    images: ['img/activ/kitchen-set-atas-kofi-ksa-302-activ-furniture.png'],
+    badge: 'ACTIV',
+    price: 800000,
+    description: '- Menggunkan warna french walnut - white yang elegant; - Dilengkapi kompartemen luas di atas; - Tersedia tempat untuk bumbu dapur bagian bawah; - Handle aluminium yang minimalis; - Laminasi PVC',
+    specs: {
+      'Dimensi': 'P: 120 L: 32 T: 79 cm',
+      'Warna': 'french walnut - white',
+      'Berat Kotor': '29 Kg'
+    },
+    features: [
+      'Menggunkan warna french walnut - white yang elegant',
+      'Dilengkapi kompartemen luas di atas',
+      'Tersedia tempat untuk bumbu dapur bagian bawah',
+      'Handle aluminium yang minimalis',
+      'Laminasi PVC'
+    ],
+    waText: 'Halo, saya tertarik dengan Kitchen Set Atas - Kofi KSA 302 - Activ Furniture (Rp 800.000)'
+  },
+
+  aks_kitchen_set_atas_kofi_ksa_3p_a_112: {
+    id: 'aks_kitchen_set_atas_kofi_ksa_3p_a_112',
+    name: 'Kitchen Set Atas - Kofi KSA 3P - Activ Furniture',
+    category: 'Kitchen Set',
+    image: 'img/activ/kitchen-set-atas-kofi-ksa-3p-activ-furniture.png',
+    images: ['img/activ/kitchen-set-atas-kofi-ksa-3p-activ-furniture.png'],
+    badge: 'ACTIV',
+    price: 800000,
+    description: '- Menggunkan warna french walnut - tsugawood yang elegant; - Dilengkapi 3 kompartemen luas di atas; - Tersedia tempat untuk bumbu dapur bagian bawah; - Handle aluminium yang minimalis; - Laminasi PVC',
+    specs: {
+      'Dimensi': 'P: 119 L: 32 T: 78,6 cm',
+      'Warna': 'french walnut - tsugawood',
+      'Berat Kotor': '29 Kg'
+    },
+    features: [
+      'Menggunkan warna french walnut - tsugawood yang elegant',
+      'Dilengkapi 3 kompartemen luas di atas',
+      'Tersedia tempat untuk bumbu dapur bagian bawah',
+      'Handle aluminium yang minimalis',
+      'Laminasi PVC'
+    ],
+    waText: 'Halo, saya tertarik dengan Kitchen Set Atas - Kofi KSA 3P - Activ Furniture (Rp 800.000)'
+  },
+
+  aks_kitchen_set_atas_kofi_ksa_2p_a_113: {
+    id: 'aks_kitchen_set_atas_kofi_ksa_2p_a_113',
+    name: 'Kitchen Set Atas - Kofi KSA 2P - Activ Furniture',
+    category: 'Kitchen Set',
+    image: 'img/activ/kitchen-set-atas-kofi-ksa-2p-activ-furniture.png',
+    images: ['img/activ/kitchen-set-atas-kofi-ksa-2p-activ-furniture.png'],
+    badge: 'ACTIV',
+    price: 800000,
+    description: '- Menggunkan warna french walnut - tsugawood yang elegant; - Dilengkapi kompartemen luas di atas; - Tersedia tempat untuk bumbu dapur bagian bawah; - Handle aluminium yang minimalis; - Laminasi PVC',
+    specs: {
+      'Dimensi': 'P: 80,6 L: 32 T: 78,6 cm',
+      'Warna': 'french walnut - tsugawood',
+      'Berat Kotor': '20 Kg'
+    },
+    features: [
+      'Menggunkan warna french walnut - tsugawood yang elegant',
+      'Dilengkapi kompartemen luas di atas',
+      'Tersedia tempat untuk bumbu dapur bagian bawah',
+      'Handle aluminium yang minimalis',
+      'Laminasi PVC'
+    ],
+    waText: 'Halo, saya tertarik dengan Kitchen Set Atas - Kofi KSA 2P - Activ Furniture (Rp 800.000)'
+  },
+
+  aov_open_rack_cabinet_rak_terbuka__114: {
+    id: 'aov_open_rack_cabinet_rak_terbuka__114',
+    name: 'Open Rack Cabinet / Rak Terbuka - Spin ORC 2 - Activ Furniture',
+    category: 'Rak & Aksesoris',
+    image: 'img/activ/open-rack-cabinet-rak-terbuka-spin-orc-2-activ-furniture.webp',
+    images: ['img/activ/open-rack-cabinet-rak-terbuka-spin-orc-2-activ-furniture.webp'],
+    badge: 'ACTIV',
+    price: 350000,
+    description: '- Rak terbuka ini menggunakan warna columbia nussebaum yang minimalis; - Terdapat penyimpanan 2 rak yang luas; - Bahan dengan kualitas terbaik; - Laminasi sheet paper yang clean; - Bahan menggunakan particle board kualitas terbaik; - Kedalaman penyimpanan 29,5 cm',
+    specs: {
+      'Dimensi': 'P: 39,7 L: 29,5 T: 60 cm',
+      'Warna': 'Columbia Nussebaum',
+      'Berat Kotor': '6,5 Kg'
+    },
+    features: [
+      'Rak terbuka ini menggunakan warna columbia nussebaum yang minimalis',
+      'Terdapat penyimpanan 2 rak yang luas',
+      'Bahan dengan kualitas terbaik',
+      'Laminasi sheet paper yang clean',
+      'Bahan menggunakan particle board kualitas terbaik',
+      'Kedalaman penyimpanan 29,5 cm'
+    ],
+    waText: 'Halo, saya tertarik dengan Open Rack Cabinet / Rak Terbuka - Spin ORC 2 - Activ Furniture (Rp 350.000)'
+  },
+
+  aov_lemari_serba_guna_rak_serba_gu_115: {
+    id: 'aov_lemari_serba_guna_rak_serba_gu_115',
+    name: 'Lemari Serba Guna / Rak Serba Guna - Spin LSG 4 (Sonoma Oak- White) - Activ Furniture',
+    category: 'Rak & Aksesoris',
+    image: 'img/activ/lemari-serba-guna-rak-serba-guna-spin-lsg-4-sonoma-oak-white-activ-furniture.webp',
+    images: ['img/activ/lemari-serba-guna-rak-serba-guna-spin-lsg-4-sonoma-oak-white-activ-furniture.webp'],
+    badge: 'ACTIV',
+    price: 550000,
+    description: '- Sideboard terbuka ini hadir dengan warna sonoma oak - white; - Handle pintu minimalis; - Dilengkapi 4 kompartemen rak yang luas; - Tersedia pengunci pintu; - Tatakan kaki agar lemari tidak bersentuhan langsung dengan lantai; - Bahan : particle board; - Luas penyimpanan 39,8 cm',
+    specs: {
+      'Dimensi': 'P: 39,6 L: 39,8 T: 120,5 cm',
+      'Warna': 'Sonoma Oak - White',
+      'Berat Kotor': '18,5 Kg'
+    },
+    features: [
+      'Sideboard terbuka ini hadir dengan warna sonoma oak - white',
+      'Handle pintu minimalis',
+      'Dilengkapi 4 kompartemen rak yang luas',
+      'Tersedia pengunci pintu',
+      'Tatakan kaki agar lemari tidak bersentuhan langsung dengan lantai',
+      'Bahan : particle board'
+    ],
+    waText: 'Halo, saya tertarik dengan Lemari Serba Guna / Rak Serba Guna - Spin LSG 4 (Sonoma Oak- White) - Activ Furniture (Rp 550.000)'
+  },
+
+  aov_sideboard_spin_sb_120_activ_fu_116: {
+    id: 'aov_sideboard_spin_sb_120_activ_fu_116',
+    name: 'Sideboard - Spin SB 120 - Activ Furniture',
+    category: 'Rak & Aksesoris',
+    image: 'img/activ/sideboard-spin-sb-120-activ-furniture.webp',
+    images: ['img/activ/sideboard-spin-sb-120-activ-furniture.webp'],
+    badge: 'ACTIV',
+    price: 850000,
+    description: '- Sideboard terbuka ini hadir dengan warna sonoma oak - white; - Handle pintu dan laci minimalis; - Dilengkapi 6 kompartemen rak dalam di bagian bawah; - Terdapat 2 kompartemen laci yang luas; - Memiliki penyimpanan terbuka di tengah; - Bagian atas sideboard dapat digunakan untuk meletakkan barang; ',
+    specs: {
+      'Dimensi': 'P: 120,2 L: 39,5 T: 80 cm',
+      'Warna': 'Sonoma Oak - White',
+      'Berat Kotor': '33 Kg'
+    },
+    features: [
+      'Sideboard terbuka ini hadir dengan warna sonoma oak - white',
+      'Handle pintu dan laci minimalis',
+      'Dilengkapi 6 kompartemen rak dalam di bagian bawah',
+      'Terdapat 2 kompartemen laci yang luas',
+      'Memiliki penyimpanan terbuka di tengah',
+      'Bagian atas sideboard dapat digunakan untuk meletakkan barang'
+    ],
+    waText: 'Halo, saya tertarik dengan Sideboard - Spin SB 120 - Activ Furniture (Rp 850.000)'
+  },
+
+  aov_sideboard_spin_sb_80_activ_fur_117: {
+    id: 'aov_sideboard_spin_sb_80_activ_fur_117',
+    name: 'Sideboard - Spin SB 80 - Activ Furniture',
+    category: 'Rak & Aksesoris',
+    image: 'img/activ/sideboard-spin-sb-80-activ-furniture.webp',
+    images: ['img/activ/sideboard-spin-sb-80-activ-furniture.webp'],
+    badge: 'ACTIV',
+    price: 700000,
+    description: '- Sideboard terbuka ini hadir dengan warna sonoma oak - white; - Handle pintu dan laci minimalis; - Dilengkapi 4 kompartemen rak dalam di bagian bawah; - Terdapat 2 kompartemen laci yang luas; - Bagian atas sideboard dapat digunakan untuk meletakkan barang; - Bahan : particle board; - Luas penyimpan',
+    specs: {
+      'Dimensi': 'P: 80,5 L: 39,5 T: 80 cm',
+      'Warna': 'Sonoma Oak - White',
+      'Berat Kotor': '24 Kg'
+    },
+    features: [
+      'Sideboard terbuka ini hadir dengan warna sonoma oak - white',
+      'Handle pintu dan laci minimalis',
+      'Dilengkapi 4 kompartemen rak dalam di bagian bawah',
+      'Terdapat 2 kompartemen laci yang luas',
+      'Bagian atas sideboard dapat digunakan untuk meletakkan barang',
+      'Bahan : particle board'
+    ],
+    waText: 'Halo, saya tertarik dengan Sideboard - Spin SB 80 - Activ Furniture (Rp 700.000)'
+  },
+
+  aov_lemari_sepatu_spin_ls_90_colum_118: {
+    id: 'aov_lemari_sepatu_spin_ls_90_colum_118',
+    name: 'Lemari Sepatu - Spin LS 90 (Columbia Nussebaum) - Activ Furniture',
+    category: 'Rak & Aksesoris',
+    image: 'img/activ/lemari-sepatu-spin-ls-90-columbia-nussebaum-activ-furniture.webp',
+    images: ['img/activ/lemari-sepatu-spin-ls-90-columbia-nussebaum-activ-furniture.webp'],
+    badge: 'ACTIV',
+    price: 700000,
+    description: '- Lemari sepatu terbuka ini hadir dengan warna columbia nussebaum; - Memiliki kapasitas besar yang dapat menyimpan hingga 15 pasang sepatu; - Tersedia lubang ventilasi; - Pintu kaca lebih tahan pecah; - Dilengkapi penyimpanan tambahan pada bagian atas; - Terdapat kompartemen terbuka; - Tersedia gant',
+    specs: {
+      'Dimensi': 'P: 91 L: 39,5 T: 121 cm',
+      'Warna': 'Columbia Nussebaum',
+      'Berat Kotor': '33,5 Kg'
+    },
+    features: [
+      'Lemari sepatu terbuka ini hadir dengan warna columbia nussebaum',
+      'Memiliki kapasitas besar yang dapat menyimpan hingga 15 pasang sepatu',
+      'Tersedia lubang ventilasi',
+      'Pintu kaca lebih tahan pecah',
+      'Dilengkapi penyimpanan tambahan pada bagian atas',
+      'Terdapat kompartemen terbuka'
+    ],
+    waText: 'Halo, saya tertarik dengan Lemari Sepatu - Spin LS 90 (Columbia Nussebaum) - Activ Furniture (Rp 700.000)'
+  },
+
+  aov_lemari_sepatu_spin_ls_90_sonom_119: {
+    id: 'aov_lemari_sepatu_spin_ls_90_sonom_119',
+    name: 'Lemari Sepatu - Spin LS 90 (Sonoma Oak) - Activ Furniture',
+    category: 'Rak & Aksesoris',
+    image: 'img/activ/lemari-sepatu-spin-ls-90-sonoma-oak-activ-furniture.webp',
+    images: ['img/activ/lemari-sepatu-spin-ls-90-sonoma-oak-activ-furniture.webp'],
+    badge: 'ACTIV',
+    price: 700000,
+    description: '- Lemari sepatu terbuka ini hadir dengan warna sonoma oak; - Memiliki kapasitas besar yang dapat menyimpan hingga 15 pasang sepatu; - Tersedia lubang ventilasi; - Pintu kaca lebih tahan pecah; - Dilengkapi penyimpanan tambahan pada bagian atas; - Terdapat kompartemen terbuka; - Tersedia gantungan ku',
+    specs: {
+      'Dimensi': 'P: 91 L: 39,5 T: 121 cm',
+      'Warna': 'Sonoma Oak',
+      'Berat Kotor': '33,5 Kg'
+    },
+    features: [
+      'Lemari sepatu terbuka ini hadir dengan warna sonoma oak',
+      'Memiliki kapasitas besar yang dapat menyimpan hingga 15 pasang sepatu',
+      'Tersedia lubang ventilasi',
+      'Pintu kaca lebih tahan pecah',
+      'Dilengkapi penyimpanan tambahan pada bagian atas',
+      'Terdapat kompartemen terbuka'
+    ],
+    waText: 'Halo, saya tertarik dengan Lemari Sepatu - Spin LS 90 (Sonoma Oak) - Activ Furniture (Rp 700.000)'
+  },
+
+  aov_lemari_sepatu_spin_ls_60_colum_120: {
+    id: 'aov_lemari_sepatu_spin_ls_60_colum_120',
+    name: 'Lemari Sepatu - Spin LS 60 (Columbia Nussebaum) - Activ Furniture',
+    category: 'Rak & Aksesoris',
+    image: 'img/activ/lemari-sepatu-spin-ls-60-columbia-nussebaum-activ-furniture.webp',
+    images: ['img/activ/lemari-sepatu-spin-ls-60-columbia-nussebaum-activ-furniture.webp'],
+    badge: 'ACTIV',
+    price: 500000,
+    description: '- Lemari sepatu terbuka ini hadir dengan warna columbia nussebaum; - Memiliki kapasitas besar yang dapat menyimpan hingga 15 pasang sepatu; - Tersedia lubang ventilasi; - Pintu kaca lebih tahan pecah; - Dilengkapi penyimpanan tambahan pada bagian atas; - Panjang penyimpanan rak sepatu 61,7 cm; - Teb',
+    specs: {
+      'Dimensi': 'P: 61,7 L: 39,5 T: 121 cm',
+      'Warna': 'Columbia Nussebaum',
+      'Berat Kotor': '24 Kg'
+    },
+    features: [
+      'Lemari sepatu terbuka ini hadir dengan warna columbia nussebaum',
+      'Memiliki kapasitas besar yang dapat menyimpan hingga 15 pasang sepatu',
+      'Tersedia lubang ventilasi',
+      'Pintu kaca lebih tahan pecah',
+      'Dilengkapi penyimpanan tambahan pada bagian atas',
+      'Panjang penyimpanan rak sepatu 61,7 cm'
+    ],
+    waText: 'Halo, saya tertarik dengan Lemari Sepatu - Spin LS 60 (Columbia Nussebaum) - Activ Furniture (Rp 500.000)'
+  },
+
+  aov_lemari_sepatu_spin_ls_60_activ_121: {
+    id: 'aov_lemari_sepatu_spin_ls_60_activ_121',
+    name: 'Lemari Sepatu - Spin LS 60 - Activ Furniture',
+    category: 'Rak & Aksesoris',
+    image: 'img/activ/lemari-sepatu-spin-ls-60-activ-furniture.webp',
+    images: ['img/activ/lemari-sepatu-spin-ls-60-activ-furniture.webp'],
+    badge: 'ACTIV',
+    price: 500000,
+    description: '- Lemari sepatu terbuka ini hadir dengan warna Sonoma oak; - Memiliki kapasitas besar yang dapat menyimpan hingga 15 pasang sepatu; - Tersedia lubang ventilasi; - Pintu kaca lebih tahan pecah; - Dilengkapi penyimpanan tambahan pada bagian atas; - Panjang penyimpanan rak sepatu 61,7 cm; - Tebal panel',
+    specs: {
+      'Dimensi': 'P: 61,7 L: 39,5 T: 121 cm',
+      'Warna': 'Sonoma Oak',
+      'Berat Kotor': '24 Kg'
+    },
+    features: [
+      'Lemari sepatu terbuka ini hadir dengan warna Sonoma oak',
+      'Memiliki kapasitas besar yang dapat menyimpan hingga 15 pasang sepatu',
+      'Tersedia lubang ventilasi',
+      'Pintu kaca lebih tahan pecah',
+      'Dilengkapi penyimpanan tambahan pada bagian atas',
+      'Panjang penyimpanan rak sepatu 61,7 cm'
+    ],
+    waText: 'Halo, saya tertarik dengan Lemari Sepatu - Spin LS 60 - Activ Furniture (Rp 500.000)'
+  },
+
+  alp_lemari_pakaian_sliding_spin_sl_122: {
+    id: 'alp_lemari_pakaian_sliding_spin_sl_122',
+    name: 'Lemari Pakaian Sliding - Spin SL 80 (Zalkova - Tsugawood Ash) - Activ Furniture',
+    category: 'Lemari',
+    image: 'img/activ/lemari-pakaian-sliding-spin-sl-80-zalkova-tsugawood-ash-activ-furniture.webp',
+    images: ['img/activ/lemari-pakaian-sliding-spin-sl-80-zalkova-tsugawood-ash-activ-furniture.webp'],
+    badge: 'ACTIV',
+    price: 1636000,
+    description: '- Lemari pakaian sliding ini hadir dengan warna zalkova - tsugawood ash yang minimalis; - Dilengkapi rel sliding yang berkualitas; - Handle minimalis; - Tersedia pengunci pintu; - Memiliki 5 penyimpanan rak yang luas; - Terdapat penyimpanan laci; - Dilengkapi cermin yang panjang; - Tatakan kaki agar',
+    specs: {
+      'Dimensi': 'P: 78,6 L: 50 T: 183,9 cm',
+      'Warna': 'Zalkova - Tsugawood Ash',
+      'Berat Kotor': '57 Kg'
+    },
+    features: [
+      'Lemari pakaian sliding ini hadir dengan warna zalkova - tsugawood ash yang minimalis',
+      'Dilengkapi rel sliding yang berkualitas',
+      'Handle minimalis',
+      'Tersedia pengunci pintu',
+      'Memiliki 5 penyimpanan rak yang luas',
+      'Terdapat penyimpanan laci'
+    ],
+    waText: 'Halo, saya tertarik dengan Lemari Pakaian Sliding - Spin SL 80 (Zalkova - Tsugawood Ash) - Activ Furniture (Rp 1.636.000)'
+  },
+
+  alp_lemari_pakaian_sliding_spin_sl_123: {
+    id: 'alp_lemari_pakaian_sliding_spin_sl_123',
+    name: 'Lemari Pakaian Sliding - Spin SL 80 (Tsugawood Ash) - Activ Furniture',
+    category: 'Lemari',
+    image: 'img/activ/lemari-pakaian-sliding-spin-sl-80-tsugawood-ash-activ-furniture.webp',
+    images: ['img/activ/lemari-pakaian-sliding-spin-sl-80-tsugawood-ash-activ-furniture.webp'],
+    badge: 'ACTIV',
+    price: 1636000,
+    description: '- Lemari pakaian sliding ini hadir dengan warna tsugawood ash yang minimalis; - Dilengkapi rel sliding yang berkualitas; - Handle minimalis; - Tersedia pengunci pintu; - Memiliki 5 penyimpanan rak yang luas; - Terdapat penyimpanan laci; - Dilengkapi cermin yang panjang; - Tatakan kaki agar lemari ti',
+    specs: {
+      'Dimensi': 'P: 78,6 L: 50 T: 183,9 cm',
+      'Warna': 'Tsugawood Ash',
+      'Berat Kotor': '57 Kg'
+    },
+    features: [
+      'Lemari pakaian sliding ini hadir dengan warna tsugawood ash yang minimalis',
+      'Dilengkapi rel sliding yang berkualitas',
+      'Handle minimalis',
+      'Tersedia pengunci pintu',
+      'Memiliki 5 penyimpanan rak yang luas',
+      'Terdapat penyimpanan laci'
+    ],
+    waText: 'Halo, saya tertarik dengan Lemari Pakaian Sliding - Spin SL 80 (Tsugawood Ash) - Activ Furniture (Rp 1.636.000)'
+  },
+
+  alp_lemari_pakaian_sliding_spin_sl_124: {
+    id: 'alp_lemari_pakaian_sliding_spin_sl_124',
+    name: 'Lemari Pakaian Sliding - Spin SL 80 (Sonoma Oak - White) - Activ Furniture',
+    category: 'Lemari',
+    image: 'img/activ/lemari-pakaian-sliding-spin-sl-80-sonoma-oak-white-activ-furniture.webp',
+    images: ['img/activ/lemari-pakaian-sliding-spin-sl-80-sonoma-oak-white-activ-furniture.webp'],
+    badge: 'ACTIV',
+    price: 1636000,
+    description: '- Lemari pakaian sliding ini hadir dengan warna sonoma oak - white yang minimalis; - Dilengkapi rel sliding yang berkualitas; - Handle minimalis; - Tersedia pengunci pintu; - Memiliki 5 penyimpanan rak yang luas; - Terdapat penyimpanan laci; - Dilengkapi cermin yang panjang; - Tatakan kaki agar lema',
+    specs: {
+      'Dimensi': 'P: 78,6 L: 50 T: 183,9 cm',
+      'Warna': 'Sonoma Oak - White',
+      'Berat Kotor': '57 Kg'
+    },
+    features: [
+      'Lemari pakaian sliding ini hadir dengan warna sonoma oak - white yang minimalis',
+      'Dilengkapi rel sliding yang berkualitas',
+      'Handle minimalis',
+      'Tersedia pengunci pintu',
+      'Memiliki 5 penyimpanan rak yang luas',
+      'Terdapat penyimpanan laci'
+    ],
+    waText: 'Halo, saya tertarik dengan Lemari Pakaian Sliding - Spin SL 80 (Sonoma Oak - White) - Activ Furniture (Rp 1.636.000)'
+  },
+
+  alp_lemari_pakaian_sliding_spin_sl_125: {
+    id: 'alp_lemari_pakaian_sliding_spin_sl_125',
+    name: 'Lemari Pakaian Sliding - Spin SL 81 - Activ Furniture',
+    category: 'Lemari',
+    image: 'img/activ/lemari-pakaian-sliding-spin-sl-81-activ-furniture.webp',
+    images: ['img/activ/lemari-pakaian-sliding-spin-sl-81-activ-furniture.webp'],
+    badge: 'ACTIV',
+    price: 1636000,
+    description: '- Lemari pakaian sliding ini hadir dengan warna white yang minimalis; - Dilengkapi rel sliding yang berkualitas; - Handle minimalis; - Tersedia pengunci pintu; - Memiliki 5 penyimpanan rak yang luas; - Terdapat penyimpanan laci; - Dilengkapi cermin yang panjang; - Tatakan kaki agar lemari tidak bers',
+    specs: {
+      'Dimensi': 'P: 78,6 L: 50 T: 183,9 cm',
+      'Warna': 'White',
+      'Berat Kotor': '57 Kg'
+    },
+    features: [
+      'Lemari pakaian sliding ini hadir dengan warna white yang minimalis',
+      'Dilengkapi rel sliding yang berkualitas',
+      'Handle minimalis',
+      'Tersedia pengunci pintu',
+      'Memiliki 5 penyimpanan rak yang luas',
+      'Terdapat penyimpanan laci'
+    ],
+    waText: 'Halo, saya tertarik dengan Lemari Pakaian Sliding - Spin SL 81 - Activ Furniture (Rp 1.636.000)'
+  },
+
+  alp_lemari_pakaian_3_pintu_spin_lp_126: {
+    id: 'alp_lemari_pakaian_3_pintu_spin_lp_126',
+    name: 'Lemari Pakaian 3 Pintu - Spin LPMR 301 (Columbia Nussebaum) - Activ Furniture',
+    category: 'Lemari',
+    image: 'img/activ/lemari-pakaian-3-pintu-spin-lpmr-301-columbia-nussebaum-activ-furniture.webp',
+    images: ['img/activ/lemari-pakaian-3-pintu-spin-lpmr-301-columbia-nussebaum-activ-furniture.webp'],
+    badge: 'ACTIV',
+    price: 1500000,
+    description: '- Lemari pakaian 3 pintu ini hadir dengan warna columbia nussebaum yang minimalis; - Handle minimalis; - Tersedia pengunci pintu; - Memiliki 8 penyimpanan rak yang luas; - Dilengkapi cermin yang panjang; - Terdapat kompartemen untuk alat make-up; - Memiliki kompartemen laci dengan pengunci; - Tersed',
+    specs: {
+      'Dimensi': 'P: 118,7 L: 41,5 T: 184,3 cm',
+      'Warna': 'Columbia Nussebaum',
+      'Berat Kotor': '38 Kg'
+    },
+    features: [
+      'Lemari pakaian 3 pintu ini hadir dengan warna columbia nussebaum yang minimalis',
+      'Handle minimalis',
+      'Tersedia pengunci pintu',
+      'Memiliki 8 penyimpanan rak yang luas',
+      'Dilengkapi cermin yang panjang',
+      'Terdapat kompartemen untuk alat make-up'
+    ],
+    waText: 'Halo, saya tertarik dengan Lemari Pakaian 3 Pintu - Spin LPMR 301 (Columbia Nussebaum) - Activ Furniture (Rp 1.500.000)'
+  },
+
+  alp_lemari_pakaian_3_pintu_spin_lp_127: {
+    id: 'alp_lemari_pakaian_3_pintu_spin_lp_127',
+    name: 'Lemari Pakaian 3 Pintu - Spin LPMR 301 (Sonoma Oak - White) - Activ Furniture',
+    category: 'Lemari',
+    image: 'img/activ/lemari-pakaian-3-pintu-spin-lpmr-301-sonoma-oak-white-activ-furniture.webp',
+    images: ['img/activ/lemari-pakaian-3-pintu-spin-lpmr-301-sonoma-oak-white-activ-furniture.webp'],
+    badge: 'ACTIV',
+    price: 1500000,
+    description: '- Lemari pakaian 3 pintu ini hadir dengan sonoma oak - warna white yang minimalis; - Handle minimalis; - Tersedia pengunci pintu; - Memiliki 8 penyimpanan rak yang luas; - Dilengkapi cermin yang panjang; - Terdapat kompartemen untuk alat make-up; - Memiliki kompartemen laci dengan pengunci; - Tersed',
+    specs: {
+      'Dimensi': 'P: 118,7 L: 41,5 T: 184,3 cm',
+      'Warna': 'Sonoma Oak - White',
+      'Berat Kotor': '38 Kg'
+    },
+    features: [
+      'Lemari pakaian 3 pintu ini hadir dengan sonoma oak - warna white yang minimalis',
+      'Handle minimalis',
+      'Tersedia pengunci pintu',
+      'Memiliki 8 penyimpanan rak yang luas',
+      'Dilengkapi cermin yang panjang',
+      'Terdapat kompartemen untuk alat make-up'
+    ],
+    waText: 'Halo, saya tertarik dengan Lemari Pakaian 3 Pintu - Spin LPMR 301 (Sonoma Oak - White) - Activ Furniture (Rp 1.500.000)'
+  },
+
+  alp_lemari_pakaian_3_pintu_spin_lp_128: {
+    id: 'alp_lemari_pakaian_3_pintu_spin_lp_128',
+    name: 'Lemari Pakaian 3 Pintu - Spin LPMR 300 - Activ Furniture',
+    category: 'Lemari',
+    image: 'img/activ/lemari-pakaian-3-pintu-spin-lpmr-300-activ-furniture.webp',
+    images: ['img/activ/lemari-pakaian-3-pintu-spin-lpmr-300-activ-furniture.webp'],
+    badge: 'ACTIV',
+    price: 1500000,
+    description: '- Lemari pakaian 3 pintu ini hadir dengan warna white yang minimalis; - Handle minimalis; - Tersedia pengunci pintu; - Memiliki 8 penyimpanan rak yang luas; - Dilengkapi cermin yang panjang; - Terdapat kompartemen untuk alat make-up; - Memiliki kompartemen laci dengan pengunci; - Tersedia kursi deng',
+    specs: {
+      'Dimensi': 'P: 118,7 L: 41,5 T: 184,3 cm',
+      'Warna': 'White',
+      'Berat Kotor': '38 Kg'
+    },
+    features: [
+      'Lemari pakaian 3 pintu ini hadir dengan warna white yang minimalis',
+      'Handle minimalis',
+      'Tersedia pengunci pintu',
+      'Memiliki 8 penyimpanan rak yang luas',
+      'Dilengkapi cermin yang panjang',
+      'Terdapat kompartemen untuk alat make-up'
+    ],
+    waText: 'Halo, saya tertarik dengan Lemari Pakaian 3 Pintu - Spin LPMR 300 - Activ Furniture (Rp 1.500.000)'
+  },
+
+  alp_lemari_pakaian_3_pintu_spin_lp_129: {
+    id: 'alp_lemari_pakaian_3_pintu_spin_lp_129',
+    name: 'Lemari Pakaian 3 Pintu - Spin LPM 331 (Zalkova - Tsugawood Ash) - Activ Furniture',
+    category: 'Lemari',
+    image: 'img/activ/lemari-pakaian-3-pintu-spin-lpm-331-zalkova-tsugawood-ash-activ-furniture.webp',
+    images: ['img/activ/lemari-pakaian-3-pintu-spin-lpm-331-zalkova-tsugawood-ash-activ-furniture.webp'],
+    badge: 'ACTIV',
+    price: 1478000,
+    description: '- Lemari pakaian 3 pintu ini hadir dengan warna zalkova - tsugawood ash yang minimalis; - Handle minimalis; - Tersedia pengunci pintu; - Memiliki 6 penyimpanan rak yang luas; - Dilengkapi cermin yang panjang; - Terdapat kompartemen untuk alat make-up; - Tatakan kaki agar lemari tidak bersentuhan lan',
+    specs: {
+      'Dimensi': 'P: 119,4 L: 41,5 T: 184,3 cm',
+      'Warna': 'Zalkova - Tsugawood Ash',
+      'Berat Kotor': '62,5 Kg'
+    },
+    features: [
+      'Lemari pakaian 3 pintu ini hadir dengan warna zalkova - tsugawood ash yang minimalis',
+      'Handle minimalis',
+      'Tersedia pengunci pintu',
+      'Memiliki 6 penyimpanan rak yang luas',
+      'Dilengkapi cermin yang panjang',
+      'Terdapat kompartemen untuk alat make-up'
+    ],
+    waText: 'Halo, saya tertarik dengan Lemari Pakaian 3 Pintu - Spin LPM 331 (Zalkova - Tsugawood Ash) - Activ Furniture (Rp 1.478.000)'
+  },
+
+  alp_lemari_pakaian_3_pintu_spin_lp_130: {
+    id: 'alp_lemari_pakaian_3_pintu_spin_lp_130',
+    name: 'Lemari Pakaian 3 Pintu - Spin LPM 331 (Tsugawood Ash) - Activ Furniture',
+    category: 'Lemari',
+    image: 'img/activ/lemari-pakaian-3-pintu-spin-lpm-331-tsugawood-ash-activ-furniture.webp',
+    images: ['img/activ/lemari-pakaian-3-pintu-spin-lpm-331-tsugawood-ash-activ-furniture.webp'],
+    badge: 'ACTIV',
+    price: 1478000,
+    description: '- Lemari pakaian 3 pintu ini hadir dengan warna tsugawood ash yang minimalis; - Handle minimalis; - Tersedia pengunci pintu; - Memiliki 6 penyimpanan rak yang luas; - Dilengkapi cermin yang panjang; - Terdapat kompartemen untuk alat make-up; - Tatakan kaki agar lemari tidak bersentuhan langsung deng',
+    specs: {
+      'Dimensi': 'P: 119,4 L: 41,5 T: 184,3 cm',
+      'Warna': 'Tsugawood Ash',
+      'Berat Kotor': '62,5 Kg'
+    },
+    features: [
+      'Lemari pakaian 3 pintu ini hadir dengan warna tsugawood ash yang minimalis',
+      'Handle minimalis',
+      'Tersedia pengunci pintu',
+      'Memiliki 6 penyimpanan rak yang luas',
+      'Dilengkapi cermin yang panjang',
+      'Terdapat kompartemen untuk alat make-up'
+    ],
+    waText: 'Halo, saya tertarik dengan Lemari Pakaian 3 Pintu - Spin LPM 331 (Tsugawood Ash) - Activ Furniture (Rp 1.478.000)'
+  },
+
+  alp_lemari_pakaian_3_pintu_spin_lp_131: {
+    id: 'alp_lemari_pakaian_3_pintu_spin_lp_131',
+    name: 'Lemari Pakaian 3 Pintu - Spin LPM 331 (Sonoma Oak - White) - Activ Furniture',
+    category: 'Lemari',
+    image: 'img/activ/lemari-pakaian-3-pintu-spin-lpm-331-sonoma-oak-white-activ-furniture.webp',
+    images: ['img/activ/lemari-pakaian-3-pintu-spin-lpm-331-sonoma-oak-white-activ-furniture.webp'],
+    badge: 'ACTIV',
+    price: 1478000,
+    description: '- Lemari pakaian 3 pintu ini hadir dengan warna sonoma oak - white yang minimalis; - Handle minimalis; - Tersedia pengunci pintu; - Memiliki 6 penyimpanan rak yang luas; - Dilengkapi cermin yang panjang; - Terdapat kompartemen untuk alat make-up; - Tatakan kaki agar lemari tidak bersentuhan langsung',
+    specs: {
+      'Dimensi': 'P: 119,4 L: 41,5 T: 184,3 cm',
+      'Warna': 'Sonoma Oak - White',
+      'Berat Kotor': '62,5 Kg'
+    },
+    features: [
+      'Lemari pakaian 3 pintu ini hadir dengan warna sonoma oak - white yang minimalis',
+      'Handle minimalis',
+      'Tersedia pengunci pintu',
+      'Memiliki 6 penyimpanan rak yang luas',
+      'Dilengkapi cermin yang panjang',
+      'Terdapat kompartemen untuk alat make-up'
+    ],
+    waText: 'Halo, saya tertarik dengan Lemari Pakaian 3 Pintu - Spin LPM 331 (Sonoma Oak - White) - Activ Furniture (Rp 1.478.000)'
+  },
+
+  alp_lemari_pakaian_3_pintu_spin_lp_132: {
+    id: 'alp_lemari_pakaian_3_pintu_spin_lp_132',
+    name: 'Lemari Pakaian 3 Pintu - Spin LPM 330 - Activ Furniture',
+    category: 'Lemari',
+    image: 'img/activ/lemari-pakaian-3-pintu-spin-lpm-330-activ-furniture.webp',
+    images: ['img/activ/lemari-pakaian-3-pintu-spin-lpm-330-activ-furniture.webp'],
+    badge: 'ACTIV',
+    price: 1200000,
+    description: '- Lemari pakaian 3 pintu ini hadir dengan warna white yang minimalis; - Handle minimalis; - Tersedia pengunci pintu; - Memiliki 6 penyimpanan rak yang luas; - Dilengkapi cermin yang panjang; - Terdapat kompartemen untuk alat make-up; - Tatakan kaki agar lemari tidak bersentuhan langsung dengan lanta',
+    specs: {
+      'Dimensi': 'P: 119,4L: 41,5 T: 184,3 cm',
+      'Warna': 'White',
+      'Berat Kotor': '62,5 Kg'
+    },
+    features: [
+      'Lemari pakaian 3 pintu ini hadir dengan warna white yang minimalis',
+      'Handle minimalis',
+      'Tersedia pengunci pintu',
+      'Memiliki 6 penyimpanan rak yang luas',
+      'Dilengkapi cermin yang panjang',
+      'Terdapat kompartemen untuk alat make-up'
+    ],
+    waText: 'Halo, saya tertarik dengan Lemari Pakaian 3 Pintu - Spin LPM 330 - Activ Furniture (Rp 1.200.000)'
+  },
+
+  alp_lemari_pakaian_spin_lpm_231_za_133: {
+    id: 'alp_lemari_pakaian_spin_lpm_231_za_133',
+    name: 'Lemari Pakaian - Spin LPM 231 (Zalkova - Tsugawood Ash) - Activ Furniture',
+    category: 'Lemari',
+    image: 'img/activ/lemari-pakaian-spin-lpm-231-zalkova-tsugawood-ash-activ-furniture.webp',
+    images: ['img/activ/lemari-pakaian-spin-lpm-231-zalkova-tsugawood-ash-activ-furniture.webp'],
+    badge: 'ACTIV',
+    price: 1147000,
+    description: '- Lemari pakaian ini hadir dengan warna tsugawood ash yang minimalis; - Handle minimalis; - Tersedia pengunci pintu; - Memiliki 5 penyimpanan rak yang luas; - Terdapat penyimpanan laci; - Dilengkapi cermin yang panjang; - Tatakan kaki agar lemari tidak bersentuhan langsung dengan lantai; - Memiliki ',
+    specs: {
+      'Dimensi': 'P: 79,6 L: 41,5 T: 184,3 cm',
+      'Warna': 'Zalkova - Tsugawood Ash',
+      'Berat Kotor': '46 Kg'
+    },
+    features: [
+      'Lemari pakaian ini hadir dengan warna tsugawood ash yang minimalis',
+      'Handle minimalis',
+      'Tersedia pengunci pintu',
+      'Memiliki 5 penyimpanan rak yang luas',
+      'Terdapat penyimpanan laci',
+      'Dilengkapi cermin yang panjang'
+    ],
+    waText: 'Halo, saya tertarik dengan Lemari Pakaian - Spin LPM 231 (Zalkova - Tsugawood Ash) - Activ Furniture (Rp 1.147.000)'
+  },
+
+  alp_lemari_pakaian_spin_lpm_231_ts_134: {
+    id: 'alp_lemari_pakaian_spin_lpm_231_ts_134',
+    name: 'Lemari Pakaian - Spin LPM 231 (Tsugawood Ash) - Activ Furniture',
+    category: 'Lemari',
+    image: 'img/activ/lemari-pakaian-spin-lpm-231-tsugawood-ash-activ-furniture.webp',
+    images: ['img/activ/lemari-pakaian-spin-lpm-231-tsugawood-ash-activ-furniture.webp'],
+    badge: 'ACTIV',
+    price: 1147000,
+    description: '- Lemari pakaian ini hadir dengan warna tsugawood ash yang minimalis; - Handle minimalis; - Tersedia pengunci pintu; - Memiliki 5 penyimpanan rak yang luas; - Terdapat penyimpanan laci; - Dilengkapi cermin yang panjang; - Tatakan kaki agar lemari tidak bersentuhan langsung dengan lantai; - Memiliki ',
+    specs: {
+      'Dimensi': 'P: 79,6 L: 41,5 T: 184,3 cm',
+      'Warna': 'Tsugawood Ash',
+      'Berat Kotor': '46 Kg'
+    },
+    features: [
+      'Lemari pakaian ini hadir dengan warna tsugawood ash yang minimalis',
+      'Handle minimalis',
+      'Tersedia pengunci pintu',
+      'Memiliki 5 penyimpanan rak yang luas',
+      'Terdapat penyimpanan laci',
+      'Dilengkapi cermin yang panjang'
+    ],
+    waText: 'Halo, saya tertarik dengan Lemari Pakaian - Spin LPM 231 (Tsugawood Ash) - Activ Furniture (Rp 1.147.000)'
+  },
+
+  alp_lemari_pakaian_spin_lpm_231_so_135: {
+    id: 'alp_lemari_pakaian_spin_lpm_231_so_135',
+    name: 'Lemari Pakaian - Spin LPM 231 (Sonoma Oak - White) - Activ Furniture',
+    category: 'Lemari',
+    image: 'img/activ/lemari-pakaian-spin-lpm-231-sonoma-oak-white-activ-furniture-2.webp',
+    images: ['img/activ/lemari-pakaian-spin-lpm-231-sonoma-oak-white-activ-furniture-2.webp'],
+    badge: 'ACTIV',
+    price: 1147000,
+    description: '- Lemari pakaian ini hadir dengan warna sonoma oak - white yang minimalis; - Handle minimalis; - Tersedia pengunci pintu; - Memiliki 5 penyimpanan rak yang luas; - Terdapat penyimpanan laci; - Dilengkapi cermin yang panjang; - Tatakan kaki agar lemari tidak bersentuhan langsung dengan lantai; - Memi',
+    specs: {
+      'Dimensi': 'P: 79,6 L: 41,5 T: 184,3 cm',
+      'Warna': 'Sonoma Oak - White',
+      'Berat Kotor': '46 Kg'
+    },
+    features: [
+      'Lemari pakaian ini hadir dengan warna sonoma oak - white yang minimalis',
+      'Handle minimalis',
+      'Tersedia pengunci pintu',
+      'Memiliki 5 penyimpanan rak yang luas',
+      'Terdapat penyimpanan laci',
+      'Dilengkapi cermin yang panjang'
+    ],
+    waText: 'Halo, saya tertarik dengan Lemari Pakaian - Spin LPM 231 (Sonoma Oak - White) - Activ Furniture (Rp 1.147.000)'
+  },
+
+  alp_lemari_pakaian_spin_lpm_231_so_136: {
+    id: 'alp_lemari_pakaian_spin_lpm_231_so_136',
+    name: 'Lemari Pakaian - Spin LPM 230 - Activ Furniture',
+    category: 'Lemari',
+    image: 'img/activ/lemari-pakaian-spin-lpm-231-sonoma-oak-white-activ-furniture.webp',
+    images: ['img/activ/lemari-pakaian-spin-lpm-231-sonoma-oak-white-activ-furniture.webp'],
+    badge: 'ACTIV',
+    price: 1200000,
+    description: '- Lemari pakaian ini hadir dengan warna white yang minimalis; - Handle minimalis; - Tersedia pengunci pintu; - Memiliki 5 penyimpanan rak yang luas; - Terdapat penyimpanan laci; - Dilengkapi cermin yang panjang; - Tatakan kaki agar lemari tidak bersentuhan langsung dengan lantai; - Memiliki gantunga',
+    specs: {
+      'Dimensi': 'P: 79,6 L: 41,5 T: 184,3 cm',
+      'Warna': 'White',
+      'Berat Kotor': '46 Kg'
+    },
+    features: [
+      'Lemari pakaian ini hadir dengan warna white yang minimalis',
+      'Handle minimalis',
+      'Tersedia pengunci pintu',
+      'Memiliki 5 penyimpanan rak yang luas',
+      'Terdapat penyimpanan laci',
+      'Dilengkapi cermin yang panjang'
+    ],
+    waText: 'Halo, saya tertarik dengan Lemari Pakaian - Spin LPM 230 - Activ Furniture (Rp 1.200.000)'
+  },
+
+  alp_lemari_pakaian_3_pintu_spin_lp_137: {
+    id: 'alp_lemari_pakaian_3_pintu_spin_lp_137',
+    name: 'Lemari Pakaian 3 Pintu - Spin LP 331 (Zalkova - Tsugawood Ash) - Activ Furniture',
+    category: 'Lemari',
+    image: 'img/activ/lemari-pakaian-3-pintu-spin-lp-331-zalkova-tsugawood-ash-activ-furniture.webp',
+    images: ['img/activ/lemari-pakaian-3-pintu-spin-lp-331-zalkova-tsugawood-ash-activ-furniture.webp'],
+    badge: 'ACTIV',
+    price: 1548000,
+    description: '- Lemari pakaian 3 pintu ini hadir dengan warna zalkova - tsugawood ash yang minimalis; - Handle minimalis; - Tersedia pengunci pintu; - Memiliki 5 penyimpanan rak yang luas; - Terdapat penyimpanan laci; - Dilengkapi cermin yang panjang; - Tatakan kaki agar lemari tidak bersentuhan langsung dengan l',
+    specs: {
+      'Dimensi': 'P: 119,6 L: 41,5 T: 184,3 cm',
+      'Warna': 'Zalkova - Tsugawood Ash',
+      'Berat Kotor': '62,5 Kg'
+    },
+    features: [
+      'Lemari pakaian 3 pintu ini hadir dengan warna zalkova - tsugawood ash yang minimalis',
+      'Handle minimalis',
+      'Tersedia pengunci pintu',
+      'Memiliki 5 penyimpanan rak yang luas',
+      'Terdapat penyimpanan laci',
+      'Dilengkapi cermin yang panjang'
+    ],
+    waText: 'Halo, saya tertarik dengan Lemari Pakaian 3 Pintu - Spin LP 331 (Zalkova - Tsugawood Ash) - Activ Furniture (Rp 1.548.000)'
+  },
+
+  alp_lemari_pakaian_3_pintu_spin_lp_138: {
+    id: 'alp_lemari_pakaian_3_pintu_spin_lp_138',
+    name: 'Lemari Pakaian 3 Pintu - Spin LP 331 (Tsugawood Ash) - Activ Furniture',
+    category: 'Lemari',
+    image: 'img/activ/lemari-pakaian-3-pintu-spin-lp-331-tsugawood-ash-activ-furniture.webp',
+    images: ['img/activ/lemari-pakaian-3-pintu-spin-lp-331-tsugawood-ash-activ-furniture.webp'],
+    badge: 'ACTIV',
+    price: 1548000,
+    description: '- Lemari pakaian 3 pintu ini hadir dengan warna tsugawood ash yang minimalis; - Handle minimalis; - Tersedia pengunci pintu; - Memiliki 5 penyimpanan rak yang luas; - Terdapat penyimpanan laci; - Dilengkapi cermin yang panjang; - Tatakan kaki agar lemari tidak bersentuhan langsung dengan lantai; - M',
+    specs: {
+      'Dimensi': 'P: 119,6 L: 41,5 T: 184,3 cm',
+      'Warna': 'Tsugawood Ash',
+      'Berat Kotor': '62,5 Kg'
+    },
+    features: [
+      'Lemari pakaian 3 pintu ini hadir dengan warna tsugawood ash yang minimalis',
+      'Handle minimalis',
+      'Tersedia pengunci pintu',
+      'Memiliki 5 penyimpanan rak yang luas',
+      'Terdapat penyimpanan laci',
+      'Dilengkapi cermin yang panjang'
+    ],
+    waText: 'Halo, saya tertarik dengan Lemari Pakaian 3 Pintu - Spin LP 331 (Tsugawood Ash) - Activ Furniture (Rp 1.548.000)'
+  },
+
+  alp_lemari_pakaian_3_pintu_spin_lp_139: {
+    id: 'alp_lemari_pakaian_3_pintu_spin_lp_139',
+    name: 'Lemari Pakaian 3 Pintu - Spin LP 331 (Sonoma Oak - White) - Activ Furniture',
+    category: 'Lemari',
+    image: 'img/activ/lemari-pakaian-3-pintu-spin-lp-331-sonoma-oak-white-activ-furniture.webp',
+    images: ['img/activ/lemari-pakaian-3-pintu-spin-lp-331-sonoma-oak-white-activ-furniture.webp'],
+    badge: 'ACTIV',
+    price: 1548000,
+    description: '- Lemari pakaian 3 pintu ini hadir dengan sonoma oak - warna white yang minimalis; - Handle minimalis; - Tersedia pengunci pintu; - Memiliki 5 penyimpanan rak yang luas; - Terdapat penyimpanan laci; - Dilengkapi cermin yang panjang; - Tatakan kaki agar lemari tidak bersentuhan langsung dengan lantai',
+    specs: {
+      'Dimensi': 'P: 119,6 L: 41,5 T: 184,3 cm',
+      'Warna': 'Sonoma Oak - White',
+      'Berat Kotor': '62,5 Kg'
+    },
+    features: [
+      'Lemari pakaian 3 pintu ini hadir dengan sonoma oak - warna white yang minimalis',
+      'Handle minimalis',
+      'Tersedia pengunci pintu',
+      'Memiliki 5 penyimpanan rak yang luas',
+      'Terdapat penyimpanan laci',
+      'Dilengkapi cermin yang panjang'
+    ],
+    waText: 'Halo, saya tertarik dengan Lemari Pakaian 3 Pintu - Spin LP 331 (Sonoma Oak - White) - Activ Furniture (Rp 1.548.000)'
+  },
+
+  alp_lemari_pakaian_3_pintu_spin_lp_140: {
+    id: 'alp_lemari_pakaian_3_pintu_spin_lp_140',
+    name: 'Lemari Pakaian 3 Pintu - Spin LP 330 - Activ Furniture',
+    category: 'Lemari',
+    image: 'img/activ/lemari-pakaian-3-pintu-spin-lp-330-activ-furniture.webp',
+    images: ['img/activ/lemari-pakaian-3-pintu-spin-lp-330-activ-furniture.webp'],
+    badge: 'ACTIV',
+    price: 1200000,
+    description: '- Lemari pakaian 3 pintu ini hadir dengan warna white yang minimalis; - Handle minimalis; - Tersedia pengunci pintu; - Memiliki 5 penyimpanan rak yang luas; - Terdapat penyimpanan laci; - Dilengkapi cermin yang panjang; - Tatakan kaki agar lemari tidak bersentuhan langsung dengan lantai; - Memiliki ',
+    specs: {
+      'Dimensi': 'P: 119,6 L: 41,5 T: 184,3 cm',
+      'Warna': 'White',
+      'Berat Kotor': '62,5 Kg'
+    },
+    features: [
+      'Lemari pakaian 3 pintu ini hadir dengan warna white yang minimalis',
+      'Handle minimalis',
+      'Tersedia pengunci pintu',
+      'Memiliki 5 penyimpanan rak yang luas',
+      'Terdapat penyimpanan laci',
+      'Dilengkapi cermin yang panjang'
+    ],
+    waText: 'Halo, saya tertarik dengan Lemari Pakaian 3 Pintu - Spin LP 330 - Activ Furniture (Rp 1.200.000)'
+  },
+
+  alp_lemari_pakaian_spin_lp_231_zal_141: {
+    id: 'alp_lemari_pakaian_spin_lp_231_zal_141',
+    name: 'Lemari Pakaian - Spin LP 231 (Zalkova - Tsugawood Ash) - Activ Furniture',
+    category: 'Lemari',
+    image: 'img/activ/lemari-pakaian-spin-lp-231-zalkova-tsugawood-ash-activ-furniture.webp',
+    images: ['img/activ/lemari-pakaian-spin-lp-231-zalkova-tsugawood-ash-activ-furniture.webp'],
+    badge: 'ACTIV',
+    price: 1242000,
+    description: '- Lemari pakaian ini hadir dengan warna zalkova - tsugawood ash yang minimalis; - Handle minimalis; - Tersedia pengunci pintu; - Memiliki 5 penyimpanan rak yang luas; - Terdapat penyimpanan laci; - Dilengkapi cermin yang panjang; - Tatakan kaki agar lemari tidak bersentuhan langsung dengan lantai; -',
+    specs: {
+      'Dimensi': 'P: 79,6 L: 41,5 T: 184,3 cm',
+      'Warna': 'Zalkova - Tsugawood Ash',
+      'Berat Kotor': '48 Kg'
+    },
+    features: [
+      'Lemari pakaian ini hadir dengan warna zalkova - tsugawood ash yang minimalis',
+      'Handle minimalis',
+      'Tersedia pengunci pintu',
+      'Memiliki 5 penyimpanan rak yang luas',
+      'Terdapat penyimpanan laci',
+      'Dilengkapi cermin yang panjang'
+    ],
+    waText: 'Halo, saya tertarik dengan Lemari Pakaian - Spin LP 231 (Zalkova - Tsugawood Ash) - Activ Furniture (Rp 1.242.000)'
+  },
+
+  alp_lemari_pakaian_spin_lp_231_tsu_142: {
+    id: 'alp_lemari_pakaian_spin_lp_231_tsu_142',
+    name: 'Lemari Pakaian - Spin LP 231 (Tsugawood Ash) - Activ Furniture',
+    category: 'Lemari',
+    image: 'img/activ/lemari-pakaian-spin-lp-231-tsugawood-ash-activ-furniture.webp',
+    images: ['img/activ/lemari-pakaian-spin-lp-231-tsugawood-ash-activ-furniture.webp'],
+    badge: 'ACTIV',
+    price: 1242000,
+    description: '- Lemari pakaian ini hadir dengan warna sonoma oak - white yang minimalis; - Handle minimalis; - Tersedia pengunci pintu; - Memiliki 5 penyimpanan rak yang luas; - Terdapat penyimpanan laci; - Dilengkapi cermin yang panjang; - Tatakan kaki agar lemari tidak bersentuhan langsung dengan lantai; - Memi',
+    specs: {
+      'Dimensi': 'P: 79,6 L: 41,5 T: 184,3 cm',
+      'Warna': 'Tsugawood Ash',
+      'Berat Kotor': '48 Kg'
+    },
+    features: [
+      'Lemari pakaian ini hadir dengan warna sonoma oak - white yang minimalis',
+      'Handle minimalis',
+      'Tersedia pengunci pintu',
+      'Memiliki 5 penyimpanan rak yang luas',
+      'Terdapat penyimpanan laci',
+      'Dilengkapi cermin yang panjang'
+    ],
+    waText: 'Halo, saya tertarik dengan Lemari Pakaian - Spin LP 231 (Tsugawood Ash) - Activ Furniture (Rp 1.242.000)'
+  },
+
+  alp_lemari_pakaian_spin_lp_231_son_143: {
+    id: 'alp_lemari_pakaian_spin_lp_231_son_143',
+    name: 'Lemari Pakaian - Spin LP 231 (Sonoma Oak - White) - Activ Furniture',
+    category: 'Lemari',
+    image: 'img/activ/lemari-pakaian-spin-lp-231-sonoma-oak-white-activ-furniture.webp',
+    images: ['img/activ/lemari-pakaian-spin-lp-231-sonoma-oak-white-activ-furniture.webp'],
+    badge: 'ACTIV',
+    price: 1242000,
+    description: '- Lemari pakaian ini hadir dengan warna sonoma oak - white yang minimalis; - Handle minimalis; - Tersedia pengunci pintu; - Memiliki 5 penyimpanan rak yang luas; - Terdapat penyimpanan laci; - Dilengkapi cermin yang panjang; - Tatakan kaki agar lemari tidak bersentuhan langsung dengan lantai; - Memi',
+    specs: {
+      'Dimensi': 'P: 79,6 L: 41,5 T: 184,3 cm',
+      'Warna': 'Spnpma Oak - White',
+      'Berat Kotor': '48 Kg'
+    },
+    features: [
+      'Lemari pakaian ini hadir dengan warna sonoma oak - white yang minimalis',
+      'Handle minimalis',
+      'Tersedia pengunci pintu',
+      'Memiliki 5 penyimpanan rak yang luas',
+      'Terdapat penyimpanan laci',
+      'Dilengkapi cermin yang panjang'
+    ],
+    waText: 'Halo, saya tertarik dengan Lemari Pakaian - Spin LP 231 (Sonoma Oak - White) - Activ Furniture (Rp 1.242.000)'
+  },
+
+  alp_lemari_pakaian_spin_lp_230_act_144: {
+    id: 'alp_lemari_pakaian_spin_lp_230_act_144',
+    name: 'Lemari Pakaian - Spin LP 230 - Activ Furniture',
+    category: 'Lemari',
+    image: 'img/activ/lemari-pakaian-spin-lp-230-activ-furniture.webp',
+    images: ['img/activ/lemari-pakaian-spin-lp-230-activ-furniture.webp'],
+    badge: 'ACTIV',
+    price: 1200000,
+    description: '- Lemari pakaian ini hadir dengan warna white yang minimalis; - Handle minimalis; - Tersedia pengunci pintu; - Memiliki 5 penyimpanan rak yang luas; - Terdapat penyimpanan laci; - Dilengkapi cermin yang panjang; - Tatakan kaki agar lemari tidak bersentuhan langsung dengan lantai; - Memiliki gantunga',
+    specs: {
+      'Dimensi': 'P: 79,6 L: 41,5 T: 184,3 cm',
+      'Warna': 'White',
+      'Berat Kotor': '48 Kg'
+    },
+    features: [
+      'Lemari pakaian ini hadir dengan warna white yang minimalis',
+      'Handle minimalis',
+      'Tersedia pengunci pintu',
+      'Memiliki 5 penyimpanan rak yang luas',
+      'Terdapat penyimpanan laci',
+      'Dilengkapi cermin yang panjang'
+    ],
+    waText: 'Halo, saya tertarik dengan Lemari Pakaian - Spin LP 230 - Activ Furniture (Rp 1.200.000)'
+  },
+
+  abl_lemari_pakaian_baby_locker_spi_145: {
+    id: 'abl_lemari_pakaian_baby_locker_spi_145',
+    name: 'Lemari Pakaian / Baby Locker - Spin BL 150 (Sonoma Oak - White) - Activ Furniture',
+    category: 'Lemari',
+    image: 'img/activ/lemari-pakaian-baby-locker-spin-bl-150-sonoma-oak-white-activ-furniture.webp',
+    images: ['img/activ/lemari-pakaian-baby-locker-spin-bl-150-sonoma-oak-white-activ-furniture.webp'],
+    badge: 'ACTIV',
+    price: 900000,
+    description: '- Lemari pakaian / baby locker ini hadir dengan warna sonoma oak - white yang minimalis; - Handle minimalis; - Tersedia pengunci pintu; - Memiliki 5 penyimpanan rak yang luas; - Dilengkapi cermin yang panjang; - Tatakan kaki agar lemari tidak bersentuhan langsung dengan lantai; - Bahan particle boar',
+    specs: {
+      'Dimensi': 'P: 79,4 L: 41 T: 150,5 cm',
+      'Warna': 'Sonoma Oak - White',
+      'Berat Kotor': '36 Kg'
+    },
+    features: [
+      'Lemari pakaian / baby locker ini hadir dengan warna sonoma oak - white yang minimalis',
+      'Handle minimalis',
+      'Tersedia pengunci pintu',
+      'Memiliki 5 penyimpanan rak yang luas',
+      'Dilengkapi cermin yang panjang',
+      'Tatakan kaki agar lemari tidak bersentuhan langsung dengan lantai'
+    ],
+    waText: 'Halo, saya tertarik dengan Lemari Pakaian / Baby Locker - Spin BL 150 (Sonoma Oak - White) - Activ Furniture (Rp 900.000)'
+  },
+
+  abl_lemari_pakaian_baby_locker_spi_146: {
+    id: 'abl_lemari_pakaian_baby_locker_spi_146',
+    name: 'Lemari Pakaian / Baby Locker - Spin BL 120 (Zalkova - Tsugawood Ash) - Activ Furniture',
+    category: 'Lemari',
+    image: 'img/activ/lemari-pakaian-baby-locker-spin-bl-120-zalkova-tsugawood-ash-activ-furniture.webp',
+    images: ['img/activ/lemari-pakaian-baby-locker-spin-bl-120-zalkova-tsugawood-ash-activ-furniture.webp'],
+    badge: 'ACTIV',
+    price: 793000,
+    description: '- Lemari pakaian / baby locker ini hadir dengan warna zalkova - tsugawood ash yang minimalis; - Handle minimalis; - Tersedia pengunci pintu; - Memiliki 3 penyimpanan rak yang luas; - Tatakan kaki agar lemari tidak bersentuhan langsung dengan lantai; - Bahan particle board; - Laminasi sheet zalkova -',
+    specs: {
+      'Dimensi': 'P: 59,4 L: 39,8 T: 120,4 cm',
+      'Warna': 'Zalkova - Tsugawood Ash',
+      'Berat Kotor': '23 Kg'
+    },
+    features: [
+      'Lemari pakaian / baby locker ini hadir dengan warna zalkova - tsugawood ash yang minimalis',
+      'Handle minimalis',
+      'Tersedia pengunci pintu',
+      'Memiliki 3 penyimpanan rak yang luas',
+      'Tatakan kaki agar lemari tidak bersentuhan langsung dengan lantai',
+      'Bahan particle board'
+    ],
+    waText: 'Halo, saya tertarik dengan Lemari Pakaian / Baby Locker - Spin BL 120 (Zalkova - Tsugawood Ash) - Activ Furniture (Rp 793.000)'
+  },
+
+  amb_meja_belajar_vino_mb_120_activ_147: {
+    id: 'amb_meja_belajar_vino_mb_120_activ_147',
+    name: 'Meja Belajar - Vino MB 120 - Activ Furniture',
+    category: 'Meja Belajar',
+    image: 'img/activ/meja-belajar-vino-mb-120-activ-furniture.png',
+    images: ['img/activ/meja-belajar-vino-mb-120-activ-furniture.png'],
+    badge: 'ACTIV',
+    price: 850000,
+    description: '- Meja belajar dengan banyak penyimpanan dan multifungsi; - Memiliki penyimpanan 2 rak terbuka yang luas; - Dilengkapi penyimpanan laci dan rak yang luas; - Handle rak dan laci minimalis; - Tersedia pengunci laci; - Terdapat pijakan kaki; - Tatakan kaki agar furniture tidak langsung menempel dengan ',
+    specs: {
+      'Dimensi': 'P: 120 L: 50 T: 120 cm',
+      'Warna': 'Beech',
+      'Berat Kotor': '44 Kg'
+    },
+    features: [
+      'Meja belajar dengan banyak penyimpanan dan multifungsi',
+      'Memiliki penyimpanan 2 rak terbuka yang luas',
+      'Dilengkapi penyimpanan laci dan rak yang luas',
+      'Handle rak dan laci minimalis',
+      'Tersedia pengunci laci',
+      'Terdapat pijakan kaki'
+    ],
+    waText: 'Halo, saya tertarik dengan Meja Belajar - Vino MB 120 - Activ Furniture (Rp 850.000)'
+  },
+
+  amt_meja_kerja_meja_tulis_vino_mtb_148: {
+    id: 'amt_meja_kerja_meja_tulis_vino_mtb_148',
+    name: 'Meja Kerja / Meja Tulis - Vino MTB 120 - Activ Furniture',
+    category: 'Meja Tulis',
+    image: 'img/activ/meja-kerja-meja-tulis-vino-mtb-120-activ-furniture.png',
+    images: ['img/activ/meja-kerja-meja-tulis-vino-mtb-120-activ-furniture.png'],
+    badge: 'ACTIV',
+    price: 1100000,
+    description: '- Meja yang luas mampu menampung PC dan peralatan kerja; - Top panel dengan penebalan sehingga tidak mudah melengkung; - Sudut meja tidak tajam; - Handle rak dan laci minimalis; - Kaki meja memiliki adjuster dan lebih tahan gores; - Tatakan kaki agar furniture tidak langsung menempel dengan lantai; ',
+    specs: {
+      'Dimensi': 'P: 120 L: 60 T: 75,5 cm',
+      'Warna': 'French Walnut',
+      'Berat Kotor': '27,5 Kg'
+    },
+    features: [
+      'Meja yang luas mampu menampung PC dan peralatan kerja',
+      'Top panel dengan penebalan sehingga tidak mudah melengkung',
+      'Sudut meja tidak tajam',
+      'Handle rak dan laci minimalis',
+      'Kaki meja memiliki adjuster dan lebih tahan gores',
+      'Tatakan kaki agar furniture tidak langsung menempel dengan lantai'
+    ],
+    waText: 'Halo, saya tertarik dengan Meja Kerja / Meja Tulis - Vino MTB 120 - Activ Furniture (Rp 1.100.000)'
+  },
+
+  amt_meja_kerja_meja_tulis_vino_mt__149: {
+    id: 'amt_meja_kerja_meja_tulis_vino_mt__149',
+    name: 'Meja Kerja / Meja Tulis - Vino MT 121 - Activ Furniture',
+    category: 'Meja Tulis',
+    image: 'img/activ/meja-kerja-meja-tulis-vino-mt-121-activ-furniture.png',
+    images: ['img/activ/meja-kerja-meja-tulis-vino-mt-121-activ-furniture.png'],
+    badge: 'ACTIV',
+    price: 1000000,
+    description: '- Meja yang luas mampu menampung PC dan peralatan kerja; - Top panel dengan penebalan sehingga tidak mudah melengkung; - Sudut meja tidak tajam; - Handle rak dan laci minimalis; - Tersedia lubang kabel; - Tatakan kaki agar furniture tidak langsung menempel dengan lantai; - Bahan luar meja menggunaka',
+    specs: {
+      'Dimensi': 'P: 120 L: 60 T: 75 cm',
+      'Warna': 'Cultas Oak - Island Teak',
+      'Berat Kotor': '22 Kg'
+    },
+    features: [
+      'Meja yang luas mampu menampung PC dan peralatan kerja',
+      'Top panel dengan penebalan sehingga tidak mudah melengkung',
+      'Sudut meja tidak tajam',
+      'Handle rak dan laci minimalis',
+      'Tersedia lubang kabel',
+      'Tatakan kaki agar furniture tidak langsung menempel dengan lantai'
+    ],
+    waText: 'Halo, saya tertarik dengan Meja Kerja / Meja Tulis - Vino MT 121 - Activ Furniture (Rp 1.000.000)'
+  },
+
+  amt_meja_kerja_meja_tulis_vino_mt__150: {
+    id: 'amt_meja_kerja_meja_tulis_vino_mt__150',
+    name: 'Meja Kerja / Meja Tulis - Vino MT 120 - Activ Furniture',
+    category: 'Meja Tulis',
+    image: 'img/activ/meja-kerja-meja-tulis-vino-mt-120-activ-furniture.png',
+    images: ['img/activ/meja-kerja-meja-tulis-vino-mt-120-activ-furniture.png'],
+    badge: 'ACTIV',
+    price: 1000000,
+    description: '- Meja yang luas mampu menampung PC dan peralatan kerja; - Top panel dengan penebalan sehingga tidak mudah melengkung; - Sudut meja tidak tajam; - Handle rak dan laci minimalis; - Tatakan kaki agar furniture tidak langsung menempel dengan lantai; - Bahan luar meja menggunakan particle board dan lami',
+    specs: {
+      'Dimensi': 'P: 120 L: 60 T: 74 cm',
+      'Warna': 'Beech',
+      'Berat Kotor': '29 Kg'
+    },
+    features: [
+      'Meja yang luas mampu menampung PC dan peralatan kerja',
+      'Top panel dengan penebalan sehingga tidak mudah melengkung',
+      'Sudut meja tidak tajam',
+      'Handle rak dan laci minimalis',
+      'Tatakan kaki agar furniture tidak langsung menempel dengan lantai',
+      'Bahan luar meja menggunakan particle board dan laminasi beech'
+    ],
+    waText: 'Halo, saya tertarik dengan Meja Kerja / Meja Tulis - Vino MT 120 - Activ Furniture (Rp 1.000.000)'
+  },
+
+  amt_meja_kerja_meja_tulis_vino_mt__151: {
+    id: 'amt_meja_kerja_meja_tulis_vino_mt__151',
+    name: 'Meja Kerja / Meja Tulis - Vino MT 100 - Activ Furniture',
+    category: 'Meja Tulis',
+    image: 'img/activ/meja-kerja-meja-tulis-vino-mt-100-activ-furniture.png',
+    images: ['img/activ/meja-kerja-meja-tulis-vino-mt-100-activ-furniture.png'],
+    badge: 'ACTIV',
+    price: 800000,
+    description: '- Meja yang luas mampu menampung PC dan peralatan kerja; - Top panel dengan penebalan sehingga tidak mudah melengkung; - Sudut meja tidak tajam; - Tersedia lubang kabel; - Tatakan kaki agar furniture tidak langsung menempel dengan lantai; - Bahan luar meja menggunakan particle board dan laminasi cul',
+    specs: {
+      'Dimensi': 'P: 100 L: 60 T: 75 cm',
+      'Warna': 'Cultas Oak - Island Teak',
+      'Berat Kotor': '25 Kg'
+    },
+    features: [
+      'Meja yang luas mampu menampung PC dan peralatan kerja',
+      'Top panel dengan penebalan sehingga tidak mudah melengkung',
+      'Sudut meja tidak tajam',
+      'Tersedia lubang kabel',
+      'Tatakan kaki agar furniture tidak langsung menempel dengan lantai',
+      'Bahan luar meja menggunakan particle board dan laminasi cultas oak - island teak'
+    ],
+    waText: 'Halo, saya tertarik dengan Meja Kerja / Meja Tulis - Vino MT 100 - Activ Furniture (Rp 800.000)'
+  },
+
+  amt_meja_kerja_meja_tulis_vino_mko_152: {
+    id: 'amt_meja_kerja_meja_tulis_vino_mko_152',
+    name: 'Meja Kerja / Meja Tulis - Vino MKO 120 - Activ Furniture',
+    category: 'Meja Tulis',
+    image: 'img/activ/meja-kerja-meja-tulis-vino-mko-120-activ-furniture.png',
+    images: ['img/activ/meja-kerja-meja-tulis-vino-mko-120-activ-furniture.png'],
+    badge: 'ACTIV',
+    price: 950000,
+    description: '- Meja yang luas mampu menampung PC dan peralatan kerja; - Top panel dengan penebalan sehingga tidak mudah melengkung; - Sudut meja tidak tajam; - Tatakan kaki agar furniture tidak langsung menempel dengan lantai; - Bahan luar meja menggunakan particle board dan laminasi cultas oak - island teak; - ',
+    specs: {
+      'Dimensi': 'P: 120 L: 60 T: 75 cm',
+      'Warna': 'Cultas Oak - Island Teak',
+      'Berat Kotor': '23 Kg'
+    },
+    features: [
+      'Meja yang luas mampu menampung PC dan peralatan kerja',
+      'Top panel dengan penebalan sehingga tidak mudah melengkung',
+      'Sudut meja tidak tajam',
+      'Tatakan kaki agar furniture tidak langsung menempel dengan lantai',
+      'Bahan luar meja menggunakan particle board dan laminasi cultas oak - island teak',
+      'Top panel penebalan 24 mm'
+    ],
+    waText: 'Halo, saya tertarik dengan Meja Kerja / Meja Tulis - Vino MKO 120 - Activ Furniture (Rp 950.000)'
+  },
+
+  amt_meja_komputer_meja_kerja_vino__153: {
+    id: 'amt_meja_komputer_meja_kerja_vino__153',
+    name: 'Meja Komputer / Meja Kerja - Vino CT 90 - Activ Furniture',
+    category: 'Meja Tulis',
+    image: 'img/activ/meja-komputer-meja-kerja-vino-ct-90-activ-furniture.png',
+    images: ['img/activ/meja-komputer-meja-kerja-vino-ct-90-activ-furniture.png'],
+    badge: 'ACTIV',
+    price: 700000,
+    description: '- Mejakomputer dengan warna cultas oak - island teak yang modern; - Dilengkapi tray untuk keyboard; - Tersedia tempat untuk CPU; - Memiliki penyimpanan laci; - Handle minimalis dengan pengunci; - Tatakan kaki agar furniture tidak langsung bersentuhan dengan lantai; - Rel tray besi; - Laminasi PVC; -',
+    specs: {
+      'Dimensi': 'P: 80 L: 39,5 T: 73 cm',
+      'Warna': 'Cultas Oak - Island Teak',
+      'Berat Kotor': '17,55 Kg'
+    },
+    features: [
+      'Mejakomputer dengan warna cultas oak - island teak yang modern',
+      'Dilengkapi tray untuk keyboard',
+      'Tersedia tempat untuk CPU',
+      'Memiliki penyimpanan laci',
+      'Handle minimalis dengan pengunci',
+      'Tatakan kaki agar furniture tidak langsung bersentuhan dengan lantai'
+    ],
+    waText: 'Halo, saya tertarik dengan Meja Komputer / Meja Kerja - Vino CT 90 - Activ Furniture (Rp 700.000)'
+  },
+
+  amt_meja_komputer_meja_kerja_vino__154: {
+    id: 'amt_meja_komputer_meja_kerja_vino__154',
+    name: 'Meja Komputer / Meja Kerja - Vino CT 80 - Activ Furniture',
+    category: 'Meja Tulis',
+    image: 'img/activ/meja-komputer-meja-kerja-vino-ct-80-activ-furniture.png',
+    images: ['img/activ/meja-komputer-meja-kerja-vino-ct-80-activ-furniture.png'],
+    badge: 'ACTIV',
+    price: 600000,
+    description: '- Mejakomputer dengan warna beech yang cerah dan modern; - Dilengkapi tray untuk keyboard; - Tersedia tempat untuk CPU; - Tatakan kaki agar furniture tidak langsung bersentuhan dengan lantai; - Rel tray besi; - Laminasi PVC; - Material particle board; - Luas penyimpanan 40 cm',
+    specs: {
+      'Dimensi': 'P: 80 L: 40 T: 73 cm',
+      'Warna': 'Beech',
+      'Berat Kotor': '19 Kg'
+    },
+    features: [
+      'Mejakomputer dengan warna beech yang cerah dan modern',
+      'Dilengkapi tray untuk keyboard',
+      'Tersedia tempat untuk CPU',
+      'Tatakan kaki agar furniture tidak langsung bersentuhan dengan lantai',
+      'Rel tray besi',
+      'Laminasi PVC'
+    ],
+    waText: 'Halo, saya tertarik dengan Meja Komputer / Meja Kerja - Vino CT 80 - Activ Furniture (Rp 600.000)'
+  },
+
+  amt_meja_kerja_meja_tulis_vino_mtb_155: {
+    id: 'amt_meja_kerja_meja_tulis_vino_mtb_155',
+    name: 'Meja Kerja / Meja Tulis - Vino MTB 121 - Activ Furniture',
+    category: 'Meja Tulis',
+    image: 'img/activ/meja-kerja-meja-tulis-vino-mtb-121-activ-furniture.webp',
+    images: ['img/activ/meja-kerja-meja-tulis-vino-mtb-121-activ-furniture.webp'],
+    badge: 'ACTIV',
+    price: 1100000,
+    description: '- Meja yang luas mampu menampung banyak peralatan kerja; - Top table tahan gores, api dan percikan air; - Terdapat lubang di atas meja; - Top table dengan penebalan sehingga tidak mudah melengkung; - Dilengkapi 1 penyimpanan laci dan rak yang luas; - Dilengkapi total 2 kunci pada rak dan laci; - Bag',
+    specs: {
+      'Dimensi': 'P: 120 L: 60 T: 75,5 cm',
+      'Warna': 'Tsugawood - Silver',
+      'Berat Kotor': '23 Kg'
+    },
+    features: [
+      'Meja yang luas mampu menampung banyak peralatan kerja',
+      'Top table tahan gores, api dan percikan air',
+      'Terdapat lubang di atas meja',
+      'Top table dengan penebalan sehingga tidak mudah melengkung',
+      'Dilengkapi 1 penyimpanan laci dan rak yang luas',
+      'Dilengkapi total 2 kunci pada rak dan laci'
+    ],
+    waText: 'Halo, saya tertarik dengan Meja Kerja / Meja Tulis - Vino MTB 121 - Activ Furniture (Rp 1.100.000)'
+  },
+
+  amt_meja_kerja_vino_mt_121_activ_f_156: {
+    id: 'amt_meja_kerja_vino_mt_121_activ_f_156',
+    name: 'Meja Kerja / Meja Tulis - Vino MT 121 - Activ Furniture',
+    category: 'Meja Tulis',
+    image: 'img/activ/meja-kerja-vino-mt-121-activ-furniture.png',
+    images: ['img/activ/meja-kerja-vino-mt-121-activ-furniture.png'],
+    badge: 'ACTIV',
+    price: 1000000,
+    description: '- Meja yang luas mampu menampung PC dan peralatan kerja; - Dilengkapi 2 penyimpanan laci dan rak yang luas; - Dilengkapi 2 set kunci pada rak dan laci; - Bagian ujung yang tidak tajam; - Tersedia lubang kabel; - Bahan luar meja menggunakan particle board dan laminasi dark oak sheet; - Bahan panel pi',
+    specs: {
+      'Dimensi': 'P: 120 L: 60 T: 75 cm',
+      'Warna': 'Walnut - Dark Oak',
+      'Berat Kotor': '22 Kg'
+    },
+    features: [
+      'Meja yang luas mampu menampung PC dan peralatan kerja',
+      'Dilengkapi 2 penyimpanan laci dan rak yang luas',
+      'Dilengkapi 2 set kunci pada rak dan laci',
+      'Bagian ujung yang tidak tajam',
+      'Tersedia lubang kabel',
+      'Bahan luar meja menggunakan particle board dan laminasi dark oak sheet'
+    ],
+    waText: 'Halo, saya tertarik dengan Meja Kerja / Meja Tulis - Vino MT 121 - Activ Furniture (Rp 1.000.000)'
+  },
+
+  amtm_meja_tamu_coffee_table_nexa_cf_157: {
+    id: 'amtm_meja_tamu_coffee_table_nexa_cf_157',
+    name: 'Meja Tamu / Coffee Table  - Nexa CFT 91 - Activ Furniture',
+    category: 'Meja Tamu',
+    image: 'img/activ/meja-tamu-coffee-table-nexa-cft-91-activ-furniture.png',
+    images: ['img/activ/meja-tamu-coffee-table-nexa-cft-91-activ-furniture.png'],
+    badge: 'ACTIV',
+    price: 850000,
+    description: '- Meja tamu Nexa CFT 90 dilengkapi dua open storage serbaguna dengan ukuran space yang cukup luas untuk menyimpan barang; - Top table berbahan Particle Board 12mm dengan finishing laminasi PVC Sonoma Oak bertekstur; - Tersedia Rak Paten pemisah antar open storage; - 5 Kaki Curved sebagai penopang ya',
+    specs: {
+      'Dimensi': 'P: 90 L: 59 T: 39 cm',
+      'Warna': 'Columbia Nussebaum',
+      'Berat Kotor': '23 Kg'
+    },
+    features: [
+      'Meja tamu Nexa CFT 90 dilengkapi dua open storage serbaguna dengan ukuran space yang cukup luas untuk menyimpan barang',
+      'Top table berbahan Particle Board 12mm dengan finishing laminasi PVC Sonoma Oak bertekstur',
+      'Tersedia Rak Paten pemisah antar open storage',
+      '5 Kaki Curved sebagai penopang yang kuat',
+      'Material : Top table Particle Board 12 mm, finishing laminasi PVC Sonoma Oak bertekstur',
+      'Berat Beban Top Table Max : 10 Kg'
+    ],
+    waText: 'Halo, saya tertarik dengan Meja Tamu / Coffee Table  - Nexa CFT 91 - Activ Furniture (Rp 850.000)'
+  },
+
+  amtm_meja_tamu_coffee_table_nexa_cf_158: {
+    id: 'amtm_meja_tamu_coffee_table_nexa_cf_158',
+    name: 'Meja Tamu / Coffee Table  - Nexa CFT 80 - Activ Furniture',
+    category: 'Meja Tamu',
+    image: 'img/activ/meja-tamu-coffee-table-nexa-cft-80-activ-furniture.png',
+    images: ['img/activ/meja-tamu-coffee-table-nexa-cft-80-activ-furniture.png'],
+    badge: 'ACTIV',
+    price: 700000,
+    description: '- Meja tamu Nexa CFT 80 dilengkapi dua open storage serbaguna dengan ukuran space yang cukup luas untuk menyimpan barang; - Top table berbahan Particle Board 12mm dengan finishing laminasi PVC Sonoma Oak bertekstur; - Tersedia Rak Paten pemisah antar open storage; - 5 Kaki Curved sebagai penopang ya',
+    specs: {
+      'Dimensi': 'P: 118 L: 50 T: 185 cm',
+      'Warna': 'Sonoma Oak - White',
+      'Berat Kotor': '15 Kg'
+    },
+    features: [
+      'Meja tamu Nexa CFT 80 dilengkapi dua open storage serbaguna dengan ukuran space yang cukup luas untuk menyimpan barang',
+      'Top table berbahan Particle Board 12mm dengan finishing laminasi PVC Sonoma Oak bertekstur',
+      'Tersedia Rak Paten pemisah antar open storage',
+      '5 Kaki Curved sebagai penopang yang kuat',
+      'Open Storage samping dengan space yang cukup luas',
+      'Bantalan dudukan kursi tebal dan empuk'
+    ],
+    waText: 'Halo, saya tertarik dengan Meja Tamu / Coffee Table  - Nexa CFT 80 - Activ Furniture (Rp 700.000)'
+  },
+
+  aov_rak_tv_wall_unit_buffet_nexa_w_159: {
+    id: 'aov_rak_tv_wall_unit_buffet_nexa_w_159',
+    name: 'Rak TV / Wall Unit / Buffet - Nexa WU 181 - Activ Furniture',
+    category: 'Rak & Aksesoris',
+    image: 'img/activ/rak-tv-wall-unit-buffet-nexa-wu-182-activ-furniture.png',
+    images: ['img/activ/rak-tv-wall-unit-buffet-nexa-wu-182-activ-furniture.png'],
+    badge: 'ACTIV',
+    price: 2500000,
+    description: '- Rak TV / Wall Unit / Buffet menggunakan warna home oak - fresh magnolia yang modern; - Tersedia penyimpanan 6 rak luas tertutup yang fungsional; - Dilengkapi rak dengan pintu kaca yang cocok untuk men-display koleksi; - Handle rak minimalis; - Terdapat penyimpanan terbuka; - Memiliki penerangan ta',
+    specs: {
+      'Dimensi': 'P: 178,8 L: 43,5 T: 201 cm',
+      'Warna': 'Home Oak - Fresh Magnolia',
+      'Berat Kotor': '123 Kg'
+    },
+    features: [
+      'Rak TV / Wall Unit / Buffet menggunakan warna home oak - fresh magnolia yang modern',
+      'Tersedia penyimpanan 6 rak luas tertutup yang fungsional',
+      'Dilengkapi rak dengan pintu kaca yang cocok untuk men-display koleksi',
+      'Handle rak minimalis',
+      'Terdapat penyimpanan terbuka',
+      'Memiliki penerangan tambahan lampu LED'
+    ],
+    waText: 'Halo, saya tertarik dengan Rak TV / Wall Unit / Buffet - Nexa WU 181 - Activ Furniture (Rp 2.500.000)'
+  },
+
+  aov_rak_tv_nexa_rtv_154_activ_furn_160: {
+    id: 'aov_rak_tv_nexa_rtv_154_activ_furn_160',
+    name: 'Rak TV - Nexa RTV 154 - Activ Furniture',
+    category: 'Rak & Aksesoris',
+    image: 'img/activ/rak-tv-nexa-rtv-154-activ-furniture.webp',
+    images: ['img/activ/rak-tv-nexa-rtv-154-activ-furniture.webp'],
+    badge: 'ACTIV',
+    price: 1200000,
+    description: '- Menggunakan warna columbia nussebaum yang modern; - Tersedia penyimpanan 2 rak kaca luas dan 3 rak terbuka yang fungsional; - Pintu dilengkapi handle minimalis; - Top table luas dapat digunakan untuk meletakkan TV; - Laminasi PVC; - Sheet paper; - Kedalaman penyimpanan hingga 41 cm',
+    specs: {
+      'Dimensi': 'P: 150 L: 39 T: 60 cm',
+      'Warna': 'Columbia Nussebaum',
+      'Berat Kotor': '43 Kg'
+    },
+    features: [
+      'Menggunakan warna columbia nussebaum yang modern',
+      'Tersedia penyimpanan 2 rak kaca luas dan 3 rak terbuka yang fungsional',
+      'Pintu dilengkapi handle minimalis',
+      'Top table luas dapat digunakan untuk meletakkan TV',
+      'Laminasi PVC',
+      'Sheet paper'
+    ],
+    waText: 'Halo, saya tertarik dengan Rak TV - Nexa RTV 154 - Activ Furniture (Rp 1.200.000)'
+  },
+
+  aov_rak_tv_nexa_rtv_153_activ_furn_161: {
+    id: 'aov_rak_tv_nexa_rtv_153_activ_furn_161',
+    name: 'Rak TV - Nexa RTV 153 - Activ Furniture',
+    category: 'Rak & Aksesoris',
+    image: 'img/activ/rak-tv-nexa-rtv-153-activ-furniture.webp',
+    images: ['img/activ/rak-tv-nexa-rtv-153-activ-furniture.webp'],
+    badge: 'ACTIV',
+    price: 1200000,
+    description: '- Menggunakan warna columbia nussebaum - white glossy yang modern; - Tersedia penyimpanan 3 rak luas tertutup dan 1 rak terbuka yang fungsional; - Pintu dilengkapi handle minimalis; - Top table luas dapat digunakan untuk meletakkan TV; - Laminasi PVC; - Sheet paper; - Kedalaman penyimpanan hingga 41',
+    specs: {
+      'Dimensi': 'P: 150 L: 39,5 T: 55 cm',
+      'Warna': 'Columbia Nussebaum - White Glossy',
+      'Berat Kotor': '28 Kg'
+    },
+    features: [
+      'Menggunakan warna columbia nussebaum - white glossy yang modern',
+      'Tersedia penyimpanan 3 rak luas tertutup dan 1 rak terbuka yang fungsional',
+      'Pintu dilengkapi handle minimalis',
+      'Top table luas dapat digunakan untuk meletakkan TV',
+      'Laminasi PVC',
+      'Sheet paper'
+    ],
+    waText: 'Halo, saya tertarik dengan Rak TV - Nexa RTV 153 - Activ Furniture (Rp 1.200.000)'
+  },
+
+  aov_rak_tv_nexa_rtv_152_activ_furn_162: {
+    id: 'aov_rak_tv_nexa_rtv_152_activ_furn_162',
+    name: 'Rak TV - Nexa RTV 152 - Activ Furniture',
+    category: 'Rak & Aksesoris',
+    image: 'img/activ/rak-tv-nexa-rtv-152-activ-furniture.webp',
+    images: ['img/activ/rak-tv-nexa-rtv-152-activ-furniture.webp'],
+    badge: 'ACTIV',
+    price: 1200000,
+    description: '- Menggunakan warna alaska maple - black - taupe yang modern; - Tersedia penyimpanan 2 rak luas tertutup dan 2 rak terbuka yang fungsional; - Pintu dilengkapi handle minimalis; - Top table luas dapat digunakan untuk meletakkan TV; - Laminasi PVC; - Sheet paper; - Kedalaman penyimpanan hingga 41 cm',
+    specs: {
+      'Dimensi': 'P: 150,3 L: 41 T: 55 cm',
+      'Warna': 'Alaska Maple - Black - Taupe',
+      'Berat Kotor': '41 Kg'
+    },
+    features: [
+      'Menggunakan warna alaska maple - black - taupe yang modern',
+      'Tersedia penyimpanan 2 rak luas tertutup dan 2 rak terbuka yang fungsional',
+      'Pintu dilengkapi handle minimalis',
+      'Top table luas dapat digunakan untuk meletakkan TV',
+      'Laminasi PVC',
+      'Sheet paper'
+    ],
+    waText: 'Halo, saya tertarik dengan Rak TV - Nexa RTV 152 - Activ Furniture (Rp 1.200.000)'
+  },
+
+  aov_rak_tv_nexa_rtv_124_activ_furn_163: {
+    id: 'aov_rak_tv_nexa_rtv_124_activ_furn_163',
+    name: 'Rak TV - Nexa RTV 124 - Activ Furniture',
+    category: 'Rak & Aksesoris',
+    image: 'img/activ/rak-tv-nexa-rtv-124-activ-furniture.webp',
+    images: ['img/activ/rak-tv-nexa-rtv-124-activ-furniture.webp'],
+    badge: 'ACTIV',
+    price: 1200000,
+    description: '- Menggunakan warna white glossy - silver� yang modern; - Tersedia penyimpanan 1 rak luas tertutup dan 2 rak terbuka yang fungsional; - Pintu dilengkapi handle minimalis; - Top table luas dapat digunakan untuk meletakkan TV; - Memiliki kaki meja yang kuat dan kokoh; - Laminasi PVC; - Sheet paper; - ',
+    specs: {
+      'Dimensi': 'P: 120 L: 39,5 T: 58,1 cm',
+      'Warna': 'Dark Oak',
+      'Berat Kotor': '28 Kg'
+    },
+    features: [
+      'Menggunakan warna white glossy - silver� yang modern',
+      'Tersedia penyimpanan 1 rak luas tertutup dan 2 rak terbuka yang fungsional',
+      'Pintu dilengkapi handle minimalis',
+      'Top table luas dapat digunakan untuk meletakkan TV',
+      'Memiliki kaki meja yang kuat dan kokoh',
+      'Laminasi PVC'
+    ],
+    waText: 'Halo, saya tertarik dengan Rak TV - Nexa RTV 124 - Activ Furniture (Rp 1.200.000)'
+  },
+
+  aov_rak_tv_nexa_rtv_122_activ_furn_164: {
+    id: 'aov_rak_tv_nexa_rtv_122_activ_furn_164',
+    name: 'Rak TV - Nexa RTV 122 - Activ Furniture',
+    category: 'Rak & Aksesoris',
+    image: 'img/activ/rak-tv-nexa-rtv-122-activ-furniture.webp',
+    images: ['img/activ/rak-tv-nexa-rtv-122-activ-furniture.webp'],
+    badge: 'ACTIV',
+    price: 1200000,
+    description: '- Menggunakan warna zalkova - tsugawood ash yang modern; - Tersedia penyimpanan 1 rak luas tertutup dan 2 rak terbuka yang fungsional; - Pintu dilengkapi handle minimalis; - Top table luas dapat digunakan untuk meletakkan TV; - Memiliki kaki meja yang kuat dan kokoh; - Laminasi PVC; - Sheet paper; -',
+    specs: {
+      'Dimensi': 'P: 120 L: 39,5 T: 50 cm',
+      'Warna': 'Zalkova - Tsugawood Ash',
+      'Berat Kotor': '28 Kg'
+    },
+    features: [
+      'Menggunakan warna zalkova - tsugawood ash yang modern',
+      'Tersedia penyimpanan 1 rak luas tertutup dan 2 rak terbuka yang fungsional',
+      'Pintu dilengkapi handle minimalis',
+      'Top table luas dapat digunakan untuk meletakkan TV',
+      'Memiliki kaki meja yang kuat dan kokoh',
+      'Laminasi PVC'
+    ],
+    waText: 'Halo, saya tertarik dengan Rak TV - Nexa RTV 122 - Activ Furniture (Rp 1.200.000)'
+  },
+
+  aov_rak_tv_nexa_rtv_121_activ_furn_165: {
+    id: 'aov_rak_tv_nexa_rtv_121_activ_furn_165',
+    name: 'Rak TV - Nexa RTV 121 - Activ Furniture',
+    category: 'Rak & Aksesoris',
+    image: 'img/activ/rak-tv-nexa-rtv-121-activ-furniture.webp',
+    images: ['img/activ/rak-tv-nexa-rtv-121-activ-furniture.webp'],
+    badge: 'ACTIV',
+    price: 1200000,
+    description: '- Menggunakan warna dark oak� yang modern; - Tersedia penyimpanan 1 rak luas tertutup dan 2 rak terbuka yang fungsional; - Pintu dilengkapi handle minimalis; - Top table luas dapat digunakan untuk meletakkan TV; - Memiliki kaki meja yang kuat dan kokoh; - Laminasi PVC; - Sheet paper; - Kedalaman pen',
+    specs: {
+      'Dimensi': 'P: 120 L: 39,5 T: 50 cm',
+      'Warna': 'Dark Oak',
+      'Berat Kotor': '28 Kg'
+    },
+    features: [
+      'Menggunakan warna dark oak� yang modern',
+      'Tersedia penyimpanan 1 rak luas tertutup dan 2 rak terbuka yang fungsional',
+      'Pintu dilengkapi handle minimalis',
+      'Top table luas dapat digunakan untuk meletakkan TV',
+      'Memiliki kaki meja yang kuat dan kokoh',
+      'Laminasi PVC'
+    ],
+    waText: 'Halo, saya tertarik dengan Rak TV - Nexa RTV 121 - Activ Furniture (Rp 1.200.000)'
+  },
+
+  aov_rak_tv_nexa_600_r_wenge_activ__166: {
+    id: 'aov_rak_tv_nexa_600_r_wenge_activ__166',
+    name: 'Rak TV - Nexa 600 R (Wenge) - Activ Furniture',
+    category: 'Rak & Aksesoris',
+    image: 'img/activ/rak-tv-nexa-600-r-wenge-activ-furniture.webp',
+    images: ['img/activ/rak-tv-nexa-600-r-wenge-activ-furniture.webp'],
+    badge: 'ACTIV',
+    price: 600000,
+    description: '- Menggunakan warna wenge yang modern; - Tersedia penyimpanan 2 rak luas yang fungsional; - Pintu dilengkapi handle minimalis; - Top table dapat digunakan untuk meletakkan TV; - Dilengkapi roda untuk memindahkan lokasi rak TV; - Tersedia penyimpanan terbuka; - Laminasi PVC; - Kedalaman penyimpanan h',
+    specs: {
+      'Dimensi': 'P: 60 L: 39,5 T: 56,5 cm',
+      'Warna': 'Wenge',
+      'Berat Kotor': '12,3 Kg'
+    },
+    features: [
+      'Menggunakan warna wenge yang modern',
+      'Tersedia penyimpanan 2 rak luas yang fungsional',
+      'Pintu dilengkapi handle minimalis',
+      'Top table dapat digunakan untuk meletakkan TV',
+      'Dilengkapi roda untuk memindahkan lokasi rak TV',
+      'Tersedia penyimpanan terbuka'
+    ],
+    waText: 'Halo, saya tertarik dengan Rak TV - Nexa 600 R (Wenge) - Activ Furniture (Rp 600.000)'
+  },
+
+  aov_rak_tv_nexa_600_r_winter_maple_167: {
+    id: 'aov_rak_tv_nexa_600_r_winter_maple_167',
+    name: 'Rak TV - Nexa 600 R (Winter Maple) - Activ Furniture',
+    category: 'Rak & Aksesoris',
+    image: 'img/activ/rak-tv-nexa-600-r-winter-maple-activ-furniture.webp',
+    images: ['img/activ/rak-tv-nexa-600-r-winter-maple-activ-furniture.webp'],
+    badge: 'ACTIV',
+    price: 600000,
+    description: '- Menggunakan warna winter maple yang modern; - Tersedia penyimpanan 2 rak luas yang fungsional; - Pintu dilengkapi handle minimalis; - Top table dapat digunakan untuk meletakkan TV; - Dilengkapi roda untuk memindahkan lokasi rak TV; - Tersedia penyimpanan terbuka; - Laminasi PVC; - Kedalaman penyim',
+    specs: {
+      'Dimensi': 'P: 60 L: 39,5 T: 56,5 cm',
+      'Warna': 'Winter Maple',
+      'Berat Kotor': '12,3 Kg'
+    },
+    features: [
+      'Menggunakan warna winter maple yang modern',
+      'Tersedia penyimpanan 2 rak luas yang fungsional',
+      'Pintu dilengkapi handle minimalis',
+      'Top table dapat digunakan untuk meletakkan TV',
+      'Dilengkapi roda untuk memindahkan lokasi rak TV',
+      'Tersedia penyimpanan terbuka'
+    ],
+    waText: 'Halo, saya tertarik dengan Rak TV - Nexa 600 R (Winter Maple) - Activ Furniture (Rp 600.000)'
+  },
+
+  adm_meja_makan_dining_set_lula_ds__168: {
+    id: 'adm_meja_makan_dining_set_lula_ds__168',
+    name: 'Meja Makan / Dining Set - Lula DS 110 - Activ Furniture',
+    category: 'Meja Makan',
+    image: 'img/activ/meja-makan-dining-set-lula-ds-110-activ-furniture.png',
+    images: ['img/activ/meja-makan-dining-set-lula-ds-110-activ-furniture.png'],
+    badge: 'ACTIV',
+    price: 2500000,
+    description: '- Meja Makan / Dining Set dengan kombinasi warna Dark Wood - Black yang Natural; - Meja makan Luas dan Lebar; - Top table Tebal dan Kuat; - Dudukan Soft dengan bantalan Beekled Fabric; - Kaki meja dan kursi Lebih Tahan Gores; - Ujung meja tidak tajam (Rounded Corner); - 1 Set pembelian = 1 Meja - Ka',
+    specs: {
+      'Dimensi': 'Meja = P: 110 L: 70 T: 75 cm',
+      'Warna': 'Meja = Dark Wood - Black',
+      'Berat Kotor': '26,3 Kg'
+    },
+    features: [
+      'Meja Makan / Dining Set dengan kombinasi warna Dark Wood - Black yang Natural',
+      'Meja makan Luas dan Lebar',
+      'Top table Tebal dan Kuat',
+      'Dudukan Soft dengan bantalan Beekled Fabric',
+      'Kaki meja dan kursi Lebih Tahan Gores',
+      'Ujung meja tidak tajam (Rounded Corner)'
+    ],
+    waText: 'Halo, saya tertarik dengan Meja Makan / Dining Set - Lula DS 110 - Activ Furniture (Rp 2.500.000)'
+  },
+
+  aov_open_rack_cabinet_rak_terbuka__169: {
+    id: 'aov_open_rack_cabinet_rak_terbuka__169',
+    name: 'Open Rack Cabinet / Rak Terbuka - Lula ORC 2A - Activ Furniture',
+    category: 'Rak & Aksesoris',
+    image: 'img/activ/open-rack-cabinet-rak-terbuka-lula-orc-2a-activ-furniture.png',
+    images: ['img/activ/open-rack-cabinet-rak-terbuka-lula-orc-2a-activ-furniture.png'],
+    badge: 'ACTIV',
+    price: 400000,
+    description: '- Rak terbuka ini menggunakan warna sonoma oak yang clean dan minimalis; - Terdapat penyimpanan 2 rak yang luas; - Bahan dengan kualitas terbaik; - Laminasi white sheet paper yang bersih; - Bahan menggunakan particle board kualitas terbaik; - Kedalaman penyimpanan 29,6 cm',
+    specs: {
+      'Dimensi': 'P: 40 L: 29,6 T: 60,5 cm',
+      'Warna': 'Sonoma Oak',
+      'Berat Kotor': '7,45 Kg'
+    },
+    features: [
+      'Rak terbuka ini menggunakan warna sonoma oak yang clean dan minimalis',
+      'Terdapat penyimpanan 2 rak yang luas',
+      'Bahan dengan kualitas terbaik',
+      'Laminasi white sheet paper yang bersih',
+      'Bahan menggunakan particle board kualitas terbaik',
+      'Kedalaman penyimpanan 29,6 cm'
+    ],
+    waText: 'Halo, saya tertarik dengan Open Rack Cabinet / Rak Terbuka - Lula ORC 2A - Activ Furniture (Rp 400.000)'
+  },
+
+  aov_open_rack_cabinet_rak_terbuka__170: {
+    id: 'aov_open_rack_cabinet_rak_terbuka__170',
+    name: 'Open Rack Cabinet / Rak Terbuka - Lula ORC 3A - Activ Furniture',
+    category: 'Rak & Aksesoris',
+    image: 'img/activ/open-rack-cabinet-rak-terbuka-lula-orc-3a-activ-furniture.png',
+    images: ['img/activ/open-rack-cabinet-rak-terbuka-lula-orc-3a-activ-furniture.png'],
+    badge: 'ACTIV',
+    price: 450000,
+    description: '- Rak terbuka ini menggunakan warna sonoma oak yang clean dan minimalis; - Terdapat penyimpanan 3 rak yang luas; - Bahan dengan kualitas terbaik; - Laminasi white sheet paper yang bersih; - Bahan menggunakan particle board kualitas terbaik; - Kedalaman penyimpanan 29,6 cm',
+    specs: {
+      'Dimensi': 'P: 40 L: 29,6 T: 89,3 cm',
+      'Warna': 'Sonoma Oak',
+      'Berat Kotor': '10.2 Kg'
+    },
+    features: [
+      'Rak terbuka ini menggunakan warna sonoma oak yang clean dan minimalis',
+      'Terdapat penyimpanan 3 rak yang luas',
+      'Bahan dengan kualitas terbaik',
+      'Laminasi white sheet paper yang bersih',
+      'Bahan menggunakan particle board kualitas terbaik',
+      'Kedalaman penyimpanan 29,6 cm'
+    ],
+    waText: 'Halo, saya tertarik dengan Open Rack Cabinet / Rak Terbuka - Lula ORC 3A - Activ Furniture (Rp 450.000)'
+  },
+
+  amt_meja_tulis_meja_kerja_lula_mt__171: {
+    id: 'amt_meja_tulis_meja_kerja_lula_mt__171',
+    name: 'Meja Tulis / Meja Kerja - Lula MT 120 - Activ Furniture',
+    category: 'Meja Tulis',
+    image: 'img/activ/meja-tulis-meja-kerja-lula-mt-120-activ-furniture-3.png',
+    images: ['img/activ/meja-tulis-meja-kerja-lula-mt-120-activ-furniture-3.png'],
+    badge: 'ACTIV',
+    price: 1200000,
+    description: '- Meja tulis / meja kerja ini menggunakan warna phantom oak yang clean dan minimalis; - Dilengkapi kunci pintu dan rak; - Terdapat penyimpanan laci dan rak; - Memiliki tatakan kaki anti slip; - Handle rak dan laci yang minimalis; - Laminasi white sheet paper yang bersih; - Bahan luar meja menggunaka',
+    specs: {
+      'Dimensi': 'P: 120 L: 60 T: 74,7 cm',
+      'Warna': 'Phantom Oak',
+      'Berat Kotor': '19 Kg'
+    },
+    features: [
+      'Meja tulis / meja kerja ini menggunakan warna phantom oak yang clean dan minimalis',
+      'Dilengkapi kunci pintu dan rak',
+      'Terdapat penyimpanan laci dan rak',
+      'Memiliki tatakan kaki anti slip',
+      'Handle rak dan laci yang minimalis',
+      'Laminasi white sheet paper yang bersih'
+    ],
+    waText: 'Halo, saya tertarik dengan Meja Tulis / Meja Kerja - Lula MT 120 - Activ Furniture (Rp 1.200.000)'
+  },
+
+  amt_meja_tulis_meja_kerja_lula_mt__172: {
+    id: 'amt_meja_tulis_meja_kerja_lula_mt__172',
+    name: 'Meja Tulis / Meja Kerja - Lula MT 120 - Activ Furniture',
+    category: 'Meja Tulis',
+    image: 'img/activ/meja-tulis-meja-kerja-lula-mt-120-activ-furniture-2.png',
+    images: ['img/activ/meja-tulis-meja-kerja-lula-mt-120-activ-furniture-2.png'],
+    badge: 'ACTIV',
+    price: 1200000,
+    description: '- Meja tulis / meja kerja ini menggunakan warna white - phantom oak yang minimalis; - Dilengkapi kunci pintu dan rak; - Terdapat penyimpanan laci dan rak; - Memiliki tatakan kaki anti slip; - Handle rak dan laci yang minimalis; - Laminasi white sheet paper yang bersih; - Bahan luar meja menggunakan ',
+    specs: {
+      'Dimensi': 'P: 120 L: 60 T: 74,7 cm',
+      'Warna': 'White - Phantom Oak',
+      'Berat Kotor': '19 Kg'
+    },
+    features: [
+      'Meja tulis / meja kerja ini menggunakan warna white - phantom oak yang minimalis',
+      'Dilengkapi kunci pintu dan rak',
+      'Terdapat penyimpanan laci dan rak',
+      'Memiliki tatakan kaki anti slip',
+      'Handle rak dan laci yang minimalis',
+      'Laminasi white sheet paper yang bersih'
+    ],
+    waText: 'Halo, saya tertarik dengan Meja Tulis / Meja Kerja - Lula MT 120 - Activ Furniture (Rp 1.200.000)'
+  },
+
+  amt_meja_tulis_meja_kerja_lula_mt__173: {
+    id: 'amt_meja_tulis_meja_kerja_lula_mt__173',
+    name: 'Meja Tulis / Meja Kerja - Lula MT 120 - Activ Furniture',
+    category: 'Meja Tulis',
+    image: 'img/activ/meja-tulis-meja-kerja-lula-mt-120-activ-furniture.png',
+    images: ['img/activ/meja-tulis-meja-kerja-lula-mt-120-activ-furniture.png'],
+    badge: 'ACTIV',
+    price: 1200000,
+    description: '- Meja tulis / meja kerja ini menggunakan warna white - sanremo oak yang clean dan minimalis; - Dilengkapi kunci pintu dan rak; - Terdapat penyimpanan laci dan rak; - Memiliki tatakan kaki anti slip; - Handle rak dan laci yang minimalis; - Laminasi white sheet paper yang bersih; - Bahan luar meja me',
+    specs: {
+      'Dimensi': 'P: 120 L: 60 T: 74,7 cm',
+      'Warna': 'White - Sanremo Oak',
+      'Berat Kotor': '19 Kg'
+    },
+    features: [
+      'Meja tulis / meja kerja ini menggunakan warna white - sanremo oak yang clean dan minimalis',
+      'Dilengkapi kunci pintu dan rak',
+      'Terdapat penyimpanan laci dan rak',
+      'Memiliki tatakan kaki anti slip',
+      'Handle rak dan laci yang minimalis',
+      'Laminasi white sheet paper yang bersih'
+    ],
+    waText: 'Halo, saya tertarik dengan Meja Tulis / Meja Kerja - Lula MT 120 - Activ Furniture (Rp 1.200.000)'
+  },
+
+  amt_meja_kerja_lula_mt_120_activ_f_174: {
+    id: 'amt_meja_kerja_lula_mt_120_activ_f_174',
+    name: 'Meja Kerja / Meja Tulis - Lula MT 120 - Activ Furniture',
+    category: 'Meja Tulis',
+    image: 'img/activ/meja-kerja-lula-mt-120-activ-furniture.png',
+    images: ['img/activ/meja-kerja-lula-mt-120-activ-furniture.png'],
+    badge: 'ACTIV',
+    price: 1200000,
+    description: '- Meja yang luas mampu menampung PC dan peralatan kerja; - Dilengkapi 2 penyimpanan laci dan rak yang luas; - Dilengkapi 2 set kunci pada rak dan laci; - Bagian ujung yang tidak tajam; - Tersedia lubang kabel; - Bahan meja menggunakan particle board; - Menggunakan laminasi phantom oak sheet',
+    specs: {
+      'Dimensi': 'P: 120 L: 60 T: 74,7 cm',
+      'Warna': 'Phantom Oak',
+      'Berat Kotor': '19 Kg'
+    },
+    features: [
+      'Meja yang luas mampu menampung PC dan peralatan kerja',
+      'Dilengkapi 2 penyimpanan laci dan rak yang luas',
+      'Dilengkapi 2 set kunci pada rak dan laci',
+      'Bagian ujung yang tidak tajam',
+      'Tersedia lubang kabel',
+      'Bahan meja menggunakan particle board'
+    ],
+    waText: 'Halo, saya tertarik dengan Meja Kerja / Meja Tulis - Lula MT 120 - Activ Furniture (Rp 1.200.000)'
+  },
+
+  amr_meja_rias_lula_mr_80_activ_fur_175: {
+    id: 'amr_meja_rias_lula_mr_80_activ_fur_175',
+    name: 'Meja Rias - Lula MR 80 - Activ Furniture',
+    category: 'Meja Rias',
+    image: 'img/activ/meja-rias-lula-mr-80-activ-furniture.jpg',
+    images: ['img/activ/meja-rias-lula-mr-80-activ-furniture.jpg'],
+    badge: 'ACTIV',
+    price: 1600000,
+    description: '- Memiliki cermin dengan mekanisme geser untuk buka tutup rak belakang dan untuk menyesuaikan pandangan saat bercermin; - Dilengkapi rak belakang cermin dengan jumlah 6 rak penyimpanan.; - Dilengkapi laci yang lebar untuk penyimpanan extra; - Terdapat papan panel penguat bawah yang lebih stabil dan ',
+    specs: {
+      'Dimensi': 'P: 80 L: 39,5 T: 145,5 cm',
+      'Warna': 'Wahana Teak - Taupe',
+      'Berat Kotor': '34 Kg'
+    },
+    features: [
+      'Memiliki cermin dengan mekanisme geser untuk buka tutup rak belakang dan untuk menyesuaikan pandangan saat bercermin',
+      'Dilengkapi rak belakang cermin dengan jumlah 6 rak penyimpanan.',
+      'Dilengkapi laci yang lebar untuk penyimpanan extra',
+      'Terdapat papan panel penguat bawah yang lebih stabil dan kokoh',
+      'Memiliki bangku/stool yang dilengkapi bantalan yang soft.�Nyaman digunakan duduk berlama-lama',
+      'Bahan luar meja dan kursi menggunakan particle board dan laminasi wahana teak sheet'
+    ],
+    waText: 'Halo, saya tertarik dengan Meja Rias - Lula MR 80 - Activ Furniture (Rp 1.600.000)'
+  },
+
+  amb_meja_belajar_anak_lula_mb_80_a_176: {
+    id: 'amb_meja_belajar_anak_lula_mb_80_a_176',
+    name: 'Meja Belajar Anak - Lula MB 80 - Activ Furniture',
+    category: 'Meja Belajar',
+    image: 'img/activ/meja-belajar-anak-lula-mb-80-activ-furniture.jpg',
+    images: ['img/activ/meja-belajar-anak-lula-mb-80-activ-furniture.jpg'],
+    badge: 'ACTIV',
+    price: 1100000,
+    description: '- Bagian pintu menggunakan laminasi white sheet paper yang bersih; - Dilengkapi gantungan stainless untuk menggantung tas / perlengkapan sekolah lainnya; - Bagian ujung tumpul; - Terdapat tatakan kaki untuk melindungi furniture bersentuhan langsung dengan lantai; - Memiliki 2 rak penyimpanan didalam',
+    specs: {
+      'Dimensi': 'P: 80,2 L: 39,5 T: 131,4 cm',
+      'Warna': 'White - Wahana Teak',
+      'Berat Kotor': '21 Kg'
+    },
+    features: [
+      'Bagian pintu menggunakan laminasi white sheet paper yang bersih',
+      'Dilengkapi gantungan stainless untuk menggantung tas / perlengkapan sekolah lainnya',
+      'Bagian ujung tumpul',
+      'Terdapat tatakan kaki untuk melindungi furniture bersentuhan langsung dengan lantai',
+      'Memiliki 2 rak penyimpanan didalam pintu yang luas dan dapat menahan berat maksimal hingga 5 kg',
+      'Memiliki 3 rak penyimpanan terbuka di bagian atas meja'
+    ],
+    waText: 'Halo, saya tertarik dengan Meja Belajar Anak - Lula MB 80 - Activ Furniture (Rp 1.100.000)'
+  },
+
+  abl_lemari_pakaian_anak_baby_locke_177: {
+    id: 'abl_lemari_pakaian_anak_baby_locke_177',
+    name: 'Lemari Pakaian Anak (Baby Locker) - Lula BL 150 - Activ Furniture',
+    category: 'Lemari',
+    image: 'img/activ/lemari-pakaian-anak-baby-locker-lula-bl-150-activ-furniture.jpg',
+    images: ['img/activ/lemari-pakaian-anak-baby-locker-lula-bl-150-activ-furniture.jpg'],
+    badge: 'ACTIV',
+    price: 1800000,
+    description: '- Memiliki cermin tinggi dengan tebal 3 mm; - Bagian pintu menggunakan laminasi white sheet paper yang bersih; - Dilengkapi gantungan baju aluminium yang kuat menahan beban hingga 10 kg; - Dilengkapi 2 set pengunci pintu dan handle L aluminium; - Terdapat tatakan kaki untuk melindungi furniture bers',
+    specs: {
+      'Dimensi': 'P: 79,4 L: 41 T: 149,8 cm',
+      'Warna': 'White - Wahana Teak',
+      'Berat Kotor': '36 Kg'
+    },
+    features: [
+      'Memiliki cermin tinggi dengan tebal 3 mm',
+      'Bagian pintu menggunakan laminasi white sheet paper yang bersih',
+      'Dilengkapi gantungan baju aluminium yang kuat menahan beban hingga 10 kg',
+      'Dilengkapi 2 set pengunci pintu dan handle L aluminium',
+      'Terdapat tatakan kaki untuk melindungi furniture bersentuhan langsung dengan lantai',
+      'Memiliki 3 rak penyimpanan baju yang luas dan dapat menahan berat maksimal hingga 5 kg'
+    ],
+    waText: 'Halo, saya tertarik dengan Lemari Pakaian Anak (Baby Locker) - Lula BL 150 - Activ Furniture (Rp 1.800.000)'
+  },
+
+  akk_kursi_kantor_lula_km_101_activ_178: {
+    id: 'akk_kursi_kantor_lula_km_101_activ_178',
+    name: 'Kursi Kantor - Lula KM 101 - Activ Furniture',
+    category: 'Kursi Kantor',
+    image: 'img/activ/kursi-kantor-lula-km-101-activ-furniture.jpg',
+    images: ['img/activ/kursi-kantor-lula-km-101-activ-furniture.jpg'],
+    badge: 'ACTIV',
+    price: 900000,
+    description: '- Ketinggian Headrest bisa Di Adjustable; - Menggunakan dudukan dengan bantalan yang nyaman; - Terdapat arm rest dengan bentuk yang ergonomis untuk tangan bersandar; - Menggunakan sandaran mesh fabric yang dapat menjaga sirkulasi udara sehingga sandaran tetap kering - Dilengkapi Fiture Tilt Mechanis',
+    specs: {
+      'Dimensi': 'P: 44 L: 46 T: 110 &#8211; 120 cm',
+      'Warna': 'Black (Fabric - Wire Mesh)',
+      'Berat Kotor': '9,5 Kg'
+    },
+    features: [
+      'Ketinggian Headrest bisa Di Adjustable',
+      'Menggunakan dudukan dengan bantalan yang nyaman',
+      'Terdapat arm rest dengan bentuk yang ergonomis untuk tangan bersandar',
+      'Menggunakan sandaran mesh fabric yang dapat menjaga sirkulasi udara sehingga sandaran tetap kering & tidak mudah bau.',
+      'Dilengkapi Fiture Tilt Mechanism untuk Kenyamanan Pengguna saat bersantai.',
+      'Material : PP Frame pada arm rest, water resistant mesh fabric pada sandaran & headrest.'
+    ],
+    waText: 'Halo, saya tertarik dengan Kursi Kantor - Lula KM 101 - Activ Furniture (Rp 900.000)'
+  },
+
+  akk_kursi_kantor_lula_km_100_activ_179: {
+    id: 'akk_kursi_kantor_lula_km_100_activ_179',
+    name: 'Kursi Kantor - Lula KM 100 - Activ Furniture',
+    category: 'Kursi Kantor',
+    image: 'img/activ/kursi-kantor-lula-km-100-activ-furniture.png',
+    images: ['img/activ/kursi-kantor-lula-km-100-activ-furniture.png'],
+    badge: 'ACTIV',
+    price: 900000,
+    description: '- Menggunakan dudukan dengan bantalan yang nyaman; - Terdapat arm rest dengan bentuk yang ergonomis untuk tangan bersandar; - Menggunakan sandaran mesh fabric yang dapat menjaga sirkulasi udara sehingga sandaran tetap kering - Material : PP Frame pada arm rest, water resistant mesh fabric pada sanda',
+    specs: {
+      'Dimensi': 'P: 48 L: 48 T: 85 &#8211; 95 cm',
+      'Warna': 'Black (Fabric - Wire Mesh)',
+      'Berat Kotor': '9,5 Kg'
+    },
+    features: [
+      'Menggunakan dudukan dengan bantalan yang nyaman',
+      'Terdapat arm rest dengan bentuk yang ergonomis untuk tangan bersandar',
+      'Menggunakan sandaran mesh fabric yang dapat menjaga sirkulasi udara sehingga sandaran tetap kering & tidak mudah bau.',
+      'Material : PP Frame pada arm rest, water resistant mesh fabric pada sandaran',
+      'Gaslift Adjustable : Hingga 10 cm',
+      'Rangka Kaki : Rangka Besi Fin. Chrome'
+    ],
+    waText: 'Halo, saya tertarik dengan Kursi Kantor - Lula KM 100 - Activ Furniture (Rp 900.000)'
+  },
+
+  akk_kursi_kantor_lula_kd_100_activ_180: {
+    id: 'akk_kursi_kantor_lula_kd_100_activ_180',
+    name: 'Kursi Kantor - Lula KD 100 - Activ Furniture',
+    category: 'Kursi Kantor',
+    image: 'img/activ/kursi-kantor-lula-kd-100-activ-furniture.jpg',
+    images: ['img/activ/kursi-kantor-lula-kd-100-activ-furniture.jpg'],
+    badge: 'ACTIV',
+    price: 750000,
+    description: '- Menggunakan sandaran yang Ergonomic Shape dengan bentukan punggung kursi yang dibuat menyesuaikan bentuk punggung manusia; - Kain kulit yang tidak panas; - Kemiringan sandaran dapat disesuaikan hingga 90 - 135 derajat; - Sandaran tangan lembut dan nyaman; - Roda premium yang mulus dan anti macet; ',
+    specs: {
+      'Dimensi': 'P: 45 L: 52 T: 109 &#8211; 119 cm',
+      'Warna': 'Black (Oscar)',
+      'Berat Kotor': '9,3 Kg'
+    },
+    features: [
+      'Menggunakan sandaran yang Ergonomic Shape dengan bentukan punggung kursi yang dibuat menyesuaikan bentuk punggung manusia',
+      'Kain kulit yang tidak panas',
+      'Kemiringan sandaran dapat disesuaikan hingga 90 - 135 derajat',
+      'Sandaran tangan lembut dan nyaman',
+      'Roda premium yang mulus dan anti macet',
+      'Ketinggian kursi dapat di adjust'
+    ],
+    waText: 'Halo, saya tertarik dengan Kursi Kantor - Lula KD 100 - Activ Furniture (Rp 750.000)'
+  },
+
+  alp_lemari_pakaian_lula_lp_200_act_181: {
+    id: 'alp_lemari_pakaian_lula_lp_200_act_181',
+    name: 'Lemari Pakaian � Lula LP 200 � Activ Furniture',
+    category: 'Lemari',
+    image: 'img/activ/lemari-pakaian-lula-lp-200-activ-furniture.jpg',
+    images: ['img/activ/lemari-pakaian-lula-lp-200-activ-furniture.jpg'],
+    badge: 'ACTIV',
+    price: 2800000,
+    description: '- Lula LP 200 ini dilengkapi Handle alumunium dan 2 set kunci di masing-masing pintu; - Tersedia gantungan baju di lemari kiri yang tinggi; - Memiliki 5 kompartemen yang luas untuk menyimpan berbagai jenis kebutuhan pakaian; - Dilengkapi laci dengan kunci yang dapat digunakan untuk menyimpan perhias',
+    specs: {
+      'Dimensi': 'P: 79,7 L: 41,5 T: 184 cm',
+      'Warna': 'Wahana Teak - White',
+      'Berat Kotor': '47 Kg'
+    },
+    features: [
+      'Lula LP 200 ini dilengkapi Handle alumunium dan 2 set kunci di masing-masing pintu',
+      'Tersedia gantungan baju di lemari kiri yang tinggi',
+      'Memiliki 5 kompartemen yang luas untuk menyimpan berbagai jenis kebutuhan pakaian',
+      'Dilengkapi laci dengan kunci yang dapat digunakan untuk menyimpan perhiasan kecil',
+      'Menggunakan tatakan kaki agar furniture tidak langsung bersentuhan dengan lantai',
+      'Material: Particle Board tebal 12 mm (Grade A)'
+    ],
+    waText: 'Halo, saya tertarik dengan Lemari Pakaian � Lula LP 200 � Activ Furniture (Rp 2.800.000)'
+  },
+};
+
+function getProduct(id) {
+  return products[id] || null;
+}
+

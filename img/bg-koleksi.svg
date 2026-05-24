@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" fill="none">
+  <path d="M180 280 L180 160 Q180 140 200 140 L260 140 Q280 140 280 160 L280 280" stroke="#c62828" stroke-width="1.5" opacity="0.08"/>
+  <path d="M200 200 L260 200" stroke="#c62828" stroke-width="1.5" opacity="0.08"/>
+  <path d="M230 140 L230 120" stroke="#c62828" stroke-width="1.5" opacity="0.08"/>
+  <path d="M550 260 L550 130 Q550 110 570 110 L640 110 Q660 110 660 130 L660 260" stroke="#c62828" stroke-width="1.5" opacity="0.06"/>
+  <path d="M570 180 L640 180" stroke="#c62828" stroke-width="1.5" opacity="0.06"/>
+  <path d="M605 110 L605 90" stroke="#c62828" stroke-width="1.5" opacity="0.06"/>
+  <circle cx="700" cy="100" r="40" stroke="#c62828" stroke-width="1" opacity="0.05"/>
+  <circle cx="100" cy="300" r="60" stroke="#c62828" stroke-width="1" opacity="0.04"/>
+  <rect x="380" y="180" width="60" height="100" rx="2" stroke="#c62828" stroke-width="1" opacity="0.06"/>
+  <rect x="390" y="120" width="40" height="60" rx="2" stroke="#c62828" stroke-width="1" opacity="0.06"/>
+  <line x1="380" y1="280" x2="360" y2="310" stroke="#c62828" stroke-width="1" opacity="0.06"/>
+  <line x1="440" y1="280" x2="460" y2="310" stroke="#c62828" stroke-width="1" opacity="0.06"/>
+</svg>
