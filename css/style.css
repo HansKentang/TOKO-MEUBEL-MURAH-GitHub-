@@ -8,6 +8,7 @@ body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   -webkit-tap-highlight-color: transparent;
+  zoom: 110%;
 }
 
 a { text-decoration: none; color: inherit; }
