@@ -43,6 +43,23 @@
 
 <!-- ===== PROMO HERO ===== -->
 <section class="promo-hero reveal">
+  <div class="promo-carousel" aria-hidden="true">
+    <div class="promo-carousel-track">
+      <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&q=80" alt="">
+      <img src="https://images.unsplash.com/photo-1540574163026-643ea20ade25?w=600&q=80" alt="">
+      <img src="https://images.unsplash.com/photo-1503602642458-232111445657?w=600&q=80" alt="">
+      <img src="https://images.unsplash.com/photo-1586105251261-72a756497a11?w=600&q=80" alt="">
+      <img src="https://images.unsplash.com/photo-1567016432779-094069958ea5?w=600&q=80" alt="">
+      <img src="https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?w=600&q=80" alt="">
+      <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&q=80" alt="">
+      <img src="https://images.unsplash.com/photo-1540574163026-643ea20ade25?w=600&q=80" alt="">
+      <img src="https://images.unsplash.com/photo-1503602642458-232111445657?w=600&q=80" alt="">
+      <img src="https://images.unsplash.com/photo-1586105251261-72a756497a11?w=600&q=80" alt="">
+      <img src="https://images.unsplash.com/photo-1567016432779-094069958ea5?w=600&q=80" alt="">
+      <img src="https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?w=600&q=80" alt="">
+    </div>
+  </div>
+  <div class="promo-carousel-overlay"></div>
   <div class="container">
     <h1><i class="fas fa-fire" style="margin-right: 8px;"></i>Promo Spesial Bulan Ini</h1>
     <p>Dapatkan harga terbaik untuk furniture impian Anda. Diskon hingga <strong class="text-yellow-300">40%</strong> untuk produk terpilih!</p>
@@ -269,6 +286,30 @@
 <div class="toast-container" id="toastContainer"></div>
 
 <style>
+  .promo-carousel {
+    position: absolute; inset: 0; z-index: 0; overflow: hidden;
+  }
+  .promo-carousel-track {
+    display: flex; height: 100%; gap: 0;
+    animation: promoscroll 30s linear infinite;
+  }
+  .promo-carousel-track img {
+    height: 100%; width: auto; object-fit: cover;
+    flex-shrink: 0;
+  }
+  @keyframes promoscroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  .promo-carousel-overlay {
+    position: absolute; inset: 0; z-index: 1;
+    background: linear-gradient(135deg, rgba(26,26,26,.75) 0%, rgba(26,26,26,.45) 50%, rgba(26,26,26,.75) 100%);
+  }
+  .promo-hero .container { position: relative; z-index: 2; }
+  @media (prefers-reduced-motion: reduce) {
+    .promo-carousel-track { animation: none; }
+  }
+
   .trust-banner {
     background: linear-gradient(to right, #c62828, #8e0000);
     color: #fff;

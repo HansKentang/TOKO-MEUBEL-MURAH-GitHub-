@@ -98,7 +98,7 @@
 
     /* ===== STATS STRIP ===== */
     .cicil-stats { padding: 40px 0; background: #fff; border-top: 1px solid #f0f0f0; border-bottom: 1px solid #f0f0f0; }
-    .cicil-stats .container { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .cicil-stats .container { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; max-width: 600px; }
     .cicil-stat { text-align: center; position: relative; padding: 16px; }
     .cicil-stat:not(:last-child)::after {
       content: ''; position: absolute; right: 0; top: 50%; transform: translateY(-50%);
@@ -415,12 +415,8 @@
     <div class="intro-visual reveal">
       <div class="intro-card-stack stagger">
         <div class="card">
-          <div class="big">0%</div>
-          <div class="small">Bunga cicilan pertama</div>
-        </div>
-        <div class="card">
-          <div class="big">3-12</div>
-          <div class="small">Tenor cicilan fleksibel</div>
+          <div class="big">3-24</div>
+          <div class="small">Tenor Fleksibel (Bulan)</div>
         </div>
         <div class="card">
           <div class="big">5 Menit</div>
@@ -434,8 +430,7 @@
 <!-- ===== STATS STRIP ===== -->
 <section class="cicil-stats reveal">
   <div class="container">
-    <div class="cicil-stat"><div class="num">0%</div><div class="label">Bunga Cicilan Pertama</div></div>
-    <div class="cicil-stat"><div class="num">3-12</div><div class="label">Tenor Fleksibel (Bulan)</div></div>
+    <div class="cicil-stat"><div class="num">3-24</div><div class="label">Tenor Fleksibel (Bulan)</div></div>
     <div class="cicil-stat"><div class="num">100%</div><div class="label">Aman & Terpercaya</div></div>
   </div>
 </section>
