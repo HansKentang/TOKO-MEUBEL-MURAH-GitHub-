@@ -9693,7 +9693,7 @@ function renderOrderHistory(containerId) {
   orders.slice().reverse().forEach(function(o) {
     var d = new Date(o.date);
     var dateStr = d.toLocaleDateString('id-ID', { day:'numeric', month:'short', year:'numeric', hour:'2-digit', minute:'2-digit' });
-    html += '<div class="order-item"><div><div class="oi-date">' + dateStr + '</div><div class="oi-name">' + o.items.map(function(i) { return i.name + ' x' + i.qty; }).join(', ') + '</div></div><div class="oi-total">' + formatPrice(o.total) + '</div></div>';
+    html += '<div class="order-item"><div><div class="oi-date">' + dateStr + '</div><div class="oi-name">' + o.items.map(function(i) { return i.name + ' x' + i.qty; }).join(', ') + '</div></div></div>';
   });
   html += '<button class="btn-clear" onclick="clearOrderHistory()"><i class="fas fa-trash"></i> Hapus semua riwayat</button></div>';
   container.innerHTML = html;
@@ -10205,7 +10205,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var imgSrc = imgs[0];
     var imgIdx = 0;
     var waUrl = 'https://wa.me/6281325373999?text=' + encodeURIComponent(data.waText || 'Halo, saya tertarik dengan ' + data.name);
-    var cartBtn = '<button type="button" class="btn btn-wa" onclick="window.open(\'' + waUrl + '\',\'_blank\');saveOrder([{id:\'' + id + '\',name:\'' + data.name.replace(/'/g, "\\'") + '\',qty:1,price:' + (data.price || 0) + '}],' + (data.price || 0) + ')" style="flex:1"><i class="fab fa-whatsapp"></i> Beli Lewat WA</button>';
+    var cartBtn = '<a href="' + waUrl + '" target="_blank" class="btn btn-wa" style="flex:1"><i class="fab fa-whatsapp"></i> Beli Lewat WA</a>';
 
     // Specs rows (max 4)
     var specsHtml = '';
