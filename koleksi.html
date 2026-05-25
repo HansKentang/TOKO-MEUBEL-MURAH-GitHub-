@@ -404,23 +404,23 @@
 <section class="filters">
   <div class="container">
     <div id="parentFilters">
-      <button class="filter-btn active" onclick="filterGroup('all', this)"><i class="fas fa-th"></i> Semua</button>
-      <button class="filter-btn" onclick="filterGroup('Kasur', this)"><i class="fas fa-bed"></i> Kasur</button>
-      <button class="filter-btn" onclick="filterGroup('Lemari', this)"><i class="fas fa-archive"></i> Lemari</button>
-      <button class="filter-btn" onclick="filterGroup('Meja', this)"><i class="fas fa-table"></i> Meja</button>
-      <button class="filter-btn" onclick="filterGroup('Rak & Aksesoris', this)"><i class="fas fa-sitemap"></i> Rak</button>
-      <button class="filter-btn" onclick="filterGroup('Kitchen Set', this)"><i class="fas fa-kitchen-set"></i> Kitchen</button>
-      <button class="filter-btn" onclick="filterGroup('Office Set', this)"><i class="fas fa-briefcase"></i> Office</button>
+      <button class="filter-btn active" onclick="filterGroup('all', this)" aria-label="Tampilkan semua produk"><i class="fas fa-th"></i> Semua</button>
+      <button class="filter-btn" onclick="filterGroup('Kasur', this)" aria-label="Filter kategori Kasur"><i class="fas fa-bed"></i> Kasur</button>
+      <button class="filter-btn" onclick="filterGroup('Lemari', this)" aria-label="Filter kategori Lemari"><i class="fas fa-archive"></i> Lemari</button>
+      <button class="filter-btn" onclick="filterGroup('Meja', this)" aria-label="Filter kategori Meja"><i class="fas fa-table"></i> Meja</button>
+      <button class="filter-btn" onclick="filterGroup('Rak & Aksesoris', this)" aria-label="Filter kategori Rak dan Aksesoris"><i class="fas fa-sitemap"></i> Rak</button>
+      <button class="filter-btn" onclick="filterGroup('Kitchen Set', this)" aria-label="Filter kategori Kitchen Set"><i class="fas fa-kitchen-set"></i> Kitchen</button>
+      <button class="filter-btn" onclick="filterGroup('Office Set', this)" aria-label="Filter kategori Office Set"><i class="fas fa-briefcase"></i> Office</button>
       <span class="count-bubble" id="countBubble">210 items</span>
     </div>
     <div id="subFilters" style="margin-top:8px;display:none;"></div>
     <div class="search-sort-bar" style="margin-top:16px">
       <div class="search-box">
         <i class="fas fa-search"></i>
-        <input type="text" id="searchInput" placeholder="Cari produk..." oninput="applyFilters()">
+        <input type="text" id="searchInput" placeholder="Cari produk..." oninput="applyFilters()" aria-label="Cari produk">
       </div>
       <div class="sort-select">
-        <select id="sortSelect" onchange="applyFilters()">
+        <select id="sortSelect" onchange="applyFilters()" aria-label="Urutkan produk">
           <option value="">Urutkan</option>
           <option value="price-asc">Harga Terendah</option>
           <option value="price-desc">Harga Tertinggi</option>
@@ -10096,7 +10096,11 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     var info = groups[group];
-    var html = '<button class="sub-filter-btn active" onclick="filterSub(\'all\', this)">Semua ' + group + '</button>';
+    var html = '<div style="display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:4px">' +
+      '<span style="font-size:12px;font-weight:600;color:#888"></span>' +
+      '<button class="sub-filter-close" onclick="filterGroup(\'all\', document.querySelector(\'#parentFilters .filter-btn\'))" aria-label="Tutup filter"><i class="fas fa-times"></i></button>' +
+    '</div>';
+    html += '<button class="sub-filter-btn active" onclick="filterSub(\'all\', this)">Semua ' + group + '</button>';
     info.subcategories.forEach(function(s) {
       html += '<button class="sub-filter-btn" onclick="filterSub(\'' + s + '\', this)">' + s + '</button>';
     });
