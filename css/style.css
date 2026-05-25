@@ -1017,6 +1017,8 @@ html { scroll-behavior: smooth; }
   .footer { padding-bottom: 70px; }
   .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
   .bottom-nav { display: block; }
+  .bottom-nav .hide-mobile { display: none; }
+  .bottom-nav .container { justify-content: space-around; }
   .whatsapp-fab { bottom: 80px; right: 20px; }
   .page-title h1 { font-size: 30px; }
   .page-title { padding: 120px 0 40px; }
