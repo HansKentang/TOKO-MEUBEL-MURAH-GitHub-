@@ -19,36 +19,8 @@ function initTheme() {
         localStorage.setItem('meubelTheme', 'dark');
         icon.className = 'fas fa-sun';
       }
-      updateMobileThemeIcons();
     });
   }
-}
-
-function toggleMobileTheme() {
-  const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-  if (isDark) {
-    document.documentElement.removeAttribute('data-theme');
-    localStorage.setItem('meubelTheme', 'light');
-  } else {
-    document.documentElement.setAttribute('data-theme', 'dark');
-    localStorage.setItem('meubelTheme', 'dark');
-  }
-  updateMobileThemeIcons();
-  const topToggle = document.getElementById('themeToggle');
-  if (topToggle) {
-    const icon = topToggle.querySelector('i');
-    icon.className = isDark ? 'fas fa-moon' : 'fas fa-sun';
-  }
-}
-
-function updateMobileThemeIcons() {
-  const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-  document.querySelectorAll('.mobile-theme-icon').forEach(function(icon) {
-    icon.className = isDark ? 'fas fa-sun' : 'fas fa-moon';
-  });
-  document.querySelectorAll('.mobile-theme-label').forEach(function(label) {
-    label.textContent = isDark ? 'Terang' : 'Gelap';
-  });
 }
 
 // ========== SHARE PRODUCT ==========
@@ -349,7 +321,7 @@ document.addEventListener('click', function(e) {
 // ========== DOM READY ==========
 document.addEventListener('DOMContentLoaded', function () {
   initTheme();
-  updateMobileThemeIcons();
+
 
   renderOrderHistory('orderHistoryContainer');
 

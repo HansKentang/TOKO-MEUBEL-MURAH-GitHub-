@@ -383,12 +383,7 @@
     .whatsapp-fab { position: fixed; bottom: 80px; right: 20px; z-index: 1001; width: 50px; height: 50px; border-radius: 50%; background: #25d366; color: #fff; font-size: 24px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 16px rgba(37,211,102,.35); transition: transform .2s; }
     .whatsapp-fab:hover { transform: scale(1.1); }
 
-    /* ===== MOBILE BOTTOM NAV ===== */
-    .bottom-nav { display: none; position: fixed; bottom: 0; left: 0; right: 0; background: #fff; border-top: 1px solid #eee; z-index: 1000; padding: 6px 0 env(safe-area-inset-bottom,6px); }
-    .bottom-nav .container { display: flex; justify-content: space-around; align-items: center; }
-    .bottom-nav a, .bottom-nav button { display: flex; flex-direction: column; align-items: center; gap: 2px; font-size: 10px; color: var(--slate); padding: 6px 12px; background: none; border: none; }
-    .bottom-nav a:hover, .bottom-nav a.active, .bottom-nav button:hover { color: var(--red); }
-    .bottom-nav a i, .bottom-nav button i { font-size: 18px; }
+
 
     /* ===== ANIMATIONS ===== */
     @media (prefers-reduced-motion: no-preference) {
@@ -864,8 +859,8 @@
     <a href="koleksi.html"><i class="fas fa-th-large"></i> Koleksi</a>
     <a href="cicilan.html"><i class="fas fa-credit-card"></i> Cicilan</a>
     <button onclick="openWishlist()"><i class="far fa-heart"></i><span class="wishlist-badge">0</span> Wishlist</button>
+    <button class="mobile-theme-toggle" onclick="toggleMobileTheme()" aria-label="Toggle dark mode"><i class="fas fa-moon"></i><span>Tema</span></button>
     <a href="kontak.html"><i class="fas fa-phone"></i> Kontak</a>
-    <button onclick="toggleMobileTheme()" aria-label="Toggle dark mode"><i class="fas fa-moon mobile-theme-icon"></i><span class="mobile-theme-label">Gelap</span></button>
   </div>
 </nav>
 

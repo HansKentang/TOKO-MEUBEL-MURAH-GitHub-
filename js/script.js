@@ -19,8 +19,30 @@ function initTheme() {
         localStorage.setItem('meubelTheme', 'dark');
         icon.className = 'fas fa-sun';
       }
+      updateMobileThemeIcons();
     });
   }
+  updateMobileThemeIcons();
+}
+
+function toggleMobileTheme() {
+  var isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+  if (isDark) {
+    document.documentElement.removeAttribute('data-theme');
+    localStorage.setItem('meubelTheme', 'light');
+  } else {
+    document.documentElement.setAttribute('data-theme', 'dark');
+    localStorage.setItem('meubelTheme', 'dark');
+  }
+  updateMobileThemeIcons();
+}
+
+function updateMobileThemeIcons() {
+  var isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+  var icons = document.querySelectorAll('.mobile-theme-toggle i');
+  icons.forEach(function(icon) {
+    icon.className = isDark ? 'fas fa-sun' : 'fas fa-moon';
+  });
 }
 
 // ========== SHARE PRODUCT ==========
