@@ -598,6 +598,18 @@ html { scroll-behavior: smooth; }
 /* ========== FILTERS ========== */
 .filters { padding: 32px 0; }
 .filters .container { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; position: relative; }
+/* PC: search on top, variants bottom */
+@media (min-width: 769px) {
+  #subFilters { order: 4; width: 100%; }
+  #filterBottom { order: 2; width: 100%; }
+  #parentFilters { order: 1; }
+  #scrollHint { order: 0; width: 100%; }
+}
+/* Mobile: variants before search (HTML order is already correct) */
+@media (max-width: 768px) {
+  #filterBottom { width: 100%; margin-top: 8px; }
+  #scrollHint { width: 100%; }
+}
 .filter-label {
   font-family: 'Inter', sans-serif;
   font-size: 1rem;
