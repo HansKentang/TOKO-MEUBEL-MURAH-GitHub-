@@ -605,13 +605,14 @@ html { scroll-behavior: smooth; }
 }
 .filter-label strong { color: #c62828; }
 .filter-btn {
-  width: 48px; height: 48px; border: 1px solid #eee; background: #fff;
-  color: #666; font-size: 0;
+  width: auto; min-width: 56px; height: auto; border: 1px solid #eee; background: #fff;
+  color: #666; padding: 8px 10px;
   transition: background .2s, color .2s, border-color .2s, box-shadow .2s, transform .2s;
-  cursor: pointer; display: inline-flex; align-items: center; justify-content: center;
-  border-radius: 50%; box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+  cursor: pointer; display: inline-flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px;
+  border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.06);
 }
 .filter-btn i { font-size: 20px; pointer-events: none; }
+.filter-btn span { font-size: 9px; font-weight: 500; line-height: 1; white-space: nowrap; pointer-events: none; }
 .filter-btn:hover, .filter-btn.active { background: #c62828; color: #fff; border-color: #c62828; box-shadow: 0 4px 12px rgba(198,40,40,0.3); transform: translateY(-2px) scale(1.05); }
 .filter-btn:focus-visible { outline: 2px solid #c62828; outline-offset: 2px; }
 .filter-btn.active i { animation: iconPop .3s ease; }
@@ -1136,8 +1137,9 @@ html { scroll-behavior: smooth; }
   .testi-card .testi-produk { font-size: 10px; }
   .btn { min-height: 44px; }
   .btn-sm { min-height: 40px; }
-  .filter-btn { width: 42px; height: 42px; font-size: 0; border-radius: 50%; }
+  .filter-btn { width: auto; min-width: 52px; padding: 6px 8px; border-radius: 10px; }
   .filter-btn i { font-size: 18px; }
+  .filter-btn span { font-size: 8px; }
   .filters .container { gap: 6px; padding-bottom: 4px; }
   #parentFilters { display: flex; gap: 5px; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; padding: 4px 0; }
   #parentFilters::-webkit-scrollbar { display: none; }
