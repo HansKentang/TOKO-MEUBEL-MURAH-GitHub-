@@ -109,43 +109,6 @@ function formatPrice(num) {
   return 'Rp ' + num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
 }
 
-const shippingRates = {
-  'banyumanik': { free: true, rate: 0, note: 'Gratis ongkir!' },
-  'tembalang': { free: true, rate: 0, note: 'Gratis ongkir!' },
-  'pedurungan': { free: true, rate: 0, note: 'Gratis ongkir!' },
-  'gayamsari': { free: true, rate: 0, note: 'Gratis ongkir!' },
-  'genuk': { free: true, rate: 0, note: 'Gratis ongkir!' },
-  'semarang-timur': { free: false, rate: 25000, note: 'Ongkir Rp 25.000' },
-  'semarang-barat': { free: false, rate: 30000, note: 'Ongkir Rp 30.000' },
-  'semarang-utara': { free: false, rate: 30000, note: 'Ongkir Rp 30.000' },
-  'semarang-selatan': { free: false, rate: 25000, note: 'Ongkir Rp 25.000' },
-  'semarang-tengah': { free: false, rate: 20000, note: 'Ongkir Rp 20.000' },
-  'mijen': { free: false, rate: 40000, note: 'Ongkir Rp 40.000' },
-  'gunungpati': { free: false, rate: 35000, note: 'Ongkir Rp 35.000' },
-  'ngaliyan': { free: false, rate: 35000, note: 'Ongkir Rp 35.000' },
-  'tugu': { free: false, rate: 45000, note: 'Ongkir Rp 45.000' },
-  'luar-kota': { free: false, rate: 0, note: 'Hubungi WA untuk info ongkir' }
-};
-
-function checkShipping() {
-  const sel = document.getElementById('shipKecamatan');
-  if (!sel || !sel.value) return;
-  const val = sel.value;
-  const data = shippingRates[val];
-  const result = document.getElementById('shipResult');
-  if (!result) return;
-  if (data.free) {
-    result.className = 'ship-result show free';
-    result.innerHTML = '<div class="ship-amount">GRATIS</div><div class="ship-note"><i class="fas fa-check-circle"></i> ' + data.note + '</div>';
-  } else if (data.rate > 0) {
-    result.className = 'ship-result show paid';
-    result.innerHTML = '<div class="ship-amount">' + formatPrice(data.rate) + '</div><div class="ship-note"><i class="fas fa-truck"></i> ' + data.note + '</div>';
-  } else {
-    result.className = 'ship-result show paid';
-    result.innerHTML = '<div class="ship-note"><i class="fab fa-whatsapp"></i> ' + data.note + ' untuk info ongkir</div>';
-  }
-}
-
 // ========== WISHLIST (localStorage) ==========
 let wishlist = JSON.parse(localStorage.getItem('meubelWishlist')) || [];
 
