@@ -10012,11 +10012,11 @@ document.addEventListener('DOMContentLoaded', function () {
 </script>
 <script>
   var groups = {
-    'Kasur': { subcategories: ['Kasur Hybrid', 'Kasur Memory Foam', 'Kasur Standar'] },
+    'Kasur': { subcategories: ['Kasur Hybrid', 'Kasur Memory Foam', 'Spring Bed', 'Kasur Busa', 'Kasur Standar'] },
     'Lemari': { subcategories: ['Lemari Pakaian', 'Lemari Sliding', 'Lemari Anak', 'Lemari Buku', 'Lemari Serbaguna'] },
     'Meja': { subcategories: ['Meja Makan', 'Meja Rias', 'Meja Tulis', 'Meja Belajar', 'Meja Tamu'] },
     'Rak & Aksesoris': { subcategories: ['Rak TV', 'Sideboard', 'Rak Sepatu', 'Rak Terbuka', 'Rak Serba Guna', 'Meja Tamu', 'Lemari Hias', 'Lemari Laci', 'Buffet', 'Tools Room'] },
-    'Kitchen Set': { subcategories: ['Kitchen Set', 'Kitchen Cabinet', 'Lemari Dapur'] },
+    'Kitchen Set': { subcategories: ['Kitchen Set Atas', 'Kitchen Set Bawah', 'Kitchen Set', 'Kitchen Cabinet', 'Lemari Dapur'] },
     'Office Set': { subcategories: ['Loker Besi', 'Lemari Kantor', 'Filing Cabinet', 'Kursi Kantor'] }
   };
 
@@ -10050,6 +10050,8 @@ document.addEventListener('DOMContentLoaded', function () {
     if (cat === 'kasur-busa') {
       if (id === 'ginko' || id === 'serena') return 'Kasur Hybrid';
       if (id === 'valerie' || id === 'olympedic') return 'Kasur Memory Foam';
+      if (id === 'jove' || id === 'iliad' || id === 'somnus') return 'Spring Bed';
+      if (id === 'zenitha' || id === 'irish') return 'Kasur Busa';
       return 'Kasur Standar';
     }
     if (cat === 'rak-aksesoris') {
@@ -10066,6 +10068,8 @@ document.addEventListener('DOMContentLoaded', function () {
       return 'Rak & Aksesoris';
     }
     if (cat === 'kitchen-set') {
+      if (id.indexOf('aks_kitchen_set_atas') === 0) return 'Kitchen Set Atas';
+      if (id.indexOf('aks_kitchen_set_bawah') === 0) return 'Kitchen Set Bawah';
       if (id.indexOf('aks_kitchen_cabinet') === 0) return 'Kitchen Cabinet';
       return 'Kitchen Set';
     }
