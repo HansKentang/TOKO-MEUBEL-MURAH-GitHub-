@@ -8,7 +8,9 @@ body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   -webkit-tap-highlight-color: transparent;
-  zoom: 1.1;
+}
+@media (min-width: 769px) {
+  body { zoom: 1.1; }
 }
 
 a { text-decoration: none; color: inherit; }
@@ -1192,8 +1194,9 @@ html { scroll-behavior: smooth; }
   .section-desc, .section-subtitle { font-size: 14px; }
   .whatsapp-fab { width: 50px; height: 50px; font-size: 26px; bottom: 76px; right: 16px; }
   .wa-tooltip { display: none; }
-  .testi-carousel { gap: 12px; padding: 12px 8px 20px; scrollbar-width: none; }
+  .testi-carousel { gap: 12px; padding: 12px 8px 20px; scrollbar-width: none; touch-action: pan-x pan-y; -webkit-overflow-scrolling: touch; }
   .testi-carousel::-webkit-scrollbar { display: none; }
+  .testi-carousel.stagger.visible > * { opacity: 1 !important; transform: none !important; }
   .testi-card { flex: 0 0 85%; padding: 20px; }
   .testi-card .testi-text { font-size: 12px; }
   .testi-card .testi-name { font-size: 13px; }
