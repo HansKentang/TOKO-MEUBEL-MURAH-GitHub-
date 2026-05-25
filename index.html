@@ -267,12 +267,53 @@
     .cat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 48px; max-width: 900px; margin-left: auto; margin-right: auto; }
     .cat-card { position: relative; overflow: hidden; cursor: pointer; transition: box-shadow .25s; }
     .cat-card:hover { box-shadow: 0 12px 40px rgba(0,0,0,.18); transform: translateY(-4px); }
-    .cat-card img { width: 100%; height: 280px; object-fit: cover; transition: transform .35s; }
+    .cat-card {
+      position: relative; overflow: hidden; cursor: pointer; border-radius: 12px;
+      transition: transform .3s cubic-bezier(.34,1.56,.64,1), box-shadow .3s;
+    }
+    .cat-card:hover { transform: translateY(-6px); box-shadow: 0 16px 48px rgba(198,40,40,.2); }
+    .cat-card img { width: 100%; height: 280px; object-fit: cover; transition: transform .5s; }
     .cat-card:hover img { transform: scale(1.08); }
-    .cat-card { transition: transform .3s, box-shadow .3s; }
-    .cat-card .overlay { position: absolute; bottom: 0; left: 0; right: 0; padding: 24px; background: linear-gradient(transparent, rgba(0,0,0,.7)); color: #fff; }
+    .cat-card .overlay {
+      position: absolute; bottom: 0; left: 0; right: 0; padding: 24px 24px 20px;
+      background: linear-gradient(transparent 30%, rgba(26,26,26,.85) 70%, rgba(198,40,40,.25));
+      color: #fff;
+    }
+    .cat-card .overlay i { font-size: 20px; margin-bottom: 6px; color: #ff5252; display: block; }
     .cat-card .overlay h3 { font-size: 18px; font-weight: 700; }
     .cat-card .overlay p { font-size: 13px; opacity: .7; margin-top: 2px; }
+    .cat-card::after {
+      content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 3px;
+      background: linear-gradient(90deg, #c62828, #ff5252); transform: scaleX(0);
+      transform-origin: left; transition: transform .35s; z-index: 2;
+    }
+    .cat-card:hover::after { transform: scaleX(1); }
+
+    /* ===== VIRTUAL TOUR ===== */
+    .tour-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 48px; }
+    .tour-card {
+      background: #fff; border-radius: 16px; overflow: hidden; cursor: pointer;
+      box-shadow: 0 4px 20px rgba(0,0,0,.06);
+      transition: transform .3s cubic-bezier(.34,1.56,.64,1), box-shadow .3s;
+    }
+    .tour-card:hover { transform: translateY(-6px); box-shadow: 0 16px 48px rgba(198,40,40,.15); }
+    .tour-images { display: grid; gap: 0; }
+    .tour-images img { width: 100%; height: 200px; object-fit: cover; transition: transform .4s; }
+    .tour-images img:first-child { height: 260px; }
+    .tour-card:hover .tour-images img { transform: scale(1.03); }
+    .tour-body {
+      padding: 20px 24px 24px; text-align: center;
+      border-top: 3px solid #c62828;
+    }
+    .tour-body i { font-size: 28px; color: #c62828; margin-bottom: 8px; }
+    .tour-body h3 { font-size: 18px; font-weight: 700; }
+    .tour-body p { font-size: 13px; color: #666; margin-top: 4px; line-height: 1.5; }
+    .tour-view-more {
+      display: inline-block; margin-top: 10px; font-size: 12px; font-weight: 600; color: #c62828;
+      transition: gap .2s; gap: 4px;
+    }
+    .tour-view-more i { font-size: 11px; transition: transform .2s; }
+    .tour-card:hover .tour-view-more i { transform: translateX(4px); }
 
     /* ===== TRUST FEATURES ===== */
     .trust-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-top: 48px; }
@@ -432,6 +473,9 @@
       .cat-card img { height: 200px; }
       .cat-card .overlay { padding: 16px; }
       .cat-card h3 { font-size: 15px; }
+      .tour-grid { grid-template-columns: 1fr; }
+      .tour-images img { height: 140px; }
+      .tour-images img:first-child { height: 180px; }
       .problem-grid { grid-template-columns: 1fr; }
       .prob-card .prob-top { padding: 36px 24px 0 24px; }
       .prob-card .prob-body { padding: 0 24px 28px; }
@@ -465,6 +509,8 @@
       .cat-card .overlay { padding: 12px; }
       .cat-card h3 { font-size: 13px; }
       .cat-card .overlay p { font-size: 11px; }
+      .tour-images img { height: 130px; }
+      .tour-images img:first-child { height: 170px; }
       .stat-item .num { font-size: 26px; }
       .stat-item .label { font-size: 11px; }
       .promo-card { flex: 0 0 230px; }
@@ -594,7 +640,7 @@
   <div class="container">
     <div class="reveal" style="text-align:center">
       <p class="sec-label">02 — Perjalanan</p>
-      <h2 class="sec-title">Sejak 2015,<br><span class="red">Ribuan Pelanggan</span> Percaya</h2>
+      <h2 class="sec-title">Sejak 2003,<br><span class="red">Ribuan Pelanggan</span> Percaya</h2>
       <p class="sec-desc" style="color:var(--slate);margin-left:auto;margin-right:auto">Dari showroom kecil di Banyumanik, kini jadi destinasi utama furniture murah berkualitas di Semarang.</p>
     </div>
     <div class="testimonial-block reveal">
@@ -605,6 +651,55 @@
     </div>
     <div class="chapter-cta reveal">
       <a href="koleksi.html" class="btn-red"><i class="fas fa-th-large"></i> Jelajahi Koleksi</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== VIRTUAL TOUR ===== -->
+<section class="alt" id="virtual-tour">
+  <div class="container">
+    <div class="reveal" style="text-align:center">
+      <p class="sec-label">Virtual Tour</p>
+      <h2 class="sec-title">Jelajahi <span class="red">Toko Kami</span></h2>
+      <p class="sec-desc" style="margin-left:auto;margin-right:auto">Lihat langsung showroom kami dari berbagai sudut.</p>
+    </div>
+    <div class="tour-grid stagger">
+      <div class="tour-card" onclick="openTourGallery('bagian-depan')">
+        <div class="tour-images">
+          <img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAHpPXvaDYwblQcyFi9KG8MQX7-Ffxj7MFa1Chyql7sXeT_D8qsM6Jg87ou3qg2J_JPWu-soUS5LYCFu9LUB3qqVWMhxGJ10-Sum7eqRCUfdAAb8RixJk_qploagM-dRpeHdzvM=w600-h450-k-no" alt="Bagian Depan" loading="lazy">
+          <img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAGZ7ZMi2giXdsNUPr2aCX3DNP5EudanHYUTbkqrB-gBcxhfY49J5lhAuK5459JrnG5_TiNpOBsGiO7Q_CNwOn09-0qH9t-oeVd37VCYqABjU4_khwMhAZQ9cnudkR7cufUvTr0NDA=w600-h450-k-no" alt="Bagian Depan" loading="lazy">
+        </div>
+        <div class="tour-body">
+          <i class="fas fa-store"></i>
+          <h3>Bagian Depan</h3>
+          <p>Showroom utama dengan berbagai koleksi furniture unggulan.</p>
+          <span class="tour-view-more">Lihat Semua Foto <i class="fas fa-arrow-right"></i></span>
+        </div>
+      </div>
+      <div class="tour-card" onclick="openTourGallery('bagian-belakang')">
+        <div class="tour-images">
+          <img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAEMmEoCeoGdPNlY8PMb43GR3-AhT3NtD0Ad9uGqrG6IAI331J_SLwraJdNyu9W_QYXM3aKFYBMhqhXU97GipReYN_JkrUeW2_oZVvbUlmKNsivWc7qC04ID_veen_4s8ebCejd5=w600-h450-k-no" alt="Bagian Belakang" loading="lazy">
+          <img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAGCXbPUy94fi_vjlI_Zj24btrgGDubRCT5OXzttVx5lV1-uS4Yxx3T-EcHRMqsMZA3kYPY0xDpHF3ii2EY2bBq2hVry2Mep71AGkJKLO1RTtaEs-tZK_C7D8Dx4wq1BXp2A9AfK=w600-h450-k-no" alt="Bagian Belakang" loading="lazy">
+        </div>
+        <div class="tour-body">
+          <i class="fas fa-warehouse"></i>
+          <h3>Bagian Belakang</h3>
+          <p>Area belakang dengan stok lengkap dan berbagai pilihan lainnya.</p>
+          <span class="tour-view-more">Lihat Semua Foto <i class="fas fa-arrow-right"></i></span>
+        </div>
+      </div>
+      <div class="tour-card" onclick="openTourGallery('lantai-1')">
+        <div class="tour-images">
+          <img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAE6HS7woQTWaPjwWnZKmnVj2Fn_Z8-qzXuWhMpP7GFLITnrpQAaxfKCm64OFLxmzWpZl2JWIBWKQENNVLnN5J0kLxtmdicuVidbSfBHak7V0KwDr435mRZhNwTysmz2AIomRI5G=w600-h450-k-no" alt="Lantai 1" loading="lazy">
+          <img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAHiZh09CmnaPBhs_0JajOWzKiS8eP1LOqfAcgO8kEFd2MC7yar-JyOGHyL5evg76XK6F8anAdzvBO63a6jhfRY2i9BPhlMqfo9wuCGJJU12H8OW1jhUhG_BFwhp6cxtrEmdqPFqgA=w600-h1067-k-no" alt="Lantai 1" loading="lazy">
+        </div>
+        <div class="tour-body">
+          <i class="fas fa-building"></i>
+          <h3>Lantai 1</h3>
+          <p>Lantai dengan display kasur, spring bed, dan perlengkapan tidur.</p>
+          <span class="tour-view-more">Lihat Semua Foto <i class="fas fa-arrow-right"></i></span>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -620,27 +715,27 @@
     <div class="cat-grid stagger">
       <a href="koleksi.html?kategori=kasur-busa" class="cat-card">
         <img src="https://asset.morefurniture.id/OLYMPIC/GINKO/ginko-4.webp" alt="Kasur Busa" loading="lazy">
-        <div class="overlay"><h3>Kasur Busa</h3><p>9 produk</p></div>
+        <div class="overlay"><i class="fas fa-bed"></i><h3>Kasur Busa</h3><p>9 produk</p></div>
       </a>
       <a href="koleksi.html?kategori=lemari" class="cat-card">
         <img src="https://asset.morefurniture.id/OLYMPIC/HESSIAN/LP/more-3pintu-1.webp" alt="Lemari" loading="lazy">
-        <div class="overlay"><h3>Lemari</h3><p>21 produk</p></div>
+        <div class="overlay"><i class="fas fa-boxes-stacked"></i><h3>Lemari</h3><p>21 produk</p></div>
       </a>
       <a href="koleksi.html?kategori=meja" class="cat-card">
         <img src="https://asset.morefurniture.id/OLYMPIC/ALMA/SETDTM/dtm-1.webp" alt="Meja Makan" loading="lazy">
-        <div class="overlay"><h3>Meja Makan</h3><p>2 produk</p></div>
+        <div class="overlay"><i class="fas fa-utensils"></i><h3>Meja Makan</h3><p>2 produk</p></div>
       </a>
       <a href="koleksi.html?kategori=meja-rias" class="cat-card">
         <img src="https://asset.morefurniture.id/PRODUCT/p-1145-1724666027-1.webp" alt="Meja Rias" loading="lazy">
-        <div class="overlay"><h3>Meja Rias</h3><p>4 produk</p></div>
+        <div class="overlay"><i class="fas fa-hand-sparkles"></i><h3>Meja Rias</h3><p>4 produk</p></div>
       </a>
       <a href="koleksi.html?kategori=rak-aksesoris" class="cat-card">
         <img src="img/activ/open-rack-cabinet-rak-terbuka-lula-orc-4a-activ-furniture.png" alt="Rak & Aksesoris" loading="lazy">
-        <div class="overlay"><h3>Rak & Aksesoris</h3><p>10 produk</p></div>
+        <div class="overlay"><i class="fas fa-layer-group"></i><h3>Rak &amp; Aksesoris</h3><p>10 produk</p></div>
       </a>
       <a href="koleksi.html?kategori=kitchen-set" class="cat-card">
         <img src="img/activ/kitchen-set-lotus-kc-120-activ-furniture.png" alt="Kitchen Set" loading="lazy">
-        <div class="overlay"><h3>Kitchen Set</h3><p>3 produk</p></div>
+        <div class="overlay"><i class="fas fa-fire"></i><h3>Kitchen Set</h3><p>3 produk</p></div>
       </a>
     </div>
   </div>
@@ -779,7 +874,7 @@
   <div class="container">
     <div>
       <div class="logo"><img src="img/logo.png" alt="Toko Meubel Murah Semarang" class="footer-logo-img"><span style="margin-left:8px;color:#c62828;font-weight:800;">TOKO MEUBEL MURAH</span></div>
-      <p>Toko furniture terpercaya di Semarang dengan kualitas terbaik dan harga bersahabat. Melayani sejak 2015.</p>
+      <p>Toko furniture terpercaya di Semarang dengan kualitas terbaik dan harga bersahabat. Melayani sejak 2003.</p>
       <p class="mt-3"><i class="fas fa-star text-yellow-500 mr-1"></i> Rating 4.3 (685 review)</p>
       <div class="trust-badges">
         <span><i class="fas fa-truck"></i> Gratis Ongkir</span>
@@ -826,6 +921,7 @@
   <div class="container">
     <a href="index.html" class="active"><i class="fas fa-home"></i> Home</a>
     <a href="koleksi.html"><i class="fas fa-th-large"></i> Koleksi</a>
+    <a href="promo.html"><i class="fas fa-fire"></i> Promo</a>
     <a href="cicilan.html"><i class="fas fa-credit-card"></i> Cicilan</a>
     <button onclick="openWishlist()" class="hide-mobile"><i class="far fa-heart"></i><span class="wishlist-badge">0</span> Wishlist</button>
     <button class="mobile-theme-toggle hide-mobile" onclick="toggleMobileTheme()" aria-label="Toggle dark mode"><i class="fas fa-moon"></i><span>Tema</span></button>
@@ -909,5 +1005,163 @@ if (testiCarousel && testiDots && testimonials.length > 1) {
   el.addEventListener('mousemove', function(e) { if (!isDown) return; e.preventDefault(); var x = e.pageX - el.offsetLeft; el.scrollLeft = scrollLeft - (x - startX); });
 })();
 </script>
+
+<!-- ===== TOUR GALLERY MODAL ===== -->
+<div id="tourGallery" class="tour-gallery" onclick="closeTourGallery(event)">
+  <button class="tour-gallery-close" onclick="event.stopPropagation();closeTourGallery()"><i class="fas fa-times"></i></button>
+  <button class="tour-gallery-nav prev" onclick="event.stopPropagation();scrollGallery(-1)" aria-label="Sebelumnya"><i class="fas fa-chevron-left"></i></button>
+  <button class="tour-gallery-nav next" onclick="event.stopPropagation();scrollGallery(1)" aria-label="Selanjutnya"><i class="fas fa-chevron-right"></i></button>
+  <div class="tour-gallery-counter" id="tourGalleryCounter"></div>
+  <div class="tour-gallery-content" id="tourGalleryContent" onclick="event.stopPropagation()"></div>
+</div>
+
+<style>
+  .tour-gallery {
+    display: none; position: fixed; inset: 0; z-index: 9999;
+    background: rgba(0,0,0,.92);
+    justify-content: center; align-items: center;
+  }
+  .tour-gallery.open { display: flex; }
+  .tour-gallery-close {
+    position: absolute; top: 16px; right: 16px; z-index: 10;
+    width: 44px; height: 44px; border-radius: 50%; border: none;
+    background: rgba(255,255,255,.15); color: #fff; font-size: 20px;
+    cursor: pointer; display: flex; align-items: center; justify-content: center;
+    transition: background .2s;
+  }
+  .tour-gallery-close:hover { background: rgba(255,255,255,.3); }
+  .tour-gallery-nav {
+    position: absolute; top: 50%; transform: translateY(-50%); z-index: 10;
+    width: 48px; height: 48px; border-radius: 50%; border: none;
+    background: rgba(255,255,255,.15); color: #fff; font-size: 20px;
+    cursor: pointer; display: flex; align-items: center; justify-content: center;
+    transition: background .2s, transform .2s; backdrop-filter: blur(4px);
+  }
+  .tour-gallery-nav:hover { background: rgba(255,255,255,.35); }
+  .tour-gallery-nav:active { transform: translateY(-50%) scale(.92); }
+  .tour-gallery-nav.prev { left: 16px; }
+  .tour-gallery-nav.next { right: 16px; }
+  .tour-gallery-counter {
+    position: absolute; bottom: 24px; left: 50%; transform: translateX(-50%); z-index: 10;
+    color: rgba(255,255,255,.6); font-size: 14px; font-weight: 500;
+    background: rgba(0,0,0,.4); padding: 6px 16px; border-radius: 20px;
+    backdrop-filter: blur(4px);
+  }
+  .tour-gallery-content {
+    display: flex; gap: 8px; padding: 40px 80px;
+    overflow-x: auto; overflow-y: hidden; cursor: grab;
+    width: 100%; height: 90vh; align-items: center;
+    scroll-behavior: smooth; -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; -ms-overflow-style: none;
+  }
+  .tour-gallery-content::-webkit-scrollbar { display: none; }
+  .tour-gallery-content img {
+    height: 92vh; width: auto; max-width: 98vw;
+    object-fit: contain; border-radius: 8px; flex-shrink: 0;
+    box-shadow: 0 8px 40px rgba(0,0,0,.5);
+    user-select: none; -webkit-user-drag: none;
+  }
+  @media (max-width: 768px) {
+    .tour-gallery-content { padding: 40px 12px; }
+    .tour-gallery-content img { height: 85vh; }
+    .tour-gallery-nav { width: 40px; height: 40px; font-size: 16px; }
+    .tour-gallery-nav.prev { left: 8px; }
+    .tour-gallery-nav.next { right: 8px; }
+  }
+  @media (max-width: 480px) {
+    .tour-gallery-content img { height: 75vh; max-width: 98vw; }
+    .tour-gallery-counter { bottom: 16px; font-size: 12px; padding: 4px 12px; }
+  }
+</style>
+
+<script>
+var tourGalleries = {
+  'lantai-1': [
+    'https://lh3.googleusercontent.com/gps-cs-s/APNQkAE6HS7woQTWaPjwWnZKmnVj2Fn_Z8-qzXuWhMpP7GFLITnrpQAaxfKCm64OFLxmzWpZl2JWIBWKQENNVLnN5J0kLxtmdicuVidbSfBHak7V0KwDr435mRZhNwTysmz2AIomRI5G=w800-h600-k-no',
+    'https://lh3.googleusercontent.com/gps-cs-s/APNQkAHiZh09CmnaPBhs_0JajOWzKiS8eP1LOqfAcgO8kEFd2MC7yar-JyOGHyL5evg76XK6F8anAdzvBO63a6jhfRY2i9BPhlMqfo9wuCGJJU12H8OW1jhUhG_BFwhp6cxtrEmdqPFqgA=w800-h1067-k-no'
+  ],
+  'bagian-belakang': [
+    'https://lh3.googleusercontent.com/gps-cs-s/APNQkAEMmEoCeoGdPNlY8PMb43GR3-AhT3NtD0Ad9uGqrG6IAI331J_SLwraJdNyu9W_QYXM3aKFYBMhqhXU97GipReYN_JkrUeW2_oZVvbUlmKNsivWc7qC04ID_veen_4s8ebCejd5=w800-h600-k-no',
+    'https://lh3.googleusercontent.com/gps-cs-s/APNQkAHSL4uvRtB9dbfOgww8Mj0CPa79izpSyqOq0W2ghMgtpm4VgHFqEZVrMi1LLlle-NIWpWESDVEnuMfIdoFRFOyezMMrFEQKoQoLzFSAJsJCe5usFfe9Mg8wnKOvNejvhEFfK4Fm=w800-h600-k-no',
+    'https://lh3.googleusercontent.com/gps-cs-s/APNQkAEV2l2MOldyftlk2qM7azlA0N4Cwh0iLIKktAA6QzvM64sqnb2e9l1F8xJrpL5R7IhouaV7NFjUiO9PWgtQpGWAUeImy9KOperBVgG9LsaUI-qGO_QE3eH8gTvBafP21-tG4u0=w800-h1067-k-no',
+    'https://lh3.googleusercontent.com/gps-cs-s/APNQkAGxH7FXpwClW6Trowr0MkilYcu456YmQd-u6XEO7BvTA9yNGHRozMuDdOpmsrVbnbexDwwNkbwJeAYAJmlNlzeOy-POYuEsOQ1TnkAhZF5BZ1BZ7eP3UsXjvE7nwyXaGzl-mkWuUg=w800-h1067-k-no',
+    'https://lh3.googleusercontent.com/gps-cs-s/APNQkAECFglHPno4BolnARtv8ixWE95L9ux4MTrW1kYPYtN8NushlDcxkaQONHP7-Ugcz_U0aKJ3Bq8pdwo48JkhWnv-rtqXlajI4kjwWC6u0DleyPMtzmfMM7rr07-M9Jukz3R78FE=w800-h600-k-no',
+    'https://lh3.googleusercontent.com/gps-cs-s/APNQkAGCXbPUy94fi_vjlI_Zj24btrgGDubRCT5OXzttVx5lV1-uS4Yxx3T-EcHRMqsMZA3kYPY0xDpHF3ii2EY2bBq2hVry2Mep71AGkJKLO1RTtaEs-tZK_C7D8Dx4wq1BXp2A9AfK=w800-h600-k-no',
+    'https://lh3.googleusercontent.com/gps-cs-s/APNQkAHsmFCXhF5pX-ZPYcticdydRFhLDTDxaIlgVeqK1yjWrTG0NVCjsFk_AzkMvovMkPWvsWlbjjdaxlqIhUH40AKS1TR3yJZQ-wH6xzd8umY-n_8FpztnHKjuiE-T08Ef8IbfyCLJnEootAVp=w800-h1067-k-no'
+  ],
+  'bagian-depan': [
+    'https://lh3.googleusercontent.com/gps-cs-s/APNQkAHpPXvaDYwblQcyFi9KG8MQX7-Ffxj7MFa1Chyql7sXeT_D8qsM6Jg87ou3qg2J_JPWu-soUS5LYCFu9LUB3qqVWMhxGJ10-Sum7eqRCUfdAAb8RixJk_qploagM-dRpeHdzvM=w800-h600-k-no',
+    'https://lh3.googleusercontent.com/gps-cs-s/APNQkAEf88frQX3LUf6iAVjUa-kb-imAV2r54I5YXaF_1xnIb3Zkh1SQDRNPawfu9y4ThOHpOflEr4LXjflX5uMF2MILGpC2ROjn_bvPTYu-1lkvyo4bRmiWIzh9KxZlCz6w5_is9Fke=w800-h450-k-no',
+    'https://lh3.googleusercontent.com/gps-cs-s/APNQkAGZ7ZMi2giXdsNUPr2aCX3DNP5EudanHYUTbkqrB-gBcxhfY49J5lhAuK5459JrnG5_TiNpOBsGiO7Q_CNwOn09-0qH9t-oeVd37VCYqABjU4_khwMhAZQ9cnudkR7cufUvTr0NDA=w800-h600-k-no',
+    'https://lh3.googleusercontent.com/gps-cs-s/APNQkAH8yOVJMf2A0wpSZIVJMO9flJCCTJoYrDgjjQxRr96dVJArko4lkRHCj_IxOQyWkRDXf3yCM3fGJgwjXg0Ysce5nxd6Da4H94g1mEaqsYfghsGstZaIv5hRQtsu0tAumZQ1Myz0VQ=w800-h600-k-no',
+    'https://lh3.googleusercontent.com/gps-cs-s/APNQkAEHwIjqPDnzIptnbPja_RHUxBJxAOpXZbCg2CdKWeU6Rydnux0d7SIxqz3g02UBy9JNCy5bzAjxIaipLki4FNT3JAyDHNoG2wXxM-uj87zfQPWjLsKXUW5-P8SUfyKjuFezrkUw=w600-h1067-k-no',
+    'https://lh3.googleusercontent.com/gps-cs-s/APNQkAHd8560Jf0BErcCha5Nod2c727saQk-zz-XkJIJEmun1S-qP63ZA-7AYxoRx-nR0MH_qUbd5EqfSNwVNLjRM-CqKpqDjieGCH9Fr-f8Te_G1cOa6kFYt7NRTZwhcAlIzsP5E2Ce=w800-h1067-k-no',
+    'https://lh3.googleusercontent.com/gps-cs-s/APNQkAHs1mPLWaoSgRJUWDZ0zqG5Ikg0jEMcGMZgkdQIi1bc78SxuNScb0R_v2KFAEyluagwATXn4TW8_ir1RULi3NDfQzUsH3pL8rxA_QapQCbJafLs2zP76P5SPZ9HX6qKVnb9-ykdHQ=w600-h1067-k-no',
+    'https://lh3.googleusercontent.com/gps-cs-s/APNQkAHYev5tp0pOWEzLRn5mJKzCjVxZxt104BLtzlBfAv9twlu63K08CKqz9kajDeP8_S6DUTq7g7inwHfoOZLQLVDLtLMqcpSN-iWV8Aa8ToY-rPO4GtSGHYEZTL98ZjOVYJb9txvY=w800-h1067-k-no'
+  ]
+};
+function openTourGallery(name) {
+  var imgs = tourGalleries[name];
+  if (!imgs) return;
+  var container = document.getElementById('tourGalleryContent');
+  container.innerHTML = '';
+  for (var i = 0; i < imgs.length; i++) {
+    var img = document.createElement('img');
+    img.src = imgs[i];
+    img.alt = name.replace('-', ' ');
+    img.loading = 'lazy';
+    img.draggable = false;
+    container.appendChild(img);
+  }
+  document.getElementById('tourGallery').classList.add('open');
+  document.body.style.overflow = 'hidden';
+  updateGalleryCounter(container);
+  // keyboard
+  document.addEventListener('keydown', tourGalleryKeydown);
+}
+function closeTourGallery(e) {
+  if (e && e.target && e.target !== document.getElementById('tourGallery') && e.target.closest) return;
+  document.getElementById('tourGallery').classList.remove('open');
+  document.body.style.overflow = '';
+  document.removeEventListener('keydown', tourGalleryKeydown);
+}
+function scrollGallery(dir) {
+  var container = document.getElementById('tourGalleryContent');
+  var w = container.querySelector('img');
+  if (!w) return;
+  container.scrollBy({ left: (w.offsetWidth + 8) * dir, behavior: 'smooth' });
+  setTimeout(function() { updateGalleryCounter(container); }, 350);
+}
+function updateGalleryCounter(container) {
+  var el = document.getElementById('tourGalleryCounter');
+  var imgs = container.querySelectorAll('img');
+  if (!el || !imgs.length) return;
+  var scrollLeft = container.scrollLeft;
+  var totalW = 0;
+  var idx = 0;
+  for (var i = 0; i < imgs.length; i++) {
+    var w = imgs[i].offsetWidth + 8;
+    if (scrollLeft >= totalW && scrollLeft < totalW + w) { idx = i; break; }
+    totalW += w;
+  }
+  el.textContent = (idx + 1) + ' / ' + imgs.length;
+}
+function tourGalleryKeydown(e) {
+  if (e.key === 'ArrowLeft') scrollGallery(-1);
+  else if (e.key === 'ArrowRight') scrollGallery(1);
+  else if (e.key === 'Escape') closeTourGallery();
+}
+// Drag scroll
+(function() {
+  var el = document.getElementById('tourGalleryContent');
+  var isDown = false, startX, scrollLeft;
+  el.addEventListener('mousedown', function(e) { isDown = true; startX = e.pageX - el.offsetLeft; scrollLeft = el.scrollLeft; el.style.cursor = 'grabbing'; });
+  el.addEventListener('mouseleave', function() { isDown = false; el.style.cursor = 'grab'; });
+  el.addEventListener('mouseup', function() { isDown = false; el.style.cursor = 'grab'; updateGalleryCounter(el); });
+  el.addEventListener('mousemove', function(e) { if (!isDown) return; e.preventDefault(); var x = e.pageX - el.offsetLeft; el.scrollLeft = scrollLeft - (x - startX); });
+  el.addEventListener('scroll', function() { updateGalleryCounter(el); });
+})();
+</script>
+
 </body>
 </html>

@@ -214,19 +214,27 @@ button { cursor: pointer; border: none; background: none; }
 .categories { padding: 100px 0; }
 .cat-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
 .cat-card {
-  position: relative; overflow: hidden; cursor: pointer;
-  transition: transform .25s ease, box-shadow .25s ease;
+  position: relative; overflow: hidden; cursor: pointer; border-radius: 12px;
+  transition: transform .3s cubic-bezier(.34,1.56,.64,1), box-shadow .3s;
 }
-.cat-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,.15); }
-.cat-card img { width: 100%; height: 280px; object-fit: cover; transition: transform .4s ease; }
-.cat-card:hover img { transform: scale(1.05); }
+.cat-card:hover { transform: translateY(-6px); box-shadow: 0 16px 48px rgba(198,40,40,.2); }
+.cat-card img { width: 100%; height: 280px; object-fit: cover; transition: transform .5s; }
+.cat-card:hover img { transform: scale(1.08); }
 .cat-card .cat-body {
   position: absolute; bottom: 0; left: 0; right: 0;
-  padding: 24px; background: linear-gradient(transparent, rgba(0,0,0,.6));
+  padding: 24px 24px 20px;
+  background: linear-gradient(transparent 30%, rgba(26,26,26,.85) 70%, rgba(198,40,40,.25));
   color: #fff;
 }
-.cat-card h3 { font-size: 18px; font-weight: 600; }
-.cat-card p { font-size: 13px; opacity: .8; margin-top: 2px; }
+.cat-card .cat-body i { font-size: 20px; margin-bottom: 6px; color: #ff5252; display: block; }
+.cat-card h3 { font-size: 18px; font-weight: 700; }
+.cat-card p { font-size: 13px; opacity: .7; margin-top: 2px; }
+.cat-card::after {
+  content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 3px;
+  background: linear-gradient(90deg, #c62828, #ff5252); transform: scaleX(0);
+  transform-origin: left; transition: transform .35s; z-index: 2;
+}
+.cat-card:hover::after { transform: scaleX(1); }
 
 /* ========== PROMO HORIZONTAL SCROLL ========== */
 .promo-scroll-section { padding: 100px 0; background: #f8f8f8; }
@@ -497,7 +505,6 @@ html { scroll-behavior: smooth; }
 .product-card:hover { transform: translateY(-4px); box-shadow: 0 10px 30px rgba(0,0,0,.08); border-color: #e8e8e8; }
 .product-card:active { transform: scale(0.97); }
 
-.cat-card { transition: transform .3s cubic-bezier(.34,1.56,.64,1), box-shadow .3s ease; }
 .cat-card:active { transform: scale(0.96); }
 
 .sosmed-card { transition: all .3s cubic-bezier(.34,1.56,.64,1); }
@@ -822,6 +829,7 @@ html { scroll-behavior: smooth; }
 [data-theme="dark"] .section-alt,
 [data-theme="dark"] .stats-bar,
 [data-theme="dark"] .trust-item,
+[data-theme="dark"] .tour-card,
 [data-theme="dark"] .promo-card,
 [data-theme="dark"] .prob-card,
 [data-theme="dark"] .product-card,
