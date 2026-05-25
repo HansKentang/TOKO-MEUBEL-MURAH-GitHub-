@@ -604,6 +604,7 @@ html { scroll-behavior: smooth; }
   #filterBottom { order: 2; width: 100%; }
   #parentFilters { order: 1; }
   #scrollHint { order: 0; width: 100%; }
+  #subFilters + #filterBottom { margin-top: 0; }
 }
 /* Mobile: variants before search (HTML order is already correct) */
 @media (max-width: 768px) {
