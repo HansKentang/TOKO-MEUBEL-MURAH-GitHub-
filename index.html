@@ -314,6 +314,7 @@
     }
     .tour-view-more i { font-size: 11px; transition: transform .2s; }
     .tour-card:hover .tour-view-more i { transform: translateX(4px); }
+    [data-theme="dark"] .tour-body p { color: #aaa; }
 
     /* ===== TRUST FEATURES ===== */
     .trust-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-top: 48px; }
@@ -511,6 +512,8 @@
       .cat-card .overlay p { font-size: 11px; }
       .tour-images img { height: 130px; }
       .tour-images img:first-child { height: 170px; }
+      .tour-images-3 img { height: 90px; }
+      .tour-images-3 img:first-child { height: 130px; }
       .stat-item .num { font-size: 26px; }
       .stat-item .label { font-size: 11px; }
       .promo-card { flex: 0 0 230px; }
@@ -666,8 +669,8 @@
     <div class="tour-grid stagger">
       <div class="tour-card" onclick="openTourGallery('bagian-depan')">
         <div class="tour-images">
-          <img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAHpPXvaDYwblQcyFi9KG8MQX7-Ffxj7MFa1Chyql7sXeT_D8qsM6Jg87ou3qg2J_JPWu-soUS5LYCFu9LUB3qqVWMhxGJ10-Sum7eqRCUfdAAb8RixJk_qploagM-dRpeHdzvM=w600-h450-k-no" alt="Bagian Depan" loading="lazy">
           <img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAGZ7ZMi2giXdsNUPr2aCX3DNP5EudanHYUTbkqrB-gBcxhfY49J5lhAuK5459JrnG5_TiNpOBsGiO7Q_CNwOn09-0qH9t-oeVd37VCYqABjU4_khwMhAZQ9cnudkR7cufUvTr0NDA=w600-h450-k-no" alt="Bagian Depan" loading="lazy">
+          <img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAHZf74a2nF5Ss87lMSLfM44AyenmtfRRo4SZNJ2OnG3sHoq7xryXBvlicMhZ7AkQBN_DxGZ9q6LWBJIhVaMgyMfSTHKi5tce9V9nwLFS3vOVyjWSqnqKddTmzM0HEVGW5Qd72g7=w600-h450-k-no" alt="Bagian Depan" loading="lazy">
         </div>
         <div class="tour-body">
           <i class="fas fa-store"></i>
@@ -691,7 +694,7 @@
       <div class="tour-card" onclick="openTourGallery('lantai-1')">
         <div class="tour-images">
           <img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAE6HS7woQTWaPjwWnZKmnVj2Fn_Z8-qzXuWhMpP7GFLITnrpQAaxfKCm64OFLxmzWpZl2JWIBWKQENNVLnN5J0kLxtmdicuVidbSfBHak7V0KwDr435mRZhNwTysmz2AIomRI5G=w600-h450-k-no" alt="Lantai 1" loading="lazy">
-          <img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAHiZh09CmnaPBhs_0JajOWzKiS8eP1LOqfAcgO8kEFd2MC7yar-JyOGHyL5evg76XK6F8anAdzvBO63a6jhfRY2i9BPhlMqfo9wuCGJJU12H8OW1jhUhG_BFwhp6cxtrEmdqPFqgA=w600-h1067-k-no" alt="Lantai 1" loading="lazy">
+          <img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAHDWgCwiLqeb7l1tOS5lMqHXdnAa3AOuSaBBh0aC8CBGgNXspVp3gjuI0F7mxcluDThphzAUDBD1jxy1KAqjNBSwvPqTt8fvbYS5jnpRQClyC6325aY7r65u88h6nGpO0EGps7SPg=w800-h380-k-no" alt="Lantai 1" loading="lazy">
         </div>
         <div class="tour-body">
           <i class="fas fa-building"></i>
@@ -1078,7 +1081,12 @@ if (testiCarousel && testiDots && testimonials.length > 1) {
 var tourGalleries = {
   'lantai-1': [
     'https://lh3.googleusercontent.com/gps-cs-s/APNQkAE6HS7woQTWaPjwWnZKmnVj2Fn_Z8-qzXuWhMpP7GFLITnrpQAaxfKCm64OFLxmzWpZl2JWIBWKQENNVLnN5J0kLxtmdicuVidbSfBHak7V0KwDr435mRZhNwTysmz2AIomRI5G=w800-h600-k-no',
-    'https://lh3.googleusercontent.com/gps-cs-s/APNQkAHiZh09CmnaPBhs_0JajOWzKiS8eP1LOqfAcgO8kEFd2MC7yar-JyOGHyL5evg76XK6F8anAdzvBO63a6jhfRY2i9BPhlMqfo9wuCGJJU12H8OW1jhUhG_BFwhp6cxtrEmdqPFqgA=w800-h1067-k-no'
+    'https://lh3.googleusercontent.com/gps-cs-s/APNQkAHDWgCwiLqeb7l1tOS5lMqHXdnAa3AOuSaBBh0aC8CBGgNXspVp3gjuI0F7mxcluDThphzAUDBD1jxy1KAqjNBSwvPqTt8fvbYS5jnpRQClyC6325aY7r65u88h6nGpO0EGps7SPg=w800-h380-k-no',
+    'https://lh3.googleusercontent.com/gps-cs-s/APNQkAFQwn8C8LEsR-2v9uYhWqVHq_3QlzXg1XZhQjVbmMZ3uHQg4eLitO4cPzsQRD6cuWMiW7zfgLUG1H2ISpEiWMKSPkLjiyitnMxy-ZTO7VxlkCdcdEDjcfJ0STEP9RirY3zX_0I=w800-h600-k-no',
+    'https://lh3.googleusercontent.com/gps-cs-s/APNQkAHWRRX0EhRcO4e5js5b2imey2AOM65Ojo4stDJiGnJ-kjmntMaVZgDspr3eegcqpHYroKInSj4VovT5II_G3jwZkfBbZ6n92eLupo0S0FMwjDXuhB17xPeNih8Ncj3rlmZueyGv=w800-h600-k-no',
+    'https://lh3.googleusercontent.com/gps-cs-s/APNQkAG5YRSwwHC-mLCLOQVXCr7569-6hu8G0AQ2DeIZzMad86O8X3iGWBCCiMkJPUo36zVrPGhH7nAqEHqkt9jfsNFvz2X25qpc3cch_OJju4sCChzwYlJ1A3GtWnQyqmSVIsIyv-vf=w800-h600-k-no',
+    'https://lh3.googleusercontent.com/gps-cs-s/APNQkAGwAqxwWOqex75P5D-T-O3h6rIYQAW6gfcikFai5UkedACOsmVlhcr-QOnzNPoS7RIyr1s-QrspoCgfH5NKvqrHMwWwivONWG02fAl_Fx95Tce6fTiv0r6cQUgx2-K_2P4GydUi=w800-h600-k-no',
+    'https://lh3.googleusercontent.com/gps-cs-s/APNQkAGWC3cK4Dm6reTS6uWFVifCvWagSzsrkNr9uQBDWXph3TOlMiB0reJDpko7-m4wDWlF40oSjr1JdxHiGS6zgcegb4C_6L_hyPm1j1phlhchdmvvJIgWiLsBm8H4j_S9zZm3hCM=w800-h600-k-no'
   ],
   'bagian-belakang': [
     'https://lh3.googleusercontent.com/gps-cs-s/APNQkAEMmEoCeoGdPNlY8PMb43GR3-AhT3NtD0Ad9uGqrG6IAI331J_SLwraJdNyu9W_QYXM3aKFYBMhqhXU97GipReYN_JkrUeW2_oZVvbUlmKNsivWc7qC04ID_veen_4s8ebCejd5=w800-h600-k-no',
