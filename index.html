@@ -114,6 +114,7 @@
     .hero-badge-item { display: flex; align-items: center; gap: 10px; font-size: 13px; color: rgba(255,255,255,.5); }
     .hero-badge-item i { font-size: 16px; color: #c62828; }
 
+
     /* ===== TRANSITION STRIP ===== */
     .transition-strip {
       position: relative;
@@ -127,7 +128,6 @@
       background: #fff;
       padding: 64px 0 56px;
       position: relative;
-      overflow: hidden;
     }
     .stats-bar::before {
       content: '';
@@ -156,6 +156,7 @@
       background: #eee;
     }
     .stat-item .num { font-size: 40px; font-weight: 900; color: var(--red); line-height: 1; }
+    .stat-item .num { background: linear-gradient(135deg, var(--red), #ef5350); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
     .stat-item .label { font-size: 13px; color: var(--slate); margin-top: 8px; font-weight: 500; }
     .stat-item:hover .num { color: #b71c1c; }
 
@@ -175,84 +176,42 @@
     }
     .sec-title { font-size: clamp(30px, 4vw, 42px); font-weight: 800; line-height: 1.1; margin-bottom: 16px; }
     .sec-desc { font-size: 15px; color: var(--slate); max-width: 500px; line-height: 1.7; }
-    .chapter-header { text-align: center; }
-    .chapter-header .sec-desc { margin-left: auto; margin-right: auto; }
 
-    /* ===== PROBLEM SECTION ===== */
-    #problem {
-      position: relative; overflow: hidden;
-    }
-    /* -- glow background -- */
-    #problem::before {
-      content: ''; position: absolute; top: -120px; right: -80px; width: 400px; height: 400px;
-      background: radial-gradient(circle, rgba(198,40,40,0.04) 0%, transparent 70%);
-      border-radius: 50%; pointer-events: none;
-    }
-    #problem::after {
-      content: ''; position: absolute; bottom: -80px; left: -80px; width: 300px; height: 300px;
-      background: radial-gradient(circle, rgba(198,40,40,0.03) 0%, transparent 70%);
-      border-radius: 50%; pointer-events: none;
-    }
-    .prob-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 48px; }
     .prob-card {
-      background: #fff; padding: 0; border-radius: 16px; overflow: hidden;
-      position: relative;
-      transition: transform .3s cubic-bezier(.34,1.56,.64,1), box-shadow .35s;
-      cursor: default;
+      background: #fff; border-radius: 12px; padding: 28px;
+      box-shadow: 0 2px 16px rgba(0,0,0,.06);
+      border-left: 4px solid var(--red);
+      transition: transform .25s ease, box-shadow .25s ease;
     }
-    .prob-card::before {
-      content: ''; position: absolute; top: 0; left: 0; right: 0;
-      height: 3px; background: var(--red); opacity: 0.6;
+    .prob-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 32px rgba(0,0,0,.1);
     }
-    .prob-card:hover { transform: translateY(-8px); box-shadow: 0 20px 60px rgba(0,0,0,.1); }
-    .prob-card:active { transform: scale(0.97); }
-    .prob-card .prob-top {
-      padding: 44px 28px 0 28px; text-align: center;
-      position: relative;
-    }
-    .prob-card .prob-number {
-      position: absolute; top: 12px; left: 16px;
-      font-size: 40px; font-weight: 800; line-height: 1;
-      color: var(--red); opacity: 0.06; pointer-events: none;
-      font-family: 'Inter', sans-serif;
-    }
-    .prob-card .prob-top .icon {
-      width: 60px; height: 60px; border-radius: 14px;
+    .prob-card:nth-child(even) { border-left-color: var(--green); }
+    .prob-card .icon {
+      width: 44px; height: 44px; border-radius: 10px;
       display: flex; align-items: center; justify-content: center;
-      font-size: 24px; margin: 0 auto 16px;
-      position: relative;
+      font-size: 18px; margin-bottom: 14px;
     }
-    .prob-card .prob-top .icon::after {
-      content: ''; position: absolute; inset: -4px;
-      border-radius: 18px; border: 1px solid rgba(198,40,40,0.08);
+    .prob-card:nth-child(odd) .icon { background: #fef2f2; color: var(--red); }
+    .prob-card:nth-child(even) .icon { background: #f0fdf4; color: var(--green); }
+    .prob-card h3 { font-size: 16px; font-weight: 700; margin-bottom: 8px; }
+    .prob-card p { font-size: 13.5px; color: #666; line-height: 1.7; margin: 0; }
+
+    .section-divider {
+      overflow: hidden; white-space: nowrap;
+      background: var(--red); color: #fff; padding: 16px 0;
+      font-size: 16px; font-weight: 700; letter-spacing: 3px;
+      text-transform: uppercase;
     }
-    .prob-card:nth-child(1) .prob-top .icon,
-    .prob-card:nth-child(2) .prob-top .icon,
-    .prob-card:nth-child(3) .prob-top .icon { background: #fef2f2; color: var(--red); }
-    .prob-card h3 { font-size: 18px; font-weight: 700; margin-bottom: 8px; }
-    .prob-card .prob-body {
-      padding: 0 28px 32px;
+    .section-divider .marquee {
+      display: inline-block;
+      animation: marquee 30s linear infinite;
     }
-    .prob-card p { font-size: 13.5px; color: #666; line-height: 1.75; margin: 0; }
-    .prob-card .prob-bar {
-      height: 3px; background: #f0f0f0; border-radius: 0 0 16px 16px; overflow: hidden;
+    @keyframes marquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
     }
-    .prob-card .prob-bar span {
-      display: block; height: 100%; width: 0;
-      transition: width .6s cubic-bezier(.34,1.56,.64,1);
-    }
-    .prob-card:hover .prob-bar span { width: 100%; }
-    .prob-card:nth-child(1) .prob-bar span,
-    .prob-card:nth-child(2) .prob-bar span,
-    .prob-card:nth-child(3) .prob-bar span { background: var(--red); }
-    .chapter-cta { margin-top: 48px; text-align: center; }
-    .chapter-cta p { font-size: 14px; color: #999; margin-bottom: 16px; }
-    .chapter-cta .btn-red {
-      border-radius: 12px; padding: 14px 36px; font-size: 14px;
-      transition: transform .25s, box-shadow .25s;
-      box-shadow: 0 4px 16px rgba(198,40,40,.25);
-    }
-    .chapter-cta .btn-red:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(198,40,40,.35); }
 
     /* ===== TESTIMONIAL DARK ===== */
     .testimonial-block { max-width: 640px; margin: 48px auto 0; text-align: center; padding: 40px; border-top: 1px solid rgba(255,255,255,.08); }
@@ -262,32 +221,6 @@
     .testimonial-block .author span { color: var(--slate); font-family: 'Inter', sans-serif; font-weight: 400; }
     .testimonial-block .stars { margin-top: 8px; }
     .testimonial-block .stars i { color: var(--yellow); font-size: 14px; }
-
-    /* ===== CATEGORY GRID ===== */
-    .cat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 48px; max-width: 900px; margin-left: auto; margin-right: auto; }
-    .cat-card { position: relative; overflow: hidden; cursor: pointer; transition: box-shadow .25s; }
-    .cat-card:hover { box-shadow: 0 12px 40px rgba(0,0,0,.18); transform: translateY(-4px); }
-    .cat-card {
-      position: relative; overflow: hidden; cursor: pointer; border-radius: 12px;
-      transition: transform .3s cubic-bezier(.34,1.56,.64,1), box-shadow .3s;
-    }
-    .cat-card:hover { transform: translateY(-6px); box-shadow: 0 16px 48px rgba(198,40,40,.2); }
-    .cat-card img { width: 100%; height: 280px; object-fit: cover; transition: transform .5s; }
-    .cat-card:hover img { transform: scale(1.08); }
-    .cat-card .overlay {
-      position: absolute; bottom: 0; left: 0; right: 0; padding: 24px 24px 20px;
-      background: linear-gradient(transparent 30%, rgba(26,26,26,.85) 70%, rgba(198,40,40,.25));
-      color: #fff;
-    }
-    .cat-card .overlay i { font-size: 20px; margin-bottom: 6px; color: #ff5252; display: block; }
-    .cat-card .overlay h3 { font-size: 18px; font-weight: 700; }
-    .cat-card .overlay p { font-size: 13px; opacity: .7; margin-top: 2px; }
-    .cat-card::after {
-      content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 3px;
-      background: linear-gradient(90deg, #c62828, #ff5252); transform: scaleX(0);
-      transform-origin: left; transition: transform .35s; z-index: 2;
-    }
-    .cat-card:hover::after { transform: scaleX(1); }
 
     /* ===== VIRTUAL TOUR ===== */
     .tour-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 48px; }
@@ -466,8 +399,6 @@
     @media (max-width: 992px) {
       .stats-bar .container { grid-template-columns: repeat(2, 1fr); gap: 8px; }
       .stat-item:not(:last-child)::after { display: none; }
-      .cat-grid { grid-template-columns: repeat(2, 1fr); }
-      .problem-grid { grid-template-columns: repeat(2, 1fr); }
       .trust-grid { grid-template-columns: repeat(2, 1fr); }
       .footer .container { grid-template-columns: repeat(2, 1fr); gap: 32px; }
     }
@@ -477,16 +408,9 @@
       .hero h1 { font-size: clamp(34px, 9vw, 44px); }
       .hero p { font-size: 15px; margin-bottom: 28px; }
       .hero-badges { gap: 16px; margin-top: 32px; }
-      .cat-grid { grid-template-columns: repeat(2, 1fr); }
-      .cat-card img { height: 200px; }
-      .cat-card .overlay { padding: 16px; }
-      .cat-card h3 { font-size: 15px; }
       .tour-grid { grid-template-columns: 1fr; }
       .tour-images img { height: 140px; }
       .tour-images img:first-child { height: 180px; }
-      .problem-grid { grid-template-columns: 1fr; }
-      .prob-card .prob-top { padding: 36px 24px 0 24px; }
-      .prob-card .prob-body { padding: 0 24px 28px; }
       .stats-bar { padding: 24px 0; }
       .stats-bar .container { grid-template-columns: repeat(2, 1fr); gap: 0; }
       .stat-item .num { font-size: 32px; }
@@ -513,10 +437,6 @@
       .hero-badge-item { font-size: 11px; gap: 6px; }
       .hero-badge-item i { font-size: 13px; }
       .hero { min-height: 80vh; overflow: visible; }
-      .cat-card img { height: 130px; }
-      .cat-card .overlay { padding: 12px; }
-      .cat-card h3 { font-size: 13px; }
-      .cat-card .overlay p { font-size: 11px; }
       .tour-images img { height: 130px; }
       .tour-images img:first-child { height: 170px; }
       .tour-images-3 img { height: 90px; }
@@ -524,14 +444,12 @@
       .stat-item .num { font-size: 26px; }
       .stat-item .label { font-size: 11px; }
       .promo-card { flex: 0 0 230px; }
-      .prob-card h3 { font-size: 16px; }
       .newsletter h2 { font-size: 24px; }
       .sec-title { font-size: clamp(20px, 5vw, 26px); }
       .btn-red, .btn-outline-light, .btn-wa { padding: 10px 20px; font-size: 13px; }
+      .newsletter { padding-bottom: 80px; }
     }
     @media (max-width: 480px) {
-      .cat-card img { height: 160px; }
-      .cat-grid { gap: 12px; }
       .stats-bar .container { gap: 12px; }
       .stat-item .num { font-size: 26px; }
     }
@@ -588,84 +506,92 @@
 <!-- STATS -->
 <section class="stats-bar" id="stats">
   <div class="container">
-    <div class="stat-item reveal"><div class="num">685+</div><div class="label">Pelanggan Puas</div></div>
-    <div class="stat-item reveal"><div class="num">500+</div><div class="label">Produk Tersedia</div></div>
-    <div class="stat-item reveal"><div class="num">20+</div><div class="label">Tahun Pengalaman</div></div>
-    <div class="stat-item reveal"><div class="num">4.3</div><div class="label">Rating Google</div></div>
+    <div class="stat-item reveal"><div class="num" data-target="685">0</div><div class="label">Pelanggan Puas</div></div>
+    <div class="stat-item reveal"><div class="num" data-target="500">0</div><div class="label">Produk Tersedia</div></div>
+    <div class="stat-item reveal"><div class="num" data-target="20">0</div><div class="label">Tahun Pengalaman</div></div>
+    <div class="stat-item reveal"><div class="num" data-target="4.3">0</div><div class="label">Rating Google</div></div>
   </div>
 </section>
 
-<!-- CHAPTER 1: MASALAH -->
-<section id="problem">
-  <div class="container">
-    <div class="chapter-header reveal">
-      <p class="sec-label">01 — Masalah</p>
-      <h2 class="sec-title">Cari Mebel Berkualitas<br><span class="red">Tanpa Mahal?</span></h2>
-      <p class="sec-desc">Tiga masalah utama yang sering dihadapi saat beli furniture:</p>
-    </div>
-    <div class="problem-grid stagger">
-      <div class="prob-card">
-        <span class="prob-number">01</span>
-        <div class="prob-top">
-          <div class="icon"><i class="fas fa-tag"></i></div>
-          <h3>Harga Selangit</h3>
-        </div>
-        <div class="prob-body">
-          <p>Furniture berkualitas identik dengan harga mahal. Markup tinggi tanpa kualitas sepadan.</p>
-        </div>
-        <div class="prob-bar"><span></span></div>
-      </div>
-      <div class="prob-card">
-        <span class="prob-number">02</span>
-        <div class="prob-top">
-          <div class="icon"><i class="fas fa-box-open"></i></div>
-          <h3>Kualitas Instan</h3>
-        </div>
-        <div class="prob-body">
-          <p>Produk murah tapi cepat rusak. Material bawah, finishing asal, tidak tahan lama.</p>
-        </div>
-        <div class="prob-bar"><span></span></div>
-      </div>
-      <div class="prob-card">
-        <span class="prob-number">03</span>
-        <div class="prob-top">
-          <div class="icon"><i class="fas fa-money-bill-wave"></i></div>
-          <h3>Ongkir Membengkak</h3>
-        </div>
-        <div class="prob-body">
-          <p>Biaya kirim + rakit bikin kantong jebol. Belum lagi kalau ada kerusakan.</p>
-        </div>
-        <div class="prob-bar"><span></span></div>
-      </div>
-    </div>
-    <div class="chapter-cta reveal">
-      <p>Kami hadir sebagai solusi.</p>
-      <a href="#solution" class="btn-red"><i class="fas fa-arrow-down"></i> Lihat Solusi</a>
-    </div>
-  </div>
-</section>
-
-<!-- CHAPTER 2: PERJALANAN + TESTIMONIAL -->
-<section class="dark" id="journey">
+<!-- CHAPTER 1 & 2: MASALAH + SOLUSI -->
+<section id="solution" class="pat-diagonal">
   <div class="container">
     <div class="reveal" style="text-align:center">
-      <p class="sec-label">02 — Perjalanan</p>
-      <h2 class="sec-title">Sejak 2003,<br><span class="red">Ribuan Pelanggan</span> Percaya</h2>
-      <p class="sec-desc" style="color:var(--slate);margin-left:auto;margin-right:auto">Dari showroom kecil di Banyumanik, kini jadi destinasi utama furniture murah berkualitas di Semarang.</p>
+      <p class="sec-label">01 — Masalah &amp; Solusi</p>
+      <h2 class="sec-title">Ada Masalah? <span class="red">Kami Solusinya</span></h2>
+      <p class="sec-desc" style="margin-left:auto;margin-right:auto">Tiga keluhan utama &mdash; satu jawaban: koleksi lengkap harga ramah.</p>
     </div>
-    <div class="testimonial-block reveal">
-      <i class="fas fa-quote-left"></i>
-      <blockquote>"Sangat puas beli lemari di sini! Harganya terjangkau, kualitas kayunya bagus, pengiriman gratis sampai rumah di Tembalang."</blockquote>
-      <div class="author">Budi Santoso <span>— Tembalang, Semarang</span></div>
-      <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
-    </div>
-    <div class="chapter-cta reveal">
-      <a href="koleksi.html" class="btn-red"><i class="fas fa-th-large"></i> Jelajahi Koleksi</a>
+    <div class="problem-solution-grid stagger">
+
+      <div class="prob-card">
+        <div class="icon"><i class="fas fa-xmark"></i></div>
+        <h3>Harga Selangit</h3>
+        <p>Furniture berkualitas identik dengan harga mahal. Markup tinggi tanpa kualitas sepadan.</p>
+      </div>
+      <div class="prob-card">
+        <div class="icon"><i class="fas fa-check-circle"></i></div>
+        <h3>Harga Murah</h3>
+        <p>Langsung dari pabrik, tanpa markup nakal. Harga bersahabat di kantong.</p>
+      </div>
+
+      <div class="prob-card">
+        <div class="icon"><i class="fas fa-xmark"></i></div>
+        <h3>Kualitas Instan</h3>
+        <p>Produk murah tapi cepat rusak. Material bawah, finishing asal, tidak tahan lama.</p>
+      </div>
+      <div class="prob-card">
+        <div class="icon"><i class="fas fa-check-circle"></i></div>
+        <h3>Kualitas Terjamin</h3>
+        <p>Material pilihan, finishing rapi, dan bergaransi resmi. Awet bertahun-tahun.</p>
+      </div>
+
+      <div class="prob-card">
+        <div class="icon"><i class="fas fa-xmark"></i></div>
+        <h3>Ongkir Membengkak</h3>
+        <p>Biaya kirim + rakit bikin kantong jebol. Belum lagi kalau ada kerusakan.</p>
+      </div>
+      <div class="prob-card">
+        <div class="icon"><i class="fas fa-check-circle"></i></div>
+        <h3>Gratis Ongkir + Rakit</h3>
+        <p>Bebas biaya kirim Semarang &amp; sekitarnya. Tim siap rakit di tempat.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ===== VIRTUAL TOUR ===== -->
+<div class="section-divider"><span class="marquee">TOKO MEUBEL MURAH&nbsp;&nbsp;&nbsp;&nbsp;&mdash;&nbsp;&nbsp;&nbsp;&nbsp;TOKO MEUBEL MURAH&nbsp;&nbsp;&nbsp;&nbsp;&mdash;&nbsp;&nbsp;&nbsp;&nbsp;TOKO MEUBEL MURAH&nbsp;&nbsp;&nbsp;&nbsp;&mdash;&nbsp;&nbsp;&nbsp;&nbsp;TOKO MEUBEL MURAH&nbsp;&nbsp;&nbsp;&nbsp;&mdash;&nbsp;&nbsp;&nbsp;&nbsp;TOKO MEUBEL MURAH&nbsp;&nbsp;&nbsp;&nbsp;&mdash;&nbsp;&nbsp;&nbsp;&nbsp;TOKO MEUBEL MURAH&nbsp;&nbsp;&nbsp;&nbsp;&mdash;&nbsp;&nbsp;&nbsp;&nbsp;TOKO MEUBEL MURAH&nbsp;&nbsp;&nbsp;&nbsp;&mdash;&nbsp;&nbsp;&nbsp;&nbsp;TOKO MEUBEL MURAH&nbsp;&nbsp;&nbsp;&nbsp;&mdash;&nbsp;&nbsp;&nbsp;&nbsp;TOKO MEUBEL MURAH&nbsp;&nbsp;&nbsp;&nbsp;&mdash;&nbsp;&nbsp;&nbsp;&nbsp;TOKO MEUBEL MURAH&nbsp;&nbsp;&nbsp;&nbsp;&mdash;&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+
+<!-- TRUST FEATURES -->
+<section class="alt pat-cross" id="trust">
+  <div class="container">
+    <div class="reveal" style="text-align:center">
+      <p class="sec-label">Layanan</p>
+      <h2 class="sec-title">Kenapa Pilih Kami?</h2>
+      <p class="sec-desc" style="margin-left:auto;margin-right:auto">Kami berkomitmen memberikan pelayanan terbaik untuk setiap pelanggan.</p>
+    </div>
+    <div class="trust-grid stagger">
+      <div class="trust-item"><i class="fas fa-truck"></i><h4>Gratis Ongkir</h4><p>Semarang & sekitarnya</p></div>
+      <div class="trust-item"><i class="fas fa-tools"></i><h4>Gratis Rakit</h4><p>Tim rakit di tempat</p></div>
+      <div class="trust-item"><i class="fas fa-shield-alt"></i><h4>Garansi</h4><p>Kerusakan ditanggung</p></div>
+      <div class="trust-item"><i class="fas fa-headset"></i><h4>CS 08.00-20.00</h4><p>Siap bantu Anda</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIAL CAROUSEL -->
+<section class="alt" id="testimoni">
+  <div class="container">
+    <div class="reveal" style="text-align:center">
+      <p class="sec-label">Testimoni</p>
+      <h2 class="sec-title">Apa Kata <span class="red">Pelanggan</span>?</h2>
+      <p class="sec-desc" style="margin-left:auto;margin-right:auto">Mereka sudah merasakan kualitas furniture kami.</p>
+    </div>
+    <div class="testi-carousel stagger" id="testiCarousel"></div>
+    <div class="testi-dots" id="testiDots" style="display:flex;justify-content:center;gap:8px;margin-top:16px"></div>
+  </div>
+</section>
+
+<!-- VIRTUAL TOUR -->
 <section class="alt" id="virtual-tour">
   <div class="container">
     <div class="reveal" style="text-align:center">
@@ -714,140 +640,81 @@
   </div>
 </section>
 
-<!-- CHAPTER 3: SOLUSI + CATEGORIES -->
-<section id="solution" class="pat-diagonal">
-  <div class="container">
-    <div class="reveal">
-      <p class="sec-label">03 — Solusi</p>
-      <h2 class="sec-title">Koleksi Lengkap<br><span class="red">Harga Ramah</span></h2>
-      <p class="sec-desc">Dari lemari hingga kursi tamu, semua dengan kualitas terbaik di kelasnya.</p>
+<!-- CHAPTER 3: PERJALANAN + TESTIMONIAL -->
+<section class="dark" id="journey">
+  <div class="journey-bg">
+    <div class="bg-track">
+      <!-- 6 Google Maps photos, each duplicated for seamless loop -->
+      <div class="bg-card"><img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAFo9UjhK1po21-sgmUrUNbuk6B7oiU5iBgUWgiFUmyPT1Ual7bcUHmVFrLmFBlsFqdQ1tJpO4YUv7yTH-BwV-bSx0JRJw9cQsifcNvGQYihy_4iOJTr75hqUaO-fdXeGIGf2Kpi=w800-h600" alt="Toko Mebel Murah" loading="lazy"></div>
+      <div class="bg-card"><img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAG5YRSwwHC-mLCLOQVXCr7569-6hu8G0AQ2DeIZzMad86O8X3iGWBCCiMkJPUo36zVrPGhH7nAqEHqkt9jfsNFvz2X25qpc3cch_OJju4sCChzwYlJ1A3GtWnQyqmSVIsIyv-vf=w800-h600" alt="Toko Mebel Murah" loading="lazy"></div>
+      <div class="bg-card"><img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAGwAqxwWOqex75P5D-T-O3h6rIYQAW6gfcikFai5UkedACOsmVlhcr-QOnzNPoS7RIyr1s-QrspoCgfH5NKvqrHMwWwivONWG02fAl_Fx95Tce6fTiv0r6cQUgx2-K_2P4GydUi=w800-h600" alt="Toko Mebel Murah" loading="lazy"></div>
+      <div class="bg-card"><img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAH6fD7Hn1Q3aVJWdper13kncZjTEmZ9V_VzoZb_ScrygGGqe7vS_t4ZnMIwkfc0AsKmzARHZng8PnDtQBRDM_cZ6xOS0Mig-YplPE2slurFlcr28-tea7_DqAVfpaT1uggN04Y=w800-h600" alt="Toko Mebel Murah" loading="lazy"></div>
+      <div class="bg-card"><img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAFo6BEDK-P4w3JybX-EPtEs7rjlb_kzc8iTsL6podLeYLAX9vzyHQyTADnUakukXkQvx3ZMh2h5foXRQV09xUBTfcUFUEFkOMrSIJuL9uH2x5sZhW0BWaz9BzqVbET1WbMdaUs=w800-h600" alt="Toko Mebel Murah" loading="lazy"></div>
+      <div class="bg-card"><img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAHzEDBUlTgmdRaOmoK-_Q1VPPIEl3l1JXUXzr14L4r-Sq1BBOY2MRGv6IJFryjAIgOq42Ikj_C7PmWN-x-a1C8kim-8Mn58vjh7nTgxdXp8k-vWjGpkHw0QgS93dwbHZxehl3A=w800-h600" alt="Toko Mebel Murah" loading="lazy"></div>
+      <!-- duplicate for seamless loop -->
+      <div class="bg-card"><img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAFo9UjhK1po21-sgmUrUNbuk6B7oiU5iBgUWgiFUmyPT1Ual7bcUHmVFrLmFBlsFqdQ1tJpO4YUv7yTH-BwV-bSx0JRJw9cQsifcNvGQYihy_4iOJTr75hqUaO-fdXeGIGf2Kpi=w800-h600" alt="Toko Mebel Murah" loading="lazy"></div>
+      <div class="bg-card"><img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAG5YRSwwHC-mLCLOQVXCr7569-6hu8G0AQ2DeIZzMad86O8X3iGWBCCiMkJPUo36zVrPGhH7nAqEHqkt9jfsNFvz2X25qpc3cch_OJju4sCChzwYlJ1A3GtWnQyqmSVIsIyv-vf=w800-h600" alt="Toko Mebel Murah" loading="lazy"></div>
+      <div class="bg-card"><img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAGwAqxwWOqex75P5D-T-O3h6rIYQAW6gfcikFai5UkedACOsmVlhcr-QOnzNPoS7RIyr1s-QrspoCgfH5NKvqrHMwWwivONWG02fAl_Fx95Tce6fTiv0r6cQUgx2-K_2P4GydUi=w800-h600" alt="Toko Mebel Murah" loading="lazy"></div>
+      <div class="bg-card"><img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAH6fD7Hn1Q3aVJWdper13kncZjTEmZ9V_VzoZb_ScrygGGqe7vS_t4ZnMIwkfc0AsKmzARHZng8PnDtQBRDM_cZ6xOS0Mig-YplPE2slurFlcr28-tea7_DqAVfpaT1uggN04Y=w800-h600" alt="Toko Mebel Murah" loading="lazy"></div>
+      <div class="bg-card"><img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAFo6BEDK-P4w3JybX-EPtEs7rjlb_kzc8iTsL6podLeYLAX9vzyHQyTADnUakukXkQvx3ZMh2h5foXRQV09xUBTfcUFUEFkOMrSIJuL9uH2x5sZhW0BWaz9BzqVbET1WbMdaUs=w800-h600" alt="Toko Mebel Murah" loading="lazy"></div>
+      <div class="bg-card"><img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAHzEDBUlTgmdRaOmoK-_Q1VPPIEl3l1JXUXzr14L4r-Sq1BBOY2MRGv6IJFryjAIgOq42Ikj_C7PmWN-x-a1C8kim-8Mn58vjh7nTgxdXp8k-vWjGpkHw0QgS93dwbHZxehl3A=w800-h600" alt="Toko Mebel Murah" loading="lazy"></div>
     </div>
-    <div class="cat-grid stagger">
-      <a href="koleksi.html?kategori=kasur-busa" class="cat-card">
-        <img src="https://asset.morefurniture.id/OLYMPIC/GINKO/ginko-4.webp" alt="Kasur Busa" loading="lazy">
-        <div class="overlay"><i class="fas fa-bed"></i><h3>Kasur Busa</h3><p>9 produk</p></div>
-      </a>
-      <a href="koleksi.html?kategori=lemari" class="cat-card">
-        <img src="https://asset.morefurniture.id/OLYMPIC/HESSIAN/LP/more-3pintu-1.webp" alt="Lemari" loading="lazy">
-        <div class="overlay"><i class="fas fa-boxes-stacked"></i><h3>Lemari</h3><p>21 produk</p></div>
-      </a>
-      <a href="koleksi.html?kategori=meja" class="cat-card">
-        <img src="https://asset.morefurniture.id/OLYMPIC/ALMA/SETDTM/dtm-1.webp" alt="Meja Makan" loading="lazy">
-        <div class="overlay"><i class="fas fa-utensils"></i><h3>Meja Makan</h3><p>2 produk</p></div>
-      </a>
-      <a href="koleksi.html?kategori=meja-rias" class="cat-card">
-        <img src="https://asset.morefurniture.id/PRODUCT/p-1145-1724666027-1.webp" alt="Meja Rias" loading="lazy">
-        <div class="overlay"><i class="fas fa-hand-sparkles"></i><h3>Meja Rias</h3><p>4 produk</p></div>
-      </a>
-      <a href="koleksi.html?kategori=rak-aksesoris" class="cat-card">
-        <img src="img/activ/open-rack-cabinet-rak-terbuka-lula-orc-4a-activ-furniture.png" alt="Rak & Aksesoris" loading="lazy">
-        <div class="overlay"><i class="fas fa-layer-group"></i><h3>Rak &amp; Aksesoris</h3><p>10 produk</p></div>
-      </a>
-      <a href="koleksi.html?kategori=kitchen-set" class="cat-card">
-        <img src="img/activ/kitchen-set-lotus-kc-120-activ-furniture.png" alt="Kitchen Set" loading="lazy">
-        <div class="overlay"><i class="fas fa-fire"></i><h3>Kitchen Set</h3><p>3 produk</p></div>
-      </a>
-    </div>
+    <div class="journey-overlay"></div>
   </div>
-</section>
-
-<!-- TRUST FEATURES -->
-<section class="alt pat-cross" id="trust">
   <div class="container">
     <div class="reveal" style="text-align:center">
-      <p class="sec-label">Layanan</p>
-      <h2 class="sec-title">Kenapa Pilih Kami?</h2>
-      <p class="sec-desc" style="margin-left:auto;margin-right:auto">Kami berkomitmen memberikan pelayanan terbaik untuk setiap pelanggan.</p>
+      <p class="sec-label">03 — Perjalanan</p>
+      <h2 class="sec-title">Sejak 2003,<br><span class="red">Ribuan Pelanggan</span> Percaya</h2>
+      <p class="sec-desc" style="color:var(--slate);margin-left:auto;margin-right:auto">Dari showroom kecil di Banyumanik, kini jadi destinasi utama furniture murah berkualitas di Semarang.</p>
     </div>
-    <div class="trust-grid stagger">
-      <div class="trust-item"><i class="fas fa-truck"></i><h4>Gratis Ongkir</h4><p>Semarang & sekitarnya</p></div>
-      <div class="trust-item"><i class="fas fa-tools"></i><h4>Gratis Rakit</h4><p>Tim rakit di tempat</p></div>
-      <div class="trust-item"><i class="fas fa-shield-alt"></i><h4>Garansi</h4><p>Kerusakan ditanggung</p></div>
-      <div class="trust-item"><i class="fas fa-headset"></i><h4>CS 08.00-20.00</h4><p>Siap bantu Anda</p></div>
+    <div class="testimonial-block reveal">
+      <i class="fas fa-quote-left"></i>
+      <blockquote>"Sangat puas beli lemari di sini! Harganya terjangkau, kualitas kayunya bagus, pengiriman gratis sampai rumah di Tembalang."</blockquote>
+      <div class="author">Budi Santoso <span>— Tembalang, Semarang</span></div>
+      <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+    </div>
+    <div class="chapter-cta reveal">
+      <a href="koleksi.html" class="btn-red"><i class="fas fa-th-large"></i> Jelajahi Koleksi</a>
     </div>
   </div>
 </section>
 
-<!-- TESTIMONIAL CAROUSEL -->
-<section class="alt" id="testimoni">
-  <div class="container">
-    <div class="reveal" style="text-align:center">
-      <p class="sec-label">Testimoni</p>
-      <h2 class="sec-title">Apa Kata <span class="red">Pelanggan</span>?</h2>
-      <p class="sec-desc" style="margin-left:auto;margin-right:auto">Mereka sudah merasakan kualitas furniture kami.</p>
-    </div>
-    <div class="testi-carousel stagger" id="testiCarousel"></div>
-    <div class="testi-dots" id="testiDots" style="display:flex;justify-content:center;gap:8px;margin-top:16px"></div>
-  </div>
-</section>
-
-
-<!-- PROMO -->
+<!-- PRODUK POPULER -->
 <section id="promo" class="pat-diagonal">
   <div class="container">
     <div class="reveal" style="text-align:center">
-      <p class="sec-label">Promo</p>
+      <p class="sec-label">Koleksi</p>
       <h2 class="sec-title">Produk Terpopuler</h2>
     </div>
     <div class="promo-scroll stagger">
       <div class="promo-card">
-        <div class="img-wrap">
-          <img src="https://images.unsplash.com/photo-1540574163026-643ea20ade25?w=400&q=80" alt="Sofa" loading="lazy">
-          <span class="badge badge-red">Diskon 20%</span>
-        </div>
-        <div class="body">
-          <h3>Sofa Tamu Minimalis</h3>
-          <p><span class="hubungi-wa"><i class="fas fa-phone"></i> Hubungi WA untuk harga</span></p>
-          <a href="https://wa.me/6281325373999?text=Halo,%20saya%20tertarik%20dengan%20Sofa%20Tamu%20Minimalis" target="_blank" class="btn-wa" style="padding:10px 20px;font-size:13px;margin-top:10px"><i class="fab fa-whatsapp"></i> Tanya WA</a>
-        </div>
+        <div class="img-wrap"><img src="https://asset.morefurniture.id/OLYMPIC/GINKO/ginko-4.webp" alt="Ginko Hybrid" loading="lazy"><span class="badge badge-red">Best Seller</span></div>
+        <div class="body"><h3>Ginko Hybrid</h3><span class="hubungi-wa"><i class="fab fa-whatsapp"></i> Hubungi via WA</span></div>
       </div>
       <div class="promo-card">
-        <div class="img-wrap">
-          <img src="https://images.unsplash.com/photo-1503602642458-232111445657?w=400&q=80" alt="Kursi Tamu" loading="lazy">
-          <span class="badge badge-yellow">Terlaris</span>
-        </div>
-        <div class="body">
-          <h3>Set Kursi Tamu</h3>
-          <p><span class="hubungi-wa"><i class="fas fa-phone"></i> Hubungi WA untuk harga</span></p>
-          <a href="https://wa.me/6281325373999?text=Halo,%20saya%20tertarik%20dengan%20Set%20Kursi%20Tamu" target="_blank" class="btn-wa" style="padding:10px 20px;font-size:13px;margin-top:10px"><i class="fab fa-whatsapp"></i> Tanya WA</a>
-        </div>
+        <div class="img-wrap"><img src="https://asset.morefurniture.id/OLYMPIC/SERENA/KB/serena-4.webp" alt="Serena Hybrid" loading="lazy"><span class="badge badge-green">Promo</span></div>
+        <div class="body"><h3>Serena Hybrid</h3><span class="hubungi-wa"><i class="fab fa-whatsapp"></i> Hubungi via WA</span></div>
       </div>
       <div class="promo-card">
-        <div class="img-wrap">
-          <img src="https://images.unsplash.com/photo-1586105251261-72a756497a11?w=400&q=80" alt="Lemari" loading="lazy">
-          <span class="badge badge-green">Diskon 15%</span>
-        </div>
-        <div class="body">
-          <h3>Lemari Pakaian 2 Pintu</h3>
-          <p><span class="hubungi-wa"><i class="fas fa-phone"></i> Hubungi WA untuk harga</span></p>
-          <a href="https://wa.me/6281325373999?text=Halo,%20saya%20tertarik%20dengan%20Lemari%20Pakaian%202%20Pintu" target="_blank" class="btn-wa" style="padding:10px 20px;font-size:13px;margin-top:10px"><i class="fab fa-whatsapp"></i> Tanya WA</a>
-        </div>
+        <div class="img-wrap"><img src="https://asset.morefurniture.id/OLYMPIC/VALERIE/valerie-4.webp" alt="Valerie Nature-Nap" loading="lazy"></div>
+        <div class="body"><h3>Valerie Nature-Nap</h3><span class="hubungi-wa"><i class="fab fa-whatsapp"></i> Hubungi via WA</span></div>
       </div>
       <div class="promo-card">
-        <div class="img-wrap">
-          <img src="https://images.unsplash.com/photo-1567016432779-094069958ea5?w=400&q=80" alt="Spring Bed" loading="lazy">
-          <span class="badge badge-red">Special</span>
-        </div>
-        <div class="body">
-          <h3>Spring Bed Single</h3>
-          <p><span class="hubungi-wa"><i class="fas fa-phone"></i> Hubungi WA untuk harga</span></p>
-          <a href="https://wa.me/6281325373999?text=Halo,%20saya%20tertarik%20dengan%20Spring%20Bed%20Single" target="_blank" class="btn-wa" style="padding:10px 20px;font-size:13px;margin-top:10px"><i class="fab fa-whatsapp"></i> Tanya WA</a>
-        </div>
+        <div class="img-wrap"><img src="https://asset.morefurniture.id/OLYMPIC/HESSIAN/LP/more-3pintu-1.webp" alt="LP HESSIAN 3P" loading="lazy"><span class="badge badge-yellow">Hemat</span></div>
+        <div class="body"><h3>LP HESSIAN 3P</h3><span class="hubungi-wa"><i class="fab fa-whatsapp"></i> Hubungi via WA</span></div>
       </div>
       <div class="promo-card">
-        <div class="img-wrap">
-          <img src="https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?w=400&q=80" alt="Meja Kerja" loading="lazy">
-          <span class="badge badge-yellow">Hemat 25%</span>
-        </div>
-        <div class="body">
-          <h3>Meja Kerja Minimalis</h3>
-          <p><span class="hubungi-wa"><i class="fas fa-phone"></i> Hubungi WA untuk harga</span></p>
-          <a href="https://wa.me/6281325373999?text=Halo,%20saya%20tertarik%20dengan%20Meja%20Kerja%20Minimalis" target="_blank" class="btn-wa" style="padding:10px 20px;font-size:13px;margin-top:10px"><i class="fab fa-whatsapp"></i> Tanya WA</a>
-        </div>
+        <div class="img-wrap"><img src="https://asset.morefurniture.id/OLYMPIC/NAVARO/LP/3pintu-1.webp" alt="LP NAVARO 3P" loading="lazy"></div>
+        <div class="body"><h3>LP NAVARO 3P</h3><span class="hubungi-wa"><i class="fab fa-whatsapp"></i> Hubungi via WA</span></div>
       </div>
-    </div>
-    <div class="chapter-cta reveal">
-      <a href="promo.html" class="btn-red"><i class="fas fa-tags"></i> Lihat Semua Promo</a>
+      <div class="promo-card">
+        <div class="img-wrap"><img src="https://asset.morefurniture.id/OLYMPIC/TITAN/MTS/mts-2.webp" alt="MTS TITAN Cherry" loading="lazy"></div>
+        <div class="body"><h3>MTS TITAN Cherry</h3><span class="hubungi-wa"><i class="fab fa-whatsapp"></i> Hubungi via WA</span></div>
+      </div>
+      <div class="promo-card">
+        <div class="img-wrap"><img src="https://asset.morefurniture.id/PRODUCT/p-1145-1724666027-1.webp" alt="MR HELENA" loading="lazy"></div>
+        <div class="body"><h3>MR HELENA</h3><span class="hubungi-wa"><i class="fab fa-whatsapp"></i> Hubungi via WA</span></div>
+      </div>
     </div>
   </div>
 </section>
@@ -1176,6 +1043,49 @@ function tourGalleryKeydown(e) {
   el.addEventListener('mousemove', function(e) { if (!isDown) return; e.preventDefault(); var x = e.pageX - el.offsetLeft; el.scrollLeft = scrollLeft - (x - startX); });
   el.addEventListener('scroll', function() { updateGalleryCounter(el); });
 })();
+</script>
+
+<script>
+function syncWaveHeights() {
+  var hSol = document.getElementById('solution');
+  var hTrust = document.getElementById('trust');
+  var hTesti = document.getElementById('testimoni');
+  if (hSol && hTrust && hTesti) {
+    document.documentElement.style.setProperty('--h-sol', hSol.offsetHeight + 'px');
+    document.documentElement.style.setProperty('--h-trust', hTrust.offsetHeight + 'px');
+    document.documentElement.style.setProperty('--h-testi', hTesti.offsetHeight + 'px');
+  }
+}
+window.addEventListener('load', syncWaveHeights);
+window.addEventListener('resize', syncWaveHeights);
+</script>
+
+<script>
+function animateStats() {
+  var nums = document.querySelectorAll('.stat-item .num');
+  if (!nums.length) return;
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (!entry.isIntersecting) return;
+      var el = entry.target;
+      var target = parseFloat(el.getAttribute('data-target'));
+      var suffix = target === 4.3 ? '' : '+';
+      var isDecimal = target % 1 !== 0;
+      var duration = 1500, start = performance.now();
+      function step(now) {
+        var p = Math.min((now - start) / duration, 1);
+        var eased = 1 - Math.pow(1 - p, 3);
+        var val = isDecimal ? (target * eased).toFixed(1) : Math.round(target * eased);
+        el.textContent = val + (p < 1 ? '' : suffix);
+        if (p < 1) requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+      observer.unobserve(el);
+    });
+  }, { threshold: 0.5 });
+  nums.forEach(function(el) { observer.observe(el); });
+}
+document.addEventListener('DOMContentLoaded', animateStats);
 </script>
 
 </body>
